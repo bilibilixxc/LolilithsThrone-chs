@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64">
+    <defs>
+        <linearGradient id="enforcerHQGradient">
+            <stop offset="0" stop-color="#2c5aa0"/>
+            <stop offset="1" stop-color="#5586d0"/>
+        </linearGradient>
+        <linearGradient id="linearGradient15" x1="29.5" x2="44.125" y1="1025.487" y2="1003.362" gradientTransform="matrix(1.35625 0 0 1.35843 -11.395 -365.612)" gradientUnits="userSpaceOnUse" xlink:href="#enforcerHQGradient"/>
+    </defs>
+    <g fill-rule="evenodd" transform="matrix(.95 0 0 .95 1.6 -937.344)">
+        <ellipse cx="32" cy="1020.368" fill="url(#linearGradient15)" rx="31.982" ry="31.98"/>
+        <path fill="#fff" d="M49.815 1027.87c-1.228 9.287-9.133 11.408-16.582 16.383-7.487-4.644-17.189-5.722-18.407-16.428-.91-7.988 4.17-12.479.486-23.658-1.175-3.566 9.804 4.384 17.466-3.8 7.575 7.86 18.14-.328 16.836 4.329-3.05 10.898 1.256 15.201.201 23.173z"/>
+        <path fill="#f0f" d="M32.732 1008.776l-8.363 23.303 20.192-14.632-24.135-.12 20.49 15.295z"/>
+    </g>
+</svg>

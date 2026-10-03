@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64">
+    <defs>
+        <linearGradient id="gymGradient">
+            <stop offset="0" stop-color="#f55"/>
+            <stop offset="1" stop-color="#ff8080"/>
+        </linearGradient>
+        <linearGradient id="linearGradient15" x1="29.5" x2="44.125" y1="1025.487" y2="1003.362" gradientTransform="matrix(1.28844 0 0 1.29051 -9.225 -296.313)" gradientUnits="userSpaceOnUse" xlink:href="#gymGradient"/>
+    </defs>
+    <g transform="translate(0 -988.362)">
+        <ellipse cx="32" cy="1020.368" fill="url(#linearGradient15)" fill-rule="evenodd" rx="30.383" ry="30.381"/>
+        <g fill="none" stroke="#fff" stroke-linecap="round">
+            <path stroke-width="4.6221637" d="M11.886 1013.997v13.97"/>
+            <path stroke-width="6.9339775999999995" d="M18.873 1011.919v17.685"/>
+            <path stroke-width="2.9282" d="M6.437 1020.896l50.58-.046"/>
+            <path stroke-width="4.6221637" d="M52.486 1013.857v13.97"/>
+            <path stroke-width="6.9339775999999995" d="M45.5 1011.779v17.685"/>
+        </g>
+    </g>
+</svg>

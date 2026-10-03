@@ -1,0 +1,797 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<dialogue>
+
+	<!-- HUMANS -->
+
+	<htmlContent tag="HUMAN_BASIC"><![CDATA[
+	<p>
+		Humans are the least numerous of all the races. Although some people appear to be human on first glance, a fluffy pair of ears, a swishing tail, or a concealed bestial cock will often end up betraying their status as a morph of one race or another. Humans have wildly varying personalities, body types, and sexual preferences.
+	</p>
+	]]>
+	</htmlContent>
+
+	<htmlContent tag="HUMAN_ADVANCED"><![CDATA[
+	<p>
+		Demons, following the orders of the Lilin, often encourage other races to treat humans as inferior beings. Rumours of Lilith's intense dislike of humans are commonplace, which would explain the fact that humans are banned from serving in any position of power within Dominion. This is partially the reason why humans are so rare; those that are born human often transform themselves to avoid persecution.
+	</p>
+	<p>
+		A defining feature of humans is that they are typically unable to harness the arcane, which often leads to further ridicule from the other races.
+	</p>
+	<p>
+		Human offspring will be a mixture of more humans and offspring of their partner's race.
+	</p>
+	]]>
+	</htmlContent>
+
+	<!-- ANGELS -->
+
+	<htmlContent tag="ANGEL_BASIC"><![CDATA[
+	<p>
+		Just like demons, angels conform to their traditional appearance. Their bodies closely resemble that of a human's, while a gigantic pair of white-feathered wings grow from their backs. Their skin, while similar to that of a human's, gives off a pale golden radiance at all times.
+	</p>
+	]]>
+	</htmlContent>
+
+	<htmlContent tag="ANGEL_ADVANCED"><![CDATA[
+	<p>
+		TODO.
+	</p>
+	]]>
+	</htmlContent>
+
+	<!-- ELDER LILIN -->
+
+	<htmlContent tag="ELDER_LILIN_BASIC"><![CDATA[
+	<p>
+		The seven elder lilin are, as their name would suggest, the oldest of all Lilith's offspring. While there are many lilin in the world, only these seven are Lilith's natural-born daughters. All of the other lilin were corrupted by Lilith into their new forms.
+	</p>
+	<p>
+		In order of seniority, the seven elder lilin are: Lirecea, Lovienne, Lasielle, Lyssieth, Lunette, Lyxias, and Lisophia.
+	</p>
+	]]>
+	</htmlContent>
+
+	<htmlContent tag="ELDER_LILIN_ADVANCED"><![CDATA[
+	<p>
+		The elder lilin are almost as powerful as Lilith herself, and each one has complete mastery of the arcane. Just like all of the other lilin, they can transform their bodies to take on the appearance of any race imaginable.
+	</p>
+	<p>
+		Along with Lilith, all seven of the elder lilin were sealed away inside the mirror dimension for thousands of years, where they helped their mother to weave her reality-changing spell. After being released, Lovienne and Lasielle took the posts of Lilith's personal guard, while Lirecea, Lunette, Lyxias, and Lisophia were placed in charge of the four regions surrounding Dominion. Due to her reluctance to punish the archangel given to her, Lyssieth was suspected of harbouring treasonous thoughts, and was placed under house arrest in her subterranean palace.
+	</p>
+	<p>
+		A lilin's offspring depends on what race their partner is. Copulation with other lilin results in the birth of more lilin, while mating with a demon produces demon offspring. If crossed with a half-demon or non-demon, the resulting offspring will be half-demons of their partners race. Finally, a lilin being bred with imps will produce more imps, although such a thing would be absolutely unthinkable in demon society.
+	</p>
+	]]>
+	</htmlContent>
+
+	<!-- LILIN -->
+
+	<htmlContent tag="LILIN_BASIC"><![CDATA[
+	<p>
+		All lilin were once common races who were corrupted by Lilith into extremely powerful demonic entities. Either by being particularly exceptional in their abilities, or by merit of their position in society, the lilin were chosen by Lilith to be her adopted offspring, and now serve their mother without question.
+	</p>
+	<p>
+		Along with Lilith herself, only the elder lilin are more powerful than the lilin, with even the strongest of demons proving to be no match for their mastery of the arcane. Around half of the lilin population choose to remain in their demonic form, with the other half making good use of their ability to transform any way they like in order to take on the form of anthro-morphs or mythological creatures.
+	</p>
+	]]>
+	</htmlContent>
+
+	<htmlContent tag="LILIN_ADVANCED"><![CDATA[
+	<p>
+		The number of lilin in the world is estimated to be less than a thousand, with the vast majority of them being the daughters of Lilith who were created before she was banished to the mirror dimension. Disguised as humans, they coordinate with their demonic daughters to subvert and infiltrate world governments and the media, thereby keeping the planet's population ignorant to the fact that Lilith is working towards world domination.
+	</p>
+	<p>
+		A lilin's offspring depends on what race their partner is. Copulation with other lilin results in the birth of more lilin, while mating with a demon produces demon offspring. If crossed with a half-demon or non-demon, the resulting offspring will be half-demons of their partners race. Finally, a lilin being bred with imps will produce more imps, although such a thing would be absolutely unthinkable in demon society.
+	</p>
+	]]>
+	</htmlContent>
+
+	<!-- DEMONS -->
+
+	<htmlContent tag="DEMON_BASIC"><![CDATA[
+	<p>
+		Not only are demons real, but the vast majority of them also conform to their stereotypical image, sporting a pair of horns, bat-like wings, and a spaded tail. They can also transform their bodies into any other demonic form they like, allowing them to both remove their external demonic parts, as well as to recolour their skin, allowing them to appear to be human. Very few of them would ever choose to do this, however, as while demons are at the top of the social hierarchy, humans are at the very bottom.
+	</p>
+	]]>
+	</htmlContent>
+
+	<htmlContent tag="DEMON_ADVANCED"><![CDATA[
+	<p>
+		Demons are created in one of two ways. They are either born from a lilin or demon copulating with another demon, or they are created when a lilin corrupts someone into becoming a demon.
+	</p>
+	<p>
+		Despite their stereotypical appearance, demons do not have the traditional predisposition towards being evil. In fact, the only trait that sets them apart from any other race is that they're far more inclined to be willing to have sex with pretty much anyone or anything.
+	</p>
+	<p>
+		All demons have incredibly strong arcane auras, which are not only able to shield them from an arcane storm's effects, but also allow them to readily harness powerful arcane spells. Thanks to this, demons find it very easy to gain employment and make money, as, thanks to telekinesis, fluid manipulation, energy generation, or many other arcane abilities, they can complete almost any manual-labour job in a fraction of the time it would take a regular worker to perform.
+	</p>
+	<p>
+		A demon's offspring depends on what race their partner is. Copulation with a lilin or another demon produces demon offspring. If crossed with a half-demon or non-demon, the resulting offspring will be half-demons of their partners race. Finally, a demon being bred with imps will produce more imps, although such a thing would be considered taboo in demon society.
+	</p>
+	]]>
+	</htmlContent>
+
+	<!-- HALF-DEMONS -->
+
+	<htmlContent tag="HALF_DEMON_BASIC"><![CDATA[
+	<p>
+		Half-demons come in two main varieties; human half-demons, and non-human half-demons. Both types of half-demon are looked down upon in demon society, but are still considered to be of more importance than any non-demonic race.
+	</p>
+	<p>
+		Non-human half-demons can transform their face and torso from human to animal-morph and back, but all other non-demonic parts of their bodies are immutable as animal-morph parts. Demonic eyes, horns, and sometimes wings are clear indications that a particularly savage-looking morph is a half-demon. Human half-demons have slightly more limited transformation abilities, and, while still being able to transform the size of all body parts, their only racial transformation ability consists of removing or altering their horns, wings, and tail.
+	</p>
+	]]>
+	</htmlContent>
+
+	<htmlContent tag="HALF_DEMON_ADVANCED"><![CDATA[
+	<p>
+		Non-human half-demons are particularly wild and animalistic at times, and, depending on their race, can exhibit extremely unpredictable behaviour, ranging from extreme aggression to intense sexual desire. Due to this, they struggle to fit in to Dominion society, and can instead be found out in the wilder regions of the world.
+	</p>
+	<p>
+		Unlike their wild counterparts, human half-demons are very calm and civil, but it's not their behaviour that's the cause of demonic resentment, but their bodies. Lilith's hatred of humans is well known, and so for a demon or lilin to have copulated with one is somewhat of a minor taboo. More serious than this, however, is that human half-demons are the origin of the despised race of crude, uncivilised, sex-obsessed imps. Human half-demons who breed with either a non-demon or another human half-demon will produce a brood of imps, and as such, many human half-demons are extremely reluctant to get pregnant. 
+	</p>
+	<p>
+		A half-demon's offspring depends on what race their partner is. A non-human half-demon will always produce more of their half-demon race, with the only exceptions of always producing human half-demons if partnered with a human half-demon, and producing imps if bred with an imp. A human half-demon, on the other hand, will produce more human half-demons when coupled with a lilin, demon, or half-demon, and imps with any other race.
+	</p>
+	]]>
+	</htmlContent>
+
+	<!-- IMPS -->
+
+	<htmlContent tag="IMP_BASIC"><![CDATA[
+	<p>
+		Other than their diminutive height (with most individuals standing at around [units.size(92)] tall), an imp's appearance is identical to that of a demon.
+		 Despite their similar appearances, however, imps are far more mischievous and aggressive than their larger counterparts.
+		 Due to these antisocial personality traits, Dominion's Enforcers always drive imps out of the city at first sight, with the vast majority of them ending up down in the undercity of Submission.
+	</p>
+	]]>
+	</htmlContent>
+
+	<htmlContent tag="IMP_ADVANCED"><![CDATA[
+	<p>
+		Just like demons, imps are able to self-transform at will, and while they are affected by non-racial transformation potions, they are immune to all racial transformations.
+		 Again, in similarity to demons, there's no way to transform someone into an imp through use of standard potions.
+		 The only way that an imp is created is by being the offspring of the resulting pregnancy between a demon and a non-Lilin.
+	</p>
+	<p>
+		Individually, imps are very weak, and so for their own protection (as well as for the increased opportunity to cause mischief), they will naturally form gangs of up to five or six members.
+		 The leader of these gangs is typically the largest one of the group, and is referred to as the alpha imp.
+		 Although most of the time these gangs are content to fight amongst themselves, they occasionally work up the courage to assault larger races.
+		 There have even been cases of imps sneaking up out of Submission during an arcane storm; making the most of the lack of Enforcers to assault anyone in sight.
+	</p>
+	<p>
+		An imp's offspring will always be more imps.
+	</p>
+	]]>
+	</htmlContent>
+
+	<!-- COW-MORPHS -->
+
+	<htmlContent tag="COW_MORPH_BASIC"><![CDATA[
+	<p>
+		Although cattle-morphs can often be found in Dominion, they're far more common and numerous out in the Foloi Fields, where their primary occupation is working in the many farms that litter the landscape.
+		 The females of this race, called cow-girls, tend to be quite docile and submissive, which is in stark contrast to their male counterparts (bull-boys), who are typically very dominant and territorial.
+	</p>
+	]]>
+	</htmlContent>
+
+	<htmlContent tag="COW_MORPH_ADVANCED"><![CDATA[
+	<p>
+		Cow-girls are well known for having gigantic breasts and heavy lactation, and, due to this, are often the target of unwanted attention.
+		 It's commonplace for a cow-girl to have her breasts regularly milked, and the Foloi Fields are littered with milking sheds suited for this purpose.
+	</p>
+	<p>
+		Cow-girls have strong herding instincts, and will naturally seek out a bull-boy to submit to.
+		 As a result of this, harems are a common part of cattle-morph society, with some of the stronger and more dominant bull-boys leading herds of up to fifty females.
+		 Cow-boys are usually the owners of the many farms out in the Foloi Fields, and will assign their herd to be responsible for tending to their crops, as well as for providing milk for the farm's dairy.
+	</p>
+	<p>
+		A cattle-morph's offspring will be a mixture of more cattle-morphs and offspring of their partner's race.
+	</p>
+	]]>
+	</htmlContent>
+
+	<!-- DOG-MORPHS -->
+
+	<htmlContent tag="DOG_MORPH_BASIC"><![CDATA[
+	<p>
+		Dog-morphs are a very common race.
+		 Easily identified by their wagging tails, fluffy ears, and energetic mannerisms, dog-morphs can be found almost anywhere.
+	</p>
+	]]>
+	</htmlContent>
+
+	<htmlContent tag="DOG_MORPH_ADVANCED"><![CDATA[
+	<p>
+		Dog-morphs are typically highly excitable and incredibly sociable, which often causes them to approach strangers in an attempt to make new friends.
+		 Although such friendly behaviour is common, dog-morphs still have varied personalities, much like humans, and not all of them are as gregarious as their reputation would have you expect.
+	</p>
+	<p>
+		Dog-morphs, like the other common races, get heavily affected by arcane storms.
+		 Being exposed to arcane thunder will fill dog-boys with the desire to assert their dominance over anyone they meet, while dog-girls will go into heat.
+	</p>
+	<p>
+		A dog-morph's offspring will be a mixture of dog-morphs and offspring of their partner's race.
+	</p>
+	]]>
+	</htmlContent>
+
+	<!-- WOLF-MORPHS -->
+
+	<htmlContent tag="WOLF_MORPH_BASIC"><![CDATA[
+	<p>
+		Wolf-morphs are a common anthropomorphic race that can be found almost anywhere.
+		 Possessing a shaggy tail, upright ears, and hungry wolf-like eyes, wolf-morphs can sometimes be mistaken for a dog-morph at first glance.
+	</p>
+	]]>
+	</htmlContent>
+
+	<htmlContent tag="WOLF_MORPH_ADVANCED"><![CDATA[
+	<p>
+		Unlike dog-morphs, wolf-morphs are extremely unpredictable, and although they sometimes share the same energetic mannerisms as dog-morphs, they often focus their energy on trying to assert their dominance.
+		 Wolf-morphs typically have short tempers and a primal instinct to prey on the weak.
+		 As a result, many people try to avoid encounters with wolf-morphs, finding them to be more trouble than they're worth.
+	</p>
+	<p>
+		Wolf-morphs, like the other common races, get heavily affected by arcane storms.
+		 Being exposed to arcane thunder will fill wolf-boys with the overwhelming desire to assert their dominance over anyone they meet, while wolf-girls will go into heat.
+	</p>
+	<p>
+		A wolf-morph's offspring will be a mixture of wolf-morphs and offspring of their partner's race.
+	</p>
+	]]>
+	</htmlContent>
+
+	<!-- FOX-MORPHS -->
+
+	<htmlContent tag="FOX_MORPH_BASIC"><![CDATA[
+	<p>
+		Fox-morphs are a common anthropomorphic race, spread through both Dominion and the Foloi Fields. The fennec-fox-morph subspecies is primarily found in the more arid regions to the south of Dominion, while the arctic-fox-morph subspecies is found almost exclusively in the aptly-named 'Snowstorm valley'. No matter their subspecies, fox-morphs have a tendency to be very cunning and mischievous, and often love nothing more than playing practical jokes on others.
+	</p>
+	]]>
+	</htmlContent>
+
+	<htmlContent tag="FOX_MORPH_ADVANCED"><![CDATA[
+	<p>
+		Due to their love for trickery, fox-morphs are believed to be insensitive to the feelings of others, but they see their own behaviour as little more than a harmless prank. Despite this, there's little trust ever placed in the fox-morphs of Dominion. Often enough, some of them move out of the city, so they can live freely, and there exists some places in the nearby forests which are inhabited almost entirely by fox-morphs and related races.
+	</p>
+	<p>
+		Fox-morphs, like the other common races, get heavily affected by arcane storms.
+		 Their mischief then takes on a noticeably more sexual bend, as they then try to have their way with others, sometimes forgoing all pretense of trickery in favor of force.
+	</p>
+	<p>
+		A fox-morph's offspring will be a mixture of fox-morphs and offspring of their partner's race.
+	</p>
+	]]>
+	</htmlContent>
+
+	<!-- YOUKO -->
+
+	<htmlContent tag="YOUKO_BASIC"><![CDATA[
+	<p>
+		Although the youko are technically a subspecies of fox-morph, they possess several unique traits which make them far more special than a typical subspecies. These traits stem from the power of their tails, which act like lightning rods for the arcane and allow even the most mundane of youko to be competent spell casters. By obtaining more tails, which can only be achieved by being granted them by the youko lilin, a youko can increase their ability to harness the arcane. A maxmimum of nine tails may be acquired by a youko, at which point they possess enough power to rival a lilin.
+	</p>
+	<p>
+		As every resident of Lilith's Realm soon learns, the youko have a fondness for brewing potions and leaving them lying all over the place. Some of these potions are not only harmless, but grant the drinker good health. Others are not so beneficial, and will transform the unfortunate drinker in ways that the youko find amusing. This split between good and harmful potions can be explained by the nature of the youko themselves; half of the youko are servants of the trickster lilin, Kayo, and love to trick, tease, and torment others. The other half of the youko are followers of the benevolent lilin, Kazuha, and like to assist those in need.
+	</p>
+	]]>
+	</htmlContent>
+
+	<htmlContent tag="YOUKO_ADVANCED"><![CDATA[
+	<p>
+		Youko society, and the very nature of the youko themselves, is shaped by the whims of the two youko lilin. Youko come into being either by being born as a one-tailed youko or by being transformed into a one-tailed youko by one of the two youko lilin. In the case of the former, a natural-born youko will at some point feel compelled to seek out one of the lilin and pledge themselves to their service, while in the case of the latter the newly-made youko will have already made their choice as to which lilin they want to follow. Those with a kind or gentle disposition will be drawn towards the benevolent Kazuha, while the selfish and egotistical will seek out Kayo.
+	</p>
+	<p>
+		No matter which lilin is chosen by a youko, the two of them will form a deep and unbreakable bond during their service ritual. What happens during these rituals is not known, for the youko are sworn to secrecy. These service rituals are repeated every time a youko earns another tail, which can be achieved by passing the lilin's trials. These trials are unique to each youko, and almost nothing is known of them other than the fact that they are extremely difficult to pass. The final ritual, when a youko earns their ninth tail, is known to take several days, during which time the lilin and her youko servant completely vanish. After bonding with one of the lilin, a youko will be taken under the wing of a more senior youko, with seniority determined by tail count. If the junior youko ever advances to match their mentor's tail count then they will seek out a new, higher-ranked youko to be their new mentor.
+	</p>
+	<p>
+		Thankfully for the citizens of the Realm, the youko prefer to keep to themselves within their homeland of the Shinrin Highlands. Situated to the far west of the Foloi Fields, this area consists of undulating terrain which is in large part covered by sparse woodland. There's no reason for travellers to ever pass through the youko's homeland, but this doesn't stop hundreds of daring trespassers from venturing into those lands every year in an attempt to meet a benevolent youko. Such a meeting is truly a blessing, for a follower of Kazuha will happily grant shelter to a stranger, and in exchange for the traveller's labour, will ply them with gifts both mundane and arcane. Some exceptionally foolish travellers have been known to try to take advantage of a benevolent youko's hospitality, and are usually dealt with by being led into a trickster youko's territory and then abandoned there. Woe betide any traveller who meets this fate, for to fall into the hands of a trickster youko is truly a terrible thing. These malevolent youko love to torment their victims, and some of them can be incredibly sadistic in nature. Thanks to their mastery of illusion spells, they've been known to trap and relentlessly torment travellers in their territory for years on end.
+	</p>
+	<p>
+		Like demons, the youko are not affected by arcane storms, which, along with the fact that they're gifted with the arcane and require a transformation from a lilin to gain power, has led some to suspect that they are a form of demon. This theory is given more weight by the fact that, much like demons, youko breeding follows special rules. The normal chain of demonic breeding takes precedence, but if a youko has offspring with a non-demon, then youko mothers will always give birth to youko. Youko fathers follow the standard rules of breeding, with offspring being a mix of youko and the race of the mother. Yet more evidence to support the youko-demon theory is that the gender ratio between feminine and masculine youko is almost identical to that of demons, with roughly only one in ten youko preferring to stay in a masculine form. Much like demons, they can also self-transform, and without using any illusion spells they are able to take on the form of a fox or a human at will. Finally, like demons, they are exceptionally long-lived, to the point where they don't seem to age. Despite this, most youko who have lived for hundreds of years prefer to transform themselves to take on a more mature appearance. If ever you encounter a youko who looks old, then they must truly be ancient.
+	</p>
+	]]>
+	</htmlContent>
+
+	<!-- CAT-MORPHS -->
+
+	<htmlContent tag="CAT_MORPH_BASIC"><![CDATA[
+	<p>
+		Cat-morphs are one of the more common anthropomorphic races found in this world. A sleek tail, upright ears, and cat-like eyes identify a cat-morph.
+	</p>
+	]]>
+	</htmlContent>
+
+	<htmlContent tag="CAT_MORPH_ADVANCED"><![CDATA[
+	<p>
+		Like all the other common races, a cat-morph's personality can vary wildly from person to person, although they do have some typical characteristics. Cat-morphs are usually quite delicate in their mannerisms, and although they often try to hide it, they can get extremely curious about things they haven't encountered before.
+	</p>
+	<p>
+		Cat-morphs, like the other common races, get heavily affected by arcane storms. Being exposed to arcane thunder will make cat-boys seek out a partner to mate with, while cat-girls will go into heat.
+	</p>
+	<p>
+		A cat-morph's offspring will be a mixture of cat-morphs and offspring of their partner's race.
+	</p>
+	]]>
+	</htmlContent>
+
+	<!-- PANTHER-MORPHS -->
+
+	<htmlContent tag="PANTHER_MORPH_BASIC"><![CDATA[
+	<p>
+		The larger and more powerful cousins of regular cat-morphs, panther-morphs come in several varieties, most of which are found in jungle or savannah regions. A long, fluffy tail, upright ears, and a heavy-set, cat-like face identify a panther-morph.
+	</p>
+	]]>
+	</htmlContent>
+
+	<htmlContent tag="PANTHER_MORPH_ADVANCED"><![CDATA[
+	<p>
+		While panther-morphs' personalities vary wildly from person to person, they do have some typical characteristics. They are usually quite dominant in their mannerisms, and although they often try to hide it, they can get extremely curious about things they haven't encountered before. Most panther-morphs will not back away from a fight, and will use their strong bodies to quickly settle arguments by force, if necessary.
+	</p>
+	<p>
+		Panther-morphs, like the other common races, get heavily affected by arcane storms. Being exposed to arcane thunder will make panther-boys seek out a partner to mate with, while panther-girls will go into heat.
+	</p>
+	<p>
+		A panther-morph's offspring will be a mixture of panther-morphs and offspring of their partner's race.
+	</p>
+	]]>
+	</htmlContent>
+
+	<!-- HORSE-MORPHS -->
+
+	<htmlContent tag="HORSE_MORPH_BASIC"><![CDATA[
+	<p>
+		Horse-morphs are one of the more common anthropomorphic races found in this world. A pair of horse-like ears and a swishing tail are usually enough to identify a horse-morph. If a horse-morph grows a pair of feathered wings, they will be defined as a 'pegasus-morph'. A single horn growing out of their forehead marks them as a 'unicorn-morph', while having both wings and horn is enough to define someone as an 'alicorn-morph'.
+	</p>
+	]]>
+	</htmlContent>
+
+	<htmlContent tag="HORSE_MORPH_ADVANCED"><![CDATA[
+	<p>
+		Horse-morphs have the reputation of being all brawn and no brains. There is some truth behind this characterisation, as most horse-morphs are quite dull-witted, although they are usually far stronger than the other common races. Horse-morphs are usually very haughty, and take great offence at any perceived sleight against them.
+	</p>
+	<p>
+		Horse-morphs, like the other common races, get heavily affected by arcane storms. Being exposed to arcane thunder will make horse-boys enter a potent rut, which, when combined with their great strength, makes them a dangerous person to meet in the middle of an arcane storm. Horse-girls will react to arcane thunder by going into heat, and will force themselves on anyone they might come across.
+	</p>
+	<p>
+		A horse-morph's offspring will be a mixture of horse-morphs and offspring of their partner's race.
+	</p>
+	]]>
+	</htmlContent>
+
+	<!-- CENTAURS AND PEGATAURS -->
+
+	<htmlContent tag="CENTAUR_BASIC"><![CDATA[
+	<p>
+		Centaurs in this reality are defined in exactly the same way as those from Greek mythology; by having the lower body of a feral horse. While they can be of any race, the upper bodies of the vast majority of centaurs in the wild are human in nature. Any wings grown by a centaur will appear on their horse's body, defining them as a 'pegataur'. A single horn growing out of their forehead marks them as a 'unitaur', while having both wings and horn is enough to define someone as an 'alitaur'.
+	</p>
+	]]>
+	</htmlContent>
+
+	<htmlContent tag="CENTAUR_ADVANCED"><![CDATA[
+	<p>
+		Centaurs, as well as the less-common pegataurs, unitaurs, and alitaurs, are almost exclusively found in the farmland surrounding Dominion, known as the 'Foloi Fields'. While they typically do their best to be law-abiding citizens, they possess a very wild temperament, and it doesn't take much to provoke one into displaying their more primal instincts.
+	</p>
+	<p>
+		Possessing the lower body of a feral horse, centaurs are capable of great feats of strength, and as such they are highly sought-after by the arcane-impotent farmer population for manual labour. While happy enough to perform tasks such as ploughing fields or carrying farmyard equipment, being used as transport (with someone riding their back) is considered to be a sign of either extreme intimacy or utmost subservience. Only doting couples or centaur-slaves are ever involved in such a demeaning practice.
+	</p>
+	]]>
+	</htmlContent>
+
+	<!-- REINDEER-MORPHS -->
+
+	<htmlContent tag="REINDEER_MORPH_BASIC"><![CDATA[
+	<p>
+		Reindeer-morphs are one of the rarer anthropomorphic races found in this world, and are almost exclusively found in the snowy tundra area far from Dominion.
+		 A large pair of multiple-branching antlers are usually enough to identify a reindeer-morph, the rounded shape of which is noticeably different from the sharper antlers of the more common deer-morphs.
+	</p>
+	]]>
+	</htmlContent>
+
+	<htmlContent tag="REINDEER_MORPH_ADVANCED"><![CDATA[
+	<p>
+		Reindeer-morphs are, for most of the year, an extremely rare sight to see outside of their traditional tundra homeland.
+		 During the winter months, however, large groups of reindeer-morphs travel to Dominion, where they work to keep the streets shovelled clear of snow.
+		 These reindeer work-gangs usually operate under a dominant male or female reindeer-morph, although on occasion some groups can be found to be working for an overseer of a different race.
+	</p>
+	<p>
+		Reindeer-morphs, like all non-demonic races, get heavily affected by arcane storms.
+		 Being exposed to arcane thunder will make reindeer-boys enter a potent rut, which, when combined with their strength and stamina, makes them very dangerous to meet in the middle of an arcane storm.
+		 Reindeer-girls will react to arcane thunder by going into heat, and will force themselves on anyone they might come across.
+	</p>
+	<p>
+		A reindeer-morph's offspring will be a mixture of reindeer-morphs and offspring of their partner's race.
+	</p>
+	]]>
+	</htmlContent>
+
+	<!-- SQUIRREL-MORPHS -->
+
+	<htmlContent tag="SQUIRREL_MORPH_BASIC"><![CDATA[
+	<p>
+		Squirrel-morphs are one of the more common anthropomorphic races found in this world.
+		 Although they're mostly found in the wooded areas of the Foloi Fields, squirrel-morphs are also a regular sight in Dominion.
+		 Their long fluffy tails and small round ears are usually enough to identify a squirrel-morph.
+	</p>
+	]]>
+	</htmlContent>
+
+	<htmlContent tag="SQUIRREL_MORPH_ADVANCED"><![CDATA[
+	<p>
+		Squirrel-morphs have a reputation for their stunning agility.
+		 They are excellent climbers and can scale even the most sheer of walls by launching themselves at it, even from a standstill.
+		 Although their personalities can vary greatly, most squirrel-morphs tend to be a bit skittish most of the time.
+	</p>
+	<p>
+		Squirrel-morphs, like the other common races, get heavily affected by arcane storms.
+		 Being exposed to arcane thunder will make squirrel-boys enter a potent rut, which, when combined with their great speed, makes them a dangerous foe to encounter during an arcane storm.
+		 Squirrel-girls will react to arcane thunder by going into heat, and will force themselves on anyone they might come across.
+	</p>
+	<p>
+		Squirrel-morphs will give birth to one or two of their own kind, in much the same way that a human pregnancy works.
+	</p>
+	]]>
+	</htmlContent>
+
+	<!-- RAT-MORPHS -->
+
+	<htmlContent tag="RAT_MORPH_BASIC" author="Professor Webster"><![CDATA[
+	<p>
+		Rat-morphs, on paper, are perhaps in the running for most common morph one will encounter. However, one's perceptions of them will vary wildly depending on where you are. Split physically between the urban environment of Dominion and the rural farmlands of the Foloi Fields, they are also split culturally. The rats of the city are infamous for their affinity to criminal endeavours and a general culture that rewards selfishness and anarchy. By contrast, the majority of the rats dwelling in the rural surrounds of Elis are hard-working farmers and decent folk, though that isn't to say they don't have their fair share of rogues. Despite these differences, the urban and rural rat-morphs are united by two major similarities; a clan-like familial structure and an impressive fecundity. 
+	</p>
+	<p>
+		Unlike what one might expect considering their animal-kin, rat-morphs are only slightly less tall than an average Human. However they have a large degree of sexual dimorphism with male rats being almost 10 centimetres taller than female rats on average. Their other characteristics are shared with the common rat; rounded rodent ears, a twitching nose, and most strikingly, a long scaly prehensile tail which they will often use in a variety of creative endeavours. With proper training a rat-morph can almost use their tail as a fifth limb.
+	</p>
+	]]>
+	</htmlContent>
+
+	<htmlContent tag="RAT_MORPH_ADVANCED" author="Professor Webster"><![CDATA[
+	<p>
+		The rural rat-morph is a dedicated farmer or labourer. Almost wholly unremarkable with one major exception; the size of their household. Rat-morph dwellings often contain not only a rat-morph's immediate family but also their cousins, uncles, grandparents and sometimes even close compatriots. Instead of constructing one themselves, rat-morphs sometimes join a variety of other burrower morphs in creating subterranean homes, and particularly opportunistic rat-morphs are not opposed to acquiring a pre-existing structure in which to start their own clan. All clan members are expected to support the household in any way they can with young adults working to bring money to the household while older members are expected to cook or clean. The oldest members of the household are given a place of honour and exempt from the expectations of work. It is encouraged for them to act as a source of wisdom in the household but is by no means forced upon them.
+	</p>
+	<p>
+		There are, of course, black sheep to this way of life. A not-insignificant number of young rat-morphs will don the black cloak of a highwayman and set about stealing flames from others instead of earning an honest living. A clan's opinion on this will vary from reluctant acceptance to hostility. Many of these dishonourable rat-morphs have no clan, having often been expelled for bringing shame or trouble to the household through their criminal endeavours.
+	</p>
+	<p>
+		The urban rat-morph is almost invariably a criminal by trade, and largely crass in their behaviour. The clan structure of the rural rat-morph remains but more resembles a criminal enterprise than a family unit. Gone too is its respect for elders who are often cut loose as burdens, although sometimes they're cared for by younger relatives for a variety of typically-selfish reasons. Some urban rat-morphs have legitimate careers, however they still support their clan and by extension its criminal behaviour. It's also not uncommon for some of these honest clan-members to be threatened or coerced by their clan mates into staging robberies of their places of work.
+	</p>
+	<p>
+		Most urban rat-morphs live in the dank, dirty tunnels of Submission, rarely coming up into Dominion except when perusing the shopping centre for clothes and groceries. Enforcers wisely keep an eye on rat-morphs who travel topside. A clan's home in Submission is often re-purposed maintenance hallways or elevated shanty towns hanging over the various waterways. The construction quality varies, with collapses not uncommon with some of the less dependable clans. Slimes and alligator-morphs will often prowl around these communities to prey on the victims who fall from above. Expulsion is a far more common fact of life in an urban rat-morph's life. However it takes on a more cruel edge as one might expect. Due to criminality being so common, most rat-morphs have a sizeable record and a bounty to match. Thus an expelled clan member will often be given in to the Enforcers for their bounty and, being unable to pay their fines, will be enslaved. There are rat-morphs who find this culture distasteful, however their attempts to live outside it are often thwarted by the prejudice bred by criminal brothers and sisters and many unfortunately fall back into the arms of their clans... or the Enforcers.
+	</p>
+	<p>
+		Rat-morphs are mostly protected from arcane storms due to living in the tunnels of Submission, or in the fields and forests where the storm's influence amounts to little more than a slight twinge of arousal. Should they be subjected to its full force, however, their behaviour differs little from other species, though their diminutive size often means they are more likely to beg others to mate with them rather than to force themselves on a victim. Ambush behaviour by groups of rat-morphs caught out in an arcane storm has been reported by some.
+	</p>
+	<p>
+		A rat-morph's offspring will be a mix of rat-morphs and the partner's race. Rat-morphs are a fecund species and as one might expect, are powerless against an opportunity to couple when one presents itself. The attitudes toward reproduction unsurprisingly differ between the rural and urban divide. Rural rat-morphs have what could generously be seen as spouses. They have 'life partners', who is defined as the individual a rat-morph is romantically closer to than any other. Even with 'life partners', most rat-morphs will still have the occasional dalliance outside of this pairing and this is accepted as normal, though repeated dalliances in too short a time frame or repeated dalliances with a single individual will start drawing social repercussions and jealousy. The urban rat-morph instead tends to forgo the life partner entirely and has a love life made entirely of opportunistic flings. There are exceptions of course, usually due to jealous partners, but an urban rat-morph will usually see this as just one more law to break.
+	</p>
+	]]>
+	</htmlContent>
+
+	<!-- BAT-MORPHS -->
+
+	<htmlContent tag="BAT_MORPH_BASIC"><![CDATA[
+	<p>
+		Bat-morphs are a rare race, and are only found in significant numbers in the dark caverns that are linked to the undercity of Submission.
+		 Their bat-like wings and large ears are usually enough to identify someone as a bat-morph.
+	</p>
+	]]>
+	</htmlContent>
+
+	<htmlContent tag="BAT_MORPH_ADVANCED"><![CDATA[
+	<p>
+		Bat-morphs mostly keep to themselves, and, being nocturnal, they sleep in their caverns during the day and only come out at night.
+		 Thanks to their echolocation ability, which involves emitting ultrasonic squeaks to produce echoes, they can 'see' perfectly in pitch-black darkness.
+		 Bat-morphs are typically quite reclusive and shy, but, much like humans, their personalities vary considerably between individuals.
+	</p>
+	<p>
+		Bat-morphs, like the other common races, get heavily affected by arcane storms.
+		 Being exposed to arcane thunder will make bat-boys enter a potent rut, while bat-girls will go into an intense heat; seeking to be bred by the first suitable partner that they can find.
+	</p>
+	<p>
+		Bat-morphs will give birth to one or two offspring at once.
+		 Their pregnancies work in exactly the same way as a normal human one.
+	</p>
+	]]>
+	</htmlContent>
+
+	<!-- RABBIT-MORPHS -->
+	<!-- Lore written by Ikin Skittertail -->
+	
+	<htmlContent tag="RABBIT_MORPH_BASIC"><![CDATA[
+	<p>
+		Of all those who dwell in the fields around Elis, few are quite so numerous as the fecund rabbit-morph. Although they're primarily found making their living in vast underground burrows in the Foloi Fields, there are also large rabbit communities in Dominion and other urban environments. Rabbit-morphs, being as fertile as their animal counterparts, often reproduce far beyond what their small communities can support and so many venture forth in search of a place to make a living, making them a common sight almost anywhere in Lilith's Realm.
+	</p>
+	<p>
+		Rabbit-morphs are digitigrade and stand slightly shorter than the average human, with male rabbit-morphs being a head taller than the females. One of the defining features of a rabbit-morph is its long ears, which stand up straight for a standard rabbit-morph and hang limply to the sides of the head on a lop-rabbit-morph. The other defining feature of a rabbit-morph is its characteristic cotton ball tail, which is short and round and sticks out at the base of its back. 
+	</p>
+	]]>
+	</htmlContent>
+
+	<htmlContent tag="RABBIT_MORPH_ADVANCED"><![CDATA[
+	<p>
+		Rabbit-morph culture has a strong emphasis on maintaining good familial relations, as well as encouraging young rabbit-morphs to start a family of their own. While a rabbit's fertility is often a source of individual pride, it's acknowledged in rabbit-morph communities that unchecked polygamy will quickly result in destabilising overpopulation. Due to this, traditional rabbit-morph communities are highly monogamous, and will strongly encourage the use of contraceptives once a rabbit-morph pair have had several offspring.
+	</p>
+	<p>
+		While urban rabbit-morphs are unlikely to adhere to these traditions and live in a similar manner to the rest of the urban population, rabbit-morphs who dwell in the Foloi Fields tend to live in large burrow communities where they will group themselves by family into individual rooms. These underground burrows often times act as self contained villages, having community centres, communal kitchens, dining rooms, and sometimes even small stores. Above these burrows, rabbit-morphs build large farms which are tell-tale indicators of a nearby rabbit community. If one ever stumbles upon a thriving farm in the wilderness, that is a good indicator that a rabbit burrow stretches under your feet.
+	</p>
+	<p>
+		Although the effects of arcane storms are mercifully blunted outside of Dominion, the Foloi Fields' rabbit-morph population tends to have a noticeable boom after each one. Lessened though the storm's effects may be, rabbits need little incentive to have more children. In Dominion, however, a rabbit-morph's behaviour does not vary much from that of any other race which suffers under its effects, with those under the storm's influence following their rabbit instincts of seeking to breed and be bred.
+	</p>
+	<p>
+		A rabbit-morph's offspring will be a mix between rabbit-morph and their partner's race. Although later in life rabbit-morphs tend to marry and live in happy, and for the most part faithful, monogamous marriages, younger rabbits are notoriously libertine. Couplings with others their age and even outsiders and visitors is a common occurrence, as is offspring from these dalliances. This will sometimes lead to one seeing decidedly unfitting morphs in a rabbit burrow, however most of the time non-rabbit-morphs will move on to other communities. In time the younger rabbits will either settle down and expand the burrow to make room for their own family and live with their mate, or they will leave the burrow to make their living in a city or as bandits out in the wilderness. All rabbit-morphs, even the vagabonds, try to keep close contact with their parents whenever possible.
+	</p>
+	]]>
+	</htmlContent>
+
+	<!-- ALLIGATOR-MORPHS -->
+
+	<htmlContent tag="ALLIGATOR_MORPH_BASIC"><![CDATA[
+	<p>
+		Alligator-morphs are one of the rarer races in this world. Almost exclusively found in the watery undercity of Submission, it is uncommon to see them walking the streets of Dominion, despite their significant population. Their large reptilian tails and alligator-like snouts make alligator-morphs very easy to identify.
+	</p>
+	]]>
+	</htmlContent>
+
+	<htmlContent tag="ALLIGATOR_MORPH_ADVANCED"><![CDATA[
+	<p>
+		Usually laid-back and easy-going, Alligator-morphs prefer to live down in Submission to escape the hustle-and-bustle of Dominion's streets. They love swimming and are responsible for converting huge parts of Submission's tunnels into slow-flowing waterways. Their similarity in appearance to the hyper-aggressive crocodile-morphs found in other parts of the world has unfairly stereotyped alligator-morphs as aggressive trouble-makers. In contrast to their public reputation, alligator-morphs' personalities vary significantly among individuals.  They are no more or less aggressive than any of the common morphs roaming Dominion's streets.
+	</p>
+	<p>
+		Alligator-morphs, like all non-demonic races, are heavily affected by arcane storms. Exposure to arcane thunder makes alligator-morphs enter a potent mating frenzy, which combined with their immense strength, makes them a fearsome foe during an arcane storm. This is yet another reason for their self-imposed exile to Submission, as they can escape the effects of arcane storms down there.
+	</p>
+	<p>
+		Alligator-morph pregnancies are a mix between mammalian and reptilian reproduction. Impregnation is similar to a human, but instead of birthing live young, a clutch of eggs grows inside an alligator-girl's womb after fertilization. Pregnancy advances similarly to other common races, but when it comes time to give birth, an alligator-girl will seek a safe place to lay her eggs. After incubating her clutch for approximately eighteen to twenty-four hours, the alligator-morph's young will hatch, with the resulting offspring being a mixture of alligator-morphs and offspring of their partner's race.
+	</p>
+	]]>
+	</htmlContent>
+
+	<!-- SLIMES -->
+
+	<htmlContent tag="SLIME_BASIC"><![CDATA[
+	<p>
+		Slimes are one of the rarer races of this world. The vast majority of their population resides in the watery undercity of Submission, but they can also be found in small numbers all over the world. Slimes are very easy to identify, as their entire body is made out of gooey slime, with a glowing core in the place where their heart should be. In place of skin, they have a soft, hydrophobic membrane, allowing them to safely enter water or other bodies of liquid without dissolving. It also prevents any unwanted sperm from entering their bodies and impregnating them.
+	</p>
+	]]>
+	</htmlContent>
+
+	<htmlContent tag="SLIME_ADVANCED"><![CDATA[
+	<p>
+		Just like most races, the personality of slimes differs greatly from individual to individual, with the vast majority being pleasant, law-abiding citizens. There are a minority, however, who believe that their diet should consist solely of sexual fluids, and these troublemakers have shown no hesitation in attacking innocent travellers to milk for their next meal...
+	</p>
+	<p>
+		Slimes survive entirely on a liquid diet, transforming any fluid that they ingest (or extract out of absorbed solids) into more slime. Just like any other liquid, their slimy bodies evaporate over time, requiring them to maintain a regular fluid intake.
+	</p>
+	<p>
+		Slimes, like all non-demonic races, get heavily affected by arcane storms. Being exposed to arcane thunder will make slimes desperately seek out someone to milk for fluids. Upon finding and subduing a suitable target, slimes will continuously milk their victim until their hunger is well satisfied.
+	</p>
+	<p>
+		Slime pregnancies work in a very different manner to all others. Regardless of whether a slime looks feminine or masculine, or whether they have transformed to give themselves a vagina or not, all slimes can be impregnated. If any cum reaches their core, new cores may later split off, before growing inside them for the same length of time as a regular pregnancy. When fully grown, the parent slime will split into multiple new slimes, with each of the new cores moving into a new slime body.
+	</p>
+	]]>
+	</htmlContent>
+
+	<!-- HARPIES -->
+
+	<htmlContent tag="HARPY_BASIC"><![CDATA[
+	<p>
+		Harpies have human bodies and faces, but in place of arms, they have huge, feathered wings.
+		 Their legs are similarly bird-like in appearance, and are covered in leathery, bird-like skin, with talons in place of feet.
+		 In stark contrast to most mythological tales, harpies are exceptionally beautiful, and their feathers come in all sorts of brightly coloured varieties.
+	</p>
+	]]>
+	</htmlContent>
+
+	<htmlContent tag="HARPY_ADVANCED"><![CDATA[
+	<p>
+		Although harpies live in Dominion, they're almost never seen walking down at street level.
+		 Instead, most of the buildings in Dominion have had their roofs converted into 'harpy nests'.
+		 These nests are large communal living spaces, where harpies in the same flock will live together.
+		 Each nest will be controlled by the most attractive harpy in the flock, who is commonly referred to as the flock's matriarch.
+	</p>
+	<p>
+		Harpy society is both matriarchal and very insular, and can seem quite alarming to an outside observer.
+		 All harpy society is based on femininity and beauty, and the more attractive a harpy is, the higher they are on the social ladder.
+		 Any harpies that are not part of a flock will be mercilessly bullied and taunted by members of other flocks until they submit to the protection of a matriarch.
+	</p>
+	<p>
+		Each matriarch will have their own way for a harpy to show submission, but some of the more common demands involve public humiliation, or having to offer themselves as sexual relief for the rest of the flock.
+		 Once the matriarch decides that their display of submission has been acceptable, the harpy will be accepted into the flock,
+			 although they will often continue to be treated as a servant or slave by any harpies that are more attractive than they are.
+	</p>
+	<p>
+		Most harpies, no matter if they're male or female, are gynephilic, with the odd exception being ambiphilic.
+		 Due to this fact, male harpies do their best to look as feminine as possible, in order to appear attractive to the harpy females.
+		 Despite their best efforts, however, male harpies are never as feminine as the females, which causes them to be treated as the lowest of the low, and will be mercilessly bullied by all females in the flock.
+		 Harpy males seem to think that this arrangement is worthwhile, as if they do a good job of obeying their mistress's commands, they will sometimes be offered sex as a reward.
+	</p>
+	<p>
+		All harpies, both male and female, have a well-deserved reputation for being narcissists, and are only interested in being more attractive than the other harpies in their flock.
+		 They will take extreme offence at being called ugly, and can quickly be driven into a blind rage by anyone doing so.
+	</p>
+	<p>
+		Harpy pregnancies are a mix between mammalian and avian reproduction.
+		 They are impregnated in much the same way as a human, but instead of giving birth to live young, a clutch of eggs will grow inside a harpy's womb once she's been fertilised.
+		 Pregnancy advances just like that of other common races, but when it comes time to give birth, the harpy will seek out a safe place to lay her eggs.
+		 After laying is complete, the mother becomes fiercely protective of her clutch, and will refuse to sleep while she incubates her eggs for approximately eighteen to twenty-four hours.
+		 Once the eggs finally hatch, the mother will usually collapse from exhaustion.
+		 The resulting offspring will be a mixture of harpies and offspring of their partner's race.
+	</p>
+	]]>
+	</htmlContent>
+
+	<!-- ELEMENTALS -->
+
+	<htmlContent tag="ELEMENTAL_FIRE_BASIC"><![CDATA[
+	<p>
+		From summoning forth shards of ice, to lifting objects by means of telekinetic powers, there are many different and varied ways in which the arcane can be harnessed.
+		 Of all the spells that are commonly known, however, none are as difficult or as draining to cast as those that summon forth elementals.
+	</p>
+	<p>
+		By binding their arcane aura to one spell school or another, a highly-proficient arcane user can create an elemental seemingly out of thin-air.
+		 These elementals may appear to have a will of their own, but, while it is true that they are capable of taking independent action, it has been proven by arcane researchers that they are being controlled by their summoner's subconsciousness.
+		 That is to say, they are not generally regarded as living creatures in their own right, but simply a physical manifestation of the summoner's arcane aura.
+	</p>
+	<p>
+		As only the most powerful of demons are able to cast these summoning spells, there haven't been many detailed studies conducted into the nature of elementals.
+		 What has been discovered, however, is that no matter which school an elemental is bound to, or how many times it is summoned and dispelled, the elemental is always the same core being, and will always identify itself by the same name.
+		 It is also a fact that, much like demons, the vast majority of elementals choose to take the form of a female.
+	</p>
+	]]>
+	</htmlContent>
+
+	<htmlContent tag="ELEMENTAL_FIRE_ADVANCED"><![CDATA[
+	<p>
+		Fire elementals, much as their name would suggest, are experts in all matters related to arcane fire.
+		 They typically take the form of a female demon, made entirely of blazing orange or blue flames, save for a little obsidian core where their heart should be.
+		 Although they look hot enough to burn anyone foolish enough to come too close, the arcane flames that make up a Fire elemental's body are no hotter than a normal person's body temperature, allowing them to be touched just like any other elemental.
+	</p>
+	<p>
+		Able to cast a wide range of Fire spells, and using their fiery bodies to launch devastating attacks, an elemental bound to this form seems to enjoy combat more than anything else.
+		 They typically act in a very unpredictable and excitable manner, and at times, seem to be entirely out of the control of their summoner.
+	</p>
+	]]>
+	</htmlContent>
+
+	<htmlContent tag="ELEMENTAL_WATER_BASIC"><![CDATA[
+	<p>
+		From summoning forth shards of ice, to lifting objects by means of telekinetic powers, there are many different and varied ways in which the arcane can be harnessed.
+		 Of all the spells that are commonly known, however, none are as difficult or as draining to cast as those that summon forth elementals.
+	</p>
+	<p>
+		By binding their arcane aura to one spell school or another, a highly-proficient arcane user can create an elemental seemingly out of thin-air.
+		 These elementals may appear to have a will of their own, but, while it is true that they are capable of taking independent action, it has been proven by arcane researchers that they are being controlled by their summoner's subconsciousness.
+		 That is to say, they are not generally regarded as living creatures in their own right, but simply a physical manifestation of the summoner's arcane aura.
+	</p>
+	<p>
+		As only the most powerful of demons are able to cast these summoning spells, there haven't been many detailed studies conducted into the nature of elementals.
+		 What has been discovered, however, is that no matter which school an elemental is bound to, or how many times it is summoned and dispelled, the elemental is always the same core being, and will always identify itself by the same name.
+		 It is also a fact that, much like demons, the vast majority of elementals choose to take the form of a female.
+	</p>
+	]]>
+	</htmlContent>
+
+	<htmlContent tag="ELEMENTAL_WATER_ADVANCED"><![CDATA[
+	<p>
+		Water elementals, much as their name would suggest, are experts in all matters related to liquids and arcane ice.
+		 They typically take the form of a female demon, made entirely of either water or ice, save for a little obsidian core where their heart should be.
+		 When in their ice form, a Water elemental's body fluctuates at around zero degrees Celsius, while their water form remains at around room-temperature.
+	</p>
+	<p>
+		An elemental bound to this form is able to cast a wide range of Water spells, and typically acts in a very calm and docile manner.
+	</p>
+	]]>
+	</htmlContent>
+
+	<htmlContent tag="ELEMENTAL_EARTH_BASIC"><![CDATA[
+	<p>
+		From summoning forth shards of ice, to lifting objects by means of telekinetic powers, there are many different and varied ways in which the arcane can be harnessed.
+		 Of all the spells that are commonly known, however, none are as difficult or as draining to cast as those that summon forth elementals.
+	</p>
+	<p>
+		By binding their arcane aura to one spell school or another, a highly-proficient arcane user can create an elemental seemingly out of thin-air.
+		 These elementals may appear to have a will of their own, but, while it is true that they are capable of taking independent action, it has been proven by arcane researchers that they are being controlled by their summoner's subconsciousness.
+		 That is to say, they are not generally regarded as living creatures in their own right, but simply a physical manifestation of the summoner's arcane aura.
+	</p>
+	<p>
+		As only the most powerful of demons are able to cast these summoning spells, there haven't been many detailed studies conducted into the nature of elementals.
+		 What has been discovered, however, is that no matter which school an elemental is bound to, or how many times it is summoned and dispelled, the elemental is always the same core being, and will always identify itself by the same name.
+		 It is also a fact that, much like demons, the vast majority of elementals choose to take the form of a female.
+	</p>
+	]]>
+	</htmlContent>
+
+	<htmlContent tag="ELEMENTAL_EARTH_ADVANCED"><![CDATA[
+	<p>
+		Earth elementals are experts in all matters related to manipulating solid objects, and are highly capable at harnessing the arcane as a means of generating waves of pure force.
+		 They typically take the form of a female demon, made entirely of either smooth stone or shiny rubber, save for a little obsidian core where their heart should be.
+	</p>
+	<p>
+		An elemental bound to this form is able to cast a wide range of Earth spells, and typically acts in a very stoic manner.
+	</p>
+	]]>
+	</htmlContent>
+
+	<htmlContent tag="ELEMENTAL_AIR_BASIC"><![CDATA[
+	<p>
+		From summoning forth shards of ice, to lifting objects by means of telekinetic powers, there are many different and varied ways in which the arcane can be harnessed.
+		 Of all the spells that are commonly known, however, none are as difficult or as draining to cast as those that summon forth elementals.
+	</p>
+	<p>
+		By binding their arcane aura to one spell school or another, a highly-proficient arcane user can create an elemental seemingly out of thin-air.
+		 These elementals may appear to have a will of their own, but, while it is true that they are capable of taking independent action, it has been proven by arcane researchers that they are being controlled by their summoner's subconsciousness.
+		 That is to say, they are not generally regarded as living creatures in their own right, but simply a physical manifestation of the summoner's arcane aura.
+	</p>
+	<p>
+		As only the most powerful of demons are able to cast these summoning spells, there haven't been many detailed studies conducted into the nature of elementals.
+		 What has been discovered, however, is that no matter which school an elemental is bound to, or how many times it is summoned and dispelled, the elemental is always the same core being, and will always identify itself by the same name.
+		 It is also a fact that, much like demons, the vast majority of elementals choose to take the form of a female.
+	</p>
+	]]>
+	</htmlContent>
+
+	<htmlContent tag="ELEMENTAL_AIR_ADVANCED"><![CDATA[
+	<p>
+		Air elementals are experts in all matters related to manipulating gasses, and are highly capable at focusing the arcane's power into creating clouds of poisonous vapours.
+		 They typically take the form of a female demon, made entirely of roiling, dark storm-clouds, save for a little obsidian core which floats at the spot where their heart should be.
+	</p>
+	<p>
+		An elemental bound to this form is able to cast a wide range of Air spells, and is typically quick both to anger and to forgive.
+	</p>
+	]]>
+	</htmlContent>
+
+	<htmlContent tag="ELEMENTAL_ARCANE_BASIC"><![CDATA[
+	<p>
+		From summoning forth shards of ice, to lifting objects by means of telekinetic powers, there are many different and varied ways in which the arcane can be harnessed.
+		 Of all the spells that are commonly known, however, none are as difficult or as draining to cast as those that summon forth elementals.
+	</p>
+	<p>
+		By binding their arcane aura to one spell school or another, a highly-proficient arcane user can create an elemental seemingly out of thin-air.
+		 These elementals may appear to have a will of their own, but, while it is true that they are capable of taking independent action, it has been proven by arcane researchers that they are being controlled by their summoner's subconsciousness.
+		 That is to say, they are not generally regarded as living creatures in their own right, but simply a physical manifestation of the summoner's arcane aura.
+	</p>
+	<p>
+		As only the most powerful of demons are able to cast these summoning spells, there haven't been many detailed studies conducted into the nature of elementals.
+		 What has been discovered, however, is that no matter which school an elemental is bound to, or how many times it is summoned and dispelled, the elemental is always the same core being, and will always identify itself by the same name.
+		 It is also a fact that, much like demons, the vast majority of elementals choose to take the form of a female.
+	</p>
+	]]>
+	</htmlContent>
+
+	<htmlContent tag="ELEMENTAL_ARCANE_ADVANCED"><![CDATA[
+	<p>
+		Arcane elementals are considered by some to be the most pure form of elemental, being experts at manipulating the very energy that formed them.
+		 They typically take the form of a female demon, made entirely of translucent pink or purple energy, save for a little obsidian core which floats at the spot where their heart should be.
+	</p>
+	<p>
+		An elemental bound to this form is able to cast a wide range of Arcane spells, and is typically only really interested in encouraging their summoner to have sex with them.
+	</p>
+	]]>
+	</htmlContent>
+
+	<!-- DOLLS -->
+
+	<htmlContent tag="DOLL_BASIC"><![CDATA[
+	<p>
+		Although there exist dozens, if not hundreds, of different types of sex doll, the one which stands apart as being truly special is the one sold at 'Lovienne's Luxuries'. Life-like features, cast in arcane-infused silicone, give these dolls a truly exceptional appearance, but it's not just their looks which they're known for. Instead, what makes them the most sought-after toys in all the realm is the fact that they're completely autonomous. The advanced animation spell which Lovienne herself has spent decades perfecting allows these dolls to move, understand and carry out orders, and even engage in conversation.
+	</p>
+	<p>
+		As is to be expected of such exceptional creations, Lovienne's sex dolls are extremely expensive. As they're not living creatures, they don't require a slaver license to own, and so there's no shortage of customers willing to pay hundreds of thousands of flames for even the most basic model. Obediently carrying out any order, able to withstand the roughest sex, and ready to fuck at a moment's notice, they're widely considered to be well worth the price.
+	</p>
+	]]>
+	</htmlContent>
+
+	<htmlContent tag="DOLL_ADVANCED"><![CDATA[
+	<p>
+		The dark secret behind these dolls is that they were once real people. Forced to ingest a huge quantity of corrupted slime, the victim is transformed into an extremely specialised subspecies of slime. Possessing a slime's unique property of having their entire body made out of a homogeneous material, the transformed victim ends up looking like a silicone sex doll.
+	</p>
+	<p>
+		Simply transforming a person's body isn't enough to turn them into an obedient sex doll, however, and it's via the second stage of the dollification process that their mental transformation is carried out. Having been subjected to a 'total essence extraction', the victim's essences are corrupted within an arcane machine that was developed by the elder lilin Lovienne. This corrupted essence is then forcibly inserted back into the victim's arcane aura, which can only be achieved at the moment of the victim's orgasm. This forceful process irreversibly breaks the new doll's mind, turning them into a perfectly obedient sex toy.
+	</p>
+	<p>
+		Although dolls do possess a slime's ability to undergo a wide range of transformations, this process must be kick-started via use of a specialised tool; the 'D.E.C.K.'. Once plugged into a doll's body, signals from this device force the victim to self-transform in the manner requested by the D.E.C.K.'s operator.
+	</p>
+	]]>
+	</htmlContent>
+
+</dialogue>

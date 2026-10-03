@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 256 256">
+    <defs>
+        <linearGradient id="elementalEarth1">
+            <stop offset="0" stop-color="#c78c38"/>
+            <stop offset="1" stop-color="#e3a347"/>
+        </linearGradient>
+        <linearGradient id="elementalEarth3">
+            <stop offset="0" stop-color="#6b6662"/>
+            <stop offset="1" stop-color="#9f9f9f"/>
+        </linearGradient>
+        <linearGradient id="linearGradient4219" x1="165.226" x2="120.897" y1="229.362" y2="72.649" gradientTransform="matrix(.62503 0 0 .62173 40.746 43.76)" gradientUnits="userSpaceOnUse" xlink:href="#elementalEarth3"/>
+    </defs>
+    <g stroke="#52473f" stroke-width="3">
+        <path fill="url(#linearGradient4219)" fill-rule="evenodd" d="M134.283 188.738l-41.745-1.023-32.62-34.3-8.606-31.016L66.17 98.027l10.72-25.5 47.076-18.39 44.655 19.34 19.205 32.994-.392 36.076-24.838 33.687z" transform="matrix(.3676 .64388 -.65102 .36357 191.68 10.408)"/>
+        <path fill="none" d="M60.14 153.624l32.829-10.032 30.595 15.676 10.273 28.634M123.564 158.85l16.972-22.156 29.032-5.434 17.42 11.496" transform="matrix(.3676 .64388 -.65102 .36357 191.68 10.408)"/>
+        <path fill="none" d="M169.568 131.469l-5.307-29.604-24.171-7.391 27.606-21.077M140.313 94.265l-35.508-2.717-27.692-19.02M103.688 91.339l18.369 23.759 18.256 21.387M74.638 119.695l18.33 23.688M51.71 122.506l69.677-7.74" transform="matrix(.3676 .64388 -.65102 .36357 191.68 10.408)"/>
+    </g>
+    <path fill="#9d8b7f" fill-rule="evenodd" d="M168.31 188.15c-59.075 2.275-97.296-49.586-130.548-60.27 28.95-5.764 67.21 55.605 130.547 60.27z"/>
+    <path fill="none" stroke="#837d67" stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M86.62 90.335l-38.133-19.95M90.914 117.862L52.78 96.648M117.43 85.158L83.338 67.985"/>
+</svg>

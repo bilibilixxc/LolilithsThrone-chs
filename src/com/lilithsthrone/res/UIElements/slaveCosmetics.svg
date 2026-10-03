@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+    <path fill="#ff8080" fill-rule="evenodd" stroke="#000" stroke-linejoin="round" stroke-width=".75" d="M9.728 26.54l10.727.029V14.81L9.785 5.844z"/>
+    <path fill="#ccc" fill-rule="evenodd" stroke="#000" stroke-linejoin="round" stroke-width=".812" d="M8.506 41.884l13.181.042V24.82l-13.234.077z"/>
+    <path fill="#333" fill-rule="evenodd" stroke="#000" stroke-linejoin="round" stroke-width=".826" d="M7.044 61.805l16.274.054V40.037l-16.34.098z"/>
+    <path fill-opacity=".251" fill-rule="evenodd" d="M19.136 40.056l.028 21.435 4.126.123V40.003z"/>
+    <path fill-opacity=".251" fill-rule="evenodd" d="M18.298 24.732l.023 15.397 3.381.089V24.693z"/>
+    <path fill-opacity=".251" fill-rule="evenodd" d="M17.293 11.751l-.071 13.111 3.381.074-.187-10.123z"/>
+    <path fill="none" stroke="#000" d="M7.031 43.625H23.25"/>
+    <path fill="#ffd5d5" fill-rule="evenodd" stroke="#000" stroke-linejoin="round" stroke-width=".75" d="M36.372 61.008l17.413.11c1.064.007 1.194-.688 1.384-1.966l4.206-28.21c.3-2.018-.706-2.27-2.514-2.41-7.92-.606-15.84-.762-23.76.126-1.873.21-2.488.817-2.29 2.196l4.061 28.379c.22 1.538.47 1.768 1.5 1.775z"/>
+    <path fill="#666" fill-rule="evenodd" stroke="#000" stroke-width=".75" d="M38.644 27.924l.02-16.516c.004-2.487-.147-2.385 2.2-2.401l8.442-.06c2.026-.013 1.988.006 1.993 2.02L51.15 27.88c-4.056-.17-8.331-.136-12.507.045z"/>
+    <path fill="#999" fill-rule="evenodd" stroke="#000" stroke-linejoin="round" stroke-width=".75" d="M38.737 56.622l12.695.08c.775.006.87-.501 1.008-1.432l3.067-20.566c.219-1.47-.511-1.763-1.833-1.756l-17.32.092c-1.375.007-1.815.595-1.67 1.6l2.96 20.689c.16 1.12.343 1.289 1.093 1.293z"/>
+</svg>

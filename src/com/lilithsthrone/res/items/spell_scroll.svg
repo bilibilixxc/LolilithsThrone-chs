@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64">
+    <defs>
+        <linearGradient id="innoGrad1">
+            <stop offset="0" stop-color="#ff8080"/>
+            <stop offset="1" stop-color="#ff2a2a"/>
+        </linearGradient>
+        <linearGradient id="scroll5">
+            <stop offset="0" stop-color="#a37e4d"/>
+            <stop offset="1" stop-color="#c1a47e"/>
+        </linearGradient>
+        <linearGradient id="scroll4">
+            <stop offset="0" stop-color="#b08a58"/>
+            <stop offset="1" stop-color="#c2a57e"/>
+        </linearGradient>
+        <linearGradient id="scroll2">
+            <stop offset="0" stop-color="#765b38"/>
+            <stop offset="1" stop-color="#9e7a4b"/>
+        </linearGradient>
+        <linearGradient id="scroll3">
+            <stop offset="0" stop-color="#17110b"/>
+            <stop offset="1" stop-color="#7c603b"/>
+        </linearGradient>
+        <linearGradient id="scroll1">
+            <stop offset="0" stop-color="#ad8552"/>
+            <stop offset=".313" stop-color="#e0cfb1"/>
+            <stop offset="1" stop-color="#ad8552"/>
+        </linearGradient>
+        <linearGradient id="linearGradient4215" x1="101.583" x2="108.276" y1="40.388" y2="52.825" gradientTransform="translate(-73.462 -15.943)" gradientUnits="userSpaceOnUse" xlink:href="#scroll1"/>
+        <linearGradient id="linearGradient4219" x1="89.588" x2="82.264" y1="54.088" y2="56.171" gradientTransform="translate(-73.462 -15.943)" gradientUnits="userSpaceOnUse" xlink:href="#scroll3"/>
+        <linearGradient id="linearGradient4229" x1="91.798" x2="87.441" y1="60.843" y2="62.8" gradientTransform="translate(-73.462 -15.943)" gradientUnits="userSpaceOnUse" xlink:href="#scroll2"/>
+        <linearGradient id="linearGradient4245" x1="90.061" x2="88.925" y1="53.772" y2="54.34" gradientTransform="translate(-73.462 -15.943)" gradientUnits="userSpaceOnUse" xlink:href="#scroll4"/>
+        <linearGradient id="linearGradient4253" x1="89.398" x2="86.273" y1="58.444" y2="59.233" gradientTransform="translate(-73.462 -15.943)" gradientUnits="userSpaceOnUse" xlink:href="#scroll5"/>
+        <linearGradient id="linearGradient4263" x1="34.286" x2="35.58" y1="28.554" y2="37.17" gradientUnits="userSpaceOnUse" xlink:href="#innoGrad1"/>
+    </defs>
+    <g fill-rule="evenodd" stroke="#000" stroke-width=".5">
+        <path fill="url(#linearGradient4219)" d="M7.654 33.102c-3.274.52-.291 20.073 9.732 16.696 4.077-1.373 3.891-14.728-3.185-17.296-1.194-.433-5.122.373-6.547.6z"/>
+        <path fill="url(#linearGradient4229)" d="M9.812 35.399c16.491-7.078 23.03 4.205 7.324 14.268-3.414 1.877-11.985-7.72-7.324-14.268z"/>
+        <path fill="url(#linearGradient4253)" d="M10.664 40.765c.762 2.744 2.763 5.178 5.138 4.388l5.059-3.188-2.242-3.094c-1.914.73-5.391 2.543-7.955 1.894z"/>
+        <path fill="url(#linearGradient4245)" d="M14.705 33.726l-4.924 1.862c5.932.343 7.2 8.945 5.997 9.565l5.24-2.652c-1.174-3.454-.038-8.224-6.313-8.775z"/>
+        <path fill="url(#linearGradient4215)" d="M7.54 33.126c15.643-4.097 29.923-9.62 40.121-19.161 1.33-.354 2.686-.14 3.968.466.24.113-.715 1.295-.715 1.295s1.787-.693 1.963-.57c1.55 1.07 2.925 2.672 3.92 4.446.229.406-.248 1.62-.248 1.62s1.226.481 1.366.914c.613 1.895.73 3.792.132 5.308C42.485 31.38 30.164 40.42 17.893 49.54c.952-.981 1.286-2.834 1.061-4.955-.054-.518 1.478-2.218 1.478-2.218s-1.947-.216-2.078-.639a16.226 16.226 0 0 0-1.306-3.055c-.158-.284.615-1.618.615-1.618s-1.603.065-1.87-.273c-1.002-1.269-2.226-2.327-3.652-2.991-.359-.168.558-1.161.558-1.161s-2.346.56-2.696.505a8.32 8.32 0 0 0-2.464-.01z"/>
+        <path fill="url(#linearGradient4263)" d="M26.76 26.807c4.907-.636 7.371 9.322 6.787 11.741-.28 1.156 4.592-1.428 4.553-2.634-.046-1.424-.065-10.41-6.071-11.517-1.566-.289-7.096 2.647-5.268 2.41z"/>
+    </g>
+</svg>

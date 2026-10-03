@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<clothing>
+
+	<coreAtributes>
+	
+		<authorTag><![CDATA[A small tag sewn into the waist reads "Official Enforcer Issue, MFD by DSG Threadworks."]]></authorTag>
+
+		<value>200</value> 
+
+		<determiner><![CDATA[an]]></determiner>
+
+		<name><![CDATA[Enforcer's stable belt]]></name>
+
+		<namePlural pluralByDefault="false"><![CDATA[Enforcer's stable belts]]></namePlural> 
+
+		<description><![CDATA[A wide, single layer nylon webbing belt.]]></description> 
+
+		<physicalResistance>0</physicalResistance> 
+
+		<femininity>ANDROGYNOUS</femininity> 
+
+		<slot>HIPS</slot> 
+
+		<rarity>EPIC</rarity> 
+
+		<clothingSet/> 
+
+		<imageName>enfstbelt.svg</imageName> 
+
+		<imageEquippedName/> 
+
+		<effects/> 
+
+		<blockedPartsList> 
+
+			<blockedParts>
+
+				<displacementType>REMOVE_OR_EQUIP</displacementType> 
+
+				<clothingAccessRequired>
+				</clothingAccessRequired>
+
+				<blockedBodyParts> 
+				</blockedBodyParts>
+
+				<clothingAccessBlocked> 
+				</clothingAccessBlocked>
+
+				<concealedSlots/> 
+			</blockedParts>
+
+		</blockedPartsList>
+
+		<incompatibleSlots/> 
+
+		<primaryColours values="JUST_BLACK"/> 
+		<primaryColoursDye values="ALL"/>
+		<secondaryColours values="JUST_GOLD"/> 
+		<secondaryColoursDye values="ALL"/>
+
+		<itemTags> 
+			<tag>CONTRABAND_MEDIUM</tag>
+		</itemTags>
+	</coreAtributes>
+
+	<replacementText type="REMOVE_OR_EQUIP">
+		<self>
+		  <![CDATA[[npc.Name] [npc.verb(tighten)] the stable belt around [npc.her] waist and [npc.verb(snap)] the buckle together.]]>
+		</self>
+		<other>
+		  <![CDATA[[npc.Name] [npc.verb(tighten)] the stable belt around [npc2.namePos] waist and [npc.verb(snap)] the buckle together.]]>
+		</other>
+		<otherRough>
+		  <![CDATA[[npc.Name] [npc.verb(tighten)] the stable belt around [npc2.namePos] waist as much as possible and forcibly [npc.verb(snap)] the buckle together.]]>
+		</otherRough>
+	</replacementText>
+
+	<displacementText type="REMOVE_OR_EQUIP">
+		<self>
+		  <![CDATA[[npc.Name] [npc.verb(unbuckle)] [npc.her] stable belt.]]>
+		</self>
+		<other>
+		  <![CDATA[[npc.Name] [npc.verb(unbuckle)] [npc2.namePos] stable belt.]]>
+		</other>
+		<otherRough>
+		  <![CDATA[[npc.Name] [npc.verb(rip)] the stable belt off [npc2.namePos] waist.]]>
+		</otherRough>
+	</displacementText>
+	
+</clothing>

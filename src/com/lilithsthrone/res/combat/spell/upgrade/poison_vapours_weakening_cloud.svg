@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 256 256">
+    <defs>
+        <linearGradient id="weakeningCloud2">
+            <stop offset="0" stop-color="#5aa02c"/>
+            <stop offset="1" stop-color="#17280b"/>
+        </linearGradient>
+        <linearGradient id="weakeningCloud1">
+            <stop offset="0" stop-color="#85b068"/>
+            <stop offset="1" stop-color="#250"/>
+        </linearGradient>
+        <radialGradient id="radialGradient4192" cx="126.517" cy="87.302" r="70.921" fx="126.517" fy="87.302" gradientTransform="matrix(1.0001 .01396 -.01008 .72181 .857 21.546)" gradientUnits="userSpaceOnUse" xlink:href="#weakeningCloud1"/>
+        <radialGradient id="radialGradient4196" cx="149.139" cy="76.041" r="59.24" fx="149.139" fy="76.041" gradientTransform="matrix(1.32547 .01267 -.0091 .95144 -47.885 .168)" gradientUnits="userSpaceOnUse" xlink:href="#weakeningCloud2"/>
+    </defs>
+    <g fill-rule="evenodd">
+        <path fill="#71c837" d="M181.607 127.442l-.114 16.44-52.332 23.983-54.222-23.238.123-17.645 54.187 24.56z"/>
+        <path fill="#5aa02c" d="M181.183 155.886l-.114 16.44-52.332 23.982-54.223-23.238.124-17.645 54.187 24.56z"/>
+        <path fill="#447821" d="M181.042 183.835l-.114 16.44-52.332 23.982-54.223-23.238.123-17.645 54.187 24.56z"/>
+        <path fill="url(#radialGradient4196)" d="M171.345 91.252c31.952 20.368 55.833-31.129 13.56-34.972-7.082-19.654-34.203-29.372-61.379-9.333-56.767-3.349-36.289 69.12 11.2 45.513 11.859 5.929 24.102 5.215 36.619-1.208z"/>
+        <path fill="url(#radialGradient4192)" d="M100.084 113.431c-38.156 23.663-66.869-36.014-16.25-40.461 8.564-22.784 40.955-33.929 73.511-10.76 67.967-3.899 43.427 79.99-13.396 52.704-14.219 6.862-28.822 5.984-43.865-1.483z"/>
+    </g>
+</svg>

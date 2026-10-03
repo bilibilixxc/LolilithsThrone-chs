@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" cursor="default" viewBox="0 0 256 256">
+    <defs>
+        <linearGradient id="linearGradient2">
+            <stop offset="0" stop-color="#f55"/>
+            <stop offset="1" stop-color="#ff8080"/>
+        </linearGradient>
+        <linearGradient id="linearGradient0">
+            <stop offset="0" stop-color="#ff8080"/>
+            <stop offset="1" stop-color="#faa"/>
+        </linearGradient>
+        <linearGradient id="linearGradient1" x1="124.501" x2="126.774" y1="980.894" y2="909.678" gradientTransform="matrix(1.05 0 0 1.05 -3.721 -58.227)" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient0"/>
+        <linearGradient id="linearGradient3" x1="126.774" x2="126.017" y1="1012.966" y2="918.264" gradientTransform="matrix(1.05 0 0 1.05 -3.721 -58.227)" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient2"/>
+    </defs>
+    <g fill-rule="evenodd" stroke="#000" stroke-width="1.05">
+        <path fill="#f55" d="M73.158 97.16l-65.16-.331-.094 6 65.348.613zM246.727 96.728l.265 6.63-62.711-.2-.398-5.966z"/>
+        <path fill="url(#linearGradient3)" d="M70.904 893.191v6c15.99 27.302 31.212 56.52 40.125 91.313h33.75c9.436-36.313 24.173-59.338 41.812-91.5l-.187-5.625c-38.336.512-76.676 1.01-115.5-.188z" transform="translate(0 -796.362)"/>
+    </g>
+    <g id="patternLayer" display="inline">
+        <path fill="url(#linearGradient1)" fill-rule="evenodd" stroke="#000" stroke-width=".945" d="M75.376 895.43v5.4c14.392 24.573 29.403 53.494 37.425 84.807h30.375c8.492-32.682 23.443-56.028 39.319-84.975l-.169-5.062c-34.502.46-72.008.908-106.95-.17z" transform="translate(0 -796.362)"/>
+    </g>
+</svg>

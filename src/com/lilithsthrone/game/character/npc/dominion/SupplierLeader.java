@@ -1,0 +1,344 @@
+package com.lilithsthrone.game.character.npc.dominion;
+
+import com.lilithsthrone.LolificationProject.Experiments.CharacterLoader;
+import com.lilithsthrone.LolificationProject.Experiments.XMLLoader;
+import com.lilithsthrone.game.Game;
+import com.lilithsthrone.game.character.CharacterImportSetting;
+import com.lilithsthrone.game.character.EquipClothingSetting;
+import com.lilithsthrone.game.character.GameCharacter;
+import com.lilithsthrone.game.character.attributes.Attribute;
+import com.lilithsthrone.game.character.body.coverings.BodyCoveringType;
+import com.lilithsthrone.game.character.body.coverings.Covering;
+import com.lilithsthrone.game.character.body.valueEnums.*;
+import com.lilithsthrone.game.character.effects.Perk;
+import com.lilithsthrone.game.character.effects.PerkCategory;
+import com.lilithsthrone.game.character.effects.PerkManager;
+import com.lilithsthrone.game.character.effects.StatusEffect;
+import com.lilithsthrone.game.character.fetishes.Fetish;
+import com.lilithsthrone.game.character.fetishes.FetishDesire;
+import com.lilithsthrone.game.character.gender.Gender;
+import com.lilithsthrone.game.character.npc.NPC;
+import com.lilithsthrone.game.character.persona.NameTriplet;
+import com.lilithsthrone.game.character.persona.Occupation;
+import com.lilithsthrone.game.character.persona.PersonalityTrait;
+import com.lilithsthrone.game.character.persona.SexualOrientation;
+import com.lilithsthrone.game.character.quests.Quest;
+import com.lilithsthrone.game.character.quests.QuestLine;
+import com.lilithsthrone.game.character.race.RaceStage;
+import com.lilithsthrone.game.character.race.Subspecies;
+import com.lilithsthrone.game.combat.CombatBehaviour;
+import com.lilithsthrone.game.dialogue.DialogueNode;
+import com.lilithsthrone.game.dialogue.places.dominion.warehouseDistrict.KaysWarehouse;
+import com.lilithsthrone.game.dialogue.responses.Response;
+import com.lilithsthrone.game.inventory.AbstractCoreItem;
+import com.lilithsthrone.game.inventory.CharacterInventory;
+import com.lilithsthrone.game.inventory.InventorySlot;
+import com.lilithsthrone.game.inventory.clothing.AbstractClothing;
+import com.lilithsthrone.game.inventory.clothing.DisplacementType;
+import com.lilithsthrone.game.inventory.item.ItemType;
+import com.lilithsthrone.main.Main;
+import com.lilithsthrone.utils.Util;
+import com.lilithsthrone.utils.Util.Value;
+import com.lilithsthrone.utils.Vector2i;
+import com.lilithsthrone.utils.colours.PresetColour;
+import com.lilithsthrone.world.WorldType;
+import com.lilithsthrone.world.places.PlaceType;
+import org.w3c.dom.Document;
+import org.w3c.dom.Element;
+
+import java.time.Month;
+import java.util.List;
+
+/**
+ * @since 0.1.99
+ * @version 0.4
+ * @author Innoxia
+ */
+public class SupplierLeader extends NPC {
+
+	public SupplierLeader() {
+		this(false);
+	}
+	
+	public SupplierLeader(boolean isImported) {
+		super(isImported, new NameTriplet("Wolfgang", "Wolfgang", "Winifred"), "Meyer",
+				"Wolfgang is the senior partner of the dobermann bounty-hunter duo which you first met at Kay's Textiles.",
+				30, Month.DECEMBER, 4,
+				12,
+				null, null, null,
+				new CharacterInventory(false, 10),
+				WorldType.TEXTILES_WAREHOUSE,
+				PlaceType.TEXTILE_WAREHOUSE_OVERSEER_STATION,
+				true);
+		if(!isImported) {
+			this.setAttribute(Attribute.MAJOR_CORRUPTION, 25);
+		}
+	}
+	
+	@Override
+	public void loadFromXML(Element parentElement, Document doc, CharacterImportSetting... settings) {
+		loadNPCVariablesFromXML(this, null, parentElement, doc, settings);
+		
+		if(Main.isVersionOlderThan(Game.loadingVersion, "0.2.10.5")) {
+			resetBodyAfterVersion_2_10_5();
+		}
+		if(Main.isVersionOlderThan(Game.loadingVersion, "0.3.3.6")) {
+			this.setLevel(12);
+		}
+		if(Main.isVersionOlderThan(Game.loadingVersion, "0.3.5.1")) {
+			this.setPersonalityTraits(
+					PersonalityTrait.BRAVE,
+					PersonalityTrait.SELFISH);
+		}
+		if(Main.isVersionOlderThan(Game.loadingVersion, "0.3.6")) {
+			this.resetPerksMap(true);
+		}
+		if(Main.isVersionOlderThan(Game.loadingVersion, "0.3.14")) {
+			this.setStartingBody(true);
+		}
+		this.setDescription("Wolfgang is the senior partner of the dobermann bounty-hunter duo which you first met at Kay's Textiles.");
+	}
+
+	@Override
+	public void loadFromXML(XMLLoader loader, CharacterImportSetting... settings) {
+		loadNPCVariablesFromXML(this, loader, settings);
+
+		if(Main.isVersionOlderThan(Game.loadingVersion, "0.2.10.5")) {
+			resetBodyAfterVersion_2_10_5();
+		}
+		if(Main.isVersionOlderThan(Game.loadingVersion, "0.3.3.6")) {
+			this.setLevel(12);
+		}
+		if(Main.isVersionOlderThan(Game.loadingVersion, "0.3.5.1")) {
+			this.setPersonalityTraits(
+					PersonalityTrait.BRAVE,
+					PersonalityTrait.SELFISH);
+		}
+		if(Main.isVersionOlderThan(Game.loadingVersion, "0.3.6")) {
+			this.resetPerksMap(true);
+		}
+		if(Main.isVersionOlderThan(Game.loadingVersion, "0.3.14")) {
+			this.setStartingBody(true);
+		}
+		this.setDescription("Wolfgang is the senior partner of the dobermann bounty-hunter duo which you first met at Kay's Textiles.");
+	}
+
+	@Override
+	public void setupPerks(boolean autoSelectPerks) {
+		this.addSpecialPerk(Perk.SPECIAL_MARTIAL_BACKGROUND);
+		this.addSpecialPerk(Perk.SPECIAL_DIRTY_MINDED);
+		
+		PerkManager.initialisePerks(this,
+				Util.newArrayListOfValues(),
+				Util.newHashMapOfValues(
+						new Value<>(PerkCategory.PHYSICAL, 3),
+						new Value<>(PerkCategory.LUST, 0),
+						new Value<>(PerkCategory.ARCANE, 0)));
+	}
+
+	@Override
+	public void resetDefaultMoves() {
+		this.clearEquippedMoves();
+		equipMove("strike");
+		equipMove("offhand-strike");
+		equipMove("twin-strike");
+		equipMove("block");
+		this.equipAllSpellMoves();
+	}
+
+	@Override
+	public void setStartingPersona(boolean setPersonality, boolean setFetishes, boolean setOrientation, boolean setHistory, boolean setSpells) {
+		this.setCombatBehaviour(CombatBehaviour.ATTACK);
+		
+		if(setPersonality) {
+			this.setPersonalityTraits(
+					PersonalityTrait.BRAVE,
+					PersonalityTrait.SELFISH);
+		}
+		
+		if(setFetishes) {
+			this.clearFetishDesires();
+			this.clearFetishes();
+			this.addFetish(Fetish.FETISH_DOMINANT);
+			this.addFetish(Fetish.FETISH_VAGINAL_GIVING);
+			this.addFetish(Fetish.FETISH_CUM_STUD);
+			
+			this.setFetishDesire(Fetish.FETISH_SUBMISSIVE, FetishDesire.ONE_DISLIKE);
+			this.setFetishDesire(Fetish.FETISH_ORAL_GIVING, FetishDesire.ONE_DISLIKE);
+		}
+		
+		if(setOrientation) {
+			this.setSexualOrientation(SexualOrientation.AMBIPHILIC);
+		}
+
+		if(setHistory) {
+			this.setHistory(Occupation.NPC_BOUNTY_HUNTER);
+		}
+		
+		if(setSpells) {
+		}
+	}
+	
+	@Override
+	public void setStartingBody(boolean setPersona) {
+		if(setPersona) {
+			setStartingPersona();
+		}
+		
+		// Body:
+		this.setBody(Gender.M_P_MALE, Subspecies.DOG_MORPH_DOBERMANN, RaceStage.GREATER, false);
+
+		// Core:
+		this.setHeight(190);
+		this.setFemininity(5);
+		this.setMuscle(Muscle.FOUR_RIPPED.getMedianValue());
+		this.setBodySize(BodySize.THREE_LARGE.getMedianValue());
+		
+		// Coverings:
+		this.setEyeCovering(new Covering(BodyCoveringType.EYE_DOG_MORPH, PresetColour.EYE_BROWN));
+		
+		this.setHairCovering(new Covering(BodyCoveringType.HAIR_CANINE_FUR, PresetColour.COVERING_BLACK), true);
+		this.setHairLength(0);
+		this.setHairStyle(HairStyle.NONE);
+
+		this.setHairCovering(new Covering(BodyCoveringType.BODY_HAIR_HUMAN, PresetColour.COVERING_BLACK), false);
+		this.setHairCovering(new Covering(BodyCoveringType.BODY_HAIR_CANINE_FUR, PresetColour.COVERING_BLACK), false);
+		this.setUnderarmHair(BodyHair.FOUR_NATURAL);
+		this.setAssHair(BodyHair.FOUR_NATURAL);
+		this.setPubicHair(BodyHair.FOUR_NATURAL);
+		this.setFacialHair(BodyHair.ZERO_NONE);
+
+//		this.setHandNailPolish(new Covering(BodyCoveringType.MAKEUP_NAIL_POLISH_HANDS, PresetColour.COVERING_RED));
+//		this.setFootNailPolish(new Covering(BodyCoveringType.MAKEUP_NAIL_POLISH_FEET, PresetColour.COVERING_RED));
+//		this.setBlusher(new Covering(BodyCoveringType.MAKEUP_BLUSHER, PresetColour.COVERING_RED));
+//		this.setLipstick(new Covering(BodyCoveringType.MAKEUP_LIPSTICK, PresetColour.COVERING_RED));
+//		this.setEyeLiner(new Covering(BodyCoveringType.MAKEUP_EYE_LINER, PresetColour.COVERING_BLACK));
+//		this.setEyeShadow(new Covering(BodyCoveringType.MAKEUP_EYE_SHADOW, PresetColour.COVERING_PURPLE));
+		
+		// Face:
+		this.setFaceVirgin(true);
+		// Leave as default
+		
+		// Chest:
+		this.setNippleVirgin(true);
+		// Leave as default
+		
+		// Ass:
+		this.setAssVirgin(true);
+		// Leave as default
+		
+		// Penis:
+		this.setPenisVirgin(false);
+		this.setPenisSize(18);
+		this.setTesticleSize(TesticleSize.THREE_LARGE);
+		this.setPenisCumStorage(65);
+		this.fillCumToMaxStorage();
+		// Leave cum as normal value
+		
+		// Vagina:
+		// No vagina
+		
+		// Feet:
+		// Foot shape
+	}
+	
+	@Override
+	public void equipClothing(List<EquipClothingSetting> settings) {
+
+		this.unequipAllClothingIntoVoid(true, true);
+		
+		AbstractClothing aviators = Main.game.getItemGen().generateClothing("innoxia_eye_aviators", PresetColour.CLOTHING_GOLD, false);
+		this.equipClothingFromNowhere(aviators, true, this);
+		this.isAbleToBeDisplaced(this.getClothingInSlot(InventorySlot.EYES), DisplacementType.PULLS_UP, true, true, this);
+		
+		this.equipClothingFromNowhere(Main.game.getItemGen().generateClothing("innoxia_groin_briefs", PresetColour.CLOTHING_BLACK, false), true, this);
+		this.equipClothingFromNowhere(Main.game.getItemGen().generateClothing("innoxia_sock_socks", PresetColour.CLOTHING_BLACK, false), true, this);
+		this.equipClothingFromNowhere(Main.game.getItemGen().generateClothing("innoxia_foot_work_boots", PresetColour.CLOTHING_BLACK, false), true, this);
+		this.equipClothingFromNowhere(Main.game.getItemGen().generateClothing("innoxia_leg_jeans", PresetColour.CLOTHING_BLACK, false), true, this);
+		this.equipClothingFromNowhere(Main.game.getItemGen().generateClothing("innoxia_torso_short_sleeved_shirt", PresetColour.CLOTHING_BLACK, false), true, this);
+
+	}
+
+	@Override
+	public boolean isUnique() {
+		return true;
+	}
+	
+	@Override
+	public String getSpeechColour() {
+		return "#d2ab77";
+	}
+	
+	@Override
+	public void endSex() {
+		setPendingClothingDressing(true);
+	}
+	
+	@Override
+	public boolean isAbleToBeImpregnated() {
+		return true;
+	}
+
+	@Override
+	public void changeFurryLevel() {
+	}
+	
+	@Override
+	public DialogueNode getEncounterDialogue() {
+		return null;
+	}
+
+	public void moveToBountyHunterLodge() {
+		this.setLocation(WorldType.BOUNTY_HUNTER_LODGE_UPSTAIRS, PlaceType.BOUNTY_HUNTER_LODGE_UPSTAIRS_ROOM_DOBERMANNS, true);
+		if(Main.game.getHourOfDay()<2 || Main.game.getHourOfDay()>=10) {
+			Vector2i barLocation = Main.game.getWorlds().get(WorldType.BOUNTY_HUNTER_LODGE).getCell(PlaceType.BOUNTY_HUNTER_LODGE_BAR).getLocation();
+			this.setLocation(WorldType.BOUNTY_HUNTER_LODGE, new Vector2i(barLocation.getX()-1, barLocation.getY()), true);
+		}
+	}
+
+	@Override
+	public void turnUpdate() {
+		if(Main.game.getPlayer().isQuestProgressGreaterThan(QuestLine.RELATIONSHIP_NYAN_HELP, Quest.RELATIONSHIP_NYAN_3_STOCK_ISSUES_DOBERMANNS)
+				&& !Main.game.getCharactersPresent().contains(this)
+				&& this.getMinutesSinceLastTimeHadSex()>15) {
+			this.moveToBountyHunterLodge();
+		}
+		if(!this.hasStatusEffect(StatusEffect.RECENTLY_SMOKED) && Main.game.getDayMinutes()%15==0 && Math.random()<0.25f) {
+			this.useItem(Main.game.getItemGen().generateItem(ItemType.CIGARETTE), this, false);
+		}
+	}
+	
+	// Combat:
+
+	@Override
+	public Response endCombat(boolean applyEffects, boolean victory) {
+		if (victory) {
+			return new Response("", "", KaysWarehouse.DOBERMANNS_COMBAT_PLAYER_VICTORY) {
+				@Override
+				public void effects() {
+//					if(Main.game.getPlayer().isQuestProgressLessThan(QuestLine.RELATIONSHIP_NYAN_HELP, Quest.RELATIONSHIP_NYAN_4_STOCK_ISSUES_SUPPLIERS_BEATEN)) {
+//						KaysWarehouse.applySuppliersBeatenEffects();
+//					}
+				}
+			};
+		} else {
+			return new Response("", "", KaysWarehouse.DOBERMANNS_COMBAT_PLAYER_LOSS);
+		}
+	}
+	
+	@Override
+	public int getEscapeChance() {
+		return 0;
+	}
+	
+	public List<AbstractCoreItem> getLootItems() {
+		return Util.newArrayListOfValues(Main.game.getItemGen().generateItem("innoxia_race_dog_canine_crunch"));
+	}
+	
+	// Sex:
+
+	public GameCharacter getPreferredSexTarget() {
+		return Main.game.getPlayer();
+	}
+	
+}

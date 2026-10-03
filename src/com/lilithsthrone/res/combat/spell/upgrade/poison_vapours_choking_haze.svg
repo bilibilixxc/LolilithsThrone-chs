@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 256 256">
+    <defs>
+        <linearGradient id="chokingHaze2">
+            <stop offset="0" stop-color="#2d5016"/>
+            <stop offset="1" stop-color="#8dd35f"/>
+        </linearGradient>
+        <linearGradient id="chokingHaze1">
+            <stop offset="0" stop-color="#447821"/>
+            <stop offset="1" stop-color="#c6e9af"/>
+        </linearGradient>
+        <radialGradient id="radialGradient4208" cx="117.503" cy="138.689" r="96.881" fx="117.503" fy="138.689" gradientTransform="matrix(1.2763 .01043 -.00588 .71942 -31.652 33.907)" gradientUnits="userSpaceOnUse" xlink:href="#chokingHaze1"/>
+        <radialGradient id="radialGradient4212" cx="145.184" cy="120.702" r="80.924" fx="145.184" fy="120.702" gradientTransform="matrix(1.22465 -.00239 .00141 .72325 -32.786 26.681)" gradientUnits="userSpaceOnUse" xlink:href="#chokingHaze2"/>
+    </defs>
+    <g fill-rule="evenodd">
+        <path fill="url(#radialGradient4212)" d="M180.07 139.767c43.624 27.84 76.287-42.528 18.56-47.716-9.718-26.89-46.766-40.117-83.887-12.788-77.53-4.53-49.543 94.41 15.272 62.185 16.222 8.111 32.956 7.161 50.055-1.68z"/>
+        <path fill="url(#radialGradient4208)" d="M82.737 170.092c-52.173 32.298-91.34-49.178-22.214-55.243 11.692-31.128 55.974-46.4 100.402-14.76 92.875-5.261 59.335 109.316-18.268 72.05-19.438 9.352-39.386 8.183-59.92-2.047z"/>
+    </g>
+</svg>

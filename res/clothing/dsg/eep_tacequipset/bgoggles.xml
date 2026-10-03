@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<clothing>
+	
+	
+	<coreAtributes>
+	
+		<authorTag><![CDATA[On the protective sleeve, rubberized ink reads "Official Enforcer Issue, MFD by DSG Threadworks."]]></authorTag>
+	
+		
+		<value>1000</value> 
+		
+		
+		<determiner><![CDATA[a set of]]></determiner>
+		
+		
+		<name><![CDATA[Enforcer's ballistic goggles]]></name>
+		
+		
+		<namePlural pluralByDefault="false"><![CDATA[Enforcer's ballistic goggles]]></namePlural> 
+		
+		
+		<description><![CDATA[A pair of well-ventilated goggles with impact resistant polycarbonate lenses. When not in use, they can be slid into a protective sleeve. The headband has a lot of adjustment available to fit a variety of head sizes.]]></description> 
+		
+		
+		<physicalResistance>2</physicalResistance> 
+		
+		
+		<femininity>ANDROGYNOUS</femininity> 
+		
+		
+		<slot>EYES</slot> 
+		
+		
+		<rarity>EPIC</rarity> 
+		
+		
+		<clothingSet/>
+		
+		
+		<imageName>bgoggles.svg</imageName> 
+		
+		
+		<imageEquippedName/> 
+		
+		
+		<effects/> 
+		
+		
+		<blockedPartsList> 
+		
+			
+			<blockedParts>
+			
+				
+				<displacementType>REMOVE_OR_EQUIP</displacementType> 
+				
+				
+				<clothingAccessRequired> 
+					<clothingAccess>EYES</clothingAccess>
+				</clothingAccessRequired>
+				
+				
+				<blockedBodyParts/> 
+				
+				
+				<clothingAccessBlocked/> 
+				
+				
+				
+				<concealedSlots/> 
+			</blockedParts>
+			<blockedParts>
+				<displacementType>PULLS_UP</displacementType>
+				<clothingAccessRequired/>
+				<blockedBodyParts/>
+				<clothingAccessBlocked/>
+				<concealedSlots/>
+			</blockedParts>
+		</blockedPartsList>
+		
+		
+		<incompatibleSlots/> 
+		
+		
+		<primaryColours values="JUST_BLACK"/> 
+		<primaryColoursDye values="ALL"/>
+		<secondaryColours values="JUST_SILVER"/>
+		<secondaryColoursDye values="ALL_WITH_METALS"/>
+		<tertiaryColours values="JUST_GREY"/>
+		
+		<tertiaryColoursDye values="ALL"/>
+		
+		
+		<itemTags> 
+			<tag>RIGID_MATERIAL</tag>
+			<tag>CONTRABAND_MEDIUM</tag>
+		</itemTags>
+	</coreAtributes>
+
+	
+	
+	
+	<replacementText type="REMOVE_OR_EQUIP">
+		<self>
+			<![CDATA[[npc.Name] [npc.verb(put)] on the ballistic goggles and [npc.verb(adjust)] the headband until they're comfortable.]]>
+		</self>
+		<other>
+			<![CDATA[[npc.Name] [npc.verb(slide)] the ballistic goggles onto [npc2.namePos] [npc2.face] and [npc.verb(help)] [npc2.her] [npc2.verb(adjust)] the headband until they're comfortable.]]>
+		</other>
+		<otherRough>
+			<![CDATA[[npc.Name] [npc.verb(force)] the ballistic goggles onto [npc2.namePos] [npc2.face] and [npc.verb(tighten)] the headband as much as possible.]]>
+		</otherRough>
+	</replacementText>
+
+	
+	<displacementText type="REMOVE_OR_EQUIP">
+		<self>
+			<![CDATA[[npc.Name] [npc.verb(loosen)] the headband on [npc.her] ballistic goggles and [npc.verb(take)] them off.]]>
+		</self>
+		<other>
+			<![CDATA[[npc.Name] [npc.verb(loosen)] the headband on [npc2.namePos] ballistic goggles and [npc.verb(take)] them off.]]>
+		</other>
+		<otherRough>
+			<![CDATA[[npc.Name] [npc.verb(yank)] [npc2.namePos] ballistic goggles from [npc2.her] [npc2.face].]]>
+		</otherRough>
+	</displacementText>
+	
+</clothing>

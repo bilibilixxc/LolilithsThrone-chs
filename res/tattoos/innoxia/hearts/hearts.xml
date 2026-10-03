@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<tattoo>
+	<coreAttributes>
+		<value>500</value> 
+		
+		<name><![CDATA[hearts]]></name>
+		
+		<description><![CDATA[A series of hearts and swirling lines.]]></description> 
+		
+		<bodyOverviewDescription><![CDATA[a tattoo which depicts of a series of hearts and swirling lines]]></bodyOverviewDescription> 
+		
+		<imageName>hearts.svg</imageName> 
+		
+		<slotAvailability/> 
+		<primaryColours values="ALL" defaultColour="CLOTHING_PINK_LIGHT"/> 
+		<secondaryColours values="ALL" defaultColour="CLOTHING_PINK"/>
+		<tertiaryColours/>
+	</coreAttributes>
+	
+</tattoo>

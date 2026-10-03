@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<dialogue>
+<!--Hi Lexi-->
+    <!--Hi-->
+    <htmlContent tag="CECILIA_APPEARS"><![CDATA[
+        <p>
+            You find yourself strolling through the expansive seemingly unending grasslands, your view of the surroundings only interrupted by the occasional patch of forest, humming a tune you find yourself making up as you go, when you pause and listen for a moment.
+        </p>
+        <p>
+            It's quiet. Unnaturally so.
+        </p>
+        <p>
+            The wildlife you've been unconsciously filtering out until now is nowhere to be heard, try as you might, you can't even pick up on an errant bird call despite them having been so plentiful just minutes earlier.
+        </p>
+    ]]>
+    </htmlContent>
+
+    <htmlContent tag="CECILIA_AVOID"><![CDATA[
+        <p>
+            Recalling some old documentary you watched what felt like a lifetime ago about the ecosystem quieting down whenever an apex predator was nearby, you decide against sticking around, hightailing it back to whence you came. Let some other idiot get mauled by a magical jaguar or something.
+        </p>
+    ]]>
+    </htmlContent>
+
+    <htmlContent tag="CECILIA_LOOK"><![CDATA[
+        <p>
+            Looking around you see nothing you haven't noticed already, the grasslands look just as they've always looked, if a fair deal quieter, not even bugs seem to make any sound here.
+        </p>
+        <p>
+            Seeing nothing of note you shrug and continue on your way, carefully sidestepping a particularly large mound of earth. Compared to the relative flatness earlier, the ground had been getting steadily more uneven, odd lumps interrupting the grassy carpet.
+        </p>
+        <p>
+            A small orange blur darting across the ground surprises you suddenly, the first sign of life you've seen in a while. Oblivious to your unease the little snake continues slithering on its merry way, its flicking brightly colored tail drawing your gaze to a particularly odd twig.
+        </p>
+        <p>
+            You've passed the occasional lone tree before so having a stick in the middle of nowhere isn't that unusual, if there were any trees around that is. Curious you bend down and pick up the strange branchlet.
+        </p>
+    ]]>
+    </htmlContent>
+
+    <htmlContent tag="CECILIA_APPEARS_REPEAT_ENCOUNTER"><![CDATA[
+        <p>Already familiar with the way the world seems to quiet down whenever Cecilia is around, you stand your ground and wait for her arrival, making a game out of spotting any sort of silent creatures that may still linger around.</p>
+    ]]>
+    </htmlContent>
+
+    <htmlContent tag="CECILIA_BRANCH"><![CDATA[
+        <p>
+            What you initially thought to be a branch isn't a branch at all but some sort of chitinous spike-- A shadow casts upon you, blocking out the everpresent sun, but before you can react, a bolsterous voice calls out from above.
+        </p>
+           [cecilia.speech(Ambush!)]
+    ]]>
+    </htmlContent>
+
+    <htmlContent tag="CECILIA_AMBUSH"><![CDATA[
+    <p>
+        Though you'd never admit it, the voice practically saves your ass as your instincts kick in and throw you to the side, just in time to avoid a flurry similar spikes riddling the ground where you just stood, embedding themselves into the ground with ease.
+    </p>
+    <p>
+        Looking up you spot a massive humanoid figure circling the sky, giant wings letting them dive down towards you faster than you would have expected.
+    </p>
+    <p>
+        "Dodge!" The figure calls out when you can make out their, no, her face, the unexpected sight of sunglasses rooting you in place just long enough that you don't react to the warning? instruction? shout in time, instead getting front row seats to your dumbfounded reflection as the figure collides against you with all the subtlety of a trainfrigter.
+    </p>
+    ]]>
+    </htmlContent>
+
+    <htmlContent tag="CECILIA_AMBUSH_REPEAT"><![CDATA[
+    		#IF(pc.getAttributeValue(ATTRIBUTE_MAJOR_PHYSIQUE) >= 66)
+                <p>Staying utterly silent and paying careful attention you manage to catch the faint whistling sound produces by Cecilia's launched spikes, rolling out of the way in the nick of time to dodge the incoming flurry and regaining your bearing just as she lands before you.</p>
+                <p>[cecilia.speech(Not bad kid, keep it up, and you'll be at my level in no time!)] </p>
+                #ELSEIF ((pc.getAttributeValue(ATTRIBUTE_MAJOR_PHYSIQUE) >= 50) || (pc.hasTraitActivated(PERK_JOB_SOLDIER))
+                <p>Paying careful attention you almost manage to catch the faint whistling sound produces by Cecilia's launched spikes in time, your clothes unfortunately getting clipped as you leap out of the way to avoid the incoming quartet. Cecilia barely gives you a moment to regain your bearing as she slams into the ground besides you.</p>
+                <p>[cecilia.speech(You could definitely do better, I hope you're not slacking! Still at least I don't need to tell you to dodge anymore.)] </p>
+                #ELSEIF (pc.getAttributeValue(ATTRIBUTE_MAJOR_PHYSIQUE) >= 35)
+                <p>[cecilia.speech(DODGE!)] The shout catches you completely unaware, just barely saving you from being skewered by a trio of spines embedding themselves where you would have still been standing if not for the warning.</p>
+                <p>[cecilia.speech(Oh come on you should be better than that at this point, I can't believe I still need to warn you ahead of time, what if I was another Manticore?!)] </p>
+			#ENDIF
+    ]]>
+    </htmlContent>
+
+    <htmlContent tag="CECILIA_RECOVER"><![CDATA[<p>
+        Recollecting your bearing and trying to ignore the new ache spread across your entire body you stand up and look at what you think will be your opponent? You certainly hope you won't have to fight her, but based on the way she's standing to face you, your hopes aren't exactly high.
+    </p>
+    <p>
+        [cecilia.speech(Confident enough you didn't need to dodge? Or is it just cockiness?)]
+    </p>
+    <p>
+        The [cecilia.race], and now you're certain she's a manticore based on the way her easily identifiable tail rises up over her shoulder, even if her fur is a surprising shade of purple, says with a grin as she stretches her well-defined muscles, the acting tugging against the black fabric wrapped over her otherwise exposed chest.
+    </p>
+    <p>
+        She isn't wearing much else, similar wrappings across her hands up her forearms, a pair of same colored jean shorts on her lower half and of course the same striking red sunglasses from earlier, reflecting your stance in their colored lenses and preventing you from making out her eye color.
+    </p>
+    <p>
+        [cecilia.speech(No words? Oh well, lets see what you got.)]
+    </p>
+    ]]>
+    </htmlContent>
+
+    <htmlContent tag="CECILIA_AMBUSH_TALK"><![CDATA[
+    <p>
+        [pc.speech(Hold on, maybe we don't have to fight?)] You try asking the manticore, after all excluding that tackle and the spike shot she clearly warned you about, she hasn't actually done anything to attack you.
+    </p>
+    <p>
+        [cecilia.speech(Oh, you're one of *those*.)] Somehow your innocuous words seem to have taken the wind right out of her sails.
+    </p>
+    <p>
+        [cecilia.speech(Since you dodged at least the spine shot I had hopes for your potential, well have fun with your...)] She makes a hand gesture at the entirety of your body before sighing. [cecilia.speech(whatever you do, hope you don't die, or do, I don't care. See you never.)] Then, before you can get another word in she flaps her mighty wings once and rockets up into the sky, the downwash almost knocking you over.
+    </p>
+    <p>
+        You have a feeling you won't be seeing her again.
+    </p>
+    ]]>
+    </htmlContent>
+
+    <htmlContent tag="CECILIA_COMBAT_PC_OPENING"><![CDATA[
+	<p>
+		[pc.speech(I don't know what your deal is, but maybe you'll lose some of that confidence once I knock it out of you.)] You tell her, taking a proper stance to fight.
+	</p>
+	]]>
+    </htmlContent>
+
+    <htmlContent tag="CECILIA_COMBAT_CECILIA_OPENING"><![CDATA[
+	<p>
+		[cecilia.speech(Feisty! That's the spirit!)] The manticore-girl replies with a smirk, crouching down slightly.
+	</p>
+	<p>
+		Then, before you have a chance to react, [cecilia.she] is already upon you, a rush of air following her movements in delay.
+	</p>
+	]]>
+    </htmlContent>
+    <htmlContent tag="CECILIA_COMBAT_PC_OPENING_REPEAT"><![CDATA[
+	<p>
+		[pc.speech(I was expecting you, lets spar!)] You tell her, taking your usual stance to fight.
+	</p>
+	]]>
+    </htmlContent>
+
+    <htmlContent tag="CECILIA_COMBAT_CECILIA_OPENING_REPEAT"><![CDATA[
+	<p>
+		[cecilia.speech(You better, I was as obvious as they come!)] Cecilia replies with a laugh, crouching down familiarly.
+	</p>
+	<p>
+		Then, before you have a chance to react, [cecilia.she] is already upon you, a rush of air following her movements in delay.
+	</p>
+	]]>
+    </htmlContent>
+
+    <htmlContent tag="COMBAT_PLAYER_LOSS"><![CDATA[
+	<p>
+		You can't carry on fighting any longer, and you feel your legs giving out beneath you as you collapse to the ground, defeated.
+	</p>
+	<p>
+		With seemingly bottomless stamina, the mighty manticore-girl laughs boisterously at you for a few moments before extending a hand and heaving you back to an upright standing, albeit shaky, position.
+	</p>
+	<p>
+		[cecilia.speech(Hah, good one! You definitely got some bite to your bark, but you can definitely do better pipsqueak! If you can't even take someone like lil ol me while holding back, who knows what other Manticores might do to you.)]
+	</p>
+	<p>
+		Despite loosing you have the feeling that the match helped your body improve considerably despite the short time it took for the unknown manticore-girl to knock you to the ground.
+	</p>
+			[#pc.incrementAttribute(ATTRIBUTE_MAJOR_PHYSIQUE, 5)]
+
+	<p>
+	    [cecilia.speech(Since you lost I expect you to be diligent in your training, the next manticore might not be as light-hearted as I am ya know. The name's Cecilia, I’m sure we'll meet again in the future to be better prepared, kay?)] You barely manage to get a subdued and somewhat bewildered nod in before she takes off with her massive wings, launching herself high into the sky, the accompanying gust of wind almost knocking you of your feet.
+	</p>
+	]]>
+    </htmlContent>
+
+    <htmlContent tag="COMBAT_PLAYER_WIN"><![CDATA[
+	<p>
+		Beaten down, the manticore-girl staggers back a few steps, breathing heavily. You're certain that she's completely unable to continue fighting when she simply stands tall again with a hearty laugh, the exhausted facade of a beaten opponent nowhere to be found.
+	</p>
+	<p>
+		[cecilia.speech(Hah, good one! You definitely got some bite to your bark, not bad, not bad at all! This much should be the bare minimum for roaming around these parts all alone. The Name's Cecilia, and now as the victor, take your pick!)]
+	</p>
+	<p>
+		The manticore spreads her arms in an inviting gesture, an amused grin on her face. Idly you note that during your fight you haven't even managed so much as displace her fashionable sunglasses even once. Suddenly you're not so sure if you want to test your luck here.
+	</p>
+	]]>
+    </htmlContent>
+    <htmlContent tag="COMBAT_PLAYER_LOSS_REPEAT"><![CDATA[
+	<p>
+		You can't carry on fighting any longer, and you feel your legs giving out beneath you as you collapse to the ground, defeated.
+	</p>
+	<p>
+		With seemingly bottomless stamina, the Cecilia laughs boisterously at you for a few moments before extending a hand and heaving you back to an upright standing, albeit shaky, position.
+	</p>
+	<p>
+		[cecilia.speech(Hah, good one! You definitely got some bite to your bark, but you can definitely do better pipsqueak! If you can't even take someone like lil ol me while holding back, who knows what other Manticores might do to you.)]
+	</p>
+	<p>
+	    Though you lost, you manage to crack a small smile, thankful for the fact that you already know Cecilia isn't the type to take advantage of a downed foe, not that you were enemies to begin with. With your strained muscles screaming out in protest at your every moment you are content in knowing that your physique has surely improved.
+	</p>
+			[#pc.incrementAttribute(ATTRIBUTE_MAJOR_PHYSIQUE, 3)]
+	<p>
+	    [cecilia.speech(Since you lost I expect you to be diligent in your training. See you next time [pc.hun].)] Just like the last time you barely manage to get a weak nod in before she takes off with her massive wings, launching herself high into the sky, the accompanying gust of wind almost knocking you of your feet.
+	</p>
+	]]>
+    </htmlContent>
+
+    <htmlContent tag="COMBAT_PLAYER_WIN_REPEAT"><![CDATA[
+	<p>
+		Seemingly beaten down, the Cecilia staggers back a few steps, breathing heavily. If you didn't know her, you'd be certain that she's completely unable to continue fighting. Instead you wait a moment and as expected she simply stands tall again with a hearty laugh, the exhausted facade of a beaten opponent nowhere to be found.
+	</p>
+	<p>
+		[cecilia.speech(Hah, good one! You definitely got some bite to your bark, not bad, not bad at all! This much should be the bare minimum for roaming around these parts all alone. Now as the victor, take your pick!)]
+	</p>
+	<p>
+		Cecilia spreads her arms in an inviting gesture, an amused grin on her face. Idly you note that during your fight you haven't even managed so much as displace her fashionable sunglasses even once. You're not quite so sure if you want to test your luck here.
+	</p>
+	]]>
+    </htmlContent>
+
+    <htmlContent tag="COMBAT_PLAYER_WIN_EXPLANATION"><![CDATA[
+	<p>
+	    Yeah, so manticores be annoying and pathetic, trying to train people not to be weaklings, also i like fighting
+    </p>
+	]]>
+    </htmlContent>
+
+    <htmlContent tag="COMBAT_PLAYER_WIN_SEX_WARNING"><![CDATA[
+	<p>
+	Lemme smash
+    </p>
+    <p>
+	If we fuck i smash you, you got a problem with that?
+    </p>
+	]]>
+    </htmlContent>
+
+    <htmlContent tag="COMBAT_PLAYER_WIN_SEX_CHOICE"><![CDATA[
+	<p>
+	Lemme smash
+    </p>
+    <p>
+	How do you want it? Eagerly, rapebait, or gently?
+    </p>
+	]]>
+    </htmlContent>
+
+    <htmlContent tag="COMBAT_PLAYER_WIN_SEX_REFUSE"><![CDATA[
+	<p>
+	im a pussy bitch who cant stand not being in control
+    </p>
+    <p>
+	"Your loss lmao" dips
+    </p>
+	]]>
+    </htmlContent>
+
+    <htmlContent tag="COMBAT_PLAYER_WIN_MONEY"><![CDATA[
+	<p>
+	gimme cash
+    </p>
+	]]>
+    </htmlContent>
+
+    <htmlContent tag="COMBAT_PLAYER_WIN_MONEY_REPEAT"><![CDATA[
+	<p>
+	Gimme more cash
+    </p>
+	]]>
+    </htmlContent>
+
+    <htmlContent tag="AFTER_SEX"><![CDATA[
+	<p>
+	Damn that was a good fuck, cya THIS IS THE TEXT DISPLAYED AT THE START OF SEX
+    </p>
+	]]>
+    </htmlContent>
+
+    <htmlContent tag="AFTER_SEX_REPEAT"><![CDATA[
+	<p>
+	Damn that was a good fuck, as usual, cya THIS IS ALSO THE TEXT DISPLAYED AT THE START OF SEX
+    </p>
+	]]>
+    </htmlContent>
+
+    <htmlContent tag="AFTER_SEX_GENTLE"><![CDATA[
+	<p>
+	WAOW where'd you learn to do that? cya
+    </p>
+	]]>
+    </htmlContent>
+
+
+
+</dialogue>

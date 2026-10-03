@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 256 256">
+    <defs>
+        <linearGradient id="arcaneThunder">
+            <stop offset="0" stop-color="#f38cec"/>
+            <stop offset="1" stop-color="#b7c4c8"/>
+        </linearGradient>
+        <linearGradient id="linearGradient4159" x1="121.071" x2="121.786" y1="164.929" y2="104.571" gradientTransform="matrix(.76277 0 0 .77286 42.742 -20.272)" gradientUnits="userSpaceOnUse" xlink:href="#arcaneThunder"/>
+    </defs>
+    <g fill-rule="evenodd">
+        <path fill="url(#linearGradient4159)" d="M103.13 107.795c-40.86 25.584-71.507-39.015-17.4-43.83 9.14-24.68 43.85-36.795 78.613-11.689 72.693-4.187 46.437 86.676-14.293 57.113-15.216 7.452-30.876 6.537-46.92-1.594z"/>
+        <path fill="#d400aa" d="M85.887 162.824c18.156 23.452 77.83 14.951 88.762 0-8.43 34.34-82.13 32.789-88.762 0z"/>
+        <path fill="#a08" d="M93.527 142.445c14.847 16.592 63.645 10.578 72.585 0-6.895 24.296-67.161 23.198-72.585 0z"/>
+        <path fill="#800066" d="M101.656 121.11c11.698 12.52 50.146 7.982 57.19 0-5.432 18.332-52.917 17.504-57.19 0z"/>
+        <path fill="#ff2ad4" d="M72 180.45c23.885 35.816 102.383 22.833 116.764 0-11.09 52.445-108.039 50.075-116.763 0z"/>
+    </g>
+</svg>

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64">
+    <defs>
+        <linearGradient id="linearGradient4857">
+            <stop offset="0" stop-color="#c0f"/>
+            <stop offset="1" stop-color="#939dac"/>
+        </linearGradient>
+        <linearGradient id="linearGradient4851">
+            <stop offset="0" stop-color="#aa00d4"/>
+            <stop offset="1" stop-color="#535d6c"/>
+        </linearGradient>
+        <linearGradient id="linearGradient4514-8-5" x1="479" x2="478.75" y1="45.5" y2="27.25" gradientTransform="matrix(.9 0 0 .9 102.46 -73.001)" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient4857"/>
+        <linearGradient id="linearGradient4516-6-7" x1="492.75" x2="492.5" y1="28.5" y2="12.5" gradientTransform="matrix(.9 0 0 .9 102.46 -73.001)" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient4851"/>
+    </defs>
+    <g stroke="#000">
+        <path fill="#dbdbe3" stroke-linecap="round" stroke-linejoin="round" stroke-width=".965" d="M20.742 1.477A15.886 15.715 0 0 0 7.498 16.971a15.886 15.715 0 0 0 15.886 15.715 15.886 15.715 0 0 0 11.754-5.172 15.886 15.715 0 0 1-2.642.222A15.886 15.715 0 0 1 16.611 12.02a15.886 15.715 0 0 1 4.13-10.544z"/>
+        <path fill="#c0f" fill-rule="evenodd" stroke-width=".478" d="M42.059 36.052l-2.76 7.46h5.98l-4.6 7.834 10.12-10.445-4.6-.186 3.833-5.036zM9.53 35.035l-2.76 7.46h5.98l-4.6 7.834 10.12-10.445-4.6-.186 3.833-5.036z"/>
+        <path fill="url(#linearGradient4516-6-7)" fill-rule="evenodd" stroke-width=".653" d="M558.848-45.257c6.23-.035 6.072-11.06-2.289-10.826 1.627-5.457-5.189-7.395-7.766-4.447-.296-5.69-9.807-9.162-13.179-1.498-14.594-2.294-13.675 16.982-3.882 16.926z" transform="translate(-503.224 70.175)"/>
+        <path fill="#c0f" fill-rule="evenodd" stroke-width=".9" d="M21.443 36.484l-5.727 12.728h12.41l-9.547 13.364L39.58 44.757l-9.546-.318 7.955-8.591z"/>
+        <path fill="url(#linearGradient4514-8-5)" fill-rule="evenodd" stroke-width=".847" d="M513.313-32.287c-8.147-.045-7.94-14.256 2.992-13.955-2.128-7.033 6.784-9.531 10.153-5.731.388-7.336 12.824-11.81 17.232-1.931 19.081-2.957 17.88 21.89 5.076 21.817z" transform="translate(-503.224 70.175)"/>
+    </g>
+</svg>

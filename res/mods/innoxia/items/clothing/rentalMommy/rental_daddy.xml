@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- For a version with comments, see "res/mods/innoxia/items/clothing/template/socks.xml". -->
+<clothing>
+	<coreAttributes>
+		<value>150</value>
+		<determiner><![CDATA[a]]></determiner>
+		<name><![CDATA[T-shirt]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[T-shirts]]></namePlural>
+		<description><![CDATA[A masculine-cut T-shirt. It bears the words:<br/>]]></description> 
+		<physicalResistance>0</physicalResistance>
+		<femininity>ANDROGYNOUS</femininity>
+		<slot>TORSO_UNDER</slot>
+		<rarity>UNCOMMON</rarity>
+		<clothingSet/>
+		<imageName>rental_daddy.svg</imageName>
+		<imageEquippedName/>
+		
+		<stickers>
+			<category id="top_txt" priority="1">
+				<categoryName><![CDATA[Top Text]]></categoryName>
+				<sticker id="rental" priority="1" defaultSticker="true" zLayer="1" colourDisabled="" colourSelected="">
+					<stickerName><![CDATA[Rental]]></stickerName>
+					<namePrefix priority="1"><![CDATA[Rental]]></namePrefix>
+					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>Rental </i>]]></descriptionModification>
+					<imageName slot="TORSO_UNDER">text_rental.svg</imageName>
+					<itemTagsAdded/>
+					<itemTagsRemoved/>
+					<unavailabilityText/>
+					<availabilityText/>
+				</sticker>
+				<sticker id="dommy" priority="2" defaultSticker="false" zLayer="1">
+					<stickerName><![CDATA[Dommy]]></stickerName>
+					<namePrefix priority="1"><![CDATA[Dommy]]></namePrefix>
+					<namePostfix/>
+					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>Dommy </i>]]></descriptionModification>
+					<imageName>text_dommy.svg</imageName>
+					<itemTagsAdded/>
+					<itemTagsRemoved/>
+					<unavailabilityText/>
+					<availabilityText/>
+				</sticker>
+				<sticker id="subby" priority="3" defaultSticker="false" zLayer="1">
+					<stickerName><![CDATA[Subby]]></stickerName>
+					<namePrefix priority="1"><![CDATA[Subby]]></namePrefix>
+					<namePostfix/>
+					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>Subby </i>]]></descriptionModification>
+					<imageName>text_subby.svg</imageName>
+					<itemTagsAdded/>
+					<itemTagsRemoved/>
+					<unavailabilityText/>
+					<availabilityText/>
+				</sticker>
+			</category>
+			<category id="btm_txt" priority="2">
+				<categoryName><![CDATA[Bottom Text]]></categoryName>
+				<sticker id="daddy" priority="1" defaultSticker="true" zLayer="1">
+					<stickerName><![CDATA[Daddy]]></stickerName>
+					<namePrefix priority="2"><![CDATA[Daddy]]></namePrefix>
+					<namePostfix/>
+					<descriptionModification fullReplacement="false" priority="2"><![CDATA[<i>Daddy</i>]]></descriptionModification>
+					<imageName>text_daddy.svg</imageName>
+					<itemTagsAdded/>
+					<itemTagsRemoved/>
+					<unavailabilityText/>
+					<availabilityText/>
+				</sticker>
+				<sticker id="mommy" priority="2" defaultSticker="false" zLayer="1">
+					<stickerName><![CDATA[Mommy]]></stickerName>
+					<namePrefix priority="2"><![CDATA[Mommy]]></namePrefix>
+					<namePostfix/>
+					<descriptionModification fullReplacement="false" priority="2"><![CDATA[<i>Mommy</i>]]></descriptionModification>
+					<imageName>text_mommy.svg</imageName>
+					<itemTagsAdded/>
+					<itemTagsRemoved/>
+					<unavailabilityText/>
+					<availabilityText/>
+				</sticker>
+			</category>
+			<category id="price" priority="3">
+				<categoryName><![CDATA[Price]]></categoryName>
+				<sticker id="50" priority="1" defaultSticker="true" zLayer="1">
+					<stickerName><![CDATA[50]]></stickerName>
+					<namePrefix/>
+					<namePostfix/>
+					<descriptionModification fullReplacement="false" priority="3"><![CDATA[, <i>[style.moneyFormatNoColour(50, span)]</i><br/>[style.italicsBlueLight(Members of the public might <b>sometimes</b> approach you and offer to pay for sex if they can see you wearing it!)]]]></descriptionModification>
+					<imageName>text_flames_50.svg</imageName>
+					<itemTagsAdded>
+						<tag>UNLOCKS_ENCOUNTER</tag>
+					</itemTagsAdded>
+					<itemTagsAdded/>
+					<itemTagsRemoved/>
+					<unavailabilityText/>
+					<availabilityText/>
+				</sticker>
+				<sticker id="250" priority="1" defaultSticker="false" zLayer="1">
+					<stickerName><![CDATA[250]]></stickerName>
+					<descriptionModification fullReplacement="false" priority="3"><![CDATA[, <i>[style.moneyFormatNoColour(250, span)]</i><br/>[style.italicsBlueLight(Members of the public might <b>sometimes</b> approach you and offer to pay for sex if they can see you wearing it!)]]]></descriptionModification>
+					<imageName>text_flames_250.svg</imageName>
+					<itemTagsAdded>
+						<tag>UNLOCKS_ENCOUNTER</tag>
+					</itemTagsAdded>
+				</sticker>
+				<sticker id="500" priority="1" defaultSticker="false" zLayer="1">
+					<stickerName><![CDATA[500]]></stickerName>
+					<descriptionModification fullReplacement="false" priority="3"><![CDATA[, <i>[style.moneyFormatNoColour(500, span)]</i><br/>[style.italicsBlueLight(Members of the public might <b>sometimes</b> approach you and offer to pay for sex if they can see you wearing it!)]]]></descriptionModification>
+					<imageName>text_flames_500.svg</imageName>
+					<itemTagsAdded>
+						<tag>UNLOCKS_ENCOUNTER</tag>
+					</itemTagsAdded>
+				</sticker>
+				<sticker id="1000" priority="1" defaultSticker="false" zLayer="1">
+					<stickerName><![CDATA[1000]]></stickerName>
+					<descriptionModification fullReplacement="false" priority="3"><![CDATA[, <i>[style.moneyFormatNoColour(1000, span)]</i><br/>[style.italicsBlueLight(Members of the public might <b>sometimes</b> approach you and offer to pay for sex if they can see you wearing it!)]]]></descriptionModification>
+					<imageName>text_flames_1000.svg</imageName>
+					<itemTagsAdded>
+						<tag>UNLOCKS_ENCOUNTER</tag>
+					</itemTagsAdded>
+				</sticker>
+				<sticker id="2500" priority="1" defaultSticker="false" zLayer="1">
+					<stickerName><![CDATA[2500]]></stickerName>
+					<descriptionModification fullReplacement="false" priority="3"><![CDATA[, <i>[style.moneyFormatNoColour(2500, span)]</i><br/>[style.italicsBlueLight(Members of the public might <b>rarely</b> approach you and offer to pay for sex if they can see you wearing it!)]]]></descriptionModification>
+					<imageName>text_flames_2500.svg</imageName>
+					<itemTagsAdded>
+						<tag>UNLOCKS_ENCOUNTER</tag>
+					</itemTagsAdded>
+				</sticker>
+				<sticker id="5000" priority="1" defaultSticker="false" zLayer="1">
+					<stickerName><![CDATA[5000]]></stickerName>
+					<descriptionModification fullReplacement="false" priority="3"><![CDATA[, <i>[style.moneyFormatNoColour(5000, span)]</i><br/>[style.italicsBlueLight(Members of the public might <b>very rarely</b> approach you and offer to pay for sex if they can see you wearing it!)]]]></descriptionModification>
+					<imageName>text_flames_5000.svg</imageName>
+					<itemTagsAdded>
+						<tag>UNLOCKS_ENCOUNTER</tag>
+					</itemTagsAdded>
+				</sticker>
+				<sticker id="10000" priority="1" defaultSticker="false" zLayer="1">
+					<stickerName><![CDATA[10000]]></stickerName>
+					<descriptionModification fullReplacement="false" priority="3"><![CDATA[, <i>[style.moneyFormatNoColour(10000, span)]</i><br/>[style.italicsBlueLight(Members of the public might <b>extremely rarely</b> approach you and offer to pay for sex if they can see you wearing it!)]]]></descriptionModification>
+					<imageName>text_flames_10000.svg</imageName>
+					<itemTagsAdded>
+						<tag>UNLOCKS_ENCOUNTER</tag>
+					</itemTagsAdded>
+				</sticker>
+				<sticker id="none" priority="0" defaultSticker="false" zLayer="1" colourSelected="TEXT_GREY">
+					<stickerName><![CDATA[None]]></stickerName>
+					<namePrefix/>
+					<namePostfix/>
+					<descriptionModification/>
+					<imageName/>
+					<itemTagsAdded/>
+					<itemTagsRemoved/>
+					<unavailabilityText/>
+					<availabilityText/>
+				</sticker>
+			</category>
+		</stickers>
+		<effects>
+              <effect itemEffectType="CLOTHING" limit="0" potency="MAJOR_BOOST" primaryModifier="CLOTHING_ATTRIBUTE" secondaryModifier="DAMAGE_LUST" timer="0"/>
+              <effect itemEffectType="CLOTHING" limit="0" potency="MAJOR_BOOST" primaryModifier="CLOTHING_ATTRIBUTE" secondaryModifier="DAMAGE_LUST" timer="0"/>
+              <effect itemEffectType="CLOTHING" limit="0" potency="MAJOR_BOOST" primaryModifier="CLOTHING_ATTRIBUTE" secondaryModifier="VIRILITY" timer="0"/>
+              <effect itemEffectType="CLOTHING" limit="0" potency="MAJOR_BOOST" primaryModifier="CLOTHING_ATTRIBUTE" secondaryModifier="VIRILITY" timer="0"/>
+              <effect itemEffectType="CLOTHING" limit="0" potency="MAJOR_BOOST" primaryModifier="TF_MOD_FETISH_BEHAVIOUR" secondaryModifier="TF_MOD_FETISH_IMPREGNATION" timer="0"/>
+		</effects>
+		<blockedPartsList>
+			<blockedParts>
+				<displacementType>REMOVE_OR_EQUIP</displacementType>
+				<clothingAccessRequired>
+					<clothingAccess>ARMS_UP_TO_SHOULDER</clothingAccess>
+					<clothingAccess>HEAD</clothingAccess>
+				</clothingAccessRequired>
+				<blockedBodyParts>
+					<bodyPart>ARMPITS</bodyPart>
+				</blockedBodyParts>
+				<clothingAccessBlocked/>
+				<concealedSlots/>
+			</blockedParts>
+			<blockedParts>
+				<displacementType>PULLS_UP</displacementType>
+				<clothingAccessRequired/>
+				<blockedBodyParts>
+					<bodyPart>BREASTS</bodyPart>
+					<bodyPart>NIPPLES</bodyPart>
+					<bodyPart>STOMACH</bodyPart>
+					<bodyPart>BACK</bodyPart>
+				</blockedBodyParts>
+				<clothingAccessBlocked>
+					<clothingAccess>CHEST</clothingAccess>
+					<clothingAccess>WAIST</clothingAccess>
+				</clothingAccessBlocked>
+				<concealedSlots>
+					<slot>CHEST</slot>
+					<slot>NIPPLE</slot>
+					<slot>STOMACH</slot>
+					<slot>PIERCING_STOMACH</slot>
+					<slot>PIERCING_NIPPLE</slot>
+				</concealedSlots>
+			</blockedParts>
+		</blockedPartsList>
+		<incompatibleSlots/>
+		<primaryColours values="JUST_WHITE"/>
+		<primaryColoursDye values="ALL"/>
+		<secondaryColours values="JUST_BLACK"/>
+		<secondaryColoursDye values="ALL"/>
+		<tertiaryColours values="JUST_WHITE"/>
+		<tertiaryColoursDye values="ALL"/>
+		<itemTags>
+			<tag>SOLD_BY_NYAN</tag>
+			<tag>FITS_ARM_WINGS</tag>
+		</itemTags>
+	</coreAttributes>
+
+  <replacementText type="REMOVE_OR_EQUIP">
+    <self>
+      <![CDATA[[npc.Name] [npc.verb(guide)] [npc.her] [npc.arms] through the T-shirt's sleeves as [npc.she] [npc.verb(pull)] it down over [npc.her] head.]]>
+    </self>
+    <other>
+      <![CDATA[[npc.Name] [npc.verb(guide)] [npc2.namePos] [npc2.arms] through the T-shirt's sleeves as [npc.she] [npc.verb(pull)] it down over [npc2.her] head.]]>
+    </other>
+    <otherRough>
+      <![CDATA[[npc.Name] roughly [npc.verb(force)] [npc2.namePos] [npc2.arms] through the T-shirt's sleeves as [npc.she] [npc.verb(pull)] it down over [npc2.her] head.]]>
+    </otherRough>
+  </replacementText>
+
+  <displacementText type="REMOVE_OR_EQUIP">
+    <self>
+      <![CDATA[[npc.Name] [npc.verb(pull)] off [npc.her] T-shirt.]]>
+    </self>
+    <other>
+      <![CDATA[[npc.Name] [npc.verb(pull)] off [npc2.namePos] T-shirt.]]>
+    </other>
+    <otherRough>
+      <![CDATA[[npc.Name] roughly [npc.verb(pull)] off [npc2.namePos] T-shirt.]]>
+    </otherRough>
+  </displacementText>
+	
+  <replacementText type="PULLS_UP">
+    <self>
+      <![CDATA[[npc.Name] [npc.verb(pull)] [npc.her] T-shirt back down, covering [npc.her] torso.]]>
+    </self>
+    <other>
+      <![CDATA[[npc.Name] [npc.verb(pull)] [npc2.namePos] T-shirt back down, covering [npc2.her] torso.]]>
+    </other>
+    <otherRough>
+      <![CDATA[[npc.Name] roughly [npc.verb(yank)] [npc2.namePos] T-shirt back down, covering [npc2.her] torso.]]>
+    </otherRough>
+  </replacementText>
+
+  <displacementText type="PULLS_UP">
+    <self>
+      <![CDATA[[npc.Name] [npc.verb(pull)] [npc.her] T-shirt up to just below [npc.her] chin, fully exposing [npc.her] torso.]]>
+    </self>
+    <other>
+      <![CDATA[[npc.Name] [npc.verb(pull)] [npc2.namePos] T-shirt up to just below [npc2.her] chin, fully exposing [npc2.her] torso.]]>
+    </other>
+    <otherRough>
+      <![CDATA[[npc.Name] roughly [npc.verb(pull)] [npc2.namePos] T-shirt up to just below [npc2.her] chin, fully exposing [npc2.her] torso.]]>
+    </otherRough>
+  </displacementText>
+	
+</clothing>

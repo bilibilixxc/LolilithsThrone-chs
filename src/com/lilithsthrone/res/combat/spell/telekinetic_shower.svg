@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+    <path fill="#7c5e48" fill-rule="evenodd" d="M130.864 216.42l.953-10.228 18.745 2.449-5.083 18.006z"/>
+    <path fill="#b2927d" fill-rule="evenodd" d="M229.41 156.732l6.673 4.768-9.08 12.152-10.408-10.78z"/>
+    <path fill="#a9866e" fill-rule="evenodd" d="M157.633 201.394l9.14-5.683 8.033 7.884 3.527 11.562-14.82-4.326z"/>
+    <path fill="#947058" fill-rule="evenodd" d="M147.697 141.654l1.345 10.679-10.518 4.005-11.978-1.624 10.12-11.66z"/>
+    <path fill="#a0795f" fill-rule="evenodd" d="M183.576 170.94l-6.34-8.697-1.82-8.592 13.795-2.097 3.344 12.827z"/>
+    <path fill="#765946" fill-rule="evenodd" d="M193.447 108.214l10.714-1.017 8.319 2.817-5.234 12.935-12.738-3.666z"/>
+    <path fill="none" stroke="#f06" stroke-dasharray="6,12" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" d="M185.012 100.23l-87.84-74.96M128.065 139.879l-87.84-74.96"/>
+    <path fill="none" stroke="#f59" stroke-dasharray="6,12" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" d="M215.19 153.264l-87.84-74.961"/>
+    <path fill="none" stroke="#fac" stroke-dasharray="6,12" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" d="M170.996 144.93l-87.84-74.961"/>
+    <path fill="none" stroke="#f59" stroke-dasharray="6,12" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" d="M154.076 192.66l-87.84-74.961"/>
+    <path fill="none" stroke="#fac" stroke-dasharray="6,12" stroke-linecap="round" stroke-linejoin="round" stroke-width="6" d="M125.54 197.205l-87.84-74.96"/>
+</svg>

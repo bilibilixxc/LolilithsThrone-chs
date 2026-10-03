@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64">
+    <defs>
+        <linearGradient id="submissionEntranceGradient">
+            <stop offset="0" stop-color="#f55"/>
+            <stop offset="1" stop-color="#ff8080"/>
+        </linearGradient>
+        <linearGradient id="linearGradient15" x1="29.5" x2="44.125" y1="1025.487" y2="1003.362" gradientTransform="matrix(1.28844 0 0 1.29051 -9.225 -296.313)" gradientUnits="userSpaceOnUse" xlink:href="#submissionEntranceGradient"/>
+    </defs>
+    <g transform="translate(0 -988.362)">
+        <ellipse cx="32" cy="1020.368" fill="url(#linearGradient15)" fill-rule="evenodd" rx="30.383" ry="30.381"/>
+        <path fill="none" stroke="#fff" stroke-width="4" d="M15.307 1023.43l8.933.147-.088 6.075 7.177.077-.011 6.544 6.881.023-.078 6.573 8.443.053"/>
+        <g stroke="#fff">
+            <path fill="#fff" fill-rule="evenodd" stroke-linejoin="round" stroke-width="1.089" d="M56.476 1019.43l-7.278.02c-13.253-7.147-21.16-7.23-35.21.031l-7.965.072c20.287-11.19 30.824-11.927 50.453-.124z"/>
+            <path fill="none" stroke-linecap="round" stroke-width="2.42" d="M8.455 1018.427c0-.213.16-11.336.16-11.336M31.637 1010.94c0-.213.16-11.336.16-11.336M54.15 1018.267c0-.214.16-11.337.16-11.337M43.348 1013.347c0-.214.16-11.336.16-11.336M19.017 1013.561c0-.214.16-11.336.16-11.336"/>
+            <path fill="none" stroke-width="1.21" d="M8.83 1008.642c15.027-9.153 33.224-8.243 45.293.641M8.62 1013.373c15.028-9.152 33.225-8.242 45.294.642"/>
+        </g>
+    </g>
+</svg>

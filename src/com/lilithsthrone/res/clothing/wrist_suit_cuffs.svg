@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" cursor="default" viewBox="0 0 256 256">
+    <defs>
+        <linearGradient id="innoGrad2">
+            <stop offset="0" stop-color="#f55"/>
+            <stop offset="1" stop-color="#ff8080"/>
+        </linearGradient>
+        <linearGradient id="innoGrad1">
+            <stop offset="0" stop-color="#f55"/>
+            <stop offset="1" stop-color="#ff8080"/>
+        </linearGradient>
+        <linearGradient id="linearGradient4321" x1="121.799" x2="78.312" y1="892.556" y2="890.258" gradientTransform="rotate(4.193 -1205.872 1348.285)" gradientUnits="userSpaceOnUse" xlink:href="#innoGrad1"/>
+        <linearGradient id="linearGradient4321-9" x1="121.799" x2="78.312" y1="892.556" y2="890.258" gradientTransform="scale(-1 1) rotate(14.434 28.33 -21.595)" gradientUnits="userSpaceOnUse" xlink:href="#innoGrad2"/>
+    </defs>
+    <g transform="translate(0 -796.362)">
+        <path fill="#ff2a2a" fill-rule="evenodd" stroke="#000" d="M60.391 840.327c5.538 1.052 5.958 6.97 9.262 10.911-15.526 8.234-15.145 1.832-9.262-10.91z"/>
+        <path fill="#f55" fill-rule="evenodd" stroke="#000" d="M167.375 821.698c-16.788 3.77-37.156 1.951-55.867 7.637-21.328 6.482-40.41 20.218-47.967 19.217-5.17-.685 5.184-12.522-12.872-6.884-15.493 4.838-29.595 16.738-44.393 25.108 9.595 18.495 170.423-8.21 161.099-45.078z"/>
+        <path fill="url(#linearGradient4321-9)" fill-rule="evenodd" stroke="#000" d="M167.741 822.12l21.157 69.16c-25.858 15.826-56.047 23.898-84.833 34.483L78.96 855.297c30.62-9.544 60.902-19.586 88.782-33.177z"/>
+        <path fill="#ff8080" fill-rule="evenodd" stroke="#000" d="M112.106 843.667C71.844 854.234 8.023 870.803 6.428 866.866c5.894 23.56 26.39 38.917 29.222 64.889 29.695 15.462 65.198-2.172 99.357-12.15-7.086-25.22-12.833-50.216-22.9-75.938z"/>
+        <ellipse cx="124.245" cy="902.147" fill="#ff7f2a" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.103" rx="16.242" ry="15.253" transform="scale(-1 1) rotate(14.434)"/>
+        <path fill-rule="evenodd" d="M61.553 847.586c.641 3.334 2.006 5.613 3.978 8.198-1.716-2.802-2.703-5.138-2.988-8.338z"/>
+        <path fill="#ff2a2a" fill-rule="evenodd" stroke="#000" d="M191.117 936.287c-5.262 2.02-4.624 7.917-7.175 12.384 16.743 5.343 15.23-.89 7.175-12.384z"/>
+        <path fill="#f55" fill-rule="evenodd" stroke="#000" d="M82.526 936.973c17.19.726 36.91-4.685 56.334-2.416 22.141 2.587 43.362 12.712 50.62 10.384 4.966-1.594-7.328-11.401 11.443-9.063 16.106 2.006 32.1 11.21 48.15 16.816-6.155 19.906-169.169 22.218-166.547-15.72z"/>
+        <path fill="url(#linearGradient4321)" fill-rule="evenodd" stroke="#000" d="M82.24 937.454l-8.525 71.819c28.26 10.978 59.403 13.555 89.612 18.853l12.18-73.807c-31.83-3.948-63.415-8.446-93.267-16.865z"/>
+        <path fill="#ff8080" fill-rule="evenodd" stroke="#000" d="M140.82 948.768c41.5 3.24 107.249 8.2 108.118 4.042-1.61 24.232-19.051 42.989-17.22 69.05-26.474 20.495-64.546 9.454-99.935 5.708 2.49-26.08 3.701-51.699 9.036-78.8z"/>
+        <ellipse cx="232.342" cy="993.096" fill="#ff7f2a" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.103" rx="16.242" ry="15.253" transform="rotate(4.193)"/>
+        <path fill-rule="evenodd" d="M190.265 943.675c.288 3.2-.268 5.674-1.459 8.736 1.482-2.894 2.42-5.38 2.458-8.774z"/>
+    </g>
+</svg>

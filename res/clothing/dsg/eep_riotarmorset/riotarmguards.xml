@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<clothing>
+
+	<coreAtributes>
+	
+		<authorTag><![CDATA[On the inside of each forearm pad, faint rubberised ink reads "Official Enforcer Issue, MFD by DSG Threadworks."]]></authorTag>
+
+		<value>450</value> 
+
+		<determiner><![CDATA[a pair of]]></determiner>
+
+		<name><![CDATA[Enforcer's riot arm guards]]></name>
+
+		<namePlural pluralByDefault="true"><![CDATA[Enforcer's riot arm guards]]></namePlural> 
+
+		<description><![CDATA[A pair of metallic elbow pads and forearm guards attached to partial sleeves of ballistic fibres. They attach to the wearer's arms via adjustable straps]]></description> 
+
+		<physicalResistance>5</physicalResistance> 
+
+		<femininity>ANDROGYNOUS</femininity> 
+
+		<slot>WRIST</slot> 
+
+		<rarity>EPIC</rarity> 
+
+		<clothingSet>dsg_enforcer_riot</clothingSet>
+
+		<imageName>riotarmguards.svg</imageName> 
+
+		<imageEquippedName/> 
+
+		<effects/>
+
+		<blockedPartsList> 
+
+			<blockedParts>
+
+				<displacementType>REMOVE_OR_EQUIP</displacementType> 
+
+				<clothingAccessRequired> 
+					<clothingAccess>WRISTS</clothingAccess>
+				</clothingAccessRequired>
+
+				<blockedBodyParts/> 
+
+				<clothingAccessBlocked/> 
+
+				<concealedSlots/> 
+			</blockedParts>
+		</blockedPartsList>
+
+		<incompatibleSlots/> 
+
+		<primaryColours values="JUST_STEEL"/> 
+		<primaryColoursDye values="ALL_METAL"/>
+		<secondaryColours values="JUST_BLACK"/> 
+		<secondaryColoursDye values="ALL"/>
+		<tertiaryColours values="JUST_STEEL"/> 
+		<tertiaryColoursDye values="ALL_METAL"/>
+
+		<itemTags> 
+			<tag>RIGID_MATERIAL</tag>
+			<tag>CONTRABAND_MEDIUM</tag>
+		</itemTags>
+	</coreAtributes>
+
+	<replacementText type="REMOVE_OR_EQUIP">
+		<self>
+			<![CDATA[[npc.Name] [npc.verb(slip)] the arm guards over [npc.her] forearms and [npc.verb(tighten)] the straps.]]>
+		</self>
+		<other>
+			<![CDATA[[npc.Name] [npc.verb(slip)] the arm guards over [npc2.namePos] forearms and [npc.verb(tighten)] the straps.]]>
+		</other>
+		<otherRough>
+			<![CDATA[[npc.Name] [npc.verb(stuff)] [npc2.namePos] forearms through the arm guards and hastily [npc.verb(tighten)] the straps.]]>
+		</otherRough>
+	</replacementText>
+
+	<displacementText type="REMOVE_OR_EQUIP">
+		<self>
+			<![CDATA[[npc.Name] [npc.verb(loosen)] the straps on [npc.her] arm guards and [npc.verb(slip)] them off.]]>
+		</self>
+		<other>
+			<![CDATA[[npc.Name] [npc.verb(loosen)] the straps on [npc2.namePos] arm guards and [npc.verb(slip)] them off.]]>
+		</other>
+		<otherRough>
+			<![CDATA[[npc.Name] [npc.verb(tear)] at the straps on [npc2.namePos] arm guards until they're loose enough and [npc.verb(toss)] them aside.]]>
+		</otherRough>
+	</displacementText>
+	
+</clothing>

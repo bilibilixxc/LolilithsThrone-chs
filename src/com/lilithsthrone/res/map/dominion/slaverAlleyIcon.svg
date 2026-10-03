@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64">
+    <defs>
+        <linearGradient id="slaverAlleyGradient">
+            <stop offset="0" stop-color="#f55"/>
+            <stop offset="1" stop-color="#ff8080"/>
+        </linearGradient>
+        <linearGradient id="linearGradient15" x1="29.5" x2="44.125" y1="1025.487" y2="1003.362" gradientTransform="matrix(1.35625 0 0 1.35843 -11.395 -365.612)" gradientUnits="userSpaceOnUse" xlink:href="#slaverAlleyGradient"/>
+    </defs>
+    <g transform="matrix(.95 0 0 .95 1.6 -937.344)">
+        <ellipse cx="32" cy="1020.368" fill="url(#linearGradient15)" fill-rule="evenodd" rx="31.982" ry="31.98"/>
+        <ellipse cx="21.546" cy="1027.056" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="4.13" rx="12.541" ry="5.558"/>
+        <ellipse cx="35.527" cy="1018.193" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.416" rx="3.811" ry="2.151" transform="rotate(.856)"/>
+        <ellipse cx="24.805" cy="1011.725" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.441" rx="3.666" ry="2.316"/>
+        <ellipse cx="36.505" cy="1009.074" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.478" rx="4.045" ry="2.209"/>
+        <ellipse cx="29.767" cy="1009.342" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.395" rx="3.644" ry="2.184"/>
+        <ellipse cx="21.346" cy="1014.885" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.441" rx="3.666" ry="2.316"/>
+        <ellipse cx="46.535" cy="1014.14" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.952" rx="12.056" ry="5.294"/>
+    </g>
+</svg>

@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<clothing>
+
+	<coreAtributes>
+	
+		<authorTag><![CDATA[On the inside of the shell, rubberised ink reads "Official Enforcer Issue, MFD by DSG Threadworks."]]></authorTag>
+
+		<value>1000</value> 
+
+		<determiner><![CDATA[an]]></determiner>
+
+		<name><![CDATA[Enforcer's combat helmet]]></name>
+
+		<namePlural pluralByDefault="false"><![CDATA[Enforcer's combat helmets]]></namePlural> 
+
+		<description><![CDATA[A ballistic helmet covered with tough fabric cover lined with shock-absorbing foam. The attached suspension system has plenty of adjustment to fit a variety of head shapes but the faint star on the forehead gives you little doubt as to the intended wearer.]]></description> 
+
+		<physicalResistance>6</physicalResistance> 
+
+		<femininity>ANDROGYNOUS</femininity> 
+
+		<slot>HEAD</slot> 
+
+		<rarity>EPIC</rarity> 
+
+		<clothingSet/> 
+
+		<imageName>chelmet.svg</imageName> 
+
+		<imageEquippedName/>
+
+		<effects>
+			<effect limit="0" mod1="CLOTHING_ATTRIBUTE" mod2="RESISTANCE_FIRE" potency="MAJOR_BOOST" timer="397" type="CLOTHING"/>
+			<effect limit="0" mod1="CLOTHING_ATTRIBUTE" mod2="RESISTANCE_FIRE" potency="BOOST" timer="397" type="CLOTHING"/>
+			<effect limit="0" mod1="CLOTHING_ATTRIBUTE" mod2="RESISTANCE_ICE" potency="MAJOR_BOOST" timer="397" type="CLOTHING"/>
+			<effect limit="0" mod1="CLOTHING_ATTRIBUTE" mod2="RESISTANCE_POISON" potency="MAJOR_BOOST" timer="397" type="CLOTHING"/>	
+		</effects>
+
+		<blockedPartsList> 
+
+			<blockedParts>
+
+				<displacementType>REMOVE_OR_EQUIP</displacementType> 
+
+				<clothingAccessRequired>
+					<clothingAccess>HEAD</clothingAccess>
+				</clothingAccessRequired> 
+
+				<blockedBodyParts>
+					<bodyPart>HAIR</bodyPart>
+				</blockedBodyParts>
+
+				<clothingAccessBlocked>
+					<clothingAccess>HEAD</clothingAccess>
+				</clothingAccessBlocked> 
+
+				<concealedSlots>
+					<slot>HAIR</slot>
+					<slot>PIERCING_EAR</slot>
+				</concealedSlots> 
+			</blockedParts>
+
+		</blockedPartsList>
+
+		<incompatibleSlots/> 
+
+		<primaryColours values="JUST_BLACK"/> 
+		<primaryColoursDye values="ALL"/>
+		<secondaryColours values="JUST_BLACK"/> 
+		<secondaryColoursDye values="ALL"/>
+		<tertiaryColours values="JUST_STEEL"/> 
+		<tertiaryColoursDye values="ALL_METAL"/>
+
+		<itemTags> 
+			<tag>RIGID_MATERIAL</tag>
+			<tag>CONTRABAND_MEDIUM</tag>
+		</itemTags>
+	</coreAtributes>
+
+	<replacementText type="REMOVE_OR_EQUIP">
+		<self>
+			<![CDATA[[npc.Name] [npc.verb(put)] on the combat helmet and securely [npc.verb(fasten)] the chinstrap.]]>
+		</self>
+		<other>
+			<![CDATA[[npc.Name] [npc.verb(put)] the combat helmet on [npc2.namePos] head and securely [npc.verb(fasten)] the chinstrap.]]>
+		</other>
+		<otherRough>
+			<![CDATA[[npc.Name] [npc.verb(force)] the combat helmet down on [npc2.namePos] head and practically [npc.verb(gag)] [npc2.her] with the chinstrap.]]>
+		</otherRough>
+	</replacementText>
+
+	<displacementText type="REMOVE_OR_EQUIP">
+		<self>
+			<![CDATA[[npc.Name] un[npc.do] the chinstrap on [npc.her] combat helmet and [npc.verb(ease)] it off.]]>
+		</self>
+		<other>
+			<![CDATA[[npc.Name] un[npc.do] the chinstrap on [npc2.namePos] combat helmet and [npc.verb(ease)] it off.]]>
+		</other>
+		<otherRough>
+			<![CDATA[[npc.Name] [npc.verb(rip)] open the chinstrap on [npc2.namePos] combat helmet and [npc.verb(yank)] it off [npc2.her] head.]]>
+		</otherRough>
+	</displacementText>
+	
+</clothing>

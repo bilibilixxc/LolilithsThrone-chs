@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<clothing>
+
+	<coreAtributes>
+	
+		<authorTag><![CDATA[On the inside of the shell, faint rubberised ink reads "Official Enforcer Issue, MFD by DSG Threadworks."]]></authorTag>
+
+		<value>1500</value> 
+
+		<determiner><![CDATA[an]]></determiner>
+
+		<name><![CDATA[Enforcer's riot helmet]]></name>
+
+		<namePlural pluralByDefault="false"><![CDATA[Enforcer's riot helmets]]></namePlural> 
+
+		<description><![CDATA[A visored, shock absorbing helmet with a ballistic outer shell. The attached neck protector keeps flammable liquids from running down the wearer's back. The attached chinstrap has plenty of adjustment to fit a variety of head shapes.]]></description> 
+
+		<physicalResistance>5</physicalResistance> 
+
+		<femininity>ANDROGYNOUS</femininity> 
+
+		<slot>HEAD</slot> 
+
+		<rarity>EPIC</rarity> 
+
+		<clothingSet>dsg_enforcer_riot</clothingSet>
+
+		<imageName>riothelmet.svg</imageName> 
+
+		<imageEquippedName/>
+
+		<effects>
+			<effect limit="0" mod1="CLOTHING_ATTRIBUTE" mod2="RESISTANCE_FIRE" potency="MAJOR_BOOST" timer="397" type="CLOTHING"/>
+			<effect limit="0" mod1="CLOTHING_ATTRIBUTE" mod2="RESISTANCE_ICE" potency="BOOST" timer="397" type="CLOTHING"/>
+			<effect limit="0" mod1="CLOTHING_ATTRIBUTE" mod2="RESISTANCE_POISON" potency="BOOST" timer="397" type="CLOTHING"/>
+		</effects> 
+
+		<blockedPartsList> 
+
+			<blockedParts>
+
+				<displacementType>REMOVE_OR_EQUIP</displacementType> 
+
+				<clothingAccessRequired>
+					<clothingAccess>HEAD</clothingAccess>
+				</clothingAccessRequired> 
+
+				<blockedBodyParts>
+					<bodyPart>HAIR</bodyPart>
+				</blockedBodyParts>
+
+				<clothingAccessBlocked>
+					<clothingAccess>HEAD</clothingAccess>
+				</clothingAccessBlocked> 
+
+				<concealedSlots>
+					<slot>HAIR</slot>
+					<slot>PIERCING_EAR</slot>
+				</concealedSlots> 
+			</blockedParts>
+
+			<blockedParts>
+				<displacementType>PULLS_UP</displacementType>
+				<clothingAccessRequired/>
+				<blockedBodyParts>
+					<bodyPart>MOUTH</bodyPart>
+				</blockedBodyParts>
+				<clothingAccessBlocked>
+					<clothingAccess>HEAD</clothingAccess>
+				</clothingAccessBlocked>
+
+				<concealedSlots>
+					<slot>HAIR</slot>
+					<slot>PIERCING_EAR</slot>
+				</concealedSlots>
+			</blockedParts>
+		</blockedPartsList>
+
+		<incompatibleSlots/> 
+
+		<primaryColours values="JUST_STEEL"/> 
+		<primaryColoursDye values="ALL_METAL"/>
+		<secondaryColours values="JUST_SILVER"/> 
+		<secondaryColoursDye values="ALL_METAL"/>
+		<tertiaryColours values="JUST_STEEL"/> 
+		<tertiaryColoursDye values="ALL_METAL"/>
+
+		<itemTags> 
+			<tag>RIGID_MATERIAL</tag>
+			<tag>CONTRABAND_MEDIUM</tag>
+		</itemTags>
+	</coreAtributes>
+
+	<replacementText type="REMOVE_OR_EQUIP">
+		<self>
+			<![CDATA[[npc.Name] [npc.verb(put)] on the riot helmet and securely [npc.verb(fasten)] the chinstrap.]]>
+		</self>
+		<other>
+			<![CDATA[[npc.Name] [npc.verb(put)] the riot helmet on [npc2.namePos] head and securely [npc.verb(fasten)] the chinstrap.]]>
+		</other>
+		<otherRough>
+			<![CDATA[[npc.Name] [npc.verb(force)] the riot helmet down on [npc2.namePos] head and practically [npc.verb(gag)] [npc2.her] with the chinstrap.]]>
+		</otherRough>
+	</replacementText>
+
+	<displacementText type="REMOVE_OR_EQUIP">
+		<self>
+			<![CDATA[[npc.Name] un[npc.do] the chinstrap on [npc.her] riot helmet and [npc.verb(ease)] it off.]]>
+		</self>
+		<other>
+			<![CDATA[[npc.Name] un[npc.do] the chinstrap on [npc2.namePos] riot helmet and [npc.verb(ease)] it off.]]>
+		</other>
+		<otherRough>
+			<![CDATA[[npc.Name] [npc.verb(rip)] open the chinstrap on [npc2.namePos] riot helmet and [npc.verb(yank)] it off [npc2.her] neck.]]>
+		</otherRough>
+	</displacementText>
+
+	<replacementText type="PULLS_DOWN">
+		<self>
+			<![CDATA[[npc.Name] [npc.verb(lower)] the visor on [npc.her] riot helmet down over [npc.her] [npc.faceD].]]>
+		</self>
+		<other>
+			<![CDATA[[npc.Name] [npc.verb(lower)] the visor on [npc2.namePos] riot helmet down over [npc2.her] [npc2.faceD].]]>
+		</other>
+		<otherRough>
+			<![CDATA[[npc.Name] [npc.verb(slam)] the visor on [npc2.namePos] riot helmet down over [npc2.her] [npc2.faceD].]]>
+		</otherRough>
+	</replacementText>
+
+	<displacementText type="PULLS_UP">
+		<self>
+			<![CDATA[[npc.Name] [npc.verb(raise)] the visor on [npc.her] riot helmet, exposing [npc.her] [npc.faceD].]]>
+		</self>
+		<other>
+			<![CDATA[[npc.Name] [npc.verb(raise)] the visor on [npc2.namePos] riot helmet, exposing [npc2.her] [npc2.faceD].]]>
+		</other>
+		<otherRough>
+			<![CDATA[[npc.Name] [npc.verb(flip)] the visor on [npc2.namePos] riot helmet up, exposing [npc2.her] [npc2.faceD].]]>
+		</otherRough>
+	</displacementText>
+	
+</clothing>

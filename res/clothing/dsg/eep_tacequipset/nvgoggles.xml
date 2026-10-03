@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<clothing>
+	<coreAtributes>
+		<authorTag><![CDATA[On the underside of each lens set, a faint engraving reads "Official Enforcer Issue, MFD by DSG Threadworks."]]></authorTag>
+		<value>1000</value>
+		<determiner><![CDATA[a set of]]></determiner>
+		<name><![CDATA[Enforcer's night vision goggles]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[Enforcer's night vision goggles]]></namePlural>
+		<description><![CDATA[With its array of four sight enchantments, this set of panoramic night vision goggles offers twice the field of view compared to older systems. The included mount is very flexible and can be securely attached to compatible headgear.]]></description>
+		<physicalResistance>1</physicalResistance>
+		<femininity>ANDROGYNOUS</femininity>
+		<slot>EYES</slot>
+		<rarity>EPIC</rarity>
+		<clothingSet/>
+		<imageName>nvgoggles.svg</imageName>
+		<imageEquippedName/>
+		<effects/> 
+		
+		<blockedPartsList> 
+			<blockedParts>
+				<displacementType>REMOVE_OR_EQUIP</displacementType>
+				<clothingAccessRequired> 
+					<clothingAccess>EYES</clothingAccess>
+				</clothingAccessRequired>
+				<blockedBodyParts/>
+				<clothingAccessBlocked>
+					<clothingAccess>EYES</clothingAccess> 
+				</clothingAccessBlocked>
+				<concealedSlots/> 
+			</blockedParts>
+		</blockedPartsList>
+		
+		<incompatibleSlots/> 
+		
+		<primaryColours values="JUST_GREY"/> 
+		<primaryColoursDye values="ALL"/>
+		<secondaryColours values="JUST_STEEL"/>
+		<secondaryColoursDye values="ALL_METAL"/>
+		<tertiaryColours values="JUST_RED_DARK"/>
+		
+		<tertiaryColoursDye values="ALL"/>
+		
+		<itemTags> 
+			<tag>RIGID_MATERIAL</tag>
+			<tag>CONTRABAND_MEDIUM</tag>
+			<tag>NIGHT_VISION_SELF</tag>
+		</itemTags>
+	</coreAtributes>
+
+	<replacementText type="REMOVE_OR_EQUIP">
+		<self>
+			<![CDATA[[npc.Name] [npc.verb(equip)] the goggles and [npc.verb(lower)] them over [npc.her] [npc.eyes].]]>
+		</self>
+		<other>
+			<![CDATA[[npc.Name] [npc.verb(help)] [npc2.name] equip the goggles and [npc.verb(lower)] them over [npc2.her] [npc2.eyes].]]>
+		</other>
+		<otherRough>
+			<![CDATA[[npc.Name] [npc.verb(force)] the goggles onto [npc2.namePos] [npc2.eyes].]]>
+		</otherRough>
+	</replacementText>
+
+	<displacementText type="REMOVE_OR_EQUIP">
+		<self>
+		  <![CDATA[[npc.Name] [npc.verb(raise)] [npc.her] goggles from [npc.her] [npc.eyes] and [npc.verb(unequip)] them.]]>
+		</self>
+		<other>
+		  <![CDATA[[npc.Name] [npc.verb(raise)] [npc2.namePos] goggles from [npc2.her] [npc2.eyes] and [npc.verb(unequip)] them.]]>
+		</other>
+		<otherRough>
+		  <![CDATA[[npc.Name] [npc.verb(yank)] [npc2.namePos] goggles from [npc2.her] [npc2.eyes].]]>
+		</otherRough>
+	</displacementText>
+	
+</clothing>

@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64">
+    <defs>
+        <linearGradient id="genericShopGradient">
+            <stop offset="0" stop-color="#f55"/>
+            <stop offset="1" stop-color="#ff8080"/>
+        </linearGradient>
+        <linearGradient id="linearGradient15" x1="29.5" x2="44.125" y1="1025.487" y2="1003.362" gradientTransform="matrix(1.28844 0 0 1.29051 -9.225 -296.313)" gradientUnits="userSpaceOnUse" xlink:href="#genericShopGradient"/>
+    </defs>
+    <g transform="translate(0 -988.362)">
+        <ellipse cx="32" cy="1020.368" fill="url(#linearGradient15)" fill-rule="evenodd" rx="30.383" ry="30.381"/>
+        <path fill="#fff" fill-rule="evenodd" d="M46.657 1013.103l-28.498.01.033 19.182c.003 1.794.8 3.552 3.926 3.575 8.962.068 11.893 0 20.9-.02 3.383 0 4.07-2.671 4.042-3.959zm-22.859 7.403h3.014v2.971l-2.978-.035zm7.064.038h3.011v2.969l-2.976-.033zm6.582.045h3.014v2.971l-2.979-.032zm-10.072 5.417h3.013v2.971l-2.978-.033zm7.09.065h3.014v2.969l-2.978-.033z"/>
+        <path fill="none" stroke="#fff" stroke-width="2.707" d="M26.541 1018.883l.03-6.126c.026-5.665 10.486-5.659 10.5 0l.013 6.169" transform="matrix(1.29022 0 0 1.29022 -8.661 -295.966)"/>
+    </g>
+</svg>

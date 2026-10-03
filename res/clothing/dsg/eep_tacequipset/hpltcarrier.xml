@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<clothing>
+
+	<coreAtributes>
+	
+		<authorTag><![CDATA[A tag sewn into the inside of the back reads "Official Enforcer Issue, MFD by DSG Threadworks."]]></authorTag>
+
+		<value>3000</value> 
+
+		<determiner><![CDATA[a]]></determiner>
+
+		<name><![CDATA[heavy plate carrier]]></name>
+
+		<namePlural pluralByDefault="false"><![CDATA[heavy plate carriers]]></namePlural> 
+
+		<description><![CDATA[A standard plate carrier vest fitted with additional deltoid, groin, neck, and throat protection. It is intended for use in pitched battles rather than quick raids.]]></description>
+
+		<physicalResistance>40</physicalResistance> 
+
+		<femininity>ANDROGYNOUS</femininity> 
+
+		<slot>TORSO_OVER</slot> 
+
+		<rarity>EPIC</rarity> 
+
+		<clothingSet>dsg_enforcer_tactical_heavy</clothingSet> 
+
+		<imageName>hpltcarrier.svg</imageName> 
+
+		<imageEquippedName/>
+
+		<stickers>
+			
+			<category id="branchtape" priority="1"> 
+				<categoryName><![CDATA[Branchtape]]></categoryName>
+				<sticker id="None" priority="0" defaultSticker="true" zLayer="1" colourSelected="TEXT_GREY"> 
+					<stickerName><![CDATA[None]]></stickerName>
+					<namePrefix/>
+					<namePostfix/>
+					<descriptionModification/>
+					<imageName/>
+					<itemTagsAdded/>
+					<itemTagsRemoved/>
+					<unavailabilityText/>
+					<availabilityText/>
+				</sticker>
+				<sticker id="enforcer" priority="1" defaultSticker="false" zLayer="1" colourDisabled="TEXT_GREY" colourSelected="CLOTHING_BLUE"> 			
+					<stickerName><![CDATA[Enforcer]]></stickerName>
+					<namePrefix priority="1"><![CDATA[Enforcer ]]></namePrefix> 
+					<namePostfix/> 
+					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i> This one is clearly labeled for Enforcer use.</i>]]></descriptionModification> 
+					<imageName>hpltcarrier_st_enftape.svg</imageName> 
+					<itemTagsAdded>
+						<tag>CONTRABAND_HEAVY</tag>
+					</itemTagsAdded> 
+					<itemTagsRemoved>
+						<tag>CONTRABAND_MEDIUM</tag>
+					</itemTagsRemoved> 
+					<unavailabilityText showDisabledButton="true"><![CDATA[
+						#IF(!pc.hasOccupationTag(OCCUPATION_TAG_ENFORCER_PATROL) ||
+							!pc.hasOccupationTag(OCCUPATION_TAG_ENFORCER_SWORD) ||
+							!pc.hasOccupationTag(OCCUPATION_TAG_ENFORCER_ORICL))
+							Only Enforcers can use an Enforcer branchtape!
+						#ENDIF
+					]]></unavailabilityText>
+					<availabilityText><![CDATA[
+						As an Enforcer, you can freely use Enforcer branchtapes.
+					]]></availabilityText> 
+				</sticker>
+			</category>
+		</stickers>
+
+		<effects>
+			<effect limit="0" mod1="CLOTHING_ATTRIBUTE" mod2="RESISTANCE_FIRE" potency="MAJOR_BOOST" timer="397" type="CLOTHING"/>
+			<effect limit="0" mod1="CLOTHING_ATTRIBUTE" mod2="RESISTANCE_FIRE" potency="MAJOR_BOOST" timer="397" type="CLOTHING"/>
+			<effect limit="0" mod1="CLOTHING_ATTRIBUTE" mod2="RESISTANCE_FIRE" potency="MAJOR_BOOST" timer="397" type="CLOTHING"/>
+			<effect limit="0" mod1="CLOTHING_ATTRIBUTE" mod2="RESISTANCE_FIRE" potency="MAJOR_BOOST" timer="397" type="CLOTHING"/>
+			<effect limit="0" mod1="CLOTHING_ATTRIBUTE" mod2="RESISTANCE_FIRE" potency="MAJOR_BOOST" timer="397" type="CLOTHING"/>
+			<effect limit="0" mod1="CLOTHING_ATTRIBUTE" mod2="RESISTANCE_FIRE" potency="MAJOR_BOOST" timer="397" type="CLOTHING"/>
+			<effect limit="0" mod1="CLOTHING_ATTRIBUTE" mod2="RESISTANCE_FIRE" potency="BOOST" timer="397" type="CLOTHING"/>
+			<effect limit="0" mod1="CLOTHING_ATTRIBUTE" mod2="RESISTANCE_ICE" potency="MAJOR_BOOST" timer="397" type="CLOTHING"/>
+			<effect limit="0" mod1="CLOTHING_ATTRIBUTE" mod2="RESISTANCE_ICE" potency="MAJOR_BOOST" timer="397" type="CLOTHING"/>
+			<effect limit="0" mod1="CLOTHING_ATTRIBUTE" mod2="RESISTANCE_ICE" potency="MAJOR_BOOST" timer="397" type="CLOTHING"/>
+			<effect limit="0" mod1="CLOTHING_ATTRIBUTE" mod2="RESISTANCE_ICE" potency="MAJOR_BOOST" timer="397" type="CLOTHING"/>
+			<effect limit="0" mod1="CLOTHING_ATTRIBUTE" mod2="RESISTANCE_POISON" potency="MAJOR_BOOST" timer="397" type="CLOTHING"/>
+			<effect limit="0" mod1="CLOTHING_ATTRIBUTE" mod2="RESISTANCE_POISON" potency="MAJOR_BOOST" timer="397" type="CLOTHING"/>
+			<effect limit="0" mod1="CLOTHING_ATTRIBUTE" mod2="RESISTANCE_POISON" potency="MAJOR_BOOST" timer="397" type="CLOTHING"/>
+			<effect limit="0" mod1="CLOTHING_ATTRIBUTE" mod2="RESISTANCE_POISON" potency="MAJOR_BOOST" timer="397" type="CLOTHING"/>	
+		</effects>
+
+		<blockedPartsList> 
+
+			<blockedParts>
+
+				<displacementType>REMOVE_OR_EQUIP</displacementType> 
+
+				<clothingAccessRequired>
+					<clothingAccess>HEAD</clothingAccess>
+				</clothingAccessRequired>
+
+				<blockedBodyParts> 
+					<bodyPart>BREASTS</bodyPart>
+					<bodyPart>NIPPLES</bodyPart>
+					<bodyPart>STOMACH</bodyPart>
+					<bodyPart>BACK</bodyPart>
+				</blockedBodyParts>
+
+				<clothingAccessBlocked> 
+					<clothingAccess>ARMS_UP_TO_SHOULDER</clothingAccess>
+					<clothingAccess>CHEST</clothingAccess>
+				</clothingAccessBlocked>
+
+				<concealedSlots values="CONCEALED_PARTIAL_TORSO"/> 
+
+			</blockedParts>
+			
+			<blockedParts>
+				<displacementType>PULLS_UP</displacementType>
+				<clothingAccessRequired/>
+				<blockedBodyParts>
+					<bodyPart>VAGINA</bodyPart>
+					<bodyPart>TESTICLES</bodyPart>
+					<bodyPart>PENIS</bodyPart>
+					<bodyPart>MOUND</bodyPart>
+				</blockedBodyParts>
+				<clothingAccessBlocked/>
+
+				<concealedSlots>
+					<slot>GROIN</slot>
+					<slot>VAGINA</slot>
+					<slot>PENIS</slot>
+					<slot>PIERCING_PENIS</slot>
+					<slot>PIERCING_VAGINA</slot>
+				</concealedSlots>
+			</blockedParts>
+
+		</blockedPartsList>
+
+		<incompatibleSlots/>
+
+		<primaryColours values="JUST_BLACK"/> 
+		<primaryColoursDye values="ALL"/>
+		<secondaryColours values="JUST_BLACK"/> 
+		<secondaryColoursDye values="ALL"/>
+		<tertiaryColours values="JUST_BLACK"/> 
+		<tertiaryColoursDye values="ALL"/>
+
+		<itemTags> 
+			<tag>RIGID_MATERIAL</tag>
+			<tag>FITS_ARM_WINGS</tag>
+			<tag>CONTRABAND_MEDIUM</tag>
+		</itemTags>
+	</coreAtributes>
+
+	<replacementText type="REMOVE_OR_EQUIP">
+		<self>
+			<![CDATA[[npc.Name] [npc.verb(slide)] [npc.her] head through the plate carrier's neck hole and [npc.verb(secure)] the cummerbund on either side of [npc.her] torso.]]>
+		</self>
+		<other>
+			<![CDATA[[npc.Name] [npc.verb(slide)] [npc2.namePos] head through the plate carrier's neck hole and [npc.verb(secure)] the cummerbund on either side of [npc2.her] torso.]]>
+		</other>
+		<otherRough>
+			<![CDATA[[npc.Name] [npc.verb(shove)] [npc2.namePos] head through the plate carrier's neck hole and hastily [npc.verb(secure)] the cummerbund on either side of [npc2.her] torso.]]>
+		</otherRough>
+	</replacementText>
+
+	<displacementText type="REMOVE_OR_EQUIP">
+		<self>
+			<![CDATA[[npc.Name] un[npc.do] the cummerbund on either side of [npc.her] plate carrier, [npc.verb(withdraw)] [npc.her] [npc.arms] from the deltoid protectors, and [npc.verb(slide)] [npc.her] head through the neck hole.]]>
+		</self>
+		<other>
+			<![CDATA[[npc.Name] un[npc.do] the cummerbund on either side of [npc2.name] plate carrier, [npc.verb(guide)] [npc.her] [npc.arms] from the deltoid protectors, and [npc.verb(slide)] [npc2.her] head through the neck hole.]]>
+		</other>
+		<otherRough>
+			<![CDATA[[npc.Name] [npc.verb(rip)] open the cummerbund either side of [npc2.namePos] plate carrier, [npc.verb(force)] [npc.her] [npc.arms] from the deltoid protectors, and [npc.verb(yank)] the rest over [npc2.her] head.]]>
+		</otherRough>
+	</displacementText>
+
+	<replacementText type="PULLS_DOWN">
+		<self>
+			<![CDATA[[npc.Name] [npc.verb(lower)] the groin protector on [npc.her] heavy plate carrier back down.]]>
+		</self>
+		<other>
+			<![CDATA[[npc.Name] [npc.verb(lower)] the groin protector on [npc.her] heavy plate carrier back down.]]>
+		</other>
+		<otherRough>
+			<![CDATA[[npc.Name] [npc.verb(flip)] the groin protector on [npc.her] heavy plate carrier back down.]]>
+		</otherRough>
+	</replacementText>
+
+	<displacementText type="PULLS_UP">
+		<self>
+			<![CDATA[[npc.Name] [npc.verb(lift)] the groin protector on [npc.her] heavy plate carrier up.]]>
+		</self>
+		<other>
+			<![CDATA[[npc.Name] [npc.verb(lift)] the groin protector on [npc2.namePos] heavy plate carrier up.]]>
+		</other>
+		<otherRough>
+			<![CDATA[[npc.Name] [npc.verb(flip)] the groin protector on [npc2.namePos] heavy plate carrier up.]]>
+		</otherRough>
+	</displacementText>
+	
+</clothing>

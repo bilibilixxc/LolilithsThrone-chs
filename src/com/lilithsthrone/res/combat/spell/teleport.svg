@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+    <defs>
+        <linearGradient id="elementalEarth1">
+            <stop offset="0" stop-color="#c78c38"/>
+            <stop offset="1" stop-color="#e3a347"/>
+        </linearGradient>
+    </defs>
+    <ellipse cx="77.277" cy="151.702" fill="#fae" rx="48.881" ry="18.364"/>
+    <path fill="none" stroke="#f0c" stroke-linecap="round" stroke-linejoin="round" stroke-width="4.18" d="M56.489 162.59l20.602-24.092 21.365 23.967-55.078-14.687 68.05.046z"/>
+    <path fill="#ff6bda" fill-rule="evenodd" d="M100.251 63.339c44.117-53.66 202.034-28.955 109.71 89.527C249.188 51.676 164.57 30.38 100.25 63.339z"/>
+    <path fill="#f300b7" fill-rule="evenodd" d="M110.971 56.378c40.806-37.717 169.739-16.052 107.085 82.164 30.12-89-53.905-110.455-107.085-82.164z"/>
+    <g stroke="#f300b7" transform="matrix(1.94872 0 0 1.94872 -109.386 -43.82)">
+        <path fill="none" stroke-linecap="round" stroke-width="5" d="M141.79 137.198l1.895-19.445M151.64 117.879c.126.631 2.272 18.94 2.272 18.94"/>
+        <path fill="#f300b7" fill-rule="evenodd" d="M153.986 120.528c-3.803-1.936-8.28-1.955-12.56.037.711-7.458.209-14.511.49-21.753.063-1.587 11.766-1.383 11.744-.126-.129 7.28-.114 14.562.326 21.842z"/>
+        <path fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.5" d="M142.294 114.746l-6.878-9.069 7.153-6.115M152.938 99.443l7.195 7.12-8.153 9.586"/>
+        <ellipse cx="148.041" cy="90.605" fill="#f300b7" stroke-linecap="round" stroke-linejoin="round" rx="5.872" ry="5.43"/>
+    </g>
+    <ellipse cx="78.301" cy="59.86" fill="none" stroke="#ff6bda" stroke-dasharray="4,2" stroke-linecap="round" stroke-linejoin="round" stroke-opacity=".949" rx="11.442" ry="10.581"/>
+    <path fill="none" stroke="#ff6bda" stroke-dasharray="4,2" stroke-opacity=".949" d="M65.786 74.425c-5.927 4.985-15.09 11.468-15.152 14.647-.082 4.234 14.395 20.961 14.395 20.961l-3.662 40.659c-.606 6.723 8.842 4.89 9.217 1.389l3.788-35.356c2.105-1.934 4.21-1.312 6.314-.252l4.293 34.85c.505 4.1 10.165 3.494 9.723-.379l-4.04-35.355-.127-5.556c-.505-.379 14.718-15.74 15.026-19.32.234-2.712-13.52-14.152-16.541-16.414-2.393-1.792-20.394-2.263-23.234.126z"/>
+    <path fill="none" stroke="#ff6bda" stroke-dasharray="4,2" stroke-opacity=".949" d="M58.336 89.704l6.756 9.217.126-14.963zM96.756 90.71l-6.297 9.252-.118-15.018z"/>
+</svg>

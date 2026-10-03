@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64">
+    <defs>
+        <linearGradient id="cavernLakeGradient">
+            <stop offset="0" stop-color="#f55"/>
+            <stop offset="1" stop-color="#ff8080"/>
+        </linearGradient>
+        <linearGradient id="linearGradient15" x1="29.5" x2="44.125" y1="1025.487" y2="1003.362" gradientTransform="matrix(1.28844 0 0 1.29051 -9.225 -296.313)" gradientUnits="userSpaceOnUse" xlink:href="#cavernLakeGradient"/>
+    </defs>
+    <g transform="translate(0 -988.362)">
+        <ellipse cx="32" cy="1020.368" fill="url(#linearGradient15)" fill-rule="evenodd" rx="30.383" ry="30.381"/>
+        <path fill="#fff" fill-rule="evenodd" stroke="#fff" stroke-width="2.656" d="M26.432 1000.583l.166 16.394c-5.621.125-16.041 3.478-16.073 7.856v.008c3.164-.79 6.373-1.009 11.204-.891 2.825.127 7.859 2.165 10.687 2.213 3.59.06 7.46-1.8 11.043-2.027 3.515-.223 10.51 1.105 10.51 1.105-.447-3.663-5.172-8.012-13.383-8.566l-.041-16.055-2.936-.01.133 3.617-8.396-.048-.135-3.586zm6.515 8.418c2.972-.138 3.365 3.123 3.522 7.486l-6.75-.031c-.039-4.056.603-7.334 3.228-7.455z"/>
+        <path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.985" d="M6.931 1029.349c4.743.916 5.148-1.624 13.407-1.258 4.317.191 8.407 2.502 13.712 2.39 5.136-.11 6.763-2.184 11.083-2.292 3.908-.098 6.944.601 11.69 1.726"/>
+        <path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.908" d="M9.486 1034.058c4.247.946 4.608-1.675 12.003-1.298 3.865.198 7.526 2.583 12.276 2.467 4.599-.113 6.055-2.255 9.923-2.366 3.499-.1 6.217.621 10.466 1.781"/>
+        <path fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.803" d="M13.321 1039.188c3.635.986 3.945-1.747 10.274-1.353 3.309.206 6.443 2.692 10.509 2.571 3.936-.117 5.183-2.35 8.493-2.466 2.995-.106 5.322.647 8.96 1.857"/>
+    </g>
+</svg>

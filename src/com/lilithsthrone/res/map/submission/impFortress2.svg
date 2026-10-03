@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64">
+    <defs>
+        <linearGradient id="impFortress2Gradient">
+            <stop offset="0" stop-color="#f55"/>
+            <stop offset="1" stop-color="#ff8080"/>
+        </linearGradient>
+        <linearGradient id="linearGradient15" x1="29.5" x2="44.125" y1="1025.487" y2="1003.362" gradientTransform="matrix(1.28844 0 0 1.29051 -9.225 -296.313)" gradientUnits="userSpaceOnUse" xlink:href="#impFortress2Gradient"/>
+    </defs>
+    <g fill-rule="evenodd" transform="translate(0 -988.362)">
+        <ellipse cx="32" cy="1020.368" fill="url(#linearGradient15)" rx="30.383" ry="30.381"/>
+        <path fill="#fff" stroke="#fff" d="M44.54 1006.276l-5.134.031.076 3.3-4.23-.055v-3.176l-5.39.035.142 3.234-4.387.102-.043-3.35-5.166.073-.088 8.152 3.97-.045-4.665 27.035h25.75l-4.336-27.037 3.625-.088zm-7.868 35.116l-7.687.062c-.773-12.28 8.14-11.81 7.687-.062z"/>
+        <path fill="#fff" stroke="#fff" stroke-width=".915" d="M32.822 1007.458v-11.75s1.96 1.919 3.215 2c1.32.087 2.551 2.927 3.86 3.136 1.525.242 4.24 2.19 4.24 2.19s-2.85-.723-4.258-.458c-1.328.25-2.33-2.193-3.656-1.924-1.247.253-3.35-1.174-3.35-1.174"/>
+    </g>
+</svg>

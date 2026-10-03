@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 256 256">
+    <defs>
+        <linearGradient id="arcaneLightning2">
+            <stop offset="0" stop-color="#f5d"/>
+            <stop offset="1" stop-color="#ff13cf"/>
+        </linearGradient>
+        <linearGradient id="arcaneLightning1">
+            <stop offset="0" stop-color="#f38cec"/>
+            <stop offset="1" stop-color="#b7c4c8"/>
+        </linearGradient>
+        <linearGradient id="linearGradient4159" x1="121.071" x2="121.786" y1="164.929" y2="104.571" gradientTransform="matrix(.76277 0 0 .77286 44.257 -14.464)" gradientUnits="userSpaceOnUse" xlink:href="#arcaneLightning1"/>
+        <linearGradient id="linearGradient4211" x1="130.562" x2="137.633" y1="177.966" y2="118.114" gradientTransform="translate(-8.701 -3.788)" gradientUnits="userSpaceOnUse" xlink:href="#arcaneLightning2"/>
+    </defs>
+    <g fill-rule="evenodd">
+        <path fill="url(#linearGradient4211)" d="M120.703 88.7l45.848.044-40.49 59h27.397L91.359 222.25l24.385-56.748-19.65-.342z"/>
+        <path fill="url(#linearGradient4159)" d="M104.646 113.603c-40.861 25.584-71.508-39.015-17.4-43.83 9.14-24.679 43.85-36.794 78.612-11.688 72.693-4.188 46.437 86.676-14.293 57.112-15.215 7.452-30.876 6.537-46.92-1.594z"/>
+    </g>
+</svg>

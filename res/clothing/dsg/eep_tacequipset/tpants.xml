@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<clothing>
+
+	<coreAtributes>
+		
+		<authorTag><![CDATA[A small tag sewn into the waist reads "Official Enforcer Issue, MFD by DSG Threadworks."]]></authorTag>
+
+		<value>300</value> 
+
+		<determiner><![CDATA[a pair of]]></determiner>
+
+		<name><![CDATA[Enforcer's tactical trousers]]></name>
+
+		<namePlural pluralByDefault="false"><![CDATA[Enforcer's tactical trousers]]></namePlural> 
+
+		<description><![CDATA[A pair of boot-cut cargo trousers made from breathable cotton rip-stop and reinforced knees and seat. The drawstrings around the ankles allow the legs to be easily bloused into a pair of boots.]]></description> 
+
+		<physicalResistance>1</physicalResistance> 
+
+		<femininity>ANDROGYNOUS</femininity> 
+
+		<slot>LEG</slot> 
+
+		<rarity>EPIC</rarity> 
+
+		<clothingSet/>
+
+		<imageName>tpants.svg</imageName> 
+
+		<imageEquippedName/> 
+
+		<effects>
+			<effect limit="0" mod1="CLOTHING_ATTRIBUTE" mod2="RESISTANCE_FIRE" potency="MINOR_BOOST" timer="397" type="CLOTHING"/>
+			<effect limit="0" mod1="CLOTHING_ATTRIBUTE" mod2="RESISTANCE_ICE" potency="MINOR_BOOST" timer="397" type="CLOTHING"/>
+			<effect limit="0" mod1="CLOTHING_ATTRIBUTE" mod2="RESISTANCE_POISON" potency="MINOR_BOOST" timer="397" type="CLOTHING"/>	
+		</effects> 
+
+		<blockedPartsList> 
+
+			<blockedParts>
+
+				<displacementType>REMOVE_OR_EQUIP</displacementType> 
+
+				<clothingAccessRequired> 
+					<clothingAccess>LEGS_UP_TO_GROIN</clothingAccess>
+					<clothingAccess>FEET</clothingAccess>
+				</clothingAccessRequired>
+
+				<blockedBodyParts/> 
+
+				<clothingAccessBlocked> 
+					<clothingAccess>LEGS_UP_TO_GROIN</clothingAccess>
+				</clothingAccessBlocked>
+
+				<concealedSlots> 
+					<slot>SOCK</slot>
+				</concealedSlots>
+			</blockedParts>
+
+			<blockedParts>
+				<displacementType>UNZIPS</displacementType>
+				<clothingAccessRequired/>
+				<blockedBodyParts>
+					<bodyPart>PENIS</bodyPart>
+				</blockedBodyParts>
+				<clothingAccessBlocked>
+					<clothingAccess>GROIN</clothingAccess>
+				</clothingAccessBlocked>
+
+				<concealedSlots values="CONCEALED_UNZIPS_GROIN"/>
+			</blockedParts>
+			
+			<blockedParts>
+				<displacementType>PULLS_DOWN</displacementType>
+				<clothingAccessRequired/>
+				<blockedBodyParts>
+					<bodyPart>ANUS</bodyPart>
+					<bodyPart>PENIS</bodyPart>
+					<bodyPart>VAGINA</bodyPart>
+				</blockedBodyParts>
+				<clothingAccessBlocked>
+					<clothingAccess>GROIN</clothingAccess>
+				</clothingAccessBlocked>
+
+				<concealedSlots>
+					<slot>GROIN</slot>
+					<slot>VAGINA</slot>
+					<slot>ANUS</slot>
+					<slot>PENIS</slot>
+					<slot>PIERCING_PENIS</slot>
+					<slot>PIERCING_VAGINA</slot>
+				</concealedSlots>
+			</blockedParts>
+		</blockedPartsList>
+
+		<incompatibleSlots/>
+
+		<defaultPatterns patternChance="1.0f" colourNameDerivedFromPattern="false"> 
+			<pattern>urban_splinter_camo</pattern>
+		</defaultPatterns>
+
+		<primaryColours values="JUST_GREY"/>
+		<primaryColoursDye values="ALL"/>
+		<secondaryColours values="JUST_STEEL"/>
+		<secondaryColoursDye values="ALL_METAL"/>
+
+		<itemTags> 
+			<tag>CONTRABAND_MEDIUM</tag>
+		</itemTags>
+	</coreAtributes>
+
+	<replacementText type="REMOVE_OR_EQUIP">
+		<self>
+		  <![CDATA[[npc.Name] [npc.verb(step)] into the tactical trousers and [npc.verb(pull)] them up to [npc.her] waist before buttoning up the front.]]>
+		</self>
+		<other>
+		  <![CDATA[[npc.Name] [npc.verb(pull)] the tactical trousers up around [npc2.namePos] legs up to [npc2.her] waist before buttoning up the front.]]>
+		</other>
+		<otherRough>
+		  <![CDATA[[npc.Name] 
+					#IF game.isSillyModeEnabled()
+					#THEN practically [npc.verb(give)] [npc2.namePos] a wedgie as [npc2.her]
+					#ENDIF
+					[npc.verb(yank)] the tactical trousers up around [npc2.namePos] legs up to [npc2.her] waist before roughly buttoning up the front.]]>
+		</otherRough>
+	</replacementText>
+
+	<displacementText type="REMOVE_OR_EQUIP">
+		<self>
+		  <![CDATA[[npc.Name] [npc.verb(unbutton)] [npc.her] tactical trousers and [npc.verb(pull)] them down before kicking them from [npc.her] [npc.feet].]]>
+		</self>
+		<other>
+		  <![CDATA[[npc.Name] [npc.verb(unbutton)] [npc2.name] tactical trousers and [npc.verb(pull)] them down before sliding them from [npc2.her] [npc2.feet].]]>
+		</other>
+		<otherRough>
+		  <![CDATA[[npc.Name] forcibly [npc.verb(unbutton)] [npc2.name] tactical trousers and [npc.verb(yank)] them off.]]>
+		</otherRough>
+	</displacementText>	
+
+	<replacementText type="UNZIPS">
+		<self>
+		  <![CDATA[[npc.Name] [npc.verb(zip)] up the fly of [npc.her] tactical trousers.]]>
+		</self>
+		<other>
+		  <![CDATA[[npc.Name] [npc.verb(zip)] up the front of [npc2.namePos] tactical trousers.]]>
+		</other>
+		<otherRough>
+		  <![CDATA[[npc.Name] roughly [npc.verb(zip)] up the front of [npc2.namePos] tactical trousers
+					#IF game.isSillyModeEnabled() && npc2.hasPenis()
+					#THEN without much regard for what might be in the way, resulting in a close call!
+					#ELSE .
+					#ENDIF
+					]]>
+		</otherRough>
+	</replacementText>
+
+	<displacementText type="UNZIPS">
+		<self>
+		  <![CDATA[[npc.Name] [npc.verb(unzip)] up the fly of [npc.her] tactical trousers.]]>
+		</self>
+		<other>
+		  <![CDATA[[npc.Name] [npc.verb(unzip)] up the fly of [npc2.namePos] tactical trousers.]]>
+		</other>
+		<otherRough>
+		  <![CDATA[[npc.Name] forcibly [npc.verb(unzip)] the fly of [npc2.namePos] tactical trousers.]]>
+		</otherRough>
+	</displacementText>
+
+	<replacementText type="PULLS_UP">
+		<self>
+		  <![CDATA[[npc.Name] [npc.verb(pull)] [npc.her] tactical trousers up to [npc.her] waist and [npc.verb(button)] up the front.]]>
+		</self>
+		<other>
+		  <![CDATA[[npc.Name] [npc.verb(pull)] [npc2.namePos] tactical trousers up to [npc2.her] waist and [npc.verb(button)] up the front.]]>
+		</other>
+		<otherRough>
+		  <![CDATA[[npc.Name] forcibly [npc.verb(pull)] [npc2.namePos] tactical trousers up to [npc2.her] waist and roughly [npc.verb(button)] up the front.]]>
+		</otherRough>
+	</replacementText>
+
+	<displacementText type="PULLS_DOWN">
+		<self>
+		  <![CDATA[[npc.Name] [npc.verb(unbutton)] [npc.her] tactical trousers and [npc.verb(pull)] them down.]]>
+		</self>
+		<other>
+		  <![CDATA[[npc.Name] [npc.verb(unbutton)] [npc2.name] tactical trousers and [npc.verb(pull)] them down.]]>
+		</other>
+		<otherRough>
+		  <![CDATA[[npc.Name] forcibly [npc.verb(unbutton)] [npc2.name] tactical trousers and [npc.verb(yank)] down around [npc2.her] legs.]]>
+		</otherRough>
+	</displacementText>	
+	
+</clothing>

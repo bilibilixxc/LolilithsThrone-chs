@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<clothing>
+
+	<coreAtributes>
+		
+		<value>500</value> 
+		
+		<authorTag><![CDATA[On the inside of the collar, faint rubberised ink reads "Official Enforcer Issue, MFD by DSG Threadworks."]]></authorTag>
+
+		<determiner><![CDATA[an]]></determiner>
+
+		<name><![CDATA[Enforcer's riot neck protector]]></name>
+
+		<namePlural pluralByDefault="false"><![CDATA[Enforcer's riot neck protectors]]></namePlural> 
+
+		<description><![CDATA[A collar made from shock-absorbing foam and flame-retardant fabric. It is designed to protect the throat and neck from blows as well as keep flammable liquids from leaking down the wearer's front.]]></description> 
+
+		<physicalResistance>3</physicalResistance> 
+
+		<femininity>ANDROGYNOUS</femininity> 
+
+		<slot>NECK</slot> 
+
+		<rarity>EPIC</rarity> 
+
+		<clothingSet>dsg_enforcer_riot</clothingSet>
+
+		<imageName>riotneckprotector.svg</imageName> 
+
+		<imageEquippedName/> 
+
+		<effects/>
+
+		<blockedPartsList> 
+
+			<blockedParts>
+
+				<displacementType>REMOVE_OR_EQUIP</displacementType> 
+
+				<clothingAccessRequired/>
+
+				<blockedBodyParts/>
+
+				<clothingAccessBlocked/>
+
+				<concealedSlots/>
+			</blockedParts>
+		</blockedPartsList>
+
+		<incompatibleSlots/> 
+
+		<primaryColours values="JUST_BLACK"/> 
+		<primaryColoursDye values="ALL"/>
+		<secondaryColours values="JUST_BLACK"/>
+		<secondaryColoursDye values="ALL"/>
+		<tertiaryColours values="JUST_BLACK"/> 
+		<tertiaryColoursDye values="ALL"/>
+
+		<itemTags> 
+			<tag>RIGID_MATERIAL</tag>
+			<tag>CONTRABAND_MEDIUM</tag>
+		</itemTags>
+	</coreAtributes>
+
+	<replacementText type="REMOVE_OR_EQUIP">
+		<self>
+			<![CDATA[[npc.Name] [npc.verb(strap)] the neck protector around [npc.her] neck.]]>
+		</self>
+		<other>
+			<![CDATA[[npc.Name] [npc.verb(strap)] the neck protector around [npc2.namePos] neck.]]>
+		</other>
+		<otherRough>
+			<![CDATA[[npc.Name] hastily [npc.verb(strap)] the neck protector around [npc2.namePos] neck.]]>
+		</otherRough>
+  </replacementText>
+
+	<displacementText type="REMOVE_OR_EQUIP">
+		<self>
+			<![CDATA[[npc.Name] [npc.verb(take)] [npc.her] neck protector off.]]>
+		</self>
+		<other>
+			<![CDATA[[npc.Name] [npc.verb(take)] [npc2.namePos] neck protector off.]]>
+		</other>
+		<otherRough>
+			<![CDATA[[npc.Name] [npc.verb(pull)] [npc2.namePos] neck protector off [npc2.her] neck.]]>
+		</otherRough>
+	</displacementText>
+	
+</clothing>

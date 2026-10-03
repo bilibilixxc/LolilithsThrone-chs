@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64">
+    <defs>
+        <linearGradient id="roomSlaveDoubleGradient">
+            <stop offset="0" stop-color="#f55"/>
+            <stop offset="1" stop-color="#ff8080"/>
+        </linearGradient>
+        <linearGradient id="linearGradient15" x1="29.5" x2="44.125" y1="1025.487" y2="1003.362" gradientTransform="matrix(1.28844 0 0 1.29051 -9.225 -296.313)" gradientUnits="userSpaceOnUse" xlink:href="#roomSlaveDoubleGradient"/>
+    </defs>
+    <g transform="translate(0 -988.362)">
+        <ellipse cx="32" cy="1020.368" fill="url(#linearGradient15)" fill-rule="evenodd" rx="30.383" ry="30.381"/>
+        <g fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" transform="translate(-4.323 -95.618) scale(1.089)">
+            <ellipse cx="22.741" cy="1035.89" stroke-width="3.229" rx="9.033" ry="4.717" transform="rotate(.008)"/>
+            <ellipse cx="60.641" cy="1032.638" stroke-width="3.056" rx="8.701" ry="4.387" transform="rotate(.876)"/>
+            <ellipse cx="159.16" cy="1033.98" stroke-width=".652" rx="3.339" ry="1.107" transform="matrix(.99961 .0279 -.12867 .99169 0 0)"/>
+            <ellipse cx="162.807" cy="1033.12" stroke-width=".652" rx="3.339" ry="1.107" transform="matrix(.99961 .0279 -.12867 .99169 0 0)"/>
+            <ellipse cx="166.686" cy="1032.342" stroke-width=".652" rx="3.339" ry="1.107" transform="matrix(.99961 .0279 -.12867 .99169 0 0)"/>
+            <ellipse cx="170.976" cy="1032.355" stroke-width=".652" rx="3.339" ry="1.107" transform="matrix(.99961 .0279 -.12867 .99169 0 0)"/>
+        </g>
+        <g fill="none" stroke="#fff">
+            <path stroke-width="3.11452" d="M9.69 1004.339v14.745"/>
+            <path stroke-linecap="round" stroke-width="3.3411013300000003" d="M13.366 1008.849h1.92"/>
+            <path stroke-width="4.67178" d="M10.336 1013.134l21.67.03"/>
+            <path stroke-width="3.11452" d="M30.497 1019.004l-.048-5.584"/>
+        </g>
+        <g fill="none" stroke="#fff">
+            <path stroke-width="3.11452" d="M35.773 1004.24v14.745"/>
+            <path stroke-linecap="round" stroke-width="3.3411013300000003" d="M39.449 1008.75h1.92"/>
+            <path stroke-width="4.67178" d="M36.42 1013.034l21.67.03"/>
+            <path stroke-width="3.11452" d="M56.58 1018.905l-.048-5.584"/>
+        </g>
+    </g>
+</svg>

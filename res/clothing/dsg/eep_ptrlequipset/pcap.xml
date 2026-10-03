@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<clothing>
+
+	<coreAtributes>
+		
+		<authorTag><![CDATA[On the inside of the hat's crown, faint rubberised ink reads "Official Enforcer Issue, MFD by DSG Threadworks."]]></authorTag>
+
+		<value>850</value> 
+
+		<determiner><![CDATA[a]]></determiner>
+
+		<name><![CDATA[cap]]></name>
+
+		<namePlural pluralByDefault="false"><![CDATA[Enforcer's caps]]></namePlural> 
+
+		<description><![CDATA[A cap with a flat circular top and a short polished visor. It is standard issue headgear for Enforcers on patrol duty.]]></description> 
+
+		<physicalResistance>0</physicalResistance> 
+
+		<femininity>MASCULINE</femininity> 
+
+		<slot>HEAD</slot> 
+
+		<rarity>EPIC</rarity> 
+
+		<clothingSet/>
+
+		<imageName>pcap.svg</imageName> 
+
+		<imageEquippedName/>
+		
+		<stickers>
+			
+			<category id="badge" priority="1"> 
+				<categoryName><![CDATA[Cap Badge]]></categoryName>
+				<sticker id="none" priority="0" defaultSticker="true" zLayer="1" colourSelected="TEXT_GREY"> 
+					<stickerName><![CDATA[None]]></stickerName>
+					<namePrefix priority="1"><![CDATA[Enforcer ]]></namePrefix>
+					<namePostfix/>
+					<descriptionModification/>
+					<imageName/>
+					<itemTagsAdded/>
+					<itemTagsRemoved/>
+					<unavailabilityText/>
+					<availabilityText/>
+				</sticker>
+				<sticker id="badge_dominion" priority="1" defaultSticker="false" zLayer="1" colourDisabled="TEXT_GREY" colourSelected="DAMAGE_TYPE_LUST"> 
+					<stickerName><![CDATA[Dominion]]></stickerName>
+					<namePrefix priority="1"><![CDATA[Dominion Patrol Enforcer ]]></namePrefix> 
+					<namePostfix/> 
+					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i> This one has the badge of the Dominion Frontline Patrol attached to it.</i>]]></descriptionModification> 
+					<imageName>pcap_st_badge_dominion.svg</imageName> 
+					<itemTagsAdded>
+						<tag>CONTRABAND_HEAVY</tag>
+					</itemTagsAdded> 
+					<itemTagsRemoved>
+						<tag>CONTRABAND_MEDIUM</tag>
+					</itemTagsRemoved> 
+					<unavailabilityText showDisabledButton="true"><![CDATA[
+						#IF(!pc.hasOccupationTag(OCCUPATION_TAG_ENFORCER_PATROL))
+							Only Patrol Enforcers can use this cap badge!
+						#ENDIF
+					]]></unavailabilityText> 
+					<availabilityText>
+						As a Patrol Enforcer, you can freely use this cap badge.
+					</availabilityText> 
+				</sticker>
+				<sticker id="badge_elis" priority="2" defaultSticker="false" zLayer="1" colourDisabled="TEXT_GREY" colourSelected="DAMAGE_TYPE_PHYSICAL"> 
+					<stickerName><![CDATA[Elis]]></stickerName>
+					<namePrefix priority="1"><![CDATA[Elis Enforcer ]]></namePrefix>
+					<namePostfix/>
+					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i> This one has the badge of the Elis Frontline Patrol attached to it.</i>]]></descriptionModification>
+					<imageName>pcap_st_badge_elis.svg</imageName>
+					<itemTagsAdded>
+						<tag>CONTRABAND_HEAVY</tag>
+					</itemTagsAdded>
+					<itemTagsRemoved>
+						<tag>CONTRABAND_MEDIUM</tag>
+					</itemTagsRemoved>
+					<unavailabilityText showDisabledButton="true"><![CDATA[
+						#IF(!pc.hasOccupationTag(OCCUPATION_TAG_ENFORCER_PATROL))
+							Only Patrol Enforcers can use this cap badge!
+						#ENDIF
+					]]></unavailabilityText>
+					<availabilityText>
+						As a Patrol Enforcer, you can freely use this cap badge.
+					</availabilityText>
+				</sticker>
+				<sticker id="badge_thinis" priority="3" defaultSticker="false" zLayer="1" colourDisabled="TEXT_GREY" colourSelected="DAMAGE_TYPE_FIRE">
+					<stickerName><![CDATA[Thinis]]></stickerName>
+					<namePrefix priority="1"><![CDATA[Thinis Enforcer ]]></namePrefix>
+					<namePostfix/>
+					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i> This one has the badge of the Thinis Frontline Patrol attached to it.</i>]]></descriptionModification>
+					<imageName>pcap_st_badge_thinis.svg</imageName>
+					<itemTagsAdded>
+						<tag>CONTRABAND_HEAVY</tag>
+					</itemTagsAdded>
+					<itemTagsRemoved>
+						<tag>CONTRABAND_MEDIUM</tag>
+					</itemTagsRemoved>
+					<unavailabilityText showDisabledButton="true"><![CDATA[
+						#IF(!pc.hasOccupationTag(OCCUPATION_TAG_ENFORCER_PATROL))
+							Only Patrol Enforcers can use this cap badge!
+						#ENDIF
+					]]></unavailabilityText>
+					<availabilityText>
+						As a Patrol Enforcer, you can freely use this cap badge.
+					</availabilityText>
+				</sticker>
+				<sticker id="badge_itzaaak" priority="4" defaultSticker="false" zLayer="1" colourDisabled="TEXT_GREY" colourSelected="DAMAGE_TYPE_POISON">
+					<stickerName><![CDATA[Itza'aak]]></stickerName>
+					<namePrefix priority="1"><![CDATA[Itza'aak Enforcer ]]></namePrefix>
+					<namePostfix/>
+					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i> This one has the badge of the Itza'aak Frontline Patrol attached to it.</i>]]></descriptionModification>
+					<imageName>pcap_st_badge_itzaaak.svg</imageName>
+					<itemTagsAdded>
+						<tag>CONTRABAND_HEAVY</tag>
+					</itemTagsAdded>
+					<itemTagsRemoved>
+						<tag>CONTRABAND_MEDIUM</tag>
+					</itemTagsRemoved>
+					<unavailabilityText showDisabledButton="true"><![CDATA[
+						#IF(!pc.hasOccupationTag(OCCUPATION_TAG_ENFORCER_PATROL))
+							Only Patrol Enforcers can use this cap badge!
+						#ENDIF
+					]]></unavailabilityText>
+					<availabilityText>
+						As a Patrol Enforcer, you can freely use this cap badge.
+					</availabilityText>
+				</sticker>
+				<sticker id="badge_lyonesse" priority="5" defaultSticker="false" zLayer="1" colourDisabled="TEXT_GREY" colourSelected="DAMAGE_TYPE_COLD">
+					<stickerName><![CDATA[Lyonesse]]></stickerName>
+					<namePrefix priority="1"><![CDATA[Lyonesse Enforcer ]]></namePrefix>
+					<namePostfix/>
+					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i> This one has the badge of the Lyonesse Frontline Patrol attached to it.</i>]]></descriptionModification>
+					<imageName>pcap_st_badge_lyonesse.svg</imageName>
+					<itemTagsAdded>
+						<tag>CONTRABAND_HEAVY</tag>
+					</itemTagsAdded>
+					<itemTagsRemoved>
+						<tag>CONTRABAND_MEDIUM</tag>
+					</itemTagsRemoved>
+					<unavailabilityText showDisabledButton="true"><![CDATA[
+						#IF(!pc.hasOccupationTag(OCCUPATION_TAG_ENFORCER_PATROL))
+							Only Patrol Enforcers can use this cap badge!
+						#ENDIF
+					]]></unavailabilityText>
+					<availabilityText>
+						As a Patrol Enforcer, you can freely use this cap badge.
+					</availabilityText>
+				</sticker>
+				<sticker id="badge_cm" priority="6" defaultSticker="false" zLayer="1" colourDisabled="TEXT_GREY" colourSelected="CLOTHING_PURPLE">
+					<stickerName><![CDATA[Commissioner]]></stickerName>
+					<namePrefix priority="1"><![CDATA[Enforcer Commissioner ]]></namePrefix>
+					<namePostfix/>
+					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i> This one has the badge of the Commissioner's Office attached to it.</i>]]></descriptionModification>
+					<imageName>pcap_st_badge_cm.svg</imageName>
+					<itemTagsAdded>
+						<tag>CONTRABAND_HEAVY</tag>
+					</itemTagsAdded>
+					<itemTagsRemoved>
+						<tag>CONTRABAND_MEDIUM</tag>
+					</itemTagsRemoved>
+					<unavailabilityText showDisabledButton="true"><![CDATA[
+						#IF(true)
+							Only Enforcers who hold a rank of Commissioner can use this cap badge!
+						#ENDIF
+					]]></unavailabilityText>
+					<availabilityText>
+						As an Enforcer who holds the rank of Commissioner, you can freely use this cap badge.
+					</availabilityText>
+				</sticker>
+			</category>
+			<category id="oakleaves" priority="2">
+				<categoryName><![CDATA[Oak Leaves]]></categoryName>
+				<sticker id="None" priority="0" defaultSticker="true" zLayer="2" colourSelected="TEXT_GREY">
+					<namePrefix/>
+					<namePostfix/>
+					<descriptionModification/>
+					<imageName/>
+					<itemTagsAdded/>
+					<itemTagsRemoved/>
+					<unavailabilityText/>
+					<availabilityText/>
+				</sticker>
+				<sticker id="oakleaves_dm" priority="1" defaultSticker="false" zLayer="2" colourDisabled="TEXT_GREY" colourSelected="CLOTHING_PURPLE">
+					<stickerName><![CDATA[Deputy Commissioner]]></stickerName>
+					<namePrefix/>
+					<namePostfix/>
+					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i> This one has the single row of oak leaves of a Deputy Commissioner.</i>]]></descriptionModification>
+					<imageName>pcap_st_oakleaves_dm.svg</imageName>
+					<itemTagsAdded>
+						<tag>CONTRABAND_HEAVY</tag>
+					</itemTagsAdded>
+					<itemTagsRemoved>
+						<tag>CONTRABAND_MEDIUM</tag>
+					</itemTagsRemoved>
+					<unavailabilityText showDisabledButton="true"><![CDATA[
+						#IF(true)
+							Only Enforcers who hold a rank of Deputy Commissioner can use this cap badge!
+						#ENDIF
+					]]></unavailabilityText>
+					<availabilityText>
+						As an Enforcer who holds the rank of Deputy Commissioner, you can freely use this cap badge.
+					</availabilityText>
+				</sticker>
+				<sticker id="oakleaves_cm" priority="2" defaultSticker="false" zLayer="2" colourDisabled="TEXT_GREY" colourSelected="CLOTHING_PURPLE">
+					<stickerName><![CDATA[Commissioner]]></stickerName>
+					<namePrefix/>
+					<namePostfix/>
+					<descriptionModification/>
+					<imageName>pcap_st_oakleaves_cm.svg</imageName>
+					<itemTagsAdded>
+						<tag>CONTRABAND_HEAVY</tag>
+					</itemTagsAdded>
+					<itemTagsRemoved>
+						<tag>CONTRABAND_MEDIUM</tag>
+					</itemTagsRemoved>
+					<unavailabilityText showDisabledButton="true"><![CDATA[
+						#IF(true)
+							Only Enforcers who hold a rank of Commissioner can use this cap badge!
+						#ENDIF
+					]]></unavailabilityText>
+					<availabilityText>
+						As an Enforcer who holds the rank of Commissioner, you can freely use this cap badge.
+					</availabilityText>
+				</sticker>
+			</category>
+		</stickers>
+
+		<effects/> 
+
+		<blockedPartsList> 
+
+			<blockedParts>
+
+				<displacementType>REMOVE_OR_EQUIP</displacementType> 
+
+				<clothingAccessRequired>
+					<clothingAccess>HEAD</clothingAccess>
+				</clothingAccessRequired> 
+
+				<blockedBodyParts>
+					<bodyPart>HAIR</bodyPart>
+				</blockedBodyParts>
+
+				<clothingAccessBlocked/> 
+
+				<concealedSlots/> 
+			</blockedParts>
+			
+		</blockedPartsList>
+
+		<incompatibleSlots/> 
+
+		<primaryColours values="JUST_BLACK"/> 
+		<primaryColoursDye values="ALL"/>
+		<secondaryColours>
+			<colour>CLOTHING_BLUE</colour>
+		</secondaryColours>
+		<secondaryColoursDye values="ALL"/>
+		<tertiaryColours values="JUST_GOLD"/>
+		<tertiaryColoursDye values="ALL_METAL"/>
+
+		<itemTags> 
+			<tag>CONTRABAND_MEDIUM</tag>
+		</itemTags>
+	</coreAtributes>
+
+	<replacementText type="REMOVE_OR_EQUIP">
+		<self>
+		  <![CDATA[[npc.Name] [npc.verb(put)] the peaked cap on.]]>
+		</self>
+		<other>
+		  <![CDATA[[npc.Name] [npc.verb(put)] the peaked cap on [npc2.namePos] head.]]>
+		</other>
+		<otherRough>
+		  <![CDATA[[npc.Name] [npc.verb(force)] the peaked cap down on [npc2.namePos] head.]]>
+		</otherRough>
+	</replacementText>
+
+	<displacementText type="REMOVE_OR_EQUIP">
+		<self>
+		  <![CDATA[[npc.Name] [npc.verb(take)] [npc.her] peaked cap off.]]>
+		</self>
+		<other>
+		  <![CDATA[[npc.Name] [npc.verb(take)] [npc2.namePos] peaked cap off.]]>
+		</other>
+		<otherRough>
+		  <![CDATA[[npc.Name] [npc.verb(slap)] [npc2.namePos] peaked cap off.]]>
+		</otherRough>
+	</displacementText>
+	
+</clothing>

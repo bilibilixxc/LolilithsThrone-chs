@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<weapon>
+	<coreAttributes>
+	
+		<authorTag><![CDATA[On the filler cap, slightly raised lettering reads "Official Enforcer Issue, MFD by DSG Forgeworks."]]></authorTag>
+	
+		<value>7500</value> 
+		
+		<melee>false</melee>
+		
+		<twoHanded>true</twoHanded>
+		
+		<determiner><![CDATA[an]]></determiner>
+		
+		<name><![CDATA[arcane liquid stun gun]]></name>
+		
+		<namePlural pluralByDefault="false"><![CDATA[arcane liquid stun guns]]></namePlural> 
+		
+		<description><![CDATA[
+		The final word in riot control, this weapon uses a water spell to propel a stream of water to conduct arcane lightning at any target its sights. You guess that it could be filled with <i>any</i> liquid if suitably modified.
+		]]></description> 
+		
+		<attackDescriptor>Shoot</attackDescriptor>
+		
+		<attackTooltipDescription>Shoot [npc2.name] with your stun gun.</attackTooltipDescription>
+		
+		<rarity>EPIC</rarity> 
+		
+		<equipText><![CDATA[
+		[npc.Name] [npc.verb(bring)] out the stun gun and pull the sling over [npc.her] shoulder. The arcane-enhanced water sloshes around inside as the built-in tank magically fills itself.
+		]]></equipText>
+		
+		<unequipText><![CDATA[[npc.Name] [npc.verb(put)] the stun gun away.]]></unequipText>
+		
+		<imageName>liqstungun_holstered.svg</imageName> 
+		
+		<imageEquippedName>liqstungun.svg</imageEquippedName>
+		
+		<damage>50</damage>
+		
+		<aoe chance="85">25</aoe>
+		<aoe chance="85">25</aoe>
+		<aoe chance="10">10</aoe>
+		<aoe chance="10">10</aoe>
+		
+		<arcaneCost>5</arcaneCost> 
+		
+		<damageVariance>LOW</damageVariance> 
+		
+		<availableDamageTypes>
+			<damageType>LUST</damageType>
+		</availableDamageTypes>
+		
+		<spells/>
+		
+		<effects/>
+		
+		<extraEffects>
+			<effect><![CDATA[[style.boldLust("Lustful Distraction")] on critical hit.]]></effect>
+		</extraEffects>
+		
+		<onHitEffect/>
+		
+		<onCriticalHitEffect><![CDATA[
+		#IF !npc2.hasStatusEffect(SE_ARCANE_AROUSAL_LUSTFUL_DISTRACTION)
+		#THEN [##npc2.addStatusEffect(SE_ARCANE_AROUSAL_LUSTFUL_DISTRACTION, 6)] [npc2.Name] [npc2.is] [style.boldLust(feeling the lingering effects of the arcane lightning.)]
+		#ENDIF
+		]]></onCriticalHitEffect>
+		
+		<primaryColours>
+			<colour>CLOTHING_GUNMETAL</colour>
+		</primaryColours>
+		<primaryColoursDye values="ALL_METAL"/>
+		<secondaryColours>
+			<colour>CLOTHING_BLUE</colour>
+		</secondaryColours> 
+		<secondaryColoursDye values="ALL"/>
+		<tertiaryColours>
+			<colour>CLOTHING_ORANGE</colour>
+		</tertiaryColours> 
+		<tertiaryColoursDye values="ALL"/>
+		
+		<itemTags>
+			<tag>CONTRABAND_HEAVY</tag>
+			<tag>WEAPON_FIREARM</tag>
+		</itemTags>
+		
+	</coreAttributes>
+
+	<hitDescriptions>
+		<hitText><![CDATA[
+		Aiming [npc.her] stun gun at [npc2.name], [npc.she] [npc.verb(pull)] the trigger. A jet of water streams towards [npc2.name], followed by a crackling bolt of arcane lightning. [npc2.Name] barely has time to stare with a look of disbelief on [npc2.her] face before succumbing to the effects of the lightning! [npc2.Name] [npc2.verb(shiver)] a bit as the water soaks [npc2.her] [npc2.skinSkin].
+		]]></hitText>
+	</hitDescriptions>
+
+	<missDescriptions>
+		<missText><![CDATA[
+		Aiming [npc.her] stun gun at [npc2.name], [npc.she] [npc.verb(pull)] the trigger. A jet of water streams towards [npc2.name], but it goes wide! The water splashes and sparks into a useless puddle on the ground.
+		]]></missText>
+	</missDescriptions>
+	
+</weapon>

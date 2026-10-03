@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<clothing>
+
+	<coreAtributes>
+	
+		<authorTag><![CDATA[A small tag sewn into the waist reads "Official Enforcer Issue, MFD by DSG Threadworks."]]></authorTag>
+
+		<value>800</value> 
+
+		<determiner><![CDATA[a pair of]]></determiner>
+
+		<name><![CDATA[Enforcer's dress slacks]]></name>
+
+		<namePlural pluralByDefault="false"><![CDATA[Enforcer's dress slacks]]></namePlural> 
+
+		<description><![CDATA[A pair of slacks made from cotton twill. Unlike the standard Enforcer's slacks, these have a coloured stripe down each leg.]]></description> 
+
+		<physicalResistance>0</physicalResistance> 
+
+		<femininity>ANDROGYNOUS</femininity> 
+
+		<slot>LEG</slot> 
+
+		<rarity>EPIC</rarity> 
+
+		<clothingSet>dsg_enforcer_service</clothingSet>
+
+		<imageName>enfdslacks.svg</imageName> 
+
+		<imageEquippedName/> 
+
+		<effects/>
+
+		<blockedPartsList> 
+
+			<blockedParts>
+
+				<displacementType>REMOVE_OR_EQUIP</displacementType> 
+
+				<clothingAccessRequired> 
+					<clothingAccess>LEGS_UP_TO_GROIN</clothingAccess>
+					<clothingAccess>FEET</clothingAccess>
+				</clothingAccessRequired>
+
+				<blockedBodyParts/> 
+
+				<clothingAccessBlocked> 
+					<clothingAccess>LEGS_UP_TO_GROIN</clothingAccess>
+				</clothingAccessBlocked>
+
+				<concealedSlots values="CONCEALED_ANKLES_FROM_TROUSERS"/> 
+			</blockedParts>
+
+			<blockedParts>
+				<displacementType>UNZIPS</displacementType>
+				<clothingAccessRequired/>
+				<blockedBodyParts>
+					<bodyPart>PENIS</bodyPart>
+				</blockedBodyParts>
+				<clothingAccessBlocked>
+					<clothingAccess>GROIN</clothingAccess>
+				</clothingAccessBlocked>
+
+				<concealedSlots values="CONCEALED_UNZIPS_GROIN"/>
+			</blockedParts>
+			
+			<blockedParts>
+				<displacementType>PULLS_DOWN</displacementType>
+				<clothingAccessRequired/>
+				<blockedBodyParts>
+					<bodyPart>ANUS</bodyPart>
+					<bodyPart>PENIS</bodyPart>
+					<bodyPart>VAGINA</bodyPart>
+				</blockedBodyParts>
+				<clothingAccessBlocked>
+					<clothingAccess>GROIN</clothingAccess>
+				</clothingAccessBlocked>
+
+				<concealedSlots>
+					<slot>GROIN</slot>
+					<slot>VAGINA</slot>
+					<slot>ANUS</slot>
+					<slot>PENIS</slot>
+					<slot>PIERCING_PENIS</slot>
+					<slot>PIERCING_VAGINA</slot>
+				</concealedSlots>
+			</blockedParts>
+		</blockedPartsList>
+
+		<incompatibleSlots/> 
+
+		<primaryColours values="JUST_BLACK"/>
+		<primaryColoursDye values="ALL"/>
+		<secondaryColours values="JUST_GOLD"/>
+		<secondaryColoursDye values="ALL_METAL"/>
+		<tertiaryColours>
+			<colour>CLOTHING_BLUE</colour>
+			<colour>CLOTHING_PINK</colour>
+			<colour>CLOTHING_GREY</colour>
+			<colour>CLOTHING_PURPLE_DARK</colour>
+		</tertiaryColours>	
+		<tertiaryColoursDye values="ALL"/>
+
+		<itemTags> 
+			<tag>CONTRABAND_MEDIUM</tag>
+		</itemTags>
+	</coreAtributes>
+
+	<replacementText type="REMOVE_OR_EQUIP">
+		<self>
+		  <![CDATA[[npc.Name] [npc.verb(step)] into the dress slacks and [npc.verb(pull)] them up to [npc.her] waist before buttoning up the front.]]>
+		</self>
+		<other>
+		  <![CDATA[[npc.Name] [npc.verb(pull)] the dress slacks up around [npc2.namePos] legs up to [npc2.her] waist before buttoning up the front.]]>
+		</other>
+		<otherRough>
+		  <![CDATA[[npc.Name] 
+					#IF game.isSillyModeEnabled()
+					#THEN practically [npc.verb(give)] [npc2.namePos] a wedgie as [npc2.her]
+					#ENDIF
+					[npc.verb(yank)] the dress slacks up around [npc2.namePos] legs up to [npc2.her] waist before roughly buttoning up the front.]]>
+		</otherRough>
+	</replacementText>
+
+	<displacementText type="REMOVE_OR_EQUIP">
+		<self>
+		  <![CDATA[[npc.Name] [npc.verb(unbutton)] [npc.her] dress slacks and [npc.verb(pull)] them down before kicking them from [npc.her] [npc.feet].]]>
+		</self>
+		<other>
+		  <![CDATA[[npc.Name] [npc.verb(unbutton)] [npc2.name] dress slacks and [npc.verb(pull)] them down before sliding them from [npc2.her] [npc2.feet].]]>
+		</other>
+		<otherRough>
+		  <![CDATA[[npc.Name] forcibly [npc.verb(unbutton)] [npc2.name] dress slacks and [npc.verb(yank)] them off.]]>
+		</otherRough>
+	</displacementText>	
+
+	<replacementText type="UNZIPS">
+		<self>
+		  <![CDATA[[npc.Name] [npc.verb(zip)] up the fly of [npc.her] dress slacks.]]>
+		</self>
+		<other>
+		  <![CDATA[[npc.Name] [npc.verb(zip)] up the front of [npc2.namePos] dress slacks.]]>
+		</other>
+		<otherRough>
+		  <![CDATA[[npc.Name] roughly [npc.verb(zip)] up the front of [npc2.namePos] dress slacks
+					#IF game.isSillyModeEnabled() && npc2.hasPenis()
+					#THEN without much regard for what might be in the way, resulting in a close call!
+					#ELSE .
+					#ENDIF
+					]]>
+		</otherRough>
+	</replacementText>
+
+	<displacementText type="UNZIPS">
+		<self>
+		  <![CDATA[[npc.Name] [npc.verb(unzip)] up the fly of [npc.her] dress slacks.]]>
+		</self>
+		<other>
+		  <![CDATA[[npc.Name] [npc.verb(unzip)] up the fly of [npc2.namePos] dress slacks.]]>
+		</other>
+		<otherRough>
+		  <![CDATA[[npc.Name] forcibly [npc.verb(unzip)] the fly of [npc2.namePos] dress slacks.]]>
+		</otherRough>
+	</displacementText>
+
+	<replacementText type="PULLS_UP">
+		<self>
+		  <![CDATA[[npc.Name] [npc.verb(pull)] [npc.her] dress slacks up to [npc.her] waist and [npc.verb(button)] up the front.]]>
+		</self>
+		<other>
+		  <![CDATA[[npc.Name] [npc.verb(pull)] [npc2.namePos] dress slacks up to [npc2.her] waist and [npc.verb(button)] up the front.]]>
+		</other>
+		<otherRough>
+		  <![CDATA[[npc.Name] forcibly [npc.verb(pull)] [npc2.namePos] dress slacks up to [npc2.her] waist and roughly [npc.verb(button)] up the front.]]>
+		</otherRough>
+	</replacementText>
+
+	<displacementText type="PULLS_DOWN">
+		<self>
+		  <![CDATA[[npc.Name] [npc.verb(unbutton)] [npc.her] dress slacks and [npc.verb(pull)] them down.]]>
+		</self>
+		<other>
+		  <![CDATA[[npc.Name] [npc.verb(unbutton)] [npc2.name] dress slacks and [npc.verb(pull)] them down.]]>
+		</other>
+		<otherRough>
+		  <![CDATA[[npc.Name] forcibly [npc.verb(unbutton)] [npc2.name] dress slacks and [npc.verb(yank)] down around [npc2.her] legs.]]>
+		</otherRough>
+	</displacementText>	
+	
+</clothing>

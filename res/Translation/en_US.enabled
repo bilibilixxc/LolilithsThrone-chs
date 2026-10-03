@@ -1,0 +1,5 @@
+Name this file to whatever language you want to use assuming they have been translated
+en_US = english US assuming standard naming but it can be anything
+AKA jap for japanese needs jap folder and jap.enabled and jap.lang
+if you translate make jap.lang and have pee=おしっこ at least, and only rename this file to jap.enabled DO NOT CREATE MULTIPLE .enabled FILES!!!
+also you must translate at least 1 string of each type in sex.lang IE sex.dom.rough.peeDrink=

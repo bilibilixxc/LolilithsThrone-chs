@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 256 256">
+    <defs>
+        <linearGradient id="cloackOfFlames2">
+            <stop offset="0" stop-color="#ffb14d"/>
+            <stop offset="1" stop-color="#ffcc4d"/>
+        </linearGradient>
+        <linearGradient id="cloakOfFlames1">
+            <stop offset="0" stop-color="#f46e16"/>
+            <stop offset="1" stop-color="#f4900c"/>
+        </linearGradient>
+        <linearGradient id="linearGradient4205" x1="127.658" x2="142.268" y1="220.043" y2="141.829" gradientUnits="userSpaceOnUse" xlink:href="#cloackOfFlames2"/>
+        <linearGradient id="linearGradient4213" x1="132.143" x2="154.643" y1="194.929" y2="59.571" gradientUnits="userSpaceOnUse" xlink:href="#cloakOfFlames1"/>
+    </defs>
+    <g fill-rule="evenodd">
+        <path fill="url(#linearGradient4213)" d="M133.144 40.141C83.53 53.655 65.14 124.577 48.97 197.864c53.619.572 49.419 28.501 74.06 29.19 31.08.868 26.795-17.37 43.63-16.466 21.112 1.134 30.218 9.885 45.096 14.969-14.06-37.64-33.756-94.835-37.778-134.964-2.691-26.848 12.505-44.853 5.684-46.91-1.694-.51-19.192-1.782-17.639-1.413 16.246 3.852-9.983 15.32-22.494 14.137-6.66-.63-10.407-13.5 4.8-15.87.985-.153-9.869-.754-11.185-.396z"/>
+        <path fill="url(#linearGradient4205)" d="M91.042 132.8c-21.875 8.22-3.607 29.617-42.072 65.064 53.619.572 49.419 28.501 74.06 29.19 31.08.868 26.795-17.37 43.63-16.466 21.112 1.134 30.218 9.885 45.096 14.969-14.06-37.64-21.812-17.047-33.033-56.909-14.133 42.176-7.128-3.879-27.975-25.15 4.908 18.617.706 34.394-2.693 34.046-14.64-1.501-21.336-35.238-14.077-53.113-22.723 22.406-17.66 56.855-31.74 55.523-8.384-.793-18.935-21.59-11.196-47.155z"/>
+    </g>
+</svg>

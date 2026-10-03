@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<clothing>
+
+	<coreAtributes>
+	
+		<authorTag><![CDATA[Embossed into the leather are the words "Official Enforcer Issue, MFD by DSG Threadworks"]]></authorTag>
+
+		<value>200</value> 
+
+		<determiner><![CDATA[an]]></determiner>
+
+		<name><![CDATA[Enforcer's dress belt]]></name>
+
+		<namePlural pluralByDefault="false"><![CDATA[Enforcer's dress belts]]></namePlural> 
+
+		<description><![CDATA[A thick leather stomach belt supported by a thinner shoulder strap. Although it once served as a sword belt, its role is now largely ceremonial.]]></description> 
+
+		<physicalResistance>0</physicalResistance> 
+
+		<femininity>ANDROGYNOUS</femininity> 
+
+		<slot>HIPS</slot> 
+
+		<rarity>EPIC</rarity> 
+
+		<clothingSet/>
+
+		<imageName>enfdbelt.svg</imageName> 
+
+		<imageEquippedName/> 
+
+		<effects/> 
+
+		<blockedPartsList> 
+
+			<blockedParts>
+
+				<displacementType>REMOVE_OR_EQUIP</displacementType> 
+
+				<clothingAccessRequired>
+				</clothingAccessRequired>
+
+				<blockedBodyParts> 
+				</blockedBodyParts>
+
+				<clothingAccessBlocked> 
+				</clothingAccessBlocked>
+
+				<concealedSlots/> 
+			</blockedParts>
+
+		</blockedPartsList>
+
+		<incompatibleSlots/> 
+
+		<primaryColours>
+			<colour>CLOTHING_DESATURATED_BROWN</colour>
+		</primaryColours>
+		<primaryColoursDye values="ALL"/>
+		<secondaryColours>
+			<colour>CLOTHING_DESATURATED_BROWN</colour>
+		</secondaryColours>
+		<secondaryColoursDye values="ALL"/>
+		<tertiaryColours values="JUST_GOLD"/> 
+		<tertiaryColoursDye values="ALL_METAL"/>
+
+		<itemTags> 
+			<tag>CONTRABAND_MEDIUM</tag>
+		</itemTags>
+	</coreAtributes>
+
+	<replacementText type="REMOVE_OR_EQUIP">
+		<self>
+		  <![CDATA[[npc.Name] [npc.verb(tighten)] the dress belt around [npc.her] waist and [npc.verb(thread)] excess through the buckle frame before inserting the double prongs through the closest adjustment hole. [npc.she] then [npc.verb(adjust)] the shoulder strap and [npc.verb(secure)] it in a similar fashion.]]>
+		</self>
+		<other>
+		  <![CDATA[[npc.Name] [npc.verb(tighten)] the dress belt around [npc2.namePos] waist and [npc.verb(thread)] excess through the buckle frame before inserting the double prongs through the closest adjustment hole. [npc.she] the [npc.verb(adjust)] the shoulder strap and [npc.verb(secure)] it in a similar fashion.]]>
+		</other>
+		<otherRough>
+		  <![CDATA[[npc.Name] [npc.verb(tighten)] the dress belt around [npc2.namePos] waist as much as possible and hastily [npc.verb(thread)] excess through the buckle frame before inserting the double prongs through the closest adjustment hole. [npc.she] then [npc.verb(does)] much the same with the shoulder strap.]]>
+		</otherRough>
+	</replacementText>
+
+	<displacementText type="REMOVE_OR_EQUIP">
+		<self>
+		  <![CDATA[[npc.Name] [npc.verb(unbuckle)] [npc.her] dress belt and its shoulder strap before taking it off.]]>
+		</self>
+		<other>
+		  <![CDATA[[npc.Name] [npc.verb(unbuckle)] [npc2.namePos] dress belt and its shoulder strap before taking it off.]]>
+		</other>
+		<otherRough>
+		  <![CDATA[[npc.Name] hastily [npc.verb(unbuckle)] [npc2.namePos] dress belt and its shoulder strap before tearing the whole thing away from [npc2.namePos] waist.]]>
+		</otherRough>
+	</displacementText>
+	
+</clothing>

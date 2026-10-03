@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<clothing>
+
+	<coreAtributes>
+	
+		<authorTag><![CDATA[A small engraving on the belt buckle reads "Official Enforcer Issue, MFD by DSG Threadworks."]]></authorTag>
+
+		<value>1200</value> 
+
+		<determiner><![CDATA[an]]></determiner>
+
+		<name><![CDATA[Enforcer's heavy battle belt]]></name>
+
+		<namePlural pluralByDefault="false"><![CDATA[Enforcer's heavy battle belts]]></namePlural> 
+
+		<description><![CDATA[A standard battle belt with ballistic thigh panels attached.]]></description> 
+
+		<physicalResistance>20</physicalResistance> 
+
+		<femininity>ANDROGYNOUS</femininity> 
+
+		<slot>HIPS</slot> 
+
+		<rarity>EPIC</rarity> 
+
+		<clothingSet>dsg_enforcer_tactical_heavy</clothingSet> 
+
+		<imageName>hbattlebelt.svg</imageName> 
+
+		<imageEquippedName/> 
+
+		<effects/> 
+
+		<blockedPartsList> 
+
+			<blockedParts>
+
+				<displacementType>REMOVE_OR_EQUIP</displacementType> 
+
+				<clothingAccessRequired/>
+
+				<blockedBodyParts> 
+					<bodyPart>THIGHS</bodyPart>
+				</blockedBodyParts>
+
+				<clothingAccessBlocked> 
+					<clothingAccess>LEGS_UP_TO_GROIN_LOW_LEVEL</clothingAccess>
+					<clothingAccess>LEGS_UP_TO_GROIN</clothingAccess>
+				</clothingAccessBlocked>
+
+				<concealedSlots/> 
+			</blockedParts>
+
+		</blockedPartsList>
+
+		<incompatibleSlots/> 
+
+		<primaryColours values="JUST_BLACK"/> 
+		<primaryColoursDye values="ALL"/>
+		<secondaryColours values="JUST_BLACK"/> 
+		<secondaryColoursDye values="ALL"/>
+		<tertiaryColours values="JUST_STEEL"/> 
+		<tertiaryColoursDye values="ALL_METAL"/>
+
+		<itemTags> 		
+			<tag>RIGID_MATERIAL</tag>
+			<tag>CONTRABAND_MEDIUM</tag>
+		</itemTags>
+	</coreAtributes>
+
+	<replacementText type="REMOVE_OR_EQUIP">
+		<self>
+			<![CDATA[[npc.Name] [npc.verb(buckle)] the heavy battle belt up around [npc.her] waist and [npc.verb(adjust)] the thigh panels they're comfortable.]]>
+		</self>
+		<other>
+			<![CDATA[[npc.Name] [npc.verb(buckle)] the heavy battle belt up around [npc2.namePos] waist and [npc.verb(help)] [npc2.her] [npc2.verb(adjust)] the thigh panels until they're comfortable.]]>
+		</other>
+		<otherRough>
+			<![CDATA[[npc.Name] [npc.verb(force)] the heavy battle belt around [npc2.namePos] waist and hastily [npc.verb(tighten)] the straps.]]>
+		</otherRough>
+	</replacementText>
+
+	<displacementText type="REMOVE_OR_EQUIP">
+		<self>
+			<![CDATA[[npc.Name] [npc.verb(loosen)] the thigh panel straps on [npc.her] heavy battle belt before unbuckling it.]]>
+		</self>
+		<other>
+			<![CDATA[[npc.Name] [npc.verb(loosen)] the thigh panel straps on [npc2.namePos] heavy battle belt before unbuckling it.]]>
+		</other>
+		<otherRough>
+			<![CDATA[[npc.Name] [npc.verb(tear)] at the thigh panel straps on [npc2.namePos] heavy battle belt before unbuckling it and tossing them aside.]]>
+		</otherRough>
+	</displacementText>
+	
+</clothing>

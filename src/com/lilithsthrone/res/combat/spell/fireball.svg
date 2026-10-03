@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 256 256">
+    <defs>
+        <linearGradient id="linearGradient4353" x1="159.57" x2="75.049" y1="168.301" y2="167.229" gradientTransform="matrix(1.79764 0 0 1.4454 -35.493 -107.175)" gradientUnits="userSpaceOnUse" xlink:href="#twinComets2"/>
+        <linearGradient id="twinComets2">
+            <stop offset="0" stop-color="#f46e16"/>
+            <stop offset="1" stop-color="#f4900c"/>
+        </linearGradient>
+        <linearGradient id="linearGradient4337" x1="150" x2="129.286" y1="167.429" y2="166.357" gradientTransform="matrix(1.79764 0 0 1.4454 -34.472 -106.471)" gradientUnits="userSpaceOnUse" xlink:href="#twinComets1"/>
+        <linearGradient id="twinComets1">
+            <stop offset="0" stop-color="#ffb14d"/>
+            <stop offset="1" stop-color="#ffcc4d"/>
+        </linearGradient>
+    </defs>
+    <g fill-rule="evenodd">
+        <path fill="url(#linearGradient4353)" d="M101.097 164.267c34.093 25.208 135.445 26.778 146.585-27.087 6.762-32.696-24.624-66.978-104.339-59.625 36.31 2.975 30.152 25.64-1.833 24.05-24.29-1.208-59.86-16.698-134.846 19.67 72.17-21.836 85.72 18.692 35.507 11.31 10.828 11.15 37.286 18.591 68.183 14.657 30.04-3.826 35.45 5.524 33.547 11.351-2.288 7.006-16.89 13.368-42.804 5.674z"/>
+        <path fill="url(#linearGradient4337)" d="M219.273 171.029c-19.593-.403-43.708-6.68-54.841-16.59 72.689 2.175 20.352-34.389-57.564-24.541 67.252-26.745 102-4.704 107.779-18.28 2.214-5.201-9.324-7.112-33.535-3.049 15.66-10.023 31.938-13.044 52.841-11.15 13.877 12.716 16.771 26.475 13.54 40.857-4.145 18.446-18.479 28.27-28.22 32.752z"/>
+    </g>
+</svg>

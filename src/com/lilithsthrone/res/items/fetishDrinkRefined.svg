@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+    <ellipse cx="31.82" cy="31.549" fill="#ff8080" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.128" rx="27.008" ry="26.625"/>
+    <path fill="#f9f9f9" fill-rule="evenodd" d="M33.31 8.447c9.544 1.259 18.527 4.22 22.834 21.406C42.96 11.013 41.262 14.34 33.31 8.447z"/>
+    <path fill-opacity=".449" fill-rule="evenodd" d="M43.352 55.124C18.555 65.584-2.419 42.116 7.64 20.864c.189 18.2 14.228 36.08 35.712 34.26z"/>
+    <g transform="matrix(1.07214 0 0 1.07214 -2.372 -2.29)">
+        <path fill="#f06" fill-rule="evenodd" d="M33.646 53.214c3.004-.086 5.35-.914 7.406-1.852-4.22-12.314-8.81-24.533-12.046-37.1l-2.66.59c3.12 12.677 5.478 25.476 7.3 38.362z"/>
+        <ellipse cx="24.109" cy="49.702" fill="#e580ff" opacity=".74" rx=".58" ry=".536" transform="rotate(-14.379)"/>
+        <path fill="#d38d5f" fill-rule="evenodd" stroke="#000" stroke-width=".5" d="M24.542 10.554l1.734 3.802 2.522-.638-.48-4.132a30.15 30.15 0 0 0-3.776.968z"/>
+        <ellipse cx="21.653" cy="55.461" fill="#e580ff" opacity=".74" rx=".759" ry=".692" transform="rotate(-14.379)"/>
+        <ellipse cx="25.091" cy="57.448" fill="#e580ff" opacity=".74" rx=".58" ry=".536" transform="rotate(-14.379)"/>
+        <ellipse cx="22.814" cy="40.126" fill="#e580ff" opacity=".74" rx=".58" ry=".536" transform="rotate(-14.379)"/>
+        <ellipse cx="23.618" cy="29.858" fill="#e580ff" opacity=".74" rx=".58" ry=".536" transform="rotate(-14.379)"/>
+        <ellipse cx="22.68" cy="22.983" fill="#e580ff" opacity=".74" rx=".58" ry=".536" transform="rotate(-14.379)"/>
+        <ellipse cx="22.11" cy="38.902" fill="#e580ff" opacity=".74" rx=".424" ry=".469" transform="rotate(-14.379)"/>
+        <ellipse cx="24.782" cy="51.5" fill="#e580ff" opacity=".74" rx=".375" ry=".362" transform="rotate(-14.379)"/>
+        <path fill="#d7eef4" fill-opacity=".251" fill-rule="evenodd" stroke="#000" stroke-width=".5" d="M33.763 53.96c2.291-.285 4.672-.72 7.473-1.867.715-.292.535-.57.392-1.013C37.49 38.223 32.34 26.296 29.232 12.61c-1.325.55-2.586.778-3.854 1.042 3.77 13.132 5.272 26.516 7.873 39.838.075.382.118.52.512.471z"/>
+        <path fill="#d7eef4" fill-opacity=".502" fill-rule="evenodd" stroke="#000" stroke-width=".5" d="M24.605 12.135c-1.206.252-.323 1.737.45 1.563 1.503-.339 2.997-.594 4.425-1.167.67-.27.706-1.844-.487-1.521-1.547.419-3.033.841-4.388 1.125z"/>
+        <path fill="#fff" fill-rule="evenodd" d="M28.536 14.262a86.9 86.9 0 0 0 1.036 4.76c1.382 4.524 3.162 9.13 5.641 15.597-2.359-6.518-4.011-11.159-5.263-15.706a84.518 84.518 0 0 1-1.414-4.651zM26.503 12.231c.789-.134 1.607-.258 2.376-.411.162-.113.32-.227.473-.342-.191-.007-.384-.016-.578-.027-.728.274-1.507.52-2.27.78z"/>
+    </g>
+</svg>

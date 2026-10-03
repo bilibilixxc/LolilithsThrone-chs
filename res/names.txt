@@ -1,0 +1,10 @@
+# Follow this example
+# Need 1 name minimum but 3 is best (Masculine, Androgenous, Feminine) name the game uses a triplet naming schematic
+# Races the game listens to (not my code but Innoxia's)
+# human/equine/reindeer/prostitute/lilin
+# For some reason she set all other to use human names except demons, they use randomly generated names from a small template. Not a list I chose modify;
+# Any lines starting with # are ignored feel free to comment ones out you can't finish
+# share your name lists if you feel like it so we can propagate a good sized name list
+human=Zackary,Zack,Zoe
+human=Michel,Michelle,Michelle
+human=Elle,Elle,Ellie

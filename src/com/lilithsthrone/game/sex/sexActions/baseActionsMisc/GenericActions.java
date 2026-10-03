@@ -1,0 +1,6177 @@
+package com.lilithsthrone.game.sex.sexActions.baseActionsMisc;
+
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Map.Entry;
+import java.util.Set;
+
+import com.lilithsthrone.game.character.GameCharacter;
+import com.lilithsthrone.game.character.attributes.CorruptionLevel;
+import com.lilithsthrone.game.character.attributes.LustLevel;
+import com.lilithsthrone.game.character.body.CoverableArea;
+import com.lilithsthrone.game.character.body.abstractTypes.AbstractPenisType;
+import com.lilithsthrone.game.character.body.coverings.BodyCoveringType;
+import com.lilithsthrone.game.character.body.types.PenisType;
+import com.lilithsthrone.game.character.body.valueEnums.ClitorisSize;
+import com.lilithsthrone.game.character.body.valueEnums.LegConfiguration;
+import com.lilithsthrone.game.character.body.valueEnums.PenetrationGirth;
+import com.lilithsthrone.game.character.body.valueEnums.PenetrationModifier;
+import com.lilithsthrone.game.character.body.valueEnums.TesticleSize;
+import com.lilithsthrone.game.character.effects.StatusEffect;
+import com.lilithsthrone.game.character.fetishes.AbstractFetish;
+import com.lilithsthrone.game.character.fetishes.Fetish;
+import com.lilithsthrone.game.character.npc.NPC;
+import com.lilithsthrone.game.character.race.Race;
+import com.lilithsthrone.game.character.race.RacialBody;
+import com.lilithsthrone.game.combat.spells.Spell;
+import com.lilithsthrone.game.dialogue.utils.UtilText;
+import com.lilithsthrone.game.inventory.InventorySlot;
+import com.lilithsthrone.game.inventory.clothing.AbstractClothing;
+import com.lilithsthrone.game.inventory.clothing.ClothingType;
+import com.lilithsthrone.game.sex.ArousalIncrease;
+import com.lilithsthrone.game.sex.GenericSexFlag;
+import com.lilithsthrone.game.sex.ImmobilisationType;
+import com.lilithsthrone.game.sex.SexAreaInterface;
+import com.lilithsthrone.game.sex.SexAreaOrifice;
+import com.lilithsthrone.game.sex.SexAreaPenetration;
+import com.lilithsthrone.game.sex.SexControl;
+import com.lilithsthrone.game.sex.SexPace;
+import com.lilithsthrone.game.sex.SexParticipantType;
+import com.lilithsthrone.game.sex.SexType;
+import com.lilithsthrone.game.sex.managers.OrgasmBehaviour;
+import com.lilithsthrone.game.sex.managers.dominion.cultist.SMAltarMissionarySealed;
+import com.lilithsthrone.game.sex.positions.slots.SexSlotGeneric;
+import com.lilithsthrone.game.sex.positions.slots.SexSlotTag;
+import com.lilithsthrone.game.sex.sexActions.SexAction;
+import com.lilithsthrone.game.sex.sexActions.SexActionCategory;
+import com.lilithsthrone.game.sex.sexActions.SexActionPriority;
+import com.lilithsthrone.game.sex.sexActions.SexActionType;
+import com.lilithsthrone.game.sex.sexActions.SexActionUtility;
+import com.lilithsthrone.main.Main;
+import com.lilithsthrone.utils.Util;
+import com.lilithsthrone.utils.Util.Value;
+import com.lilithsthrone.utils.colours.Colour;
+import com.lilithsthrone.utils.colours.PresetColour;
+import com.lilithsthrone.world.places.PlaceType;
+
+/**
+ * @since 0.1.79
+ * @version 0.4.11.1
+ * @author Innoxia
+ */
+public class GenericActions {
+	
+	private static String quickSexDescription = "";
+
+	private static SexType getPlayerOngoingMainSex(GameCharacter partner) {
+		for(Entry<SexAreaInterface, Map<GameCharacter, Set<SexAreaInterface>>> entry1 : Main.sex.getOngoingActionsMap(Main.game.getPlayer()).entrySet()) {
+			// If penetrating an internal orifice, prefer that:
+			if(entry1.getValue().containsKey(partner)
+					&& entry1.getKey().isPenetration()
+					&& ((SexAreaPenetration)entry1.getKey()).isTakesVirginity()
+					&& entry1.getValue().get(partner).stream().anyMatch(orifice -> orifice.isOrifice() && ((SexAreaOrifice)orifice).isInternalOrifice())) {
+				return new SexType(SexParticipantType.NORMAL, entry1.getKey(), entry1.getValue().get(partner).stream().filter(orifice -> orifice.isOrifice() && ((SexAreaOrifice)orifice).isInternalOrifice()).findFirst().get());
+
+			// If being penetrated, prefer that:
+			} else if(entry1.getValue().containsKey(partner)
+					&& entry1.getKey().isOrifice()
+					&& ((SexAreaOrifice)entry1.getKey()).isInternalOrifice()
+					&& entry1.getValue().get(partner).stream().anyMatch(penetration -> penetration.isPenetration() && ((SexAreaPenetration)penetration).isTakesVirginity())) {
+				return new SexType(SexParticipantType.NORMAL, entry1.getKey(), entry1.getValue().get(partner).stream().filter(penetration -> penetration.isPenetration() && ((SexAreaPenetration)penetration).isTakesVirginity()).findFirst().get());
+			}
+		}
+		return null;
+	}
+	
+	private static SexType getForeplayPreference(GameCharacter dom, GameCharacter sub) {
+		if(dom.isPlayer()) {
+			SexType playerMainSexType = getPlayerOngoingMainSex(sub);
+			if(playerMainSexType!=null) {
+				return playerMainSexType;	
+			}
+		}
+		
+		SexType preference = Main.sex.getForeplayPreference(dom, sub);
+		List<SexAreaInterface> domBanned = Main.sex.getInitialSexManager().getAreasBannedMap().get(dom);
+		if(domBanned==null) {
+			domBanned = new ArrayList<>();
+		}
+		List<SexAreaInterface> subBanned = Main.sex.getInitialSexManager().getAreasBannedMap().get(sub);
+		if(subBanned==null) {
+			subBanned = new ArrayList<>();
+		}
+		
+		List<SexType> sexTypesBanned = new ArrayList<>();
+		if(Main.sex.getInitialSexManager().getSexTypesBannedMap().get(dom)!=null) {
+			sexTypesBanned.addAll(Main.sex.getInitialSexManager().getSexTypesBannedMap().get(dom));
+		}
+		if(Main.sex.getInitialSexManager().getSexTypesBannedMap().get(sub)!=null) {
+			for(SexType st : Main.sex.getInitialSexManager().getSexTypesBannedMap().get(sub)) {
+				sexTypesBanned.add(st.getReversedSexType());
+			}
+		}
+		if(preference!=null) {
+			if(domBanned.contains(preference.getPerformingSexArea())
+					|| subBanned.contains(preference.getTargetedSexArea())
+					|| !dom.isAbleToAccessCoverableArea(preference.getPerformingSexArea().getRelatedCoverableArea(dom), true)
+					|| !sub.isAbleToAccessCoverableArea(preference.getTargetedSexArea().getRelatedCoverableArea(sub), true)) {
+				preference = null;
+			}
+		}
+		if(preference==null && dom.isAbleToAccessCoverableArea(CoverableArea.MOUTH, true) && !domBanned.contains(SexAreaOrifice.MOUTH)) {
+			if(sub.hasPenis() && !subBanned.contains(SexAreaPenetration.PENIS) && sub.isAbleToAccessCoverableArea(CoverableArea.PENIS, true)) {
+				preference = new SexType(SexParticipantType.NORMAL, SexAreaOrifice.MOUTH, SexAreaPenetration.PENIS);
+				
+			} else if(sub.hasVagina() && !subBanned.contains(SexAreaOrifice.VAGINA) && sub.isAbleToAccessCoverableArea(CoverableArea.VAGINA, true)) {
+				preference = new SexType(SexParticipantType.NORMAL, SexAreaPenetration.TONGUE, SexAreaOrifice.VAGINA);
+			}
+		}
+		
+		if(sexTypesBanned.contains(preference)) {
+			preference = null;
+		}
+		
+		if(preference==null) {
+			preference = new SexType(SexParticipantType.NORMAL, SexAreaPenetration.TONGUE, SexAreaOrifice.MOUTH); // At least give them something...
+		}
+		return preference;
+	}
+	
+	private static SexType getMainSexPreference(GameCharacter dom, GameCharacter sub) {
+		if(dom.isPlayer()) {
+			SexType playerMainSexType = getPlayerOngoingMainSex(sub);
+			if(playerMainSexType!=null) {
+				return playerMainSexType;	
+			}
+		}
+		
+		SexType preference = Main.sex.getMainSexPreference(dom, sub);
+		List<SexAreaInterface> domBanned = Main.sex.getInitialSexManager().getAreasBannedMap().get(dom);
+		if(domBanned==null) {
+			domBanned = new ArrayList<>();
+		}
+		List<SexAreaInterface> subBanned = Main.sex.getInitialSexManager().getAreasBannedMap().get(sub);
+		if(subBanned==null) {
+			subBanned = new ArrayList<>();
+		}
+
+		List<SexType> sexTypesBanned = new ArrayList<>();
+		if(Main.sex.getInitialSexManager().getSexTypesBannedMap().get(dom)!=null) {
+			sexTypesBanned.addAll(Main.sex.getInitialSexManager().getSexTypesBannedMap().get(dom));
+		}
+		if(Main.sex.getInitialSexManager().getSexTypesBannedMap().get(sub)!=null) {
+			for(SexType st : Main.sex.getInitialSexManager().getSexTypesBannedMap().get(sub)) {
+				sexTypesBanned.add(st.getReversedSexType());
+			}
+		}
+		if(preference!=null) {
+			if(domBanned.contains(preference.getPerformingSexArea())
+					|| subBanned.contains(preference.getTargetedSexArea())
+					|| !dom.isAbleToAccessCoverableArea(preference.getPerformingSexArea().getRelatedCoverableArea(dom), true)
+					|| !sub.isAbleToAccessCoverableArea(preference.getTargetedSexArea().getRelatedCoverableArea(sub), true)) {
+				preference = null;
+			}
+		}
+		if(preference==null && dom.hasPenis() && !domBanned.contains(SexAreaPenetration.PENIS) && dom.isAbleToAccessCoverableArea(CoverableArea.PENIS, true)) {
+			if(sub.hasVagina() && !subBanned.contains(SexAreaOrifice.VAGINA) && sub.isAbleToAccessCoverableArea(CoverableArea.VAGINA, true)) {
+				preference = new SexType(SexParticipantType.NORMAL, SexAreaPenetration.PENIS, SexAreaOrifice.VAGINA);
+				
+			} else if(Main.game.isAnalContentEnabled() && !subBanned.contains(SexAreaOrifice.ANUS) && sub.isAbleToAccessCoverableArea(CoverableArea.ANUS, true)){
+				preference = new SexType(SexParticipantType.NORMAL, SexAreaPenetration.PENIS, SexAreaOrifice.ANUS);
+			}
+		}
+		if(preference==null && dom.hasVagina() && !domBanned.contains(SexAreaOrifice.VAGINA) && dom.isAbleToAccessCoverableArea(CoverableArea.VAGINA, true)) {
+			if(sub.hasPenis() && !subBanned.contains(SexAreaPenetration.PENIS) && sub.isAbleToAccessCoverableArea(CoverableArea.PENIS, true)) {
+				preference = new SexType(SexParticipantType.NORMAL, SexAreaOrifice.VAGINA, SexAreaPenetration.PENIS);
+				
+			} else if(sub.hasTail() && !subBanned.contains(SexAreaPenetration.TAIL) && sub.isTailSuitableForPenetration()){
+				preference = new SexType(SexParticipantType.NORMAL, SexAreaOrifice.VAGINA, SexAreaPenetration.TAIL);
+				
+			} else {
+				preference = new SexType(SexParticipantType.NORMAL, SexAreaOrifice.VAGINA, SexAreaPenetration.FINGER);
+			}
+		}
+		if(preference==null && dom.isAbleToAccessCoverableArea(CoverableArea.MOUTH, true) && !domBanned.contains(SexAreaOrifice.MOUTH)) {
+			if(sub.hasPenis() && !subBanned.contains(SexAreaPenetration.PENIS) && sub.isAbleToAccessCoverableArea(CoverableArea.PENIS, true)) {
+				preference = new SexType(SexParticipantType.NORMAL, SexAreaOrifice.MOUTH, SexAreaPenetration.PENIS);
+				
+			} else if(sub.hasVagina() && !subBanned.contains(SexAreaOrifice.VAGINA) && sub.isAbleToAccessCoverableArea(CoverableArea.VAGINA, true)) {
+				preference = new SexType(SexParticipantType.NORMAL, SexAreaPenetration.TONGUE, SexAreaOrifice.VAGINA);
+				
+			} else if(sub.isAbleToAccessCoverableArea(CoverableArea.MOUTH, true) && !subBanned.contains(SexAreaOrifice.MOUTH)) {
+				preference = new SexType(SexParticipantType.NORMAL, SexAreaPenetration.TONGUE, SexAreaOrifice.MOUTH);
+			}
+		}
+		
+		if(sexTypesBanned.contains(preference)) {
+			preference = null;
+		}
+		
+		if(preference==null) {
+			preference = new SexType(SexParticipantType.NORMAL, SexAreaPenetration.TONGUE, SexAreaOrifice.MOUTH); // At least give them something...
+		}
+		
+		return preference;
+	}
+	
+	private static boolean preventCreampie(SexType sexType, GameCharacter dom, GameCharacter sub) {
+		if(sexType.equals(new SexType(SexParticipantType.NORMAL, SexAreaPenetration.PENIS, SexAreaOrifice.VAGINA))
+				&& ((Main.sex.isConsensual() && sub.getFetishDesire(Fetish.FETISH_PREGNANCY).isNegative() && Main.sex.getInitialSexManager().getCharacterOrgasmBehaviour(dom)!=OrgasmBehaviour.CREAMPIE)
+						|| Main.sex.getInitialSexManager().getCharacterOrgasmBehaviour(dom)==OrgasmBehaviour.PULL_OUT)) {
+			return true;
+		}
+		if(sexType.equals(new SexType(SexParticipantType.NORMAL, SexAreaOrifice.VAGINA, SexAreaPenetration.PENIS))
+				&& ((dom.getFetishDesire(Fetish.FETISH_PREGNANCY).isNegative() && Main.sex.getInitialSexManager().getCharacterOrgasmBehaviour(sub)!=OrgasmBehaviour.CREAMPIE)
+						|| Main.sex.getInitialSexManager().getCharacterOrgasmBehaviour(sub)==OrgasmBehaviour.PULL_OUT)) {
+			return true;
+		}
+		return false;
+	}
+	
+	private static String generateQuickSexDescription() {
+
+		StringBuilder sb = new StringBuilder();
+		
+		HashMap<GameCharacter, GameCharacter> targetedCharacters = new HashMap<>();
+		List<GameCharacter> availableSubs = new ArrayList<>(Main.sex.getSubmissiveParticipants(false).keySet());
+		boolean allDomsAssigned = false;
+		boolean allSubsAssigned = false;
+		List<GameCharacter> domsNotSatisfied = new ArrayList<>(Main.sex.getDominantParticipants(false).keySet());
+		
+		// All characters in sex should know of each others' parts:
+		for(GameCharacter character : Main.sex.getAllParticipants()) {
+			for(GameCharacter partner : Main.sex.getAllParticipants()) {
+				if(!character.equals(partner)) {
+					partner.setAllAreasKnownByCharacter(character, true);
+					character.setAllAreasKnownByCharacter(partner, true);
+				}
+			}
+		}
+		
+		while(!allSubsAssigned) {
+			for(GameCharacter dom : domsNotSatisfied) {
+				GameCharacter target = dom.isPlayer()?Main.sex.getTargetedPartner(dom):Main.sex.getInitialSexManager().getPreferredSexTarget((NPC) dom);
+				if(target==null || (dom.isPlayer() && allDomsAssigned && Main.sex.isConsensual())) { // If second time through loop, and equal control, give player another target if available
+					if(availableSubs.isEmpty()) { // If run out of subs, re-populate sub list.
+						availableSubs = new ArrayList<>(Main.sex.getSubmissiveParticipants(false).keySet());
+					}
+					float topWeight = -10_000;
+					for(GameCharacter sub : availableSubs) {
+						float weight = dom.isAttractedTo(sub)?dom.getAffection(sub):-1_000;
+						if(weight>topWeight) {
+							topWeight = weight;
+							target = sub;
+						}
+					}
+				}
+				availableSubs.remove(target);
+				if(availableSubs.isEmpty()) {
+					allSubsAssigned = true;
+				}
+				targetedCharacters.put(dom, target);
+				if(allDomsAssigned && allSubsAssigned) { // If this is the second+ time going through the loop, break as soon as all subs are accounted for
+					break;
+				}
+			}
+			allDomsAssigned = true;
+			
+			// Apply all generic sex effects:
+			for(Entry<GameCharacter, GameCharacter> entry : targetedCharacters.entrySet()) {
+				GameCharacter dom = entry.getKey();
+				GameCharacter sub = entry.getValue();
+				sb.append(UtilText.parse(dom, sub,
+						"<p style='text-align:center;'>"
+//							+ "<b>[style.boldSexDom([npc.Name])] dominantly "+(Main.sex.isConsensual()?"having sex with":"fucking")+" [style.boldSexSub([npc2.name])]</b>"
+							+ "<b><b style='color:"+dom.getFemininity().getColour().toWebHexString()+";'>[npc.Name]</b>"
+								+ " dominantly "+(Main.sex.isConsensual()?"having sex with ":"fucking ")
+								+"<b style='color:"+sub.getFemininity().getColour().toWebHexString()+";'>[npc2.name]</b></b>"
+						+ "</p>"));
+				
+				boolean preventCreampie = false;
+				
+				// Foreplay:
+				SexType preference;
+				if(Main.sex.isInForeplay(dom)) {
+					// Self-equip clothing:
+					if(dom instanceof NPC) {
+						Value<AbstractClothing, String> clothingValue = ((NPC)dom).getSexClothingToSelfEquip(sub, true);
+						while(clothingValue!=null && SexActionUtility.PARTNER_SELF_EQUIP_CLOTHING.isQuickSexRequirementsMet(dom)) {
+							dom.equipClothingFromInventory(clothingValue.getKey(), true, dom, dom);
+							clothingValue = ((NPC)dom).getSexClothingToSelfEquip(sub, true);
+						}
+					}
+					if(sub instanceof NPC) {
+						Value<AbstractClothing, String> clothingValue = ((NPC)sub).getSexClothingToSelfEquip(dom, true);
+						while(clothingValue!=null && SexActionUtility.PARTNER_SELF_EQUIP_CLOTHING.isQuickSexRequirementsMet(sub)) {
+							sub.equipClothingFromInventory(clothingValue.getKey(), true, sub, sub);
+							clothingValue = ((NPC)sub).getSexClothingToSelfEquip(dom, true);
+						}
+					}
+					// Equip clothing on partner:
+					if(dom instanceof NPC) {
+						Value<AbstractClothing, String> clothingValue = ((NPC)dom).getSexClothingToEquip(sub, true);
+						while(clothingValue!=null && SexActionUtility.PARTNER_EQUIP_CLOTHING.isQuickSexRequirementsMet(dom)) {
+							sub.equipClothingFromInventory(clothingValue.getKey(), true, dom, dom);
+							clothingValue = ((NPC)dom).getSexClothingToEquip(sub, true);
+						}
+					}
+					if(sub instanceof NPC) {
+						Value<AbstractClothing, String> clothingValue = ((NPC)sub).getSexClothingToEquip(dom, true);
+						while(clothingValue!=null && SexActionUtility.PARTNER_EQUIP_CLOTHING.isQuickSexRequirementsMet(sub)) {
+							dom.equipClothingFromInventory(clothingValue.getKey(), true, sub, sub);
+							clothingValue = ((NPC)sub).getSexClothingToEquip(dom, true);
+						}
+					}
+					preference = getForeplayPreference(dom, sub);
+					preventCreampie = preventCreampie(preference, dom, sub);
+					sb.append("<p style='margin:0; padding:0; text-align:center;'>");
+					sb.append("[style.boldPurpleLight(Foreplay)] ([style.colourSexDom("+Util.capitaliseSentence(preference.getPerformingSexArea().getName(dom, true))+")]-[style.colourSexSub("+preference.getTargetedSexArea().getName(sub, true)+")]): ");
+					sb.append(dom.calculateGenericSexEffects(true, false, sub, preference, GenericSexFlag.EXTENDED_DESCRIPTION_NEEDED, (preventCreampie?GenericSexFlag.PREVENT_CREAMPIE:null)));
+					sb.append("</p>");
+				}
+				
+				// Main sex:
+				preference = getMainSexPreference(dom, sub);
+				preventCreampie = preventCreampie(preference, dom, sub);
+				// If equal sex control, dom should satisfy subs:
+				int orgamsNeeded = !Main.sex.isConsensual()
+						?(dom.getOrgasmsBeforeSatisfied()-Main.sex.getNumberOfOrgasms(dom))
+						:Math.max((sub.getOrgasmsBeforeSatisfied()-Main.sex.getNumberOfOrgasms(sub)), (dom.getOrgasmsBeforeSatisfied()-Main.sex.getNumberOfOrgasms(dom)));
+				for(int i=0; i<orgamsNeeded; i++) {
+					// Regenerate cum by 5 minutes' worth of cum, so that there's cum for the next orgasm:
+					// Moved before orgasm so the first quick sex orgasm isn't dry
+					dom.incrementPenisStoredCum((5*60) * dom.getCumRegenerationPerSecond());
+					sub.incrementPenisStoredCum((5*60) * sub.getCumRegenerationPerSecond());
+
+					// Self-equip clothing:
+					if(dom instanceof NPC) {
+						Value<AbstractClothing, String> clothingValue = ((NPC)dom).getSexClothingToSelfEquip(sub, true);
+						while(clothingValue!=null && SexActionUtility.PARTNER_SELF_EQUIP_CLOTHING.isQuickSexRequirementsMet(dom)) {
+							dom.equipClothingFromInventory(clothingValue.getKey(), true, dom, dom);
+							clothingValue = ((NPC)dom).getSexClothingToSelfEquip(sub, true);
+						}
+					}
+					if(sub instanceof NPC) {
+						Value<AbstractClothing, String> clothingValue = ((NPC)sub).getSexClothingToSelfEquip(dom, true);
+						while(clothingValue!=null && SexActionUtility.PARTNER_SELF_EQUIP_CLOTHING.isQuickSexRequirementsMet(sub)) {
+							sub.equipClothingFromInventory(clothingValue.getKey(), true, sub, sub);
+							clothingValue = ((NPC)sub).getSexClothingToSelfEquip(dom, true);
+						}
+					}
+					// Equip clothing on partner:
+					if(dom instanceof NPC) {
+						Value<AbstractClothing, String> clothingValue = ((NPC)dom).getSexClothingToEquip(sub, true);
+						while(clothingValue!=null && SexActionUtility.PARTNER_EQUIP_CLOTHING.isQuickSexRequirementsMet(dom)) {
+							sub.equipClothingFromInventory(clothingValue.getKey(), true, dom, dom);
+							clothingValue = ((NPC)dom).getSexClothingToEquip(sub, true);
+						}
+					}
+					if(sub instanceof NPC) {
+						Value<AbstractClothing, String> clothingValue = ((NPC)sub).getSexClothingToEquip(dom, true);
+						while(clothingValue!=null && SexActionUtility.PARTNER_EQUIP_CLOTHING.isQuickSexRequirementsMet(sub)) {
+							dom.equipClothingFromInventory(clothingValue.getKey(), true, sub, sub);
+							clothingValue = ((NPC)sub).getSexClothingToEquip(dom, true);
+						}
+					}
+					sb.append("<p style='margin:0; padding:0; text-align:center;'>");
+					sb.append("[style.boldPurple(Sex)] ([style.colourSexDom("+Util.capitaliseSentence(preference.getPerformingSexArea().getName(dom, true))+")]-[style.colourSexSub("+preference.getTargetedSexArea().getName(sub, true)+")]): ");
+					sb.append("</p>");
+					sb.append(dom.calculateGenericSexEffects(true, true, sub, preference, GenericSexFlag.EXTENDED_DESCRIPTION_NEEDED, (preventCreampie?GenericSexFlag.PREVENT_CREAMPIE:null))); // This increments orgasms
+//					if(sub.hasPenisIgnoreDildo() && !dom.hasFetish(Fetish.FETISH_DENIAL) && Main.sex.getSexPace(sub)!=SexPace.SUB_RESISTING) {
+//						sb.append(sub.calculateGenericSexEffects(true, true, dom, new SexType(SexAreaPenetration.PENIS, SexAreaPenetration.FINGER), GenericSexFlag.EXTENDED_DESCRIPTION_NEEDED, (preventCreampie?GenericSexFlag.PREVENT_CREAMPIE:null))); // This increments orgasms
+//						//TODO
+//					}
+					
+					if(orgamsNeeded>1) {
+						dom.generateSexChoices(false, sub);
+						preference = getMainSexPreference(dom, sub);
+						preventCreampie = preventCreampie(preference, dom, sub);
+					}
+				}
+			}
+			
+			for(GameCharacter dom : new ArrayList<>(domsNotSatisfied)) {
+				if(Main.sex.getNumberOfOrgasms(dom)>=dom.getOrgasmsBeforeSatisfied() || !dom.isAbleToOrgasm()) {
+					domsNotSatisfied.remove(dom);
+				}
+			}
+			
+			if(!Main.sex.isConsensual()) { // If the doms don't care about satisfying all the subs, treat all subs assigned as being true
+				if(domsNotSatisfied.isEmpty()) {
+					allSubsAssigned = true;
+				}
+			} else {
+				if(domsNotSatisfied.isEmpty() && !allSubsAssigned) {
+					domsNotSatisfied = new ArrayList<>(Main.sex.getDominantParticipants(false).keySet());
+				}
+			}
+		}
+		
+		// Append description of what clothing was equipped during sex:
+		StringBuilder equippedClothingSB = new StringBuilder();
+		for(Entry<GameCharacter, Map<GameCharacter, List<AbstractClothing>>> equippedMapEntry : Main.sex.getClothingEquippedDuringSex().entrySet()) {
+			if(equippedMapEntry.getValue().isEmpty()) {
+				continue;
+			}
+			if(equippedClothingSB.length()>0) {
+				equippedClothingSB.append("<br/>");
+			}
+			GameCharacter equipper = equippedMapEntry.getKey();
+			equippedClothingSB.append(UtilText.parse(equipper, "<b><span style='color:"+(equipper.getFemininity().getColour().toWebHexString())+"'>[npc.Name]</span> equipped the following clothing during sex:</b>"));
+			for(Entry<GameCharacter, List<AbstractClothing>> characterEntry : equippedMapEntry.getValue().entrySet()) {
+				GameCharacter target = characterEntry.getKey();
+				for(AbstractClothing clothing : characterEntry.getValue()) {
+					equippedClothingSB.append(UtilText.parse(target, "<br/>"+clothing.getDisplayName(true)+" onto <span style='color:"+(target.getFemininity().getColour().toWebHexString())+"'>[npc.name]</span>"));
+				}
+			}
+		}
+		if(equippedClothingSB.length()>0) {
+			equippedClothingSB.insert(0, "<p style='text-align:center;'>");
+			equippedClothingSB.append("</p>");
+		}
+		sb.append(equippedClothingSB.toString());
+		
+		return sb.toString();
+	}
+
+	private static String eggLayingTargetDescription(SexAreaPenetration penetratingArea, SexAreaInterface orifice, GameCharacter characterOrgasming, GameCharacter target) {
+		StringBuilder sb = new StringBuilder();
+		
+		if(!orifice.isOrifice()) {
+			System.err.println("ERROR: eggLayingTargetDescription()");
+			new Exception().printStackTrace();
+			return "";
+		}
+		
+		SexAreaOrifice orificeTargeted = (SexAreaOrifice)orifice;
+		
+		boolean condomBreaks = characterOrgasming.isWearingCondom();
+		int eggCount = characterOrgasming.getPregnantLitter().getTotalLitterCount();
+		String penetrationAreaText = "[npc.cock]";
+		String penetrationAreaPlusText = "[npc.cock+]";
+		
+		if(penetratingArea==SexAreaPenetration.CLIT) {
+			penetrationAreaText = "[npc.clit]";
+			penetrationAreaPlusText = "[npc.clit+]";
+			
+		} else if(penetratingArea==SexAreaPenetration.TAIL) {
+			penetrationAreaText = "[npc.tail]";
+			penetrationAreaPlusText = "[npc.tail+]";
+		}
+		
+		String hipGrindText = "";
+		String selfTargetText = "[npc2.namePos]";
+		if(characterOrgasming==target) {
+			selfTargetText = "[npc2.her] own";
+		}
+		switch(orificeTargeted) {
+			case ARMPITS:
+			case ASS:
+			case BREAST:
+			case BREAST_CROTCH:
+			case SPINNERET:
+			case THIGHS:
+			case URETHRA_PENIS:
+			case URETHRA_VAGINA:
+				break;
+			case ANUS:
+				if(penetratingArea==SexAreaPenetration.TAIL) {
+					hipGrindText = "thrusting [npc.her] [npc.tail+] into "+selfTargetText+" [npc2.assCloaca]";
+				} else {
+					hipGrindText = "grinding [npc.her] [npc.hips] into "+selfTargetText+" [npc2.assCloaca]";
+				}
+				break;
+			case MOUTH:
+				if(penetratingArea==SexAreaPenetration.TAIL) {
+					hipGrindText = "thrusting [npc.her] [npc.tail+] down "+selfTargetText+" throat";
+				} else {
+					hipGrindText = "grinding [npc.her] [npc.hips] into "+selfTargetText+" [npc2.face]";
+				}
+				break;
+			case NIPPLE:
+				if(penetratingArea==SexAreaPenetration.TAIL) {
+					hipGrindText = "thrusting [npc.her] [npc.tail+] into "+selfTargetText+" [npc2.nipple+(true)]";
+				} else {
+					hipGrindText = "grinding [npc.her] [npc.hips] into "+selfTargetText+" [npc2.breasts]";
+				}
+				break;
+			case NIPPLE_CROTCH:
+				if(penetratingArea==SexAreaPenetration.TAIL) {
+					hipGrindText = "thrusting [npc.her] [npc.tail+] into "+selfTargetText+" [npc2.nippleCrotch+(true)]";
+				} else {
+					hipGrindText = "grinding [npc.her] [npc.hips] into "+selfTargetText+" [npc2.crotchBreasts]";
+				}
+				break;
+			case VAGINA:
+				if(penetratingArea==SexAreaPenetration.TAIL) {
+					hipGrindText = "thrusting [npc.her] [npc.tail+] into "+selfTargetText+" [npc2.pussy+]";
+				} else {
+					hipGrindText = "grinding [npc.her] [npc.hips] into "+selfTargetText+" groin";
+				}
+				break;
+		}
+
+		if(characterOrgasming==target) {
+			sb.append("Wanting to deposit [npc.her] egg");
+			if(eggCount!=1) {
+				sb.append("s");
+			}
+			switch(orificeTargeted) {
+				case ARMPITS:
+				case ASS:
+				case BREAST:
+				case BREAST_CROTCH:
+				case SPINNERET:
+				case THIGHS:
+				case URETHRA_PENIS:
+				case URETHRA_VAGINA:
+					break;
+				case ANUS:
+					sb.append(" in [npc2.her] own ass, [npc.name] [npc.verb(let)] out [npc.a_moan+] and [npc.verb(push)] [npc.her] "+penetrationAreaPlusText+" as deep as possible into [npc2.her] [npc2.asshole].");
+					sb.append(" Eagerly "+hipGrindText+", [npc.she] excitedly [npc.moansVerb] as [npc.she] [npc.verb(prepare)] to lay [npc.her] egg"+(eggCount!=1?"s":"")+".");
+					sb.append("</br>");
+					sb.append("With that, [npc2.name] suddenly [npc2.verb(feel)] the unmistakable bulbous lump of an egg travelling down the length of [npc.namePos] "+penetrationAreaText+","
+							+ " and [npc2.she] can't help but let out an alarmed [npc2.moan] as it squeezes out of the end"+(condomBreaks?", breaking [npc.namePos] condom in the process,":"")+" and is safely laid deep in [npc2.her] stomach.");
+					if(eggCount>1) {
+						sb.append(" Still with "+(Util.intToString(eggCount-1))+" egg"+(eggCount>2?"s":"")+" left to lay, [npc.name] [npc.verb(keep)] [npc.her] "+penetrationAreaPlusText+" hilted deep in [npc2.her] own [npc2.asshole+]"
+								+ " and [npc.verb(continue)] to let out a series of deeply satisfied [npc.moans] as [npc.she] [npc.verb(turn)] [npc2.her] stomach into an egg-incubation chamber.");
+					}
+					sb.append("</br>");
+					sb.append("With one last [npc.moan], [npc.name] [npc.verb(pull)] back, before lovingly rubbing [npc.her] [npc.hand] over [npc2.her] swollen belly and sighing,");
+					sb.append(" [npc.speech(That's better!)]");
+					break;
+				case MOUTH:
+					sb.append(" in [npc2.her] own stomach, [npc.name] [npc.verb(let)] out [npc.a_moan+] and [npc.verb(push)] [npc.her] "+penetrationAreaPlusText+" as deep as possible down [npc2.her] throat.");
+					sb.append(" Eagerly "+hipGrindText+", [npc.she] excitedly [npc.moansVerb] as [npc.she] [npc.verb(prepare)] to lay [npc.her] egg"+(eggCount!=1?"s":"")+".");
+					sb.append("</br>");
+					sb.append("With that, [npc2.name] suddenly [npc2.verb(feel)] the unmistakable bulbous lump of an egg travelling down the length of [npc.namePos] "+penetrationAreaText+","
+							+ " and [npc2.she] can't help but let out an alarmed, muffled [npc2.moan] as it squeezes out of the end"+(condomBreaks?", breaking [npc.namePos] condom in the process,":"")+" and is safely laid deep in [npc2.her] stomach.");
+					if(eggCount>1) {
+						sb.append(" Still with "+(Util.intToString(eggCount-1))+" egg"+(eggCount>2?"s":"")+" left to lay, [npc.name] [npc.verb(keep)] [npc.her] "+penetrationAreaPlusText+" hilted deep down [npc2.her] own throat"
+								+ " and [npc.verb(continue)] to let out a series of deeply satisfied [npc.moans] as [npc.she] [npc.verb(turn)] [npc2.her] stomach into an egg-incubation chamber.");
+					}
+					sb.append("</br>");
+					sb.append("With one last [npc.moan], [npc.name] [npc.verb(pull)] back, before lovingly rubbing [npc.her] [npc.hand] over [npc2.her] swollen belly and sighing,");
+					sb.append(" [npc.speech(That's better!)]");
+					break;
+				case NIPPLE:
+					sb.append(" in [npc2.her] own breasts, [npc.name] [npc.verb(let)] out [npc.a_moan+] and [npc.verb(push)] [npc.her] "+penetrationAreaPlusText+" as deep as possible into [npc2.her] [npc2.nipple(true)].");
+					sb.append(" Eagerly "+hipGrindText+", [npc.she] excitedly [npc.moansVerb] as [npc.she] [npc.verb(prepare)] to lay [npc.her] egg"+(eggCount!=1?"s":"")+".");
+					sb.append("</br>");
+					sb.append("With that, [npc2.name] suddenly [npc2.verb(feel)] the unmistakable bulbous lump of an egg travelling down the length of [npc.namePos] "+penetrationAreaText+","
+							+ " and [npc2.she] can't help but let out an alarmed [npc2.moan] as it squeezes out of the end"
+							+(condomBreaks?", breaking [npc.namePos] condom in the process,":"")+" and is safely laid deep within [npc2.her] fuckable breast.");
+					if(eggCount>1) {
+						sb.append(" Still with "+(Util.intToString(eggCount-1))+" egg"+(eggCount>2?"s":"")+" left to lay, [npc.name] [npc.verb(pull)] out and then immediately [npc.verb(penetrate)] [npc2.her] other [npc2.nipple(true)]."
+								+ " Continuing to let out a series of deeply satisfied [npc.moans], [npc.she] quickly [npc.verb(turn)] [npc2.her] [npc2.breasts] into egg-incubation chambers.");
+					}
+					sb.append("</br>");
+					sb.append("With one last [npc.moan], [npc.name] [npc.verb(pull)] back, before lovingly rubbing [npc.her] [npc.hand] over [npc2.her] swollen [npc2.breasts] and sighing,");
+					sb.append(" [npc.speech(That's better!)]");
+					break;
+				case NIPPLE_CROTCH:
+					sb.append(" in [npc2.her] own [npc2.crotchBoobs], [npc.name] [npc.verb(let)] out [npc.a_moan+] and [npc.verb(push)] [npc.her] "+penetrationAreaPlusText+" as deep as possible into [npc2.her] [npc2.nippleCrotch(true)].");
+					sb.append(" Eagerly "+hipGrindText+", [npc.she] excitedly [npc.moansVerb] as [npc.she] [npc.verb(prepare)] to lay [npc.her] egg"+(eggCount!=1?"s":"")+".");
+					sb.append("</br>");
+					sb.append("With that, [npc2.name] suddenly [npc2.verb(feel)] the unmistakable bulbous lump of an egg travelling down the length of [npc.namePos] "+penetrationAreaText+","
+							+ " and [npc2.she] can't help but let out an alarmed [npc2.moan] as it squeezes out of the end"
+							+(condomBreaks?", breaking [npc.namePos] condom in the process,":"")+" and is safely laid deep within [npc2.her] fuckable [npc2.crotchBoobs].");
+					if(eggCount>1) {
+						sb.append(" Still with "+(Util.intToString(eggCount-1))+" egg"+(eggCount>2?"s":"")+" left to lay, [npc.name] [npc.verb(pull)] out and then immediately [npc.verb(penetrate)] [npc2.her] other [npc2.nippleCrotch(true)]."
+								+ " Continuing to let out a series of deeply satisfied [npc.moans], [npc.she] quickly [npc.verb(turn)] [npc2.her] [npc2.crotchBoobs] into egg-incubation chambers.");
+					}
+					sb.append("</br>");
+					sb.append("With one last [npc.moan], [npc.name] [npc.verb(pull)] back, before lovingly rubbing [npc.her] [npc.hand] over [npc2.her] swollen [npc2.crotchBoobs] and sighing,");
+					sb.append(" [npc.speech(That's better!)]");
+					break;
+				case VAGINA:
+					sb.append(" in [npc2.her] own womb, [npc.name] [npc.verb(let)] out [npc.a_moan+] and [npc.verb(push)] [npc.her] "+penetrationAreaPlusText+" as deep as possible into [npc2.her] [npc2.pussy].");
+					sb.append(" Eagerly "+hipGrindText+", [npc.she] excitedly [npc.moansVerb] as [npc.she] [npc.verb(prepare)] to lay [npc.her] egg"+(eggCount!=1?"s":"")+".");
+					sb.append("</br>");
+					sb.append("With that, [npc2.name] suddenly [npc2.verb(feel)] the unmistakable bulbous lump of an egg travelling down the length of [npc.namePos] "+penetrationAreaText+","
+							+ " and [npc2.she] can't help but let out an alarmed [npc2.moan] as it squeezes out of the end"+(condomBreaks?", breaking [npc.namePos] condom in the process,":"")+" and is safely laid deep in [npc2.her] womb.");
+					if(eggCount>1) {
+						sb.append(" Still with "+(Util.intToString(eggCount-1))+" egg"+(eggCount>2?"s":"")+" left to lay, [npc.name] [npc.verb(keep)] [npc.her] "+penetrationAreaPlusText+" hilted deep in [npc2.her] own [npc2.pussy+]"
+								+ " and [npc.verb(continue)] to let out a series of deeply satisfied [npc.moans] as [npc.she] [npc.verb(turn)] [npc2.her] womb into an egg-incubation chamber.");
+					}
+					sb.append("</br>");
+					sb.append("Finally, with one last [npc.moan], [npc.name] [npc.verb(pull)] back, before lovingly rubbing [npc.her] [npc.hand] over [npc2.her] swollen belly and sighing,");
+					sb.append(" [npc.speech(That's better!)]");
+					break;
+			}
+			
+		} else {
+			sb.append("Wanting to deposit [npc.her] egg");
+			if(eggCount!=1) {
+				sb.append("s");
+			}
+			switch(orificeTargeted) {
+				case ARMPITS:
+				case ASS:
+				case BREAST:
+				case BREAST_CROTCH:
+				case SPINNERET:
+				case THIGHS:
+				case URETHRA_PENIS:
+				case URETHRA_VAGINA:
+					break;
+				case ANUS:
+					switch(Main.sex.getSexPace(characterOrgasming)) {
+						case DOM_ROUGH:
+							sb.append(" in [npc2.name], [npc.name] [npc.verb(let)] out [npc.a_moan+] and [npc.verb(slam)] [npc.her] "+penetrationAreaPlusText+" as deep as possible into [npc2.her] [npc2.asshole].");
+							sb.append(" Roughly "+hipGrindText+", [npc.she] [npc.verb(sneer)],");
+							if(eggCount==1) {
+								sb.append(" [npc.speech(You're going to take my egg, [npc2.bitch]!)]");
+							} else {
+								sb.append(" [npc.speech(I'm going to stuff you full of eggs, [npc2.bitch]!)]");
+							}
+							break;
+						default:
+							sb.append(" in [npc2.name], [npc.name] [npc.verb(let)] out [npc.a_moan+] and [npc.verb(push)] [npc.her] "+penetrationAreaPlusText+" as deep as possible into [npc2.her] [npc2.asshole].");
+							sb.append(" Eagerly "+hipGrindText+", [npc.she] excitedly [npc.verb(exclaim)],");
+							if(eggCount==1) {
+								sb.append(" [npc.speech(I'm going to put my egg in you!)]");
+							} else {
+								sb.append(" [npc.speech(I'm going to stuff you with eggs!)]");
+							}
+							break;
+					}
+					sb.append("</br>");
+					sb.append("With that, [npc2.name] suddenly [npc2.verb(feel)] the unmistakable bulbous lump of an egg travelling down the length of [npc.namePos] "+penetrationAreaText+","
+							+ " and [npc2.she] can't help but let out an alarmed [npc2.moan] as it squeezes out of the end"+(condomBreaks?", breaking [npc.namePos] condom in the process,":"")+" and is safely laid deep in [npc2.her] stomach.");
+					if(eggCount>1) {
+						sb.append(" Still with "+(Util.intToString(eggCount-1))+" egg"+(eggCount>2?"s":"")+" left to lay, [npc.name] [npc.verb(keep)] [npc.her] "+penetrationAreaPlusText+" hilted deep in [npc2.namePos] [npc2.asshole+]"
+								+ " and [npc.verb(continue)] to let out a series of deeply satisfied [npc.moans] as [npc.she] [npc.verb(turn)] [npc2.her] stomach into an egg-incubation chamber.");
+					}
+					sb.append("</br>");
+					switch(Main.sex.getSexPace(characterOrgasming)) {
+						case DOM_ROUGH:
+							sb.append("With one last [npc.moan], [npc.name] roughly [npc.verb(pull)] back, before dominantly rubbing [npc.her] [npc.hand] over [npc2.namePos] swollen belly and growling,");
+							sb.append(" [npc.speech(Make sure to take good care of my "+(eggCount>1?"children":"child")+", [npc2.bitch]!)]");
+							break;
+						default:
+							sb.append("With one last [npc.moan], [npc.name] [npc.verb(pull)] back, before lovingly rubbing [npc.her] [npc.hand] over [npc2.namePos] swollen belly and sighing,");
+							sb.append(" [npc.speech(Make sure to take good care of my "+(eggCount>1?"children":"child")+"!)]");
+							break;
+					}
+					break;
+				case MOUTH:
+					switch(Main.sex.getSexPace(characterOrgasming)) {
+						case DOM_ROUGH:
+							sb.append(" in [npc2.name], [npc.name] [npc.verb(let)] out [npc.a_moan+] and [npc.verb(slam)] [npc.her] "+penetrationAreaPlusText+" as deep as possible down [npc2.her] throat.");
+							sb.append(" Roughly "+hipGrindText+", [npc.she] [npc.verb(sneer)],");
+							if(eggCount==1) {
+								sb.append(" [npc.speech(You're going to take my egg, [npc2.bitch]!)]");
+							} else {
+								sb.append(" [npc.speech(I'm going to stuff you full of eggs, [npc2.bitch]!)]");
+							}
+							break;
+						default:
+							sb.append(" in [npc2.name], [npc.name] [npc.verb(let)] out [npc.a_moan+] and [npc.verb(push)] [npc.her] "+penetrationAreaPlusText+" as deep as possible down [npc2.her] throat.");
+							sb.append(" Eagerly "+hipGrindText+", [npc.she] excitedly [npc.verb(exclaim)],");
+							if(eggCount==1) {
+								sb.append(" [npc.speech(I'm going to put my egg in you!)]");
+							} else {
+								sb.append(" [npc.speech(I'm going to stuff you with eggs!)]");
+							}
+							break;
+					}
+					sb.append("</br>");
+					sb.append("With that, [npc2.name] suddenly [npc2.verb(feel)] the unmistakable bulbous lump of an egg travelling down the length of [npc.namePos] "+penetrationAreaText+","
+							+ " and [npc2.she] can't help but let out an alarmed, muffled [npc2.moan] as it squeezes out of the end"+(condomBreaks?", breaking [npc.namePos] condom in the process,":"")+" and is safely laid deep in [npc2.her] stomach.");
+					if(eggCount>1) {
+						sb.append(" Still with "+(Util.intToString(eggCount-1))+" egg"+(eggCount>2?"s":"")+" left to lay, [npc.name] [npc.verb(keep)] [npc.her] "+penetrationAreaPlusText+" hilted deep down [npc2.namePos] throat"
+								+ " and [npc.verb(continue)] to let out a series of deeply satisfied [npc.moans] as [npc.she] [npc.verb(turn)] [npc2.her] stomach into an egg-incubation chamber.");
+					}
+					sb.append("</br>");
+					switch(Main.sex.getSexPace(characterOrgasming)) {
+						case DOM_ROUGH:
+							sb.append("With one last [npc.moan], [npc.name] roughly [npc.verb(pull)] back, before dominantly rubbing [npc.her] [npc.hand] over [npc2.namePos] swollen belly and growling,");
+							sb.append(" [npc.speech(Make sure to take good care of my "+(eggCount>1?"children":"child")+", [npc2.bitch]!)]");
+							break;
+						default:
+							sb.append("With one last [npc.moan], [npc.name] [npc.verb(pull)] back, before lovingly rubbing [npc.her] [npc.hand] over [npc2.namePos] swollen belly and sighing,");
+							sb.append(" [npc.speech(Make sure to take good care of my "+(eggCount>1?"children":"child")+"!)]");
+							break;
+					}
+					break;
+				case NIPPLE:
+					switch(Main.sex.getSexPace(characterOrgasming)) {
+						case DOM_ROUGH:
+							sb.append(" in [npc2.name], [npc.name] [npc.verb(let)] out [npc.a_moan+] and [npc.verb(slam)] [npc.her] "+penetrationAreaPlusText+" as deep as possible into [npc2.her] [npc2.nipple(true)].");
+							sb.append(" Roughly "+hipGrindText+", [npc.she] [npc.verb(sneer)],");
+							if(eggCount==1) {
+								sb.append(" [npc.speech(You're going to take my egg, [npc2.bitch]!)]");
+							} else {
+								sb.append(" [npc.speech(I'm going to stuff you full of eggs, [npc2.bitch]!)]");
+							}
+							break;
+						default:
+							sb.append(" in [npc2.name], [npc.name] [npc.verb(let)] out [npc.a_moan+] and [npc.verb(push)] [npc.her] "+penetrationAreaPlusText+" as deep as possible into [npc2.her] [npc2.nipple(true)].");
+							sb.append(" Eagerly "+hipGrindText+", [npc.she] excitedly [npc.verb(exclaim)],");
+							if(eggCount==1) {
+								sb.append(" [npc.speech(I'm going to put my egg in you!)]");
+							} else {
+								sb.append(" [npc.speech(I'm going to stuff you with eggs!)]");
+							}
+							break;
+					}
+					sb.append("</br>");
+					sb.append("With that, [npc2.name] suddenly [npc2.verb(feel)] the unmistakable bulbous lump of an egg travelling down the length of [npc.namePos] "+penetrationAreaText+","
+							+ " and [npc2.she] can't help but let out an alarmed [npc2.moan] as it squeezes out of the end"
+							+(condomBreaks?", breaking [npc.namePos] condom in the process,":"")+" and is safely laid deep within [npc2.her] fuckable breast.");
+					if(eggCount>1) {
+						sb.append(" Still with "+(Util.intToString(eggCount-1))+" egg"+(eggCount>2?"s":"")+" left to lay, [npc.name] [npc.verb(pull)] out and then immediately [npc.verb(penetrate)] [npc2.namePos] other [npc2.nipple(true)]."
+								+ " Continuing to let out a series of deeply satisfied [npc.moans], [npc.she] quickly [npc.verb(turn)] [npc2.namePos] [npc2.breasts] into egg-incubation chambers.");
+					}
+					sb.append("</br>");
+					switch(Main.sex.getSexPace(characterOrgasming)) {
+						case DOM_ROUGH:
+							sb.append("With one last [npc.moan], [npc.name] roughly [npc.verb(pull)] back, before dominantly rubbing [npc.her] [npc.hand] over [npc2.namePos] swollen [npc2.breasts] and growling,");
+							sb.append(" [npc.speech(Make sure to take good care of my "+(eggCount>1?"children":"child")+", [npc2.bitch]!)]");
+							break;
+						default:
+							sb.append("With one last [npc.moan], [npc.name] [npc.verb(pull)] back, before lovingly rubbing [npc.her] [npc.hand] over [npc2.namePos] swollen [npc2.breasts] and sighing,");
+							sb.append(" [npc.speech(Make sure to take good care of my "+(eggCount>1?"children":"child")+"!)]");
+							break;
+					}
+					break;
+				case NIPPLE_CROTCH:
+					switch(Main.sex.getSexPace(characterOrgasming)) {
+						case DOM_ROUGH:
+							sb.append(" in [npc2.name], [npc.name] [npc.verb(let)] out [npc.a_moan+] and [npc.verb(slam)] [npc.her] "+penetrationAreaPlusText+" as deep as possible into [npc2.her] [npc2.nippleCrotch(true)].");
+							sb.append(" Roughly "+hipGrindText+", [npc.she] [npc.verb(sneer)],");
+							if(eggCount==1) {
+								sb.append(" [npc.speech(You're going to take my egg, [npc2.bitch]!)]");
+							} else {
+								sb.append(" [npc.speech(I'm going to stuff you full of eggs, [npc2.bitch]!)]");
+							}
+							break;
+						default:
+							sb.append(" in [npc2.name], [npc.name] [npc.verb(let)] out [npc.a_moan+] and [npc.verb(push)] [npc.her] "+penetrationAreaPlusText+" as deep as possible into [npc2.her] [npc2.nippleCrotch(true)].");
+							sb.append(" Eagerly "+hipGrindText+", [npc.she] excitedly [npc.verb(exclaim)],");
+							if(eggCount==1) {
+								sb.append(" [npc.speech(I'm going to put my egg in you!)]");
+							} else {
+								sb.append(" [npc.speech(I'm going to stuff you with eggs!)]");
+							}
+							break;
+					}
+					sb.append("</br>");
+					sb.append("With that, [npc2.name] suddenly [npc2.verb(feel)] the unmistakable bulbous lump of an egg travelling down the length of [npc.namePos] "+penetrationAreaText+","
+							+ " and [npc2.she] can't help but let out an alarmed [npc2.moan] as it squeezes out of the end"
+							+(condomBreaks?", breaking [npc.namePos] condom in the process,":"")+" and is safely laid deep within [npc2.her] fuckable [npc2.crotchBoobs].");
+					if(eggCount>1) {
+						sb.append(" Still with "+(Util.intToString(eggCount-1))+" egg"+(eggCount>2?"s":"")+" left to lay, [npc.name] [npc.verb(pull)] out and then immediately [npc.verb(penetrate)] [npc2.namePos] other [npc2.nippleCrotch(true)]."
+								+ " Continuing to let out a series of deeply satisfied [npc.moans], [npc.she] quickly [npc.verb(turn)] [npc2.namePos] [npc2.crotchBoobs] into egg-incubation chambers.");
+					}
+					sb.append("</br>");
+					switch(Main.sex.getSexPace(characterOrgasming)) {
+						case DOM_ROUGH:
+							sb.append("With one last [npc.moan], [npc.name] roughly [npc.verb(pull)] back, before dominantly rubbing [npc.her] [npc.hand] over [npc2.namePos] swollen [npc2.crotchBoobs] and growling,");
+							sb.append(" [npc.speech(Make sure to take good care of my "+(eggCount>1?"children":"child")+", [npc2.bitch]!)]");
+							break;
+						default:
+							sb.append("With one last [npc.moan], [npc.name] [npc.verb(pull)] back, before lovingly rubbing [npc.her] [npc.hand] over [npc2.namePos] swollen [npc2.crotchBoobs] and sighing,");
+							sb.append(" [npc.speech(Make sure to take good care of my "+(eggCount>1?"children":"child")+"!)]");
+							break;
+					}
+					break;
+				case VAGINA:
+					switch(Main.sex.getSexPace(characterOrgasming)) {
+						case DOM_ROUGH:
+							sb.append(" in [npc2.name], [npc.name] [npc.verb(let)] out [npc.a_moan+] and [npc.verb(slam)] [npc.her] "+penetrationAreaPlusText+" as deep as possible into [npc2.her] [npc2.pussy].");
+							sb.append(" Roughly "+hipGrindText+", [npc.she] [npc.verb(sneer)],");
+							if(eggCount==1) {
+								sb.append(" [npc.speech(You're going to take my egg, [npc2.bitch]!)]");
+							} else {
+								sb.append(" [npc.speech(I'm going to stuff you full of eggs, [npc2.bitch]!)]");
+							}
+							break;
+						default:
+							sb.append(" in [npc2.name], [npc.name] [npc.verb(let)] out [npc.a_moan+] and [npc.verb(push)] [npc.her] "+penetrationAreaPlusText+" as deep as possible into [npc2.her] [npc2.pussy].");
+							sb.append(" Eagerly "+hipGrindText+", [npc.she] excitedly [npc.verb(exclaim)],");
+							if(eggCount==1) {
+								sb.append(" [npc.speech(I'm going to put my egg in you!)]");
+							} else {
+								sb.append(" [npc.speech(I'm going to stuff you with eggs!)]");
+							}
+							break;
+					}
+					sb.append("</br>");
+					sb.append("With that, [npc2.name] suddenly [npc2.verb(feel)] the unmistakable bulbous lump of an egg travelling down the length of [npc.namePos] "+penetrationAreaText+","
+							+ " and [npc2.she] can't help but let out an alarmed [npc2.moan] as it squeezes out of the end"+(condomBreaks?", breaking [npc.namePos] condom in the process,":"")+" and is safely laid deep in [npc2.her] womb.");
+					if(eggCount>1) {
+						sb.append(" Still with "+(Util.intToString(eggCount-1))+" egg"+(eggCount>2?"s":"")+" left to lay, [npc.name] [npc.verb(keep)] [npc.her] "+penetrationAreaPlusText+" hilted deep in [npc2.namePos] [npc2.pussy+]"
+								+ " and [npc.verb(continue)] to let out a series of deeply satisfied [npc.moans] as [npc.she] [npc.verb(turn)] [npc2.her] womb into an egg-incubation chamber.");
+					}
+					sb.append("</br>");
+					switch(Main.sex.getSexPace(characterOrgasming)) {
+						case DOM_ROUGH:
+							sb.append("Finally, with one last [npc.moan], [npc.name] roughly [npc.verb(pull)] back, before dominantly rubbing [npc.her] [npc.hand] over [npc2.namePos] swollen belly and growling,");
+							sb.append(" [npc.speech(Make sure to take good care of my "+(eggCount>1?"children":"child")+", [npc2.bitch]!)]");
+							break;
+						default:
+							sb.append("Finally, with one last [npc.moan], [npc.name] [npc.verb(pull)] back, before lovingly rubbing [npc.her] [npc.hand] over [npc2.namePos] swollen belly and sighing,");
+							sb.append(" [npc.speech(Make sure to take good care of my "+(eggCount>1?"children":"child")+"!)]");
+							break;
+					}
+					break;
+			}
+		}
+		
+		return UtilText.parse(characterOrgasming, target, sb.toString());
+	}
+	
+	private static GameCharacter getCharacterToBeEgged(GameCharacter performingCharacter, GameCharacter targetedCharacter, SexAreaPenetration penetratingArea, SexAreaInterface targetedOrifice) {
+		Set<GameCharacter> ongoingCharacters = Main.sex.getOngoingCharactersUsingAreas(performingCharacter, penetratingArea, targetedOrifice);
+		if(ongoingCharacters.isEmpty()) {
+			return null;
+		}
+		GameCharacter characterPenetrated = ongoingCharacters.iterator().next();
+		
+		List<GameCharacter> charactersPenetrated = Main.sex.getCharactersHavingOngoingActionWith(performingCharacter, penetratingArea);
+		if(charactersPenetrated.contains(targetedCharacter)) {
+			characterPenetrated = targetedCharacter;
+		}
+		
+		return characterPenetrated;
+	}
+	
+	public static final SexAction PLAYER_SKIP_SEX = new SexAction(
+			SexActionType.SPECIAL,
+			ArousalIncrease.ONE_MINIMUM,
+			ArousalIncrease.ONE_MINIMUM,
+			CorruptionLevel.ZERO_PURE,
+			null,
+			SexParticipantType.NORMAL) {
+//		@Override
+//		public SexActionPriority getPriority() {
+//			if(Main.sex.isCharacterImmobilised(Main.sex.getCharacterPerformingAction())) {
+//				return SexActionPriority.UNIQUE_MAX; // So that this action is available with the 'Cocooned!' action.
+//			}
+//			return super.getPriority();
+//		}
+		@Override
+		public boolean isAvailableDuringImmobilisation(Collection<ImmobilisationType> types) {
+			return true;
+		}
+		@Override
+		public Colour getHighlightColour() {
+			return PresetColour.BASE_ORANGE;
+		}
+		@Override
+		public String getActionTitle() {
+			return "Quick sex";
+		}
+		@Override
+		public String getActionDescription() {
+			return "Skips this sex scene, but still [style.boldSex(applies all applicable effects)] as though the scene had taken place, based on your partner's preferences."
+					+ " A description of the resulting sex scene will be displayed before the scene ends.";
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {
+			return Main.sex.getInitialSexManager().isAbleToSkipSexScene()
+					&& Main.sex.getCharacterPerformingAction().isPlayer();
+		}
+		@Override
+		public String applyEndEffects(){
+			quickSexDescription = "";
+			return "";
+		}
+		@Override
+		public String getDescription() {
+			if(quickSexDescription.isEmpty()) {
+				quickSexDescription = generateQuickSexDescription();
+			}
+			return quickSexDescription;
+		}
+		@Override
+		public boolean endsSex() {
+			return true;
+		}
+	};
+	
+	public static final SexAction GENERIC_RESIST = new SexAction(
+			SexActionType.ONGOING,
+			ArousalIncrease.ZERO_NONE,
+			ArousalIncrease.ONE_MINIMUM,
+			CorruptionLevel.ZERO_PURE,
+			null,
+			SexParticipantType.NORMAL,
+			SexPace.SUB_RESISTING) {
+		@Override
+		public ArousalIncrease getArousalGainSelf() {
+			if(Main.sex.getCharacterPerformingAction().hasFetish(Fetish.FETISH_NON_CON_SUB)) {
+				return ArousalIncrease.THREE_NORMAL;
+			}
+			return ArousalIncrease.ZERO_NONE;
+		}
+		
+		@Override
+		public boolean isBaseRequirementsMet() {
+			return !Main.sex.getCharacterPerformingAction().isPlayer()
+					|| (!Main.sex.isDom(Main.sex.getCharacterPerformingAction()) && !Main.sex.isConsensual());
+		}
+		
+		@Override
+		public String getActionTitle() {
+			return "Resist";
+		}
+
+		@Override
+		public String getActionDescription() {
+			return "Resist having sex with [npc2.name].";
+		}
+
+		@Override
+		public String getDescription() {
+			
+			if(Main.sex.getSexPositionSlot(Main.sex.getCharacterPerformingAction()).hasTag(SexSlotTag.BACK_TO_WALL)) {
+				return UtilText.returnStringAtRandom(
+						"[npc.Name] [npc.verb(slap)], [npc.verb(hit)], and [npc.verb(kick)] [npc2.name] as [npc.she] desperately [npc.verb(try)] to struggle out of [npc2.her] grip,"
+								+ " but [npc.her] efforts prove to be in vain as [npc2.she] easily [npc2.verb(keep)] [npc.herHim] pinned back against the wall.",
+						
+						"Struggling against [npc2.name], [npc.name] [npc.verb(let)] out [npc.a_sob+] as [npc.she] weakly [npc.verb(try)] to wriggle out of [npc2.her] grasp,"
+								+ " but [npc2.her] grip is too strong for [npc.herHim], and [npc2.name] easily [npc2.verb(keep)] [npc.herHim] pushed back against the wall.",
+						
+						"Begging for [npc2.name] to leave [npc.herHim] alone, [npc.name] desperately [npc.verb(struggle)] against [npc2.herHim],"
+								+ " [npc.sobbing] in distress as [npc2.she] [npc2.verb(push)] [npc.herHim] back against the wall.");
+				
+			} else if(Main.sex.getSexPositionSlot(Main.sex.getCharacterPerformingAction()).hasTag(SexSlotTag.ALL_FOURS)) {
+				return UtilText.returnStringAtRandom(
+						"[npc.Name] [npc.verb(let)] out [npc.a_sob+] as [npc.she] [npc.verb(try)] to crawl away from [npc2.name],"
+								+ " but [npc.her] efforts prove to be in vain as [npc2.name] [npc2.verb(grab)] [npc.her] [npc.hips] and [npc2.verb(pull)] [npc.her] [npc.ass] back into [npc2.her] groin.",
+						
+						"Trying to crawl away from [npc2.name] on all fours, [npc.name] [npc.verb(let)] out [npc.a_sob+] as [npc2.she] [npc2.verb(grasp)] [npc.her] [npc.hips], before pulling [npc.herHim] back into position.",
+						
+						"Begging for [npc2.name] to leave [npc.herHim] alone, [npc.name] desperately [npc.verb(try)] to crawl away from [npc2.herHim],"
+								+ " [npc.sobbing] in distress as [npc2.she] [npc2.verb(take)] hold of [npc.her] [npc.hips] and [npc2.verb(pull)] [npc.herHim] back into [npc2.herHim].");
+				
+			} else if(Main.sex.getSexPositionSlot(Main.sex.getCharacterPerformingAction()).hasTag(SexSlotTag.FACE_TO_WALL)) {
+				return UtilText.returnStringAtRandom(
+						"[npc.Name] [npc.verb(slap)], [npc.verb(hit)], and [npc.verb(kick)] [npc2.name] as [npc.she] desperately [npc.verb(try)] to struggle out of [npc2.her] grip,"
+								+ " but [npc.her] efforts prove to be in vain as [npc2.name] easily [npc2.verb(keep)] [npc.herHim] pinned up against the wall.",
+						
+						"Struggling against [npc2.name], [npc.name] [npc.verb(let)] out [npc.a_sob+] as [npc.she] weakly [npc.verb(try)] to wriggle out of [npc2.her] grasp,"
+								+ " but [npc2.her] grip is too strong for [npc.herHim], and [npc2.she] easily [npc2.verb(keep)] [npc.herHim] pushed up against the wall.",
+						
+						"Begging for [npc2.name] to leave [npc.herHim] alone, [npc.name] desperately [npc.verb(struggle)] against [npc2.herHim],"
+								+ " [npc.sobbing] in distress as [npc2.she] [npc2.verb(push)] [npc.herHim] up against the wall.");
+				
+			} else if(Main.sex.getSexPositionSlot(Main.sex.getCharacterPerformingAction()).hasTag(SexSlotTag.PERFORMING_ORAL)) {
+				return UtilText.returnStringAtRandom(
+						"[npc.Name] [npc.verb(try)] to push [npc2.namePos] groin away from [npc.her] [npc.face],"
+								+ " but [npc.her] efforts prove to be in vain as [npc2.name] [npc2.verb(grab)] hold of [npc.her] head and [npc2.verb(pull)] [npc.herHim] back into [npc2.her] crotch.",
+						
+						"Struggling against [npc2.name], [npc.name] [npc.verb(let)] out [npc.a_sob+] as [npc.she] weakly [npc.verb(try)] to pull [npc.her] [npc.face] away from [npc2.her] groin,"
+								+ " but [npc2.namePos] grasp on [npc.her] head is too strong, and [npc2.she] quickly [npc2.verb(force)] [npc.herHim] back into position.",
+								
+						"Begging for [npc2.name] to leave [npc.herHim] alone, [npc.name] desperately [npc.verb(struggle)] against [npc2.herHim],"
+								+ " [npc.sobbing] in distress as [npc2.she] [npc2.verb(pull)] [npc.her] [npc.face] back into [npc2.her] groin.");
+				
+			} else if(Main.sex.getSexPositionSlot(Main.sex.getCharacterPerformingAction()).hasTag(SexSlotTag.LYING_DOWN)) {
+				return UtilText.returnStringAtRandom(
+						"[npc.Name] [npc.verb(try)] to push [npc2.name] off of [npc.herHim] as [npc.she] desperately [npc.verb(try)] to wriggle out from under [npc2.herHim],"
+								+ " but [npc.her] efforts prove to be in vain as [npc2.name] easily [npc2.verb(pin)] [npc.herHim] to the floor.",
+						
+						"Struggling against [npc2.name], [npc.name] [npc.verb(let)] out [npc.a_sob+] as [npc.she] weakly [npc.verb(try)] to wriggle out from under [npc2.herHim],"
+								+ " but [npc2.name] [npc2.verb(press)] [npc2.her] body down onto [npc.hers], preventing [npc.herHim] from getting away.",
+						
+						"Begging for [npc2.name] to leave [npc.herHim] alone, [npc.name] desperately [npc.verb(struggle)] against [npc2.herHim],"
+								+ " [npc.sobbing] in distress as [npc2.she] [npc2.verb(use)] [npc2.her] body to pin [npc.herHim] to the floor.");
+				
+			} else {
+				return UtilText.returnStringAtRandom(
+						"[npc.Name] [npc.verb(slap)], [npc.verb(hit)], and [npc.verb(kick)] [npc2.name] as [npc.she] desperately [npc.verb(try)] to struggle out of [npc2.her] grip,"
+								+ " but [npc.her] efforts prove to be in vain as [npc2.she] easily [npc2.verb(continue)] restraining [npc.herHim].",
+								
+						"Struggling against [npc2.name], [npc.name] [npc.verb(let)] out [npc.a_sob+] as [npc.she] weakly [npc.verb(try)] to wriggle out of [npc2.her] grasp.",
+						
+						"Begging for [npc2.name] to leave [npc.herHim] alone, [npc.name] desperately [npc.verb(struggle)] against [npc2.herHim], [npc.sobbing] in distress as [npc2.she] easily [npc2.verb(hold)] [npc.herHim] in place.");
+			}
+		}
+		
+		@Override
+		public List<AbstractFetish> getFetishes(GameCharacter character) {
+			if(character.equals(Main.sex.getCharacterTargetedForSexAction(this))) {
+				return Util.newArrayListOfValues(Fetish.FETISH_NON_CON_DOM);
+			} else {
+				return Util.newArrayListOfValues(Fetish.FETISH_NON_CON_SUB);
+			}
+		}
+	};
+	
+	public static final SexAction PLAYER_SELF_GROW_PENIS = new SexAction(
+			SexActionType.ONGOING,
+			ArousalIncrease.ONE_MINIMUM,
+			ArousalIncrease.TWO_LOW,
+			CorruptionLevel.ONE_VANILLA,
+			null,
+			SexParticipantType.SELF) {
+		
+		@Override
+		public String getActionTitle() {
+			return "Grow cock (self)";
+		}
+
+		@Override
+		public String getActionDescription() {
+			return "Use your transformative powers to grow a cock for yourself. <b>You will automatically transform the grown cock away when sex ends.</b>";
+		}
+
+		@Override
+		public boolean isBaseRequirementsMet() {
+			return Main.game.getPlayer().isAbleToSelfTransform()
+					&& !Main.game.getPlayer().hasPenis()
+					&& Main.sex.getCharacterPerformingAction().isPlayer();
+		}
+
+		@Override
+		public String getDescription() {//TODO resisting variations
+			if(Main.game.getPlayer().getSubspeciesOverrideRace()==Race.DEMON) {
+				return "Deciding to use your transformative powers to give yourself a thick demonic cock, you start grinning as you [npc.moanVerb],"
+						+ " [npc.speech(You're going to love this!)]";
+			} else if (Main.game.getPlayer().isYouko()){
+				return "Deciding to use your transformative powers to give yourself a thick knotted fox cock, you start grinning as you [npc.moanVerb],"
+						+ " [npc.speech(You're going to love this!)]";
+			} else {
+				return "Deciding to use your transformative powers to give yourself a thick slimy cock, you start grinning as you [npc.moanVerb],"
+						+ " [npc.speech(You're going to love this!)]";
+			}
+		}
+
+		@Override
+		public String applyEffectsString() {
+			Main.sex.getCharactersGrewCock().add(Main.game.getPlayer());
+			
+			StringBuilder sb = new StringBuilder();
+			if(Main.game.getPlayer().getSubspeciesOverrideRace()==Race.DEMON) {
+				sb.append(Main.game.getPlayer().setPenisType(PenisType.DEMON_COMMON, Main.game.getPlayer().getPreviousPenisType()!=PenisType.DEMON_COMMON));
+			} else if (Main.game.getPlayer().isYouko()){
+				sb.append(Main.game.getPlayer().setPenisType(PenisType.FOX_MORPH, Main.game.getPlayer().getPreviousPenisType()!=PenisType.FOX_MORPH));
+			} else {
+				AbstractPenisType penisType = RacialBody.valueOfRace(Main.game.getPlayer().getBody().getFleshSubspecies().getRace()).getPenisType();
+				if(Main.game.getPlayer().getPreviousPenisType()!=null) {
+					penisType = Main.game.getPlayer().getPreviousPenisType();
+				}
+				sb.append(Main.game.getPlayer().setPenisType(penisType, Main.game.getPlayer().getPreviousPenisType()!=penisType));
+			}
+			
+			Main.game.getPlayer().fillCumToMaxStorage();
+			
+			if(Main.game.getPlayer().getPreviousPenisType()==null) {
+				int size = Main.sex.getCharacterPerformingAction().getLegConfiguration().isLargeGenitals()?40:20;
+				if(Main.game.getPlayer().getPenisRawSizeValue() < size) {
+					sb.append(Main.game.getPlayer().setPenisSize(size));
+				}
+				if(Main.game.getPlayer().getPenisRawCumStorageValue() < Main.sex.getCharacterPerformingAction().getFleshSubspecies().getRace().getRacialBody().getCumProduction()) {
+					sb.append(Main.game.getPlayer().setPenisCumStorage(Main.sex.getCharacterPerformingAction().getFleshSubspecies().getRace().getRacialBody().getCumProduction()));
+				}
+			}
+			
+			
+			for(GameCharacter character : Main.sex.getAllParticipants()) {
+				if(character instanceof NPC) {
+					for(GameCharacter target : Main.sex.getAllParticipants()) {
+						if(!target.equals(character) && Main.sex.getSexPositionSlot(target)!=SexSlotGeneric.MISC_WATCHING) {
+							((NPC)character).generateSexChoices(false, target, null);
+						}
+					}
+				}
+			}
+			
+			return sb.toString();
+		}
+	};
+	
+	public static final SexAction PLAYER_GET_PARTNER_TO_GROW_PENIS = new SexAction(
+			SexActionType.ONGOING,
+			ArousalIncrease.ONE_MINIMUM,
+			ArousalIncrease.TWO_LOW,
+			CorruptionLevel.ONE_VANILLA,
+			null,
+			SexParticipantType.NORMAL) {
+		
+		@Override
+		public String getActionTitle() {
+			return "Grow cock";
+		}
+
+		@Override
+		public String getActionDescription() {
+			if(Main.sex.getCharacterTargetedForSexAction(this).getSubspeciesOverrideRace()==Race.DEMON
+					|| Main.sex.getCharacterTargetedForSexAction(this).isElemental()) {
+				return "Get [npc2.name] to use [npc2.her] demonic self-transformative powers to grow [npc2.herself] a demonic cock.";
+			} else if(Main.sex.getCharacterTargetedForSexAction(this).isYouko()) {
+				return "Get [npc2.name] to use [npc2.her] innate self-transformative powers to grow [npc2.herself] a fox cock.";
+			} else {
+				return "Get [npc2.name] to use [npc2.her] slimy body's self-transformative powers to grow [npc2.herself] a slimy cock.";
+			}
+		}
+
+		@Override
+		public boolean isBaseRequirementsMet() {
+			return !Main.sex.isMasturbation()
+					&& !Main.sex.getCharacterTargetedForSexAction(this).isAsleep()
+					&& Main.sex.getSexPace(Main.sex.getCharacterTargetedForSexAction(this))!=SexPace.SUB_RESISTING
+					//TODO make the NPC refuse with a reason before blocking this action
+//					&& (Main.sex.isCharacterObeyingTarget(Main.sex.getCharacterTargetedForSexAction(this), Main.game.getPlayer())
+//							|| !Main.sex.getCharacterTargetedForSexAction(this).getFetishDesire(Fetish.FETISH_PENIS_GIVING).isNegative())
+					&& Main.sex.getCharacterTargetedForSexAction(this).isAbleToSelfTransform()
+					&& !Main.sex.getCharacterTargetedForSexAction(this).hasPenis()
+					&& Main.sex.getCharacterPerformingAction().isPlayer();
+		}
+
+		@Override
+		public String getDescription() {
+			if(Main.sex.getCharacterTargetedForSexAction(this).getSubspeciesOverrideRace()==Race.DEMON
+					|| Main.sex.getCharacterTargetedForSexAction(this).isElemental()) {
+				return "Grinning down at [npc2.name], you tease, [npc.speech(How about you use your transformative powers to grow a nice thick demonic cock, so that we can have even more fun!)]"
+						+ "<br/><br/>"
+						+(Main.sex.getCharacterTargetedForSexAction(this).isCoverableAreaExposed(CoverableArea.PENIS)
+							?"[npc2.Name] lets out a little giggle, and as you look down at [npc2.her] naked groin, you see a large bump start to form beneath [npc2.her] [npc2.skin]."
+									+ " Before you have any time to change your mind, it quickly grows out into a fat demonic cock, and as you stare down at the little wriggling bumps that press out all along its shaft,"
+									+ " a bead of precum seeps out and drips from the tip."
+							:"[npc2.Name] lets out a little giggle, and as you look down at [npc2.her] groin, you see a huge bulge quickly forming in [npc2.her] "
+									+Main.sex.getCharacterTargetedForSexAction(this).getHighestZLayerCoverableArea(CoverableArea.PENIS).getName()+"."
+									+ " Before you have any time to change your mind, [npc2.she] lets out [npc2.a_moan+], and you realise that [npc2.sheHas] now got a huge demonic cock hiding beneath [npc2.her] clothing.");
+				
+			} else if(Main.sex.getCharacterTargetedForSexAction(this).isYouko()) {
+				return "Grinning down at [npc2.name], you tease, [npc.speech(How about you use your transformative powers to grow a nice thick fox cock, so that we can have even more fun!)]"
+						+ "<br/><br/>"
+						+(Main.sex.getCharacterTargetedForSexAction(this).isCoverableAreaExposed(CoverableArea.PENIS)
+						?"[npc2.Name] lets out a little giggle, and as you look down at [npc2.her] naked groin, you see a large bump start to form beneath [npc2.her] [npc2.skin]."
+						+ " Before you have any time to change your mind, it quickly grows out into a fox cock, and as you stare down at its throbbing length,"
+						+ " a bead of precum seeps out and drips from the tip."
+						:"[npc2.Name] lets out a little giggle, and as you look down at [npc2.her] groin, you see a huge bulge quickly forming in [npc2.her] "
+						+Main.sex.getCharacterTargetedForSexAction(this).getHighestZLayerCoverableArea(CoverableArea.PENIS).getName()+"."
+						+ " Before you have any time to change your mind, [npc2.she] lets out [npc2.a_moan+], and you realise that [npc2.sheHas] now got a huge fox cock hiding beneath [npc2.her] clothing.");
+			} else {
+				return "Grinning down at [npc2.name], you tease, [npc.speech(How about you use your transformative powers to grow a nice thick slimy cock, so that we can have even more fun!)]"
+						+ "<br/><br/>"
+						+(Main.sex.getCharacterTargetedForSexAction(this).isCoverableAreaExposed(CoverableArea.PENIS)
+							?"[npc2.Name] lets out a little giggle, and as you look down at [npc2.her] naked groin, you see a large bump start to form beneath [npc2.her] [npc2.skin]."
+									+ " Before you have any time to change your mind, it quickly grows out into a fat slimy cock, and as you stare down at its throbbing length, a bead of precum seeps out and drips from the tip."
+							:"[npc2.Name] lets out a little giggle, and as you look down at [npc2.her] groin, you see a huge bulge quickly forming in [npc2.her] "
+									+Main.sex.getCharacterTargetedForSexAction(this).getHighestZLayerCoverableArea(CoverableArea.PENIS).getName()+"."
+									+ " Before you have any time to change your mind, [npc2.she] lets out [npc2.a_moan+], and you realise that [npc2.sheHas] now got a huge slimy cock hiding beneath [npc2.her] clothing.");
+			}
+		}
+		
+		@Override
+		public String applyEffectsString() {
+			Main.sex.getCharactersGrewCock().add(Main.sex.getCharacterTargetedForSexAction(this));
+			
+			StringBuilder sb = new StringBuilder();
+			boolean discoveredPenisColour = Main.sex.getCharacterTargetedForSexAction(this).isBodyCoveringTypesDiscovered(BodyCoveringType.PENIS);
+			if(Main.sex.getCharacterTargetedForSexAction(this).getSubspeciesOverrideRace()==Race.DEMON || Main.sex.getCharacterTargetedForSexAction(this).isElemental()) {
+				sb.append(Main.sex.getCharacterTargetedForSexAction(this).setPenisType(PenisType.DEMON_COMMON, Main.sex.getCharacterTargetedForSexAction(this).getPreviousPenisType()!=PenisType.DEMON_COMMON));
+				if(!discoveredPenisColour) {
+					Main.sex.getCharacterTargetedForSexAction(this).setSkinCovering(BodyCoveringType.PENIS, Main.sex.getCharacterTargetedForSexAction(this).getCovering(BodyCoveringType.DEMON_COMMON).getPrimaryColour(), false);
+				}
+				
+			} else if(Main.sex.getCharacterTargetedForSexAction(this).isYouko()) {
+				sb.append(Main.sex.getCharacterTargetedForSexAction(this).setPenisType(PenisType.FOX_MORPH, Main.sex.getCharacterTargetedForSexAction(this).getPreviousPenisType()!=PenisType.FOX_MORPH));
+				if(!discoveredPenisColour) {
+					Main.sex.getCharacterTargetedForSexAction(this).setSkinCovering(BodyCoveringType.PENIS, PresetColour.SKIN_RED, false);
+				}
+				
+			} else {
+				AbstractPenisType penisType = RacialBody.valueOfRace(Main.sex.getCharacterTargetedForSexAction(this).getBody().getFleshSubspecies().getRace()).getPenisType();
+				if(Main.sex.getCharacterTargetedForSexAction(this).getPreviousPenisType()!=null) {
+					penisType = Main.sex.getCharacterTargetedForSexAction(this).getPreviousPenisType();
+				}
+				sb.append(Main.sex.getCharacterTargetedForSexAction(this).setPenisType(penisType, Main.sex.getCharacterTargetedForSexAction(this).getPreviousPenisType()!=penisType));
+			}
+			
+
+			if(Main.sex.getCharacterTargetedForSexAction(this).getPreviousPenisType()==null) {
+				if(Main.sex.getCharacterTargetedForSexAction(this).getPenisRawCumStorageValue() < 150) {
+					Main.sex.getCharacterTargetedForSexAction(this).setPenisCumStorage(150);
+				}
+				Main.sex.getCharacterTargetedForSexAction(this).fillCumToMaxStorage();
+				if(Main.sex.getCharacterTargetedForSexAction(this).hasVagina()) {
+					Main.sex.getCharacterTargetedForSexAction(this).setTesticleSize(TesticleSize.ZERO_VESTIGIAL);
+				} else if(Main.sex.getCharacterTargetedForSexAction(this).getTesticleSize().getValue() < TesticleSize.THREE_LARGE.getValue()){
+					Main.sex.getCharacterTargetedForSexAction(this).setTesticleSize(TesticleSize.THREE_LARGE);
+				}
+				if(Main.sex.getCharacterTargetedForSexAction(this).getPenisGirth().getValue() < PenetrationGirth.THREE_AVERAGE.getValue()) {
+					sb.append(Main.sex.getCharacterTargetedForSexAction(this).setPenisGirth(PenetrationGirth.THREE_AVERAGE));
+				}
+				int size = Main.sex.getCharacterTargetedForSexAction(this).getLegConfiguration().isLargeGenitals()?40:20;
+				if(Main.sex.getCharacterTargetedForSexAction(this).getPenisRawSizeValue() < size) {
+					sb.append(Main.sex.getCharacterTargetedForSexAction(this).setPenisSize(size));
+				}
+			}
+			
+			
+			for(GameCharacter character : Main.sex.getAllParticipants()) {
+				if(character instanceof NPC) {
+					for(GameCharacter target : Main.sex.getAllParticipants()) {
+						if(!target.equals(character) && Main.sex.getSexPositionSlot(target)!=SexSlotGeneric.MISC_WATCHING) {
+							((NPC)character).generateSexChoices(false, target, null);
+						}
+					}
+				}
+			}
+			
+			return sb.toString();
+		}
+	};
+
+	
+	public static final SexAction HYPNOTIC_SUGGESTION_LUST_DECREASE = new SexAction(
+			SexActionType.ONGOING,
+			ArousalIncrease.ONE_MINIMUM,
+			ArousalIncrease.TWO_LOW,
+			CorruptionLevel.THREE_DIRTY,
+			null,
+			SexParticipantType.NORMAL) {
+		@Override
+		public Colour getHighlightColour() {
+			return PresetColour.PSYCHOACTIVE;
+		}
+		@Override
+		public String getActionTitle() {
+			return "Calming suggestion";
+		}
+		@Override
+		public String getActionDescription() {
+			return "[npc2.Name] is under the effect of a psychoactive substance. Use this to your advantage and hypnotically suggest that [npc2.she] doesn't like having sex with you.";
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {
+			return 
+//					!Main.sex.getCharacterTargetedForSexAction(this).getPsychoactiveFluidsIngested().isEmpty()
+					Main.sex.getCharacterTargetedForSexAction(this).hasStatusEffect(StatusEffect.PSYCHOACTIVE)
+					&& !Main.sex.getCharacterTargetedForSexAction(this).isAsleep()
+					&& (Main.sex.getCharacterPerformingAction().isPlayer() || (Main.sex.getCharacterTargetedForSexAction(this).getLust()>25 && Main.sex.getCharacterPerformingAction().hasFetish(Fetish.FETISH_NON_CON_DOM)));
+		}
+		@Override
+		public String getDescription() {
+			StringBuilder sb = new StringBuilder();
+			sb.append("<p>"
+					+ "Wanting to take advantage of the fact that [npc2.nameIsFull] under the strong effect of a psychoactive substance, [npc.name] [npc.verb(lean)] towards [npc2.herHim] and [npc.moansVerb],"
+						+ " [npc.speech(You aren't really interested in having sex with me, are you?)]"
+					+ "</p>"
+					+ "<p>"
+						+ "[npc2.Name] can't help but agree with what [npc.sheIs] saying, and [npc2.name] haltingly [npc2.verb(answer)],"
+						+ " [npc2.speech(Yes... I... I don't know why I'm having sex with you...)]"
+					+ "</p>"
+					+ "<p>"
+						+ "Pushing a little further,"+(!Main.sex.getCharacterPerformingAction().isPlayer()?" and driven on by [npc.her] fetish for having non-consensual sex,":"")+" [npc.name] [npc.verb(continue)],"
+						+ " [npc.speech(You'd rather I wasn't fucking you right now, isn't that right?)]"
+					+ "</p>");
+			
+			sb.append("<p>");
+				if(Main.sex.isDom(Main.sex.getCharacterTargetedForSexAction(this))) {
+					sb.append("As the hypnotic suggestion sinks into [npc2.namePos] head, [npc2.she] [npc2.verb(let)] out a disappointed sigh,"
+							+ " [npc2.speech(This isn't really all that fun...)]");
+					
+				} else {
+					if(LustLevel.getLustLevelFromValue(Main.sex.getCharacterTargetedForSexAction(this).getLust()-50).getSexPaceSubmissive()==SexPace.SUB_RESISTING) {
+						sb.append("As the hypnotic suggestion sinks into [npc2.namePos] head, [npc2.she] [npc2.verb(let)] out a distressed cry,"
+								+ " [npc2.speech(Wait, w-why is this happening?! Please, stop it! Get away from me!)]");
+					} else {
+						sb.append("As the hypnotic suggestion sinks into [npc2.namePos] head, [npc2.she] [npc2.verb(let)] out a disappointed sigh,"
+								+ " [npc2.speech(This isn't really all that fun...)]");
+					}
+				}
+			sb.append("</p>");
+			
+			return sb.toString();
+		}
+		@Override
+		public void applyEffects() {
+			Main.sex.getCharacterTargetedForSexAction(this).incrementLust(-50, false);
+		}
+	};
+	
+	public static final SexAction HYPNOTIC_SUGGESTION_LUST_INCREASE = new SexAction(
+			SexActionType.ONGOING,
+			ArousalIncrease.ONE_MINIMUM,
+			ArousalIncrease.TWO_LOW,
+			CorruptionLevel.THREE_DIRTY,
+			null,
+			SexParticipantType.NORMAL) {
+		@Override
+		public Colour getHighlightColour() {
+			return PresetColour.PSYCHOACTIVE;
+		}
+		@Override
+		public String getActionTitle() {
+			return "Lustful suggestion";
+		}
+		@Override
+		public String getActionDescription() {
+			return "[npc2.Name] is under the effect of a psychoactive substance. Use this to your advantage and hypnotically suggest that [npc2.she] loves to have sex with you.";
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {
+			return 
+//					!Main.sex.getCharacterTargetedForSexAction(this).getPsychoactiveFluidsIngested().isEmpty()
+					Main.sex.getCharacterTargetedForSexAction(this).hasStatusEffect(StatusEffect.PSYCHOACTIVE)
+					&& !Main.sex.getCharacterTargetedForSexAction(this).isAsleep()
+					&& (Main.sex.getCharacterPerformingAction().isPlayer() || (Main.sex.getCharacterTargetedForSexAction(this).getLust()<75 && !Main.sex.getCharacterPerformingAction().hasFetish(Fetish.FETISH_NON_CON_DOM)));
+		}
+		@Override
+		public String getDescription() {
+			StringBuilder sb = new StringBuilder();
+			
+			sb.append("Wanting to take advantage of the fact that [npc2.nameIsFull] under the mind-altering effects of a psychoactive substance, [npc.name] [npc.verb(lean)] in towards [npc2.herHim] and [npc.moanVerb],"
+						+ " [npc.speech(You love having sex with me, don't you?)]"
+					+ "</p>");
+			
+			if(Main.sex.getCharacterTargetedForSexAction(this).isPlayer()) {
+				sb.append("<p>"
+							+ "As [npc.name] says this, you suddenly feel a fuzzy warmth clouding your mind, and you're vaguely aware of your [npc2.eyes] glazing over as you answer,"
+							+ " [npc2.speech(Yes... I... I love having sex with you...)]"
+						+ "</p>");
+			} else {
+				sb.append("<p>"
+						+ "[npc2.NamePos] [npc2.eyes] glaze over a little as [npc2.she] answers,"
+						+ " [npc2.speech(Yes... I... I love having sex with you...)]"
+					+ "</p>");
+			}
+			
+			sb.append( "<p>"
+						+ "Pushing a little further, [npc.name] [npc.verb(continue)],"
+						+ " [npc.speech(You love begging for me to fuck you, isn't that right?)]"
+					+ "</p>");
+
+			if(Main.sex.getCharacterTargetedForSexAction(this).isPlayer()) {
+				sb.append("<p>"
+							+ "As your mind well and truly gives in to the hypnotic suggestion, you find yourself wanting nothing more than to be fucked by [npc.name], and you eagerly [npc2.moansVerb],"
+							+ " [npc2.speech(Yes... Yes! Please, fuck me! I <i>need</i> you to fuck me!)]"
+						+ "</p>");
+			} else {
+				sb.append("<p>"
+						+ "As the hypnotic suggestion sinks into [npc2.namePos] head, [npc2.she] starts to sound a lot more eager, and [npc2.moansVerb],"
+						+ " [npc2.speech(Yes... Yes, [npc.name]! Please, fuck me! I <i>need</i> you to fuck me!)]"
+					+ "</p>");
+			}
+			
+			sb.append( "<p>"
+						+ "[npc.speech(That's a good [npc2.girl],)] [npc.name] [npc.verb(say)], pleased to hear that [npc2.namePos] mind is [npc.hers] to twist as [npc.she] [npc.verb(see)] fit. [npc.speech(I'll give you what you want!)]"
+					+ "</p>");
+			
+			return sb.toString();
+		}
+		@Override
+		public void applyEffects() {
+			Main.sex.getCharacterTargetedForSexAction(this).incrementLust(50, false);
+		}
+	};
+	
+	public static final SexAction GENERIC_DENY = new SexAction(
+			SexActionType.ONGOING,
+			ArousalIncrease.TWO_LOW,
+			ArousalIncrease.NEGATIVE,
+			CorruptionLevel.ZERO_PURE,
+			null,
+			SexParticipantType.NORMAL) {
+		
+		@Override
+		public String getActionTitle() {
+			return "Deny";
+		}
+
+		@Override
+		public String getActionDescription() {
+			return "Force [npc2.name] to stay perfectly still, holding them in position until they've lost a good portion of their arousal.";
+		}
+
+		@Override
+		public boolean isBaseRequirementsMet() {
+			if(Main.sex.isDom(Main.sex.getCharacterPerformingAction())
+					&& !Main.sex.isMasturbation()
+					&& !Main.sex.getInitialSexManager().isHidden(Main.sex.getCharacterPerformingAction()) // can't deny when hidden
+					&& !Main.sex.getInitialSexManager().isHidden(Main.sex.getCharacterTargetedForSexAction(this))) { // can't deny hidden characters
+				if(Main.sex.getCharacterPerformingAction().isPlayer()) {
+					return true;
+					
+				} else {
+					return !Main.sex.isDom(Main.sex.getCharacterTargetedForSexAction(this)) // Doms will not deny other doms.
+							&& Main.sex.getCharacterTargetedForSexAction(this).getArousal()>=50 // They will not deny if less than 50 arousal.
+							&& Main.sex.getCharacterPerformingAction().getFetishDesire(Fetish.FETISH_DENIAL).isPositive()
+							&& !Main.sex.getLastUsedSexAction(Main.sex.getCharacterPerformingAction()).equals(this); // Do not deny twice in a row
+				}
+			}
+			return false;
+		}
+
+		@Override
+		public String getDescription() {//TODO BDSM gear. penetrations.
+			UtilText.nodeContentSB.setLength(0);
+			
+			boolean alreadyOrgasmed = Main.sex.getNumberOfOrgasms(Main.sex.getCharacterTargetedForSexAction(this))>0;
+			
+			switch(Main.sex.getSexPace(Main.sex.getCharacterPerformingAction())) {
+				case DOM_GENTLE:
+					if(!Main.sex.getCharacterTargetedForSexAction(this).isAsleep()) {
+					UtilText.nodeContentSB.append(
+						UtilText.returnStringAtRandom(
+							"Taking a gentle, yet firm, grip of [npc2.namePos] [npc2.arms], [npc.name] [npc.verb(hold)] [npc2.herHim] quite still, softly [npc.moaning] as [npc.she] [npc.verb(wait)] for [npc2.herHim] to calm down, ",
+							"Firmly gripping [npc2.namePos] [npc2.arms], [npc.name] [npc.verb(hold)] [npc2.herHim] in place, letting out [npc.a_moan+] as [npc.she] [npc.verb(force)] [npc2.herHim] to calm down, ",
+							"Softly [npc.moaning] as [npc.she] [npc.verb(take)] a firm grip of [npc2.namePos] [npc2.arms], [npc.name] [npc.verb(tease)] [npc2.name] as [npc.she] [npc.verb(wait)] for [npc2.herHim] to calm down, "));
+						UtilText.nodeContentSB.append(
+								UtilText.returnStringAtRandom(
+									"[npc.speech(That's a good [npc2.girl]... We wouldn't want you to climax "+(alreadyOrgasmed?"again already":"just yet")+" now, would we?)]",
+									"[npc.speech(Be a good [npc2.girl] now, and take a moment to calm down. You didn't think you'd get to orgasm "+(alreadyOrgasmed?"again":"")+" so soon with me, did you?)]",
+									"[npc.speech(Good [npc2.girl]... You just take a moment to calm down. We wouldn't want you to climax "+(alreadyOrgasmed?"again already":"so soon")+" now, would we?)]"));
+					} else {
+						UtilText.nodeContentSB.append(
+								UtilText.returnStringAtRandom(
+									"Pulling back from [npc2.name], [npc.name] [npc.verb(leave)] [npc2.herHim] without stimulation for a few moments, softly [npc.moaning] to [npc.herself] as [npc.she] [npc.verb(wait)] for [npc2.herHim] to calm down.",
+									"Breaking off from having physical contact with [npc2.name], [npc.name] [npc.verb(stop)] stimulating [npc2.herHim] and [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(wait)] for [npc2.herHim] to calm down.",
+									"Pausing for a moment, [npc.name] [npc.verb(stop)] stimulating [npc2.name] and quietly [npc.verbMoans] as [npc.she] [npc.verb(wait)] for [npc2.herHim] to calm down."));
+					}
+					break;
+				case DOM_NORMAL:
+					UtilText.nodeContentSB.append(
+							UtilText.returnStringAtRandom(
+								"Taking a firm, grip of [npc2.namePos] [npc2.arms], [npc.name] [npc.verb(hold)] [npc2.herHim] quite still, [npc.moaning+] as [npc.she] [npc.verb(wait)] for [npc2.herHim] to calm down, ",
+								"Firmly gripping [npc2.namePos] [npc2.arms], [npc.name] [npc.verb(hold)] [npc2.herHim] in place, letting out [npc.a_moan+] as [npc.she] [npc.verb(force)] [npc2.herHim] to calm down, ",
+								"[npc.Moaning+] as [npc.she] [npc.verb(take)] a firm grip of [npc2.namePos] [npc2.arms], [npc.name] [npc.verb(tease)] [npc2.name] as [npc.she] [npc.verb(wait)] for [npc2.herHim] to calm down, "));
+
+						UtilText.nodeContentSB.append(
+							UtilText.returnStringAtRandom(
+								"[npc.speech(That's a good [npc2.girl]! We wouldn't want you to climax "+(alreadyOrgasmed?"again already":"just yet")+" now, would we?!)]",
+								"[npc.speech(Be a good [npc2.girl] now, and take a moment to calm down. You didn't think you'd get to orgasm "+(alreadyOrgasmed?"again":"")+" so soon with me, did you?!)]",
+								"[npc.speech(Good [npc2.girl]! You just take a moment to calm down! We wouldn't want you to climax "+(alreadyOrgasmed?"again already":"so soon")+" now, would we?!)]"));
+						break;
+				case DOM_ROUGH:
+					UtilText.nodeContentSB.append(
+							UtilText.returnStringAtRandom(
+								"Taking a rough, firm grip of [npc2.namePos] [npc2.arms], [npc.name] [npc.verb(force)] [npc2.herHim] to remain quite still, growling in a threatening manner as [npc.she] [npc.verb(wait)] for [npc2.herHim] to calm down, ",
+								"Roughly gripping [npc2.namePos] [npc2.arms], [npc.name] [npc.verb(force)] [npc2.herHim] to remain in place, letting out a threatening growl as [npc.she] [npc.verb(make)] [npc2.herHim] calm down, ",
+								"Letting out a menacing growl as [npc.she] [npc.verb(take)] a firm grip of [npc2.namePos] [npc2.arms], [npc.name] [npc.verb(threaten)] [npc.her] partner as [npc.she] [npc.verb(wait)] for [npc2.herHim] to calm down, "));
+
+						UtilText.nodeContentSB.append(
+							UtilText.returnStringAtRandom(
+								"[npc.speech(Stay still, you dumb [npc2.bitch]! You're not getting to climax "+(alreadyOrgasmed?"again already":"just yet")+" with me, understood?!)]",
+								"[npc.speech(Stay still, [npc2.bitch], and calm down! You didn't think you'd get to orgasm "+(alreadyOrgasmed?"again":"")+" so soon with me, did you?!)]",
+								"[npc.speech(That's it, [npc2.bitch]! You stay still and calm down! We wouldn't want you to climax "+(alreadyOrgasmed?"again already":"so soon")+" now, would we?!)]"));
+						break;
+				default:
+					break;
+			}
+			if(!Main.sex.getCharacterTargetedForSexAction(this).isAsleep()) {
+				UtilText.nodeContentSB.append("<br/><br/>");
+				boolean nameKnown = Main.sex.getCharacterPerformingAction().isPlayerKnowsName();
+				switch(Main.sex.getSexPace(Main.sex.getCharacterTargetedForSexAction(this))) {
+					case SUB_EAGER:
+						UtilText.nodeContentSB.append(
+							UtilText.returnStringAtRandom(
+									"[npc2.speechNoExtraEffects("+(nameKnown?"No, [npc.name],":"No...")+")] [npc2.name] [npc2.verb(reply)], trying to contain the excitement in [npc2.her] voice, [npc2.speechNoExtraEffects(I'll try to endure...)]",
+									"[npc2.speechNoExtraEffects("+(nameKnown?"No, [npc.name],":"No...")+")] [npc2.name] [npc2.moansVerb], failing to subdue the intense arousal in [npc2.her] voice, [npc2.speechNoExtraEffects(I'll do my best to hold back...)]",
+									"[npc2.speechNoExtraEffects("+(nameKnown?"No, [npc.name]...":"No...")+")] [npc2.name] [npc2.verb(answer)], before trying to stifle a desperate [npc2.moan], [npc2.speechNoExtraEffects(~Mmm!~ I'll try to hold back!)]"));
+						break;
+					case SUB_NORMAL:
+						UtilText.nodeContentSB.append(
+								UtilText.returnStringAtRandom(
+										"[npc2.speechNoExtraEffects("+(nameKnown?"No, [npc.name]...":"No...")+")] [npc2.name] [npc2.verb(reply)], [npc2.speechNoExtraEffects(I'll try to endure...)]",
+										"[npc2.speechNoExtraEffects("+(nameKnown?"No, [npc.name]...":"No...")+")] [npc2.name] [npc2.moansVerb], [npc2.speechNoExtraEffects(I'll do my best to hold back...)]",
+										"[npc2.speechNoExtraEffects("+(nameKnown?"No, [npc.name]...":"No...")+")] [npc2.name] [npc2.verb(answer)], [npc2.speechNoExtraEffects(I'll try to hold back!)]"));
+						break;
+					case SUB_RESISTING:
+						UtilText.nodeContentSB.append(
+								UtilText.returnStringAtRandom(
+										"[npc2.speechNoExtraEffects(Just get away from me!)] [npc2.name] frantically [npc2.sobsVerb], [npc2.speechNoExtraEffects(I hate this!)]",
+										"[npc2.speechNoExtraEffects(Let go of me!)] [npc2.name] desperately [npc2.sobsVerb], trying to pull [npc2.herself] out of [npc.namePos] grasp, [npc2.speechNoExtraEffects(Stop it! Get away from me!)]",
+										"[npc2.speechNoExtraEffects(Why won't you just let me go?!)] [npc2.name] [npc2.sobsVerb] as [npc2.she] weakly [npc2.verb(try)] to pull away from [npc2.name], [npc2.speechNoExtraEffects(I don't want this!)]"));
+						break;
+					default:
+						break;
+				}
+			}
+			UtilText.nodeContentSB.append("<br/><br/>");
+			UtilText.nodeContentSB.append("Once it's clear that [npc2.nameHasFull] calmed down, [npc.name] [npc.verb(loosen)] [npc.her] grip, before continuing as [npc.she] [npc.was] before...");
+			
+			return UtilText.nodeContentSB.toString();
+		}
+		
+		@Override
+		public List<AbstractFetish> getFetishes(GameCharacter character) {
+			if(character.equals(Main.sex.getCharacterPerformingAction())) {
+				return Util.newArrayListOfValues(Fetish.FETISH_DENIAL);
+			} else {
+				return Util.newArrayListOfValues(Fetish.FETISH_DENIAL_SELF);
+			}
+		}
+	};
+	
+	public static final SexAction PLAYER_STOP_ALL_PENETRATIONS = new SexAction(
+			SexActionType.ONGOING,
+			ArousalIncrease.ONE_MINIMUM,
+			ArousalIncrease.ONE_MINIMUM,
+			CorruptionLevel.ZERO_PURE,
+			null,
+			SexParticipantType.NORMAL) {
+		
+		@Override
+		public String getActionTitle() {
+			return "Stop penetrations";
+		}
+
+		@Override
+		public String getActionDescription() {
+			return "Stop all ongoing penetrative actions that [npc2.name] is involved with.";
+		}
+
+		@Override
+		public boolean isBaseRequirementsMet() {
+			return Main.sex.isAnyOngoingActionHappening()
+					&& !Main.sex.isMasturbation()
+					&& Main.sex.getSexControl(Main.sex.getCharacterPerformingAction())==SexControl.FULL
+					&& Main.sex.getCharacterPerformingAction().isPlayer();
+		}
+
+		@Override
+		public String getDescription() {
+			UtilText.nodeContentSB.setLength(0);
+
+			for(GameCharacter character : Main.sex.getAllParticipants()) {
+				for(SexAreaOrifice ot : SexAreaOrifice.values()) {
+					switch(ot) {
+						case ANUS:
+							if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), ot).contains(character)) {
+								UtilText.nodeContentSB.append(UtilText.parse(character, Main.sex.getCharacterTargetedForSexAction(this),
+										"<br/>[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(pull)] out of [npc2.her] [npc2.asshole+]."));
+							}
+							if (Main.sex.getCharacterOngoingSexArea(character, ot).contains(Main.sex.getCharacterTargetedForSexAction(this))) {
+								UtilText.nodeContentSB.append(UtilText.parse(Main.sex.getCharacterTargetedForSexAction(this), character,
+										"<br/>[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(pull)] out of [npc2.her] [npc2.asshole+]."));
+							}
+							break;
+						case ASS:
+							if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), ot).contains(character)) {
+								UtilText.nodeContentSB.append(UtilText.parse(character, Main.sex.getCharacterTargetedForSexAction(this),
+										"<br/>[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(stop)] using [npc2.her] [npc2.ass+]."));
+							}
+							if (Main.sex.getCharacterOngoingSexArea(character, ot).contains(Main.sex.getCharacterTargetedForSexAction(this))) {
+								UtilText.nodeContentSB.append(UtilText.parse(Main.sex.getCharacterTargetedForSexAction(this), character,
+										"<br/>[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(stop)] using [npc2.her] [npc2.ass+]."));
+							}
+							break;
+						case ARMPITS:
+							if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), ot).contains(character)) {
+								UtilText.nodeContentSB.append(UtilText.parse(character, Main.sex.getCharacterTargetedForSexAction(this),
+										"<br/>[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(stop)] fucking [npc2.her] [npc2.armpit+]."));
+							}
+							if (Main.sex.getCharacterOngoingSexArea(character, ot).contains(Main.sex.getCharacterTargetedForSexAction(this))) {
+								UtilText.nodeContentSB.append(UtilText.parse(Main.sex.getCharacterTargetedForSexAction(this), character,
+										"<br/>[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(stop)] fucking [npc2.her] [npc2.armpit+]."));
+							}
+							break;
+						case BREAST:
+							if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), ot).contains(character)) {
+								UtilText.nodeContentSB.append(UtilText.parse(character, Main.sex.getCharacterTargetedForSexAction(this),
+										"<br/>[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(stop)] playing with [npc2.her] [npc2.breasts+]."));
+							}
+							if (Main.sex.getCharacterOngoingSexArea(character, ot).contains(Main.sex.getCharacterTargetedForSexAction(this))) {
+								UtilText.nodeContentSB.append(UtilText.parse(Main.sex.getCharacterTargetedForSexAction(this), character,
+										"<br/>[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(stop)] playing with [npc2.her] [npc2.breasts+]."));
+							}
+							break;
+						case BREAST_CROTCH:
+							if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), ot).contains(character)) {
+								UtilText.nodeContentSB.append(UtilText.parse(character, Main.sex.getCharacterTargetedForSexAction(this),
+										"<br/>[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(stop)] playing with [npc2.her] [npc2.crotchBoobs+]."));
+							}
+							if (Main.sex.getCharacterOngoingSexArea(character, ot).contains(Main.sex.getCharacterTargetedForSexAction(this))) {
+								UtilText.nodeContentSB.append(UtilText.parse(Main.sex.getCharacterTargetedForSexAction(this), character,
+										"<br/>[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(stop)] playing with [npc2.her] [npc2.crotchBoobs+]."));
+							}
+							break;
+						case MOUTH:
+							if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), ot).contains(character)) {
+								UtilText.nodeContentSB.append(UtilText.parse(character, Main.sex.getCharacterTargetedForSexAction(this),
+										"<br/>[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(pull)] out of [npc2.her] mouth."));
+							}
+							if (Main.sex.getCharacterOngoingSexArea(character, ot).contains(Main.sex.getCharacterTargetedForSexAction(this))) {
+								UtilText.nodeContentSB.append(UtilText.parse(Main.sex.getCharacterTargetedForSexAction(this), character,
+										"<br/>[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(pull)] out of [npc2.her] mouth."));
+							}
+							break;
+						case NIPPLE:
+							if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), ot).contains(character)) {
+								UtilText.nodeContentSB.append(UtilText.parse(character, Main.sex.getCharacterTargetedForSexAction(this),
+										"<br/>[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(pull)] out of [npc2.her] [npc2.nipple+]."));
+							}
+							if (Main.sex.getCharacterOngoingSexArea(character, ot).contains(Main.sex.getCharacterTargetedForSexAction(this))) {
+								UtilText.nodeContentSB.append(UtilText.parse(Main.sex.getCharacterTargetedForSexAction(this), character,
+										"<br/>[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(pull)] out of [npc2.her] [npc2.nipple+]."));
+							}
+							break;
+						case NIPPLE_CROTCH:
+							if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), ot).contains(character)) {
+								UtilText.nodeContentSB.append(UtilText.parse(character, Main.sex.getCharacterTargetedForSexAction(this),
+										"<br/>[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(pull)] out of [npc2.her] [npc2.crotchNipple+]."));
+							}
+							if (Main.sex.getCharacterOngoingSexArea(character, ot).contains(Main.sex.getCharacterTargetedForSexAction(this))) {
+								UtilText.nodeContentSB.append(UtilText.parse(Main.sex.getCharacterTargetedForSexAction(this), character,
+										"<br/>[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(pull)] out of [npc2.her] [npc2.crotchNipple+]."));
+							}
+							break;
+						case URETHRA_PENIS:
+							if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), ot).contains(character)) {
+								UtilText.nodeContentSB.append(UtilText.parse(character, Main.sex.getCharacterTargetedForSexAction(this),
+										"<br/>[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(pull)] out of [npc2.her] [npc2.penisUrethra+]."));
+							}
+							if (Main.sex.getCharacterOngoingSexArea(character, ot).contains(Main.sex.getCharacterTargetedForSexAction(this))) {
+								UtilText.nodeContentSB.append(UtilText.parse(Main.sex.getCharacterTargetedForSexAction(this), character,
+										"<br/>[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(pull)] out of [npc2.her] [npc2.penisUrethra+]."));
+							}
+							break;
+						case URETHRA_VAGINA:
+							if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), ot).contains(character)) {
+								UtilText.nodeContentSB.append(UtilText.parse(character, Main.sex.getCharacterTargetedForSexAction(this),
+										"<br/>[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(pull)] out of [npc2.her] [npc2.vaginaUrethra+]."));
+							}
+							if (Main.sex.getCharacterOngoingSexArea(character, ot).contains(Main.sex.getCharacterTargetedForSexAction(this))) {
+								UtilText.nodeContentSB.append(UtilText.parse(Main.sex.getCharacterTargetedForSexAction(this), character,
+										"<br/>[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(pull)] out of [npc2.her] [npc2.vaginaUrethra+]."));
+							}
+							break;
+						case VAGINA:
+							if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), ot).contains(character)) {
+								UtilText.nodeContentSB.append(UtilText.parse(character, Main.sex.getCharacterTargetedForSexAction(this),
+										"<br/>[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(pull)] out of [npc2.her] [npc2.pussy+]."));
+							}
+							if (Main.sex.getCharacterOngoingSexArea(character, ot).contains(Main.sex.getCharacterTargetedForSexAction(this))) {
+								UtilText.nodeContentSB.append(UtilText.parse(Main.sex.getCharacterTargetedForSexAction(this), character,
+										"<br/>[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(pull)] out of [npc2.her] [npc2.pussy+]."));
+							}
+							break;
+						case THIGHS:
+							if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), ot).contains(character)) {
+								UtilText.nodeContentSB.append(UtilText.parse(character, Main.sex.getCharacterTargetedForSexAction(this),
+										"<br/>[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(pull)] out from between [npc2.her] thighs."));
+							}
+							if (Main.sex.getCharacterOngoingSexArea(character, ot).contains(Main.sex.getCharacterTargetedForSexAction(this))) {
+								UtilText.nodeContentSB.append(UtilText.parse(Main.sex.getCharacterTargetedForSexAction(this), character,
+										"<br/>[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(pull)] out from between [npc2.her] thighs."));
+							}
+							break;
+						case SPINNERET:
+							if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), ot).contains(character)) {
+								UtilText.nodeContentSB.append(UtilText.parse(character, Main.sex.getCharacterTargetedForSexAction(this),
+										"<br/>[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(pull)] out of [npc2.her] spinneret."));
+							}
+							if (Main.sex.getCharacterOngoingSexArea(character, ot).contains(Main.sex.getCharacterTargetedForSexAction(this))) {
+								UtilText.nodeContentSB.append(UtilText.parse(Main.sex.getCharacterTargetedForSexAction(this), character,
+										"<br/>[npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] as [npc.name] [npc.verb(pull)] out of [npc2.her] spinneret."));
+							}
+							break;
+					}
+				}
+			}
+			
+			UtilText.nodeContentSB.replace(0, 5, "");
+			
+			return UtilText.nodeContentSB.toString();
+		}
+
+		@Override
+		public void applyEffects() {
+			for(GameCharacter character : Main.sex.getAllParticipants()) {
+				Main.sex.stopAllOngoingActions(Main.sex.getCharacterTargetedForSexAction(this), character);
+			}
+		}
+	};
+	
+	public static final SexAction PLAYER_STOP_ALL_PENETRATIONS_SELF = new SexAction(
+			SexActionType.ONGOING,
+			ArousalIncrease.ONE_MINIMUM,
+			ArousalIncrease.ONE_MINIMUM,
+			CorruptionLevel.ZERO_PURE,
+			null,
+			SexParticipantType.NORMAL) {
+		
+		@Override
+		public String getActionTitle() {
+			return "Stop penetrations (self)";
+		}
+
+		@Override
+		public String getActionDescription() {
+			return "Stop all ongoing penetrative actions that you are involved with.";
+		}
+
+		@Override
+		public boolean isBaseRequirementsMet() {
+			return Main.sex.isCharacterEngagedInOngoingAction(Main.game.getPlayer())
+					&& Main.sex.getAllParticipants(false).size()>2
+					&& !Main.sex.isMasturbation()
+					&& Main.sex.getSexControl(Main.sex.getCharacterPerformingAction())==SexControl.FULL
+					&& Main.sex.getCharacterPerformingAction().isPlayer();
+		}
+
+		@Override
+		public String getDescription() {
+			UtilText.nodeContentSB.setLength(0);
+
+			for(GameCharacter character : Main.sex.getAllParticipants()) {
+				for(SexAreaOrifice ot : SexAreaOrifice.values()) {
+					switch(ot) {
+						case ANUS:
+							if (Main.sex.getCharacterOngoingSexArea(Main.game.getPlayer(), ot).contains(Main.game.getPlayer())) {
+								UtilText.nodeContentSB.append("<br/>[npc.A_moan+] drifts out from between your [npc.lips+] as you stop stimulating your [npc.asshole+].");
+							}
+							if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), ot).contains(character)) {
+								UtilText.nodeContentSB.append("<br/>[npc2.Name] lets out [npc2.a_moan+] as you pull out of [npc2.her] [npc2.asshole+].");
+							}
+							break;
+						case ASS:
+							if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), ot).contains(Main.game.getPlayer())) {
+								UtilText.nodeContentSB.append("<br/>[npc2.Name] lets out [npc2.a_moan+] as you stop using [npc2.her] [npc2.ass+].");
+							}
+							if (Main.sex.getCharacterOngoingSexArea(Main.game.getPlayer(), ot).contains(Main.game.getPlayer())) {
+								UtilText.nodeContentSB.append("<br/>[npc.A_moan+] drifts out from between your [npc.lips+] as you stop stimulating your [npc.ass+].");
+							}
+							break;
+						case ARMPITS:
+							if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), ot).contains(Main.game.getPlayer())) {
+								UtilText.nodeContentSB.append("<br/>[npc2.Name] lets out [npc2.a_moan+] as you stop fucking [npc2.her] [npc2.armpit+].");
+							}
+							if (Main.sex.getCharacterOngoingSexArea(Main.game.getPlayer(), ot).contains(Main.game.getPlayer())) {
+								UtilText.nodeContentSB.append("<br/>[npc.A_moan+] drifts out from between your [npc.lips+] as you stop stimulating your [npc.armpits+].");
+							}
+							break;
+						case BREAST:
+							if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), ot).contains(Main.game.getPlayer())) {
+								UtilText.nodeContentSB.append("<br/>[npc2.Name] lets out [npc2.a_moan+] as you stop playing with [npc2.her] [npc2.breasts+].");
+							}
+							if (Main.sex.getCharacterOngoingSexArea(Main.game.getPlayer(), ot).contains(Main.game.getPlayer())) {
+								UtilText.nodeContentSB.append("<br/>[npc.A_moan+] drifts out from between your [npc.lips+] as you stop stimulating your [npc.breasts+].");
+							}
+							break;
+						case BREAST_CROTCH:
+							if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), ot).contains(Main.game.getPlayer())) {
+								UtilText.nodeContentSB.append("<br/>[npc2.Name] lets out [npc2.a_moan+] as you stop playing with [npc2.her] [npc2.crotchBoobs+].");
+							}
+							if (Main.sex.getCharacterOngoingSexArea(Main.game.getPlayer(), ot).contains(Main.game.getPlayer())) {
+								UtilText.nodeContentSB.append("<br/>[npc.A_moan+] drifts out from between your [npc.lips+] as you stop stimulating your [npc.crotchBoobs+].");
+							}
+							break;
+						case MOUTH:
+							if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), ot).contains(Main.game.getPlayer())) {
+								UtilText.nodeContentSB.append("<br/>[npc2.Name] lets out [npc2.a_moan+] as you pull out of [npc2.her] mouth.");
+							}
+							if (Main.sex.getCharacterOngoingSexArea(Main.game.getPlayer(), ot).contains(Main.game.getPlayer())) {
+								UtilText.nodeContentSB.append("<br/>[npc.A_moan+] drifts out from between your [npc.lips+] as you pull out of your mouth.");
+							}
+							break;
+						case NIPPLE:
+							if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), ot).contains(Main.game.getPlayer())) {
+								UtilText.nodeContentSB.append("<br/>[npc2.Name] lets out [npc2.a_moan+] as you pull out of [npc2.her] [npc2.nipple+].");
+							}
+							if (Main.sex.getCharacterOngoingSexArea(Main.game.getPlayer(), ot).contains(Main.game.getPlayer())) {
+								UtilText.nodeContentSB.append("<br/>[npc.A_moan+] drifts out from between your [npc.lips+] as you stop stimulating your [npc.nipple+].");
+							}
+							break;
+						case NIPPLE_CROTCH:
+							if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), ot).contains(Main.game.getPlayer())) {
+								UtilText.nodeContentSB.append("<br/>[npc2.Name] lets out [npc2.a_moan+] as you pull out of [npc2.her] [npc2.crotchNipple+].");
+							}
+							if (Main.sex.getCharacterOngoingSexArea(Main.game.getPlayer(), ot).contains(Main.game.getPlayer())) {
+								UtilText.nodeContentSB.append("<br/>[npc.A_moan+] drifts out from between your [npc.lips+] as you stop stimulating your [npc.crotchNipple+].");
+							}
+							break;
+						case URETHRA_PENIS:
+							if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), ot).contains(Main.game.getPlayer())) {
+								UtilText.nodeContentSB.append("<br/>[npc2.Name] lets out [npc2.a_moan+] as you pull out of [npc2.her] [npc2.penisUrethra+].");
+							}
+							if (Main.sex.getCharacterOngoingSexArea(Main.game.getPlayer(), ot).contains(Main.game.getPlayer())) {
+								UtilText.nodeContentSB.append("<br/>[npc.A_moan+] drifts out from between your [npc.lips+] as you stop stimulating your [npc.penisUrethra+].");
+							}
+							break;
+						case URETHRA_VAGINA:
+							if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), ot).contains(Main.game.getPlayer())) {
+								UtilText.nodeContentSB.append("<br/>[npc2.Name] lets out [npc2.a_moan+] as you pull out of [npc2.her] [npc2.vaginaUrethra+].");
+							}
+							if (Main.sex.getCharacterOngoingSexArea(Main.game.getPlayer(), ot).contains(Main.game.getPlayer())) {
+								UtilText.nodeContentSB.append("<br/>[npc.A_moan+] drifts out from between your [npc.lips+] as you stop stimulating your [npc.vaginaUrethra+].");
+							}
+							break;
+						case VAGINA:
+							if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), ot).contains(Main.game.getPlayer())) {
+								UtilText.nodeContentSB.append("<br/>[npc2.Name] lets out [npc2.a_moan+] as you pull out of [npc2.her] [npc2.pussy+].");
+							}
+							if (Main.sex.getCharacterOngoingSexArea(Main.game.getPlayer(), ot).contains(Main.game.getPlayer())) {
+								UtilText.nodeContentSB.append("<br/>[npc.A_moan+] drifts out from between your [npc.lips+] as you stop stimulating your [npc.pussy+].");
+							}
+							break;
+						case THIGHS:
+							if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), ot).contains(Main.game.getPlayer())) {
+								UtilText.nodeContentSB.append("<br/>[npc2.Name] lets out [npc2.a_moan+] as you pull out from between [npc2.her] thighs.");
+							}
+							if (Main.sex.getCharacterOngoingSexArea(Main.game.getPlayer(), ot).contains(Main.game.getPlayer())) {
+								UtilText.nodeContentSB.append("<br/>[npc.A_moan+] drifts out from between your [npc.lips+] as you stop playing with your thighs.");
+							}
+							break;
+						case SPINNERET:
+							if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), ot).contains(Main.game.getPlayer())) {
+								UtilText.nodeContentSB.append("<br/>[npc2.Name] lets out [npc2.a_moan+] as you pull out of [npc2.her] spinneret.");
+							}
+							if (Main.sex.getCharacterOngoingSexArea(Main.game.getPlayer(), ot).contains(Main.game.getPlayer())) {
+								UtilText.nodeContentSB.append("<br/>[npc.A_moan+] drifts out from between your [npc.lips+] as you stop stimulating your spinneret.");
+							}
+							break;
+					}
+				}
+			}
+			
+			UtilText.nodeContentSB.replace(0, 5, "");
+			
+			return UtilText.nodeContentSB.toString();
+		}
+
+		@Override
+		public void applyEffects() {
+			for(GameCharacter character : Main.sex.getAllParticipants()) {
+				Main.sex.stopAllOngoingActions(Main.game.getPlayer(), character);
+			}
+		}
+	};
+	
+	public static final SexAction PLAYER_FORBID_PARTNER_SELF = new SexAction(
+			SexActionType.SPECIAL,
+			ArousalIncrease.ONE_MINIMUM,
+			ArousalIncrease.ONE_MINIMUM,
+			CorruptionLevel.ZERO_PURE,
+			null,
+			SexParticipantType.NORMAL) {
+		@Override
+		public String getActionTitle() {
+			return "Forbid self actions";
+		}
+		@Override
+		public String getActionDescription() {
+			return "Forbid [npc2.name] from performing all self-penetrative actions.";
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {
+			GameCharacter performer = Main.sex.getCharacterPerformingAction();
+			GameCharacter target = Main.sex.getCharacterTargetedForSexAction(this);
+			
+			return !target.isAsleep()
+					&& (Main.sex.getSexControl(performer)==SexControl.FULL || (Main.sex.isCharacterImmobilised(performer) && Main.sex.isDom(performer) && !Main.sex.isSexControlForced(performer)))
+					&& (Main.sex.getSexControl(target)!=SexControl.FULL || !Main.sex.isDom(target))
+					&& !Main.sex.isMasturbation()
+					&& Main.sex.isCharacterAllowedToUseSelfActions(target)
+					&& performer.isPlayer();
+		}
+		@Override
+		public boolean isAvailableDuringImmobilisation(Collection<ImmobilisationType> types) {
+			return true;
+		}
+		@Override
+		public String getDescription() {
+			UtilText.nodeContentSB.setLength(0);
+			
+			if(Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), SexAreaOrifice.VAGINA)!=null) {
+				if(Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), SexAreaOrifice.VAGINA).contains(Main.sex.getCharacterTargetedForSexAction(this))) {
+					UtilText.nodeContentSB.append("[npc2.Name] lets out a disappointed [npc.moan] as you force [npc2.herHim] to stop stimulating [npc2.her] [npc2.pussy+].");
+				}
+			}
+			
+			if(Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), SexAreaOrifice.ANUS)!=null) {
+				if(Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), SexAreaOrifice.ANUS).contains(Main.sex.getCharacterTargetedForSexAction(this))) {
+					if(UtilText.nodeContentSB.length()!=0)
+						UtilText.nodeContentSB.append("<br/>");
+					UtilText.nodeContentSB.append("As you put an end to [npc2.namePos] self-stimulation of [npc2.her] [npc2.asshole], [npc2.she] lets out a pathetic whine.");
+				}
+			}
+			
+			if(Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), SexAreaOrifice.NIPPLE)!=null) {
+				if(Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), SexAreaOrifice.NIPPLE).contains(Main.sex.getCharacterTargetedForSexAction(this))) {
+					if(UtilText.nodeContentSB.length()!=0)
+						UtilText.nodeContentSB.append("<br/>");
+					UtilText.nodeContentSB.append("[npc2.Name] pouts at you as you force [npc2.herHim] to stop stimulating [npc2.her] [npc2.nipples+].");
+				}
+			}
+			
+			if(Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), SexAreaOrifice.MOUTH)!=null) {
+				if(Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), SexAreaOrifice.MOUTH).contains(Main.sex.getCharacterTargetedForSexAction(this))) {
+					if(UtilText.nodeContentSB.length()!=0)
+						UtilText.nodeContentSB.append("<br/>");
+					UtilText.nodeContentSB.append("[npc2.Name] lets out a disappointed [npc.moan] as you force [npc2.herHim] to stop using [npc2.her] mouth.");
+				}
+			}
+			
+			if(UtilText.nodeContentSB.length()!=0) {
+				UtilText.nodeContentSB.append("<br/><br/>");
+			}
+			
+			UtilText.nodeContentSB.append("[npc.speech(I don't want to see you trying to get yourself off,)] you [npc.moanVerb] at [npc2.name].<br/><br/>"
+					+ "<i style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>[npc2.Name] will no longer use any self-penetrative actions.</i>");
+			
+			return UtilText.nodeContentSB.toString();
+		}
+		@Override
+		public void applyEffects() {
+			Main.sex.stopAllOngoingActions(Main.sex.getCharacterTargetedForSexAction(this), Main.sex.getCharacterTargetedForSexAction(this));
+			
+			Main.sex.setCharacterAllowedToUseSelfActions(Main.sex.getCharacterTargetedForSexAction(this), false);
+		}
+	};
+	
+	public static final SexAction PLAYER_PERMIT_PARTNER_SELF = new SexAction(
+			SexActionType.SPECIAL,
+			ArousalIncrease.ONE_MINIMUM,
+			ArousalIncrease.ONE_MINIMUM,
+			CorruptionLevel.ZERO_PURE,
+			null,
+			SexParticipantType.NORMAL) {
+		@Override
+		public String getActionTitle() {
+			return "Permit self actions";
+		}
+		@Override
+		public String getActionDescription() {
+			return "Permit [npc2.name] to perform all self-penetrative actions.";
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {
+			GameCharacter performer = Main.sex.getCharacterPerformingAction();
+			GameCharacter target = Main.sex.getCharacterTargetedForSexAction(this);
+			
+			return !target.isAsleep()
+					&& (Main.sex.getSexControl(performer)==SexControl.FULL || (Main.sex.isCharacterImmobilised(performer) && Main.sex.isDom(performer) && !Main.sex.isSexControlForced(performer)))
+					&& (Main.sex.getSexControl(target)!=SexControl.FULL || !Main.sex.isDom(target))
+					&& !Main.sex.isMasturbation()
+					&& !Main.sex.isCharacterAllowedToUseSelfActions(target)
+					&& performer.isPlayer();
+		}
+		@Override
+		public boolean isAvailableDuringImmobilisation(Collection<ImmobilisationType> types) {
+			return true;
+		}
+		@Override
+		public String getDescription() {
+			return "[npc.speech(You can touch yourself all you want,)] you [npc.moanVerb] at [npc2.name].<br/><br/>"
+					+ "<i style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>[npc2.Name] is now able to use any self-penetrative actions.</i>";
+		}
+		@Override
+		public void applyEffects() {
+			Main.sex.setCharacterAllowedToUseSelfActions(Main.sex.getCharacterTargetedForSexAction(this), true);
+		}
+	};
+
+	public static final SexAction PLAYER_FORBID_PARTNER_CONTROL = new SexAction(
+			SexActionType.SPECIAL,
+			ArousalIncrease.ONE_MINIMUM,
+			ArousalIncrease.ONE_MINIMUM,
+			CorruptionLevel.ZERO_PURE,
+			null,
+			SexParticipantType.NORMAL) {
+		@Override
+		public String getActionTitle() {
+			return "Restrict control";
+		}
+		@Override
+		public String getActionDescription() {
+			return "Restrict [npc2.namePos] level of control, preventing [npc2.herHim] from initiating any non-self penetrative actions.";
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {
+			GameCharacter performer = Main.sex.getCharacterPerformingAction();
+			GameCharacter target = Main.sex.getCharacterTargetedForSexAction(this);
+			
+			return !target.isAsleep()
+					&& (Main.sex.getSexControl(performer)==SexControl.FULL || (Main.sex.isCharacterImmobilised(performer) && Main.sex.isDom(performer) && !Main.sex.isSexControlForced(performer)))
+					&& !Main.sex.isDom(target)
+					&& !Main.sex.isMasturbation()
+					&& Main.sex.getSexControl(target).getValue()>=SexControl.ONGOING_PLUS_LIMITED_PENETRATIONS.getValue()
+					&& performer.isPlayer();
+		}
+		@Override
+		public boolean isAvailableDuringImmobilisation(Collection<ImmobilisationType> types) {
+			return true;
+		}
+		@Override
+		public String getDescription() {
+			UtilText.nodeContentSB.setLength(0);
+			
+			UtilText.nodeContentSB.append("[npc.speech(You're not to do anything without being told,)] you order [npc2.name].<br/><br/>"
+					+ "<i style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>[npc2.Name] now has a restricted level of control, and cannot initiate any non-self penetrative actions.</i>");
+			
+			return UtilText.nodeContentSB.toString();
+		}
+		@Override
+		public void applyEffects() {
+			GameCharacter target = Main.sex.getCharacterTargetedForSexAction(this);
+			Main.sex.setForcedSexControl(target, SexControl.ONGOING_ONLY);
+		}
+	};
+	
+	public static final SexAction PLAYER_PERMIT_PARTNER_CONTROL = new SexAction(
+			SexActionType.SPECIAL,
+			ArousalIncrease.ONE_MINIMUM,
+			ArousalIncrease.ONE_MINIMUM,
+			CorruptionLevel.ZERO_PURE,
+			null,
+			SexParticipantType.NORMAL) {
+		@Override
+		public String getActionTitle() {
+			return "Unrestrict control";
+		}
+		@Override
+		public String getActionDescription() {
+			return "Unrestrict [npc2.namePos] level of control, allowing [npc2.herHim] to initiate non-self penetrative actions.";
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {
+			GameCharacter performer = Main.sex.getCharacterPerformingAction();
+			GameCharacter target = Main.sex.getCharacterTargetedForSexAction(this);
+			
+			return !target.isAsleep()
+					&& (Main.sex.getSexControl(performer)==SexControl.FULL || (Main.sex.isCharacterImmobilised(performer) && Main.sex.isDom(performer) && !Main.sex.isSexControlForced(performer)))
+					&& !Main.sex.isDom(target)
+					&& !Main.sex.isMasturbation()
+					&& Main.sex.getSexControl(target).getValue()<SexControl.ONGOING_PLUS_LIMITED_PENETRATIONS.getValue()
+					&& performer.isPlayer();
+		}
+		@Override
+		public boolean isAvailableDuringImmobilisation(Collection<ImmobilisationType> types) {
+			return true;
+		}
+		@Override
+		public String getDescription() {
+			UtilText.nodeContentSB.setLength(0);
+			
+			UtilText.nodeContentSB.append("[npc.speech(You can do what you like,)] you say to [npc2.name], freeing [npc2.herHim] to do as [npc2.she] pleases.<br/><br/>"
+					+ "<i style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>[npc2.Name] now has an unrestricted level of control, and can initiate non-self penetrative actions at will.</i>");
+			
+			return UtilText.nodeContentSB.toString();
+		}
+		@Override
+		public void applyEffects() {
+			GameCharacter target = Main.sex.getCharacterTargetedForSexAction(this);
+			Main.sex.setForcedSexControl(target, SexControl.FULL);
+			for(GameCharacter participant : Main.sex.getAllParticipants()) {
+				if(!participant.equals(target) && Main.sex.getSexPositionSlot(participant)!=SexSlotGeneric.MISC_WATCHING) {
+					((NPC)target).generateSexChoices(false, participant, null);
+				}
+			}
+		}
+	};
+	
+	public static final SexAction PLAYER_FORBID_PARTNER_POSITIONING_SELF = new SexAction(
+			SexActionType.SPECIAL,
+			ArousalIncrease.ONE_MINIMUM,
+			ArousalIncrease.ONE_MINIMUM,
+			CorruptionLevel.ZERO_PURE,
+			null,
+			SexParticipantType.NORMAL) {
+		@Override
+		public String getActionTitle() {
+			return "Forbid positioning";
+		}
+		@Override
+		public String getActionDescription() {
+			return "Forbid [npc2.name] from using any positioning actions.";
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {
+			GameCharacter performer = Main.sex.getCharacterPerformingAction();
+			GameCharacter target = Main.sex.getCharacterTargetedForSexAction(this);
+			
+			return !target.isAsleep()
+					&& (Main.sex.getSexControl(performer)==SexControl.FULL || (Main.sex.isCharacterImmobilised(performer) && Main.sex.isDom(performer) && !Main.sex.isSexControlForced(performer)))
+					&& (Main.sex.getSexControl(target)!=SexControl.FULL || !Main.sex.isDom(target))
+					&& !Main.sex.isMasturbation()
+					&& !Main.sex.isCharacterForbiddenByOthersFromPositioning(target)
+					&& performer.isPlayer()
+					&& Main.sex.getInitialSexManager().isPositionChangingAllowed(target);
+		}
+		@Override
+		public boolean isAvailableDuringImmobilisation(Collection<ImmobilisationType> types) {
+			return true;
+		}
+		@Override
+		public String getDescription() {
+			UtilText.nodeContentSB.setLength(0);
+			
+			UtilText.nodeContentSB.append("[npc.speech(I don't want to see you attempting to switch positions,)] you [npc.moanVerb] at [npc2.name].<br/><br/>"
+					+ "<i style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>[npc2.Name] will no longer use any positioning actions.</i>");
+			
+			return UtilText.nodeContentSB.toString();
+		}
+		@Override
+		public void applyEffects() {
+			Main.sex.stopAllOngoingActions(Main.sex.getCharacterTargetedForSexAction(this), Main.sex.getCharacterTargetedForSexAction(this));
+			
+			Main.sex.addCharacterForbiddenByOthersFromPositioning(Main.sex.getCharacterTargetedForSexAction(this));
+		}
+	};
+	
+	public static final SexAction PLAYER_PERMIT_PARTNER_POSITIONING_SELF = new SexAction(
+			SexActionType.SPECIAL,
+			ArousalIncrease.ONE_MINIMUM,
+			ArousalIncrease.ONE_MINIMUM,
+			CorruptionLevel.ZERO_PURE,
+			null,
+			SexParticipantType.NORMAL) {
+		@Override
+		public String getActionTitle() {
+			return "Permit positioning";
+		}
+		@Override
+		public String getActionDescription() {
+			return "Permit [npc2.name] to use positioning actions.";
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {
+			GameCharacter performer = Main.sex.getCharacterPerformingAction();
+			GameCharacter target = Main.sex.getCharacterTargetedForSexAction(this);
+			
+			return !target.isAsleep()
+					&& (Main.sex.getSexControl(performer)==SexControl.FULL || (Main.sex.isCharacterImmobilised(performer) && Main.sex.isDom(performer) && !Main.sex.isSexControlForced(performer)))
+					&& (Main.sex.getSexControl(target)!=SexControl.FULL || !Main.sex.isDom(target))
+					&& !Main.sex.isMasturbation()
+					&& Main.sex.isCharacterForbiddenByOthersFromPositioning(target)
+					&& performer.isPlayer()
+					&& Main.sex.getInitialSexManager().isPositionChangingAllowed(target);
+		}
+		@Override
+		public boolean isAvailableDuringImmobilisation(Collection<ImmobilisationType> types) {
+			return true;
+		}
+		@Override
+		public String getDescription() {
+			return "[npc.speech(If you'd like, you can switch to whatever position you're most comfortable with,)] you [npc.moanVerb] at [npc2.name].<br/><br/>"
+					+ "<i style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>[npc2.Name] is now able to use positioning actions.</i>";
+		}
+		@Override
+		public void applyEffects() {
+			GameCharacter target = Main.sex.getCharacterTargetedForSexAction(this);
+			Main.sex.removeCharacterForbiddenByOthersFromPositioning(Main.sex.getCharacterTargetedForSexAction(this));
+			for(GameCharacter participant : Main.sex.getAllParticipants()) {
+				if(!participant.equals(target) && Main.sex.getSexPositionSlot(participant)!=SexSlotGeneric.MISC_WATCHING) {
+					((NPC)target).generateSexChoices(false, participant, null);
+				}
+			}
+		}
+	};
+	
+	public static final SexAction PLAYER_FORBID_PARTNER_CLOTHING = new SexAction(
+			SexActionType.SPECIAL,
+			ArousalIncrease.ONE_MINIMUM,
+			ArousalIncrease.ONE_MINIMUM,
+			CorruptionLevel.ZERO_PURE,
+			null,
+			SexParticipantType.NORMAL) {
+		@Override
+		public String getActionTitle() {
+			return "Forbid clothing";
+		}
+		@Override
+		public String getActionDescription() {
+			return "Forbid [npc2.name] from managing any of your clothing.";
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {
+			GameCharacter performer = Main.sex.getCharacterPerformingAction();
+			GameCharacter target = Main.sex.getCharacterTargetedForSexAction(this);
+			
+			return !target.isAsleep()
+					&& (Main.sex.getSexControl(performer)==SexControl.FULL || (Main.sex.isCharacterImmobilised(performer) && Main.sex.isDom(performer) && !Main.sex.isSexControlForced(performer)))
+					&& (Main.sex.getSexControl(target)!=SexControl.FULL || !Main.sex.isDom(target))
+					&& !Main.sex.isMasturbation()
+					&& Main.sex.isCanRemoveOthersClothing(target, null)
+					&& performer.isPlayer();
+		}
+		@Override
+		public boolean isAvailableDuringImmobilisation(Collection<ImmobilisationType> types) {
+			return true;
+		}
+		@Override
+		public String getDescription() {
+			return "[npc.speech(Don't you <i>dare</i> try and touch any of my clothes!)] you growl at [npc2.name].<br/><br/>"
+					+ "<i style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>[npc2.Name] will not attempt to remove or displace any of your clothes.</i>";
+		}
+		@Override
+		public void applyEffects() {
+			Main.sex.setCanRemoveOthersClothing(Main.sex.getCharacterTargetedForSexAction(this), false);
+		}
+	};
+	
+	public static final SexAction PLAYER_PERMIT_PARTNER_CLOTHING = new SexAction(
+			SexActionType.SPECIAL,
+			ArousalIncrease.ONE_MINIMUM,
+			ArousalIncrease.ONE_MINIMUM,
+			CorruptionLevel.ZERO_PURE,
+			null,
+			SexParticipantType.NORMAL) {
+		@Override
+		public String getActionTitle() {
+			return "Permit clothing";
+		}
+		@Override
+		public String getActionDescription() {
+			return "Permit [npc2.name] to take off and displace your clothing.";
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {
+			GameCharacter performer = Main.sex.getCharacterPerformingAction();
+			GameCharacter target = Main.sex.getCharacterTargetedForSexAction(this);
+			
+			return !target.isAsleep()
+					&& (Main.sex.getSexControl(performer)==SexControl.FULL || (Main.sex.isCharacterImmobilised(performer) && Main.sex.isDom(performer) && !Main.sex.isSexControlForced(performer)))
+					&& (Main.sex.getSexControl(target)!=SexControl.FULL || !Main.sex.isDom(target))
+					&& !Main.sex.isMasturbation()
+					&& !Main.sex.isCanRemoveOthersClothing(target, null)
+					&& performer.isPlayer();
+		}
+		@Override
+		public boolean isAvailableDuringImmobilisation(Collection<ImmobilisationType> types) {
+			return true;
+		}
+		@Override
+		public String getDescription() {
+			return "[npc.speech(How about you help me take off some of these clothes?)] you [npc.moan].<br/><br/>"
+					+ "<i style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>[npc2.Name] is now able to manage your clothing.</i>";
+		}
+		@Override
+		public void applyEffects() {
+			Main.sex.setCanRemoveOthersClothing(Main.sex.getCharacterTargetedForSexAction(this), true);
+		}
+	};
+	
+	public static final SexAction PLAYER_FORBID_PARTNER_SELF_CLOTHING = new SexAction(
+			SexActionType.SPECIAL,
+			ArousalIncrease.ONE_MINIMUM,
+			ArousalIncrease.ONE_MINIMUM,
+			CorruptionLevel.ZERO_PURE,
+			null,
+			SexParticipantType.NORMAL) {
+		@Override
+		public String getActionTitle() {
+			return "Forbid self clothing";
+		}
+		@Override
+		public String getActionDescription() {
+			return "Forbid [npc2.name] from managing any of [npc2.her] clothing.";
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {
+			GameCharacter performer = Main.sex.getCharacterPerformingAction();
+			GameCharacter target = Main.sex.getCharacterTargetedForSexAction(this);
+			
+			return !target.isAsleep()
+					&& (Main.sex.getSexControl(performer)==SexControl.FULL || (Main.sex.isCharacterImmobilised(performer) && Main.sex.isDom(performer) && !Main.sex.isSexControlForced(performer)))
+					&& (Main.sex.getSexControl(target)!=SexControl.FULL || !Main.sex.isDom(target))
+					&& !Main.sex.isMasturbation()
+					&& Main.sex.isCanRemoveSelfClothing(target)
+					&& performer.isPlayer();
+		}
+		@Override
+		public boolean isAvailableDuringImmobilisation(Collection<ImmobilisationType> types) {
+			return true;
+		}
+		@Override
+		public String getDescription() {
+			return "[npc.speech(Don't you <i>dare</i> try and touch your clothes!)] you growl at [npc2.name].<br/><br/>"
+					+ "<i style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>[npc2.Name] will not attempt to remove or displace any of [npc2.her] clothes.</i>";
+		}
+		@Override
+		public void applyEffects() {
+			Main.sex.setCanRemoveSelfClothing(Main.sex.getCharacterTargetedForSexAction(this), false);
+		}
+	};
+	
+	public static final SexAction PLAYER_PERMIT_PARTNER_SELF_CLOTHING = new SexAction(
+			SexActionType.SPECIAL,
+			ArousalIncrease.ONE_MINIMUM,
+			ArousalIncrease.ONE_MINIMUM,
+			CorruptionLevel.ZERO_PURE,
+			null,
+			SexParticipantType.NORMAL) {
+		@Override
+		public String getActionTitle() {
+			return "Permit self clothing";
+		}
+		@Override
+		public String getActionDescription() {
+			return "Permit [npc2.name] to take off and displace [npc2.her] clothing.";
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {
+			GameCharacter performer = Main.sex.getCharacterPerformingAction();
+			GameCharacter target = Main.sex.getCharacterTargetedForSexAction(this);
+			
+			return !target.isAsleep()
+					&& (Main.sex.getSexControl(performer)==SexControl.FULL || (Main.sex.isCharacterImmobilised(performer) && Main.sex.isDom(performer) && !Main.sex.isSexControlForced(performer)))
+					&& (Main.sex.getSexControl(target)!=SexControl.FULL || !Main.sex.isDom(target))
+					&& !Main.sex.isMasturbation()
+					&& !Main.sex.isCanRemoveSelfClothing(target)
+					&& performer.isPlayer();
+		}
+		@Override
+		public boolean isAvailableDuringImmobilisation(Collection<ImmobilisationType> types) {
+			return true;
+		}
+		@Override
+		public String getDescription() {
+			return "[npc.speech(How about you start taking off some of your clothes?)] you [npc.moan].<br/><br/>"
+					+ "<i style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>[npc2.Name] is now able to manage [npc2.her] clothing.</i>";
+		}
+		@Override
+		public void applyEffects() {
+			Main.sex.setCanRemoveSelfClothing(Main.sex.getCharacterTargetedForSexAction(this), true);
+		}
+	};
+	
+	
+	public static final SexAction PLAYER_STOP_PARTNER_SELF = new SexAction(
+			SexActionType.SPECIAL,
+			ArousalIncrease.ONE_MINIMUM,
+			ArousalIncrease.ONE_MINIMUM,
+			CorruptionLevel.ZERO_PURE,
+			null,
+			SexParticipantType.NORMAL) {
+		
+		@Override
+		public String getActionTitle() {
+			return "Stop partner";
+		}
+
+		@Override
+		public String getActionDescription() {
+			return "Stop [npc2.name] from performing all self-penetrative actions.";
+		}
+
+		@Override
+		public boolean isBaseRequirementsMet() {
+			return !Main.sex.isMasturbation()
+					&& Main.sex.isCharacterSelfOngoingActionHappening(Main.sex.getCharacterTargetedForSexAction(this))
+					&& Main.sex.getSexControl(Main.sex.getCharacterPerformingAction())==SexControl.FULL
+					&& Main.sex.getCharacterPerformingAction().isPlayer();
+		}
+
+		@Override
+		public String getDescription() {
+			UtilText.nodeContentSB.setLength(0);
+			
+			if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), SexAreaOrifice.VAGINA)!=null) {
+				if(Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), SexAreaOrifice.VAGINA).contains(Main.sex.getCharacterTargetedForSexAction(this))) {
+					UtilText.nodeContentSB.append("[npc2.Name] lets out a disappointed [npc.moan] as you force [npc2.herHim] to stop stimulating [npc2.her] [npc2.pussy+].");
+				}
+			}
+			
+			if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), SexAreaOrifice.ANUS)!=null) {
+				if(Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), SexAreaOrifice.ANUS).contains(Main.sex.getCharacterTargetedForSexAction(this))) {
+					if(UtilText.nodeContentSB.length()!=0)
+						UtilText.nodeContentSB.append("<br/>");
+					UtilText.nodeContentSB.append("As you put an end to [npc2.namePos] self-stimulation of [npc2.her] [npc2.asshole], [npc2.she] lets out a pathetic whine.");
+				}
+			}
+			
+			if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), SexAreaOrifice.NIPPLE)!=null) {
+				if(Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), SexAreaOrifice.NIPPLE).contains(Main.sex.getCharacterTargetedForSexAction(this))) {
+					if(UtilText.nodeContentSB.length()!=0)
+						UtilText.nodeContentSB.append("<br/>");
+					UtilText.nodeContentSB.append("[npc2.Name] pouts at you as you force [npc2.herHim] to stop stimulating [npc2.her] [npc2.nipples+].");
+				}
+			}
+			
+			if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), SexAreaOrifice.MOUTH)!=null) {
+				if(Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), SexAreaOrifice.MOUTH).contains(Main.sex.getCharacterTargetedForSexAction(this))) {
+					if(UtilText.nodeContentSB.length()!=0)
+						UtilText.nodeContentSB.append("<br/>");
+					UtilText.nodeContentSB.append("[npc2.Name] lets out a disappointed [npc.moan] as you force [npc2.herHim] to stop using [npc2.her] mouth.");
+				}
+			}
+			
+			return UtilText.nodeContentSB.toString();
+		}
+
+		@Override
+		public void applyEffects() {
+			Main.sex.stopAllOngoingActions(Main.sex.getCharacterTargetedForSexAction(this), Main.sex.getCharacterTargetedForSexAction(this));
+		}
+	};
+	
+	public static final SexAction PARTNER_STOP_PLAYER_SELF = new SexAction(
+			SexActionType.ONGOING,
+			ArousalIncrease.ONE_MINIMUM,
+			ArousalIncrease.ONE_MINIMUM,
+			CorruptionLevel.ZERO_PURE,
+			null,
+			SexParticipantType.NORMAL) {
+		
+		@Override
+		public String getActionTitle() {
+			return "Stop player";
+		}
+
+		@Override
+		public String getActionDescription() {
+			return "";
+		}
+		
+		@Override
+		public boolean isBaseRequirementsMet() {
+			return Main.sex.isCharacterSelfOngoingActionHappening(Main.sex.getCharacterTargetedForSexAction(this))
+					&& !Main.sex.isAnyNonSelfOngoingActionHappening()
+					&& Main.sex.getSexControl(Main.sex.getCharacterPerformingAction())==SexControl.FULL
+					&& !Main.sex.getCharacterPerformingAction().isPlayer();
+		}
+
+		@Override
+		public String getDescription() {
+			UtilText.nodeContentSB.setLength(0);
+			
+			if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), SexAreaOrifice.VAGINA)!=null) {
+				if(Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), SexAreaOrifice.VAGINA).contains(Main.sex.getCharacterTargetedForSexAction(this))) {
+					UtilText.nodeContentSB.append("[npc.Name] lets out an angry growl as [npc.she] forces [npc2.name] to stop stimulating [npc2.her] [npc2.pussy+].");
+				}
+			}
+			
+			if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), SexAreaOrifice.ANUS)!=null) {
+				if(Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), SexAreaOrifice.ANUS).contains(Main.sex.getCharacterTargetedForSexAction(this))) {
+					if(UtilText.nodeContentSB.length()!=0)
+						UtilText.nodeContentSB.append("<br/>");
+					UtilText.nodeContentSB.append("As [npc.name] puts an end to [npc2.namePos] self-stimulation of [npc2.her] [npc2.asshole], [npc.she] growls menacingly at [npc2.herHim].");
+				}
+			}
+			
+			if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), SexAreaOrifice.NIPPLE)!=null) {
+				if(Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), SexAreaOrifice.NIPPLE).contains(Main.sex.getCharacterTargetedForSexAction(this))) {
+					if(UtilText.nodeContentSB.length()!=0)
+						UtilText.nodeContentSB.append("<br/>");
+					UtilText.nodeContentSB.append("[npc.Name] frowns at [npc2.name] as [npc.she] forces [npc2.herHim] to stop stimulating [npc2.her] [npc2.nipples+].");
+				}
+			}
+			
+			if (Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), SexAreaOrifice.MOUTH)!=null) {
+				if(Main.sex.getCharacterOngoingSexArea(Main.sex.getCharacterTargetedForSexAction(this), SexAreaOrifice.MOUTH).contains(Main.sex.getCharacterTargetedForSexAction(this))) {
+					if(UtilText.nodeContentSB.length()!=0)
+						UtilText.nodeContentSB.append("<br/>");
+					UtilText.nodeContentSB.append("[npc.Name] makes a disapproving clicking noise with [npc.her] [npc.tongue] as [npc.she] forces [npc2.name] to stop using [npc2.her] mouth.");
+				}
+			}
+			
+			return UtilText.nodeContentSB.toString();
+		}
+
+		@Override
+		public void applyEffects() {
+			Main.sex.stopAllOngoingActions(Main.sex.getCharacterTargetedForSexAction(this), Main.sex.getCharacterTargetedForSexAction(this));
+		}
+	};
+	
+	/**
+	 * Special end action for submissive NPCs who end up resisting, and who also have the power to stop sex.
+	 */
+	public static final SexAction PARTNER_STOP_SEX_NOT_HAVING_FUN = new SexAction(
+			SexActionType.SPECIAL,
+			ArousalIncrease.ONE_MINIMUM,
+			ArousalIncrease.ONE_MINIMUM,
+			CorruptionLevel.ZERO_PURE,
+			null,
+			SexParticipantType.NORMAL) {
+
+		@Override
+		public boolean isOverrideAvailableDuringResisting() {
+			return true;
+		}
+		@Override
+		public String getActionTitle() {
+			return "End sex";
+		}
+
+		@Override
+		public String getActionDescription() {
+			return "";
+		}
+
+		@Override
+		public boolean isBaseRequirementsMet() {
+			return !Main.sex.getCharacterPerformingAction().isPlayer()
+					&& (!Main.sex.getCharacterPerformingAction().isSlave() || !Main.sex.getAllParticipants().contains(Main.sex.getCharacterPerformingAction().getOwner()))
+					&& Main.sex.getSexControl(Main.sex.getCharacterPerformingAction())==SexControl.FULL
+					&& Main.sex.getSexPace(Main.sex.getCharacterPerformingAction())==SexPace.SUB_RESISTING
+					&& !Main.sex.getCharacterPerformingAction().hasFetish(Fetish.FETISH_NON_CON_SUB);
+			
+		}
+		
+		@Override
+		public SexActionPriority getPriority() {
+			return SexActionPriority.HIGH;
+		}
+		
+		@Override
+		public String getDescription() {
+			return "With an annoyed sigh, [npc.name] disentangles [npc.herself] from [npc2.namePos] clutches,"
+					+ " [npc.speechNoExtraEffects(Eugh... I'm not really feeling this right now, ok?)]";
+		}
+		
+		@Override
+		public boolean endsSex() {
+			return true;
+		}
+	};
+	
+	public static final SexAction PARTNER_STOP_SEX = new SexAction(
+			SexActionType.SPECIAL,
+			ArousalIncrease.ONE_MINIMUM,
+			ArousalIncrease.ONE_MINIMUM,
+			CorruptionLevel.ZERO_PURE,
+			null,
+			SexParticipantType.SELF) {
+		
+		@Override
+		public String getActionTitle() {
+			return Main.sex.isMasturbation()
+					?"Stop masturbating"
+					:"Stop sex";
+		}
+
+		@Override
+		public String getActionDescription() {
+			return "";
+		}
+
+		@Override
+		public boolean isBaseRequirementsMet() {
+			return Main.sex.isCharacterWantingToStopSex(Main.sex.getCharacterPerformingAction())
+					&& (!Main.sex.getAllParticipants(false).contains(Main.game.getPlayer()) || !Main.sex.isReadyToOrgasm(Main.game.getPlayer()))
+					&& !Main.sex.getCharacterPerformingAction().isPlayer();
+		}
+		
+		@Override
+		public SexActionPriority getPriority() {
+			return SexActionPriority.HIGH;
+		}
+		
+		@Override
+		public String getDescription() {
+			return Main.sex.getSexPositionSlot(Main.sex.getCharacterPerformingAction()).getGenericEndSexDescription(Main.sex.getCharacterPerformingAction(), Main.sex.getCharacterTargetedForSexAction(this));
+		}
+		
+		@Override
+		public SexParticipantType getParticipantType() {
+			return Main.sex.isMasturbation()?SexParticipantType.SELF:SexParticipantType.NORMAL;
+		}
+		
+		@Override
+		public boolean endsSex() {
+			return true;
+		}
+	};
+	
+	public static final SexAction PLAYER_STOP_SEX = new SexAction(
+			SexActionType.SPECIAL,
+			ArousalIncrease.ONE_MINIMUM,
+			ArousalIncrease.ONE_MINIMUM,
+			CorruptionLevel.ZERO_PURE,
+			null,
+			SexParticipantType.SELF) {
+
+		@Override
+		public String getActionTitle() {
+			if(Main.sex.isSpectator(Main.game.getPlayer()) && Main.sex.getInitialSexManager().isHidden(Main.game.getPlayer())) {
+				return "Stop watching";
+			}
+			return Main.sex.isMasturbation()
+					?"Stop masturbating"
+					:"Stop sex";
+		}
+		@Override
+		public String getActionDescription() {
+			if(Main.sex.isSpectator(Main.game.getPlayer()) && Main.sex.getInitialSexManager().isHidden(Main.game.getPlayer())) {
+				return "Back out and stop watching the sex scene unfold before you."
+						+ "<br/>This will still [style.boldSex(apply all applicable effects)] to the other sex participants as though the sex scene had fully taken place.";
+			}
+			return Main.sex.isMasturbation()
+					?"Put an end to your masturbation session."
+					:"Stop having sex with [npc2.name].";
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {
+			return Main.sex.getInitialSexManager().isPlayerAbleToStopSex()
+					&& Main.sex.getCharacterPerformingAction().isPlayer();
+		}
+		@Override
+		public String getDescription() {
+			return Main.sex.isSpectator(Main.game.getPlayer())
+					?"Having had enough of the show, you turn away and stop watching the sex scene unfold before you..."
+					:(Main.sex.isMasturbation()
+						?"Having had enough, you stop masturbating..."
+						:"Having had enough, you [pc.step] back and stop having sex...");
+		}
+		@Override
+		public SexParticipantType getParticipantType() {
+			return Main.sex.isMasturbation() || Main.sex.isSpectator(Main.game.getPlayer())
+					?SexParticipantType.SELF
+					:SexParticipantType.NORMAL;
+		}
+		@Override
+		public boolean endsSex() {
+			return true;
+		}
+		@Override
+		public String applyEndEffects(){
+			 // Generate effects when ending sex as hidden spectator, but do not assign it to the 'quickSexDescription' variable, as that's only used for display in PLAYER_QUICK_SEX
+			if(Main.sex.isSpectator(Main.game.getPlayer()) && Main.sex.getInitialSexManager().isHidden(Main.game.getPlayer())) {
+				generateQuickSexDescription();
+			}
+			return "";
+		}
+	};
+
+	public static final SexAction ROPE_BOUND = new SexAction(
+			SexActionType.SPECIAL,
+			ArousalIncrease.ZERO_NONE,
+			ArousalIncrease.ZERO_NONE,
+			CorruptionLevel.ZERO_PURE,
+			null,
+			SexParticipantType.NORMAL) {
+		@Override
+		public boolean isOverrideAvailableDuringResisting() {
+			return true;
+		}
+		@Override
+		public boolean isAvailableDuringImmobilisation(Collection<ImmobilisationType> types) {
+			return types.contains(ImmobilisationType.ROPE);
+		}
+		@Override
+		public String getActionTitle() {
+			return "[style.boldBad(Bound!)]";
+		}
+		@Override
+		public String getActionDescription() {
+			return "The ropes tied around your body are preventing you from making a move!";
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {
+			return Main.sex.getImmobilisationTypes(Main.sex.getCharacterPerformingAction()).containsKey(ImmobilisationType.ROPE)
+					&& !Main.sex.isCharacterInanimateFromImmobilisation(Main.sex.getCharacterPerformingAction());
+		}
+		@Override
+		public String getDescription() {
+			return UtilText.returnStringAtRandom(
+					"[npc.Name] [npc.verb(try)] to make a move, but the ropes binding [npc.herHim] in place are too strong, and [npc.she] [npc.verb(collapse)] back down, stunned.");
+		}
+		@Override
+		public List<AbstractFetish> getExtraFetishes(GameCharacter character) {
+			if(character.equals(Main.sex.getCharacterPerformingAction())) {
+				return Util.newArrayListOfValues(Fetish.FETISH_BONDAGE_VICTIM);
+			}
+			return null;
+		}
+	};
+
+	public static final SexAction CHAINS_BOUND = new SexAction(
+			SexActionType.SPECIAL,
+			ArousalIncrease.ZERO_NONE,
+			ArousalIncrease.ZERO_NONE,
+			CorruptionLevel.ZERO_PURE,
+			null,
+			SexParticipantType.NORMAL) {
+		@Override
+		public boolean isOverrideAvailableDuringResisting() {
+			return true;
+		}
+		@Override
+		public boolean isAvailableDuringImmobilisation(Collection<ImmobilisationType> types) {
+			return types.contains(ImmobilisationType.CHAINS);
+		}
+		@Override
+		public String getActionTitle() {
+			return "[style.boldBad(Bound!)]";
+		}
+		@Override
+		public String getActionDescription() {
+			return "The chains tied around your body are preventing you from making a move!";
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {
+			return Main.sex.getImmobilisationTypes(Main.sex.getCharacterPerformingAction()).containsKey(ImmobilisationType.CHAINS)
+					&& !Main.sex.isCharacterInanimateFromImmobilisation(Main.sex.getCharacterPerformingAction());
+		}
+		@Override
+		public String getDescription() {
+			return UtilText.returnStringAtRandom(
+					"[npc.Name] [npc.verb(try)] to make a move, but the chains binding [npc.herHim] in place are too strong, and [npc.she] [npc.verb(collapse)] back down, stunned.");
+		}
+		@Override
+		public List<AbstractFetish> getExtraFetishes(GameCharacter character) {
+			if(character.equals(Main.sex.getCharacterPerformingAction())) {
+				return Util.newArrayListOfValues(Fetish.FETISH_BONDAGE_VICTIM);
+			}
+			return null;
+		}
+	};
+
+	public static final SexAction STOCKS_BOUND = new SexAction(
+			SexActionType.SPECIAL,
+			ArousalIncrease.ZERO_NONE,
+			ArousalIncrease.ZERO_NONE,
+			CorruptionLevel.ZERO_PURE,
+			null,
+			SexParticipantType.NORMAL) {
+		@Override
+		public boolean isOverrideAvailableDuringResisting() {
+			return true;
+		}
+		@Override
+		public boolean isAvailableDuringImmobilisation(Collection<ImmobilisationType> types) {
+			return types.contains(ImmobilisationType.STOCKS);
+		}
+		@Override
+		public String getActionTitle() {
+			return "[style.boldBad(Bound!)]";
+		}
+		@Override
+		public String getActionDescription() {
+			return "Having been locked into a set of stocks, [npc.nameIsFull] prevented from making a move!";
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {
+			return Main.sex.getImmobilisationTypes(Main.sex.getCharacterPerformingAction()).containsKey(ImmobilisationType.STOCKS)
+					&& !Main.sex.isCharacterInanimateFromImmobilisation(Main.sex.getCharacterPerformingAction());
+		}
+		@Override
+		public String getDescription() {
+			return UtilText.returnStringAtRandom(
+					"[npc.Name] [npc.verb(try)] to make a move, but the set of stocks into which [npc.sheIs] locked are too strong, and so [npc.she] [npc.verb(remain)] completely immobilised.");
+		}
+		@Override
+		public List<AbstractFetish> getExtraFetishes(GameCharacter character) {
+			if(character.equals(Main.sex.getCharacterPerformingAction())) {
+				return Util.newArrayListOfValues(Fetish.FETISH_BONDAGE_VICTIM);
+			}
+			return null;
+		}
+	};
+	
+	// Spinneret:
+	
+	public static final SexAction SPINNERET_SPIN_CONDOM_SELF = new SexAction(
+			SexActionType.REQUIRES_NO_PENETRATION_AND_EXPOSED,
+			ArousalIncrease.ONE_MINIMUM,
+			ArousalIncrease.TWO_LOW,
+			CorruptionLevel.ONE_VANILLA,
+			Util.newHashMapOfValues(new Value<>(SexAreaOrifice.SPINNERET, SexAreaPenetration.PENIS)),
+			SexParticipantType.SELF) {
+		@Override
+		public SexActionCategory getCategory() {
+			return SexActionCategory.MISCELLANEOUS;
+		}
+		@Override
+		public String getActionTitle() {
+			return "Spin condom (self)";
+		}
+		@Override
+		public String getActionDescription() {
+			return "Use your spinneret to wrap your [npc.penis] in a condom-like binding of webbing.";
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {
+			return (Main.sex.getCharacterPerformingAction().isPlayer()
+						|| ((NPC) Main.sex.getCharacterPerformingAction()).isWantingToEquipCondom(Main.sex.getTargetedPartner(Main.sex.getCharacterPerformingAction())))
+					&& Main.sex.isCanRemoveSelfClothing(Main.sex.getCharacterPerformingAction())
+					&& Main.sex.getCharacterPerformingAction().hasPenisIgnoreDildo()
+					&& Main.sex.isClothingEquipAvailable(Main.sex.getCharacterPerformingAction(), InventorySlot.PENIS, null)
+					&& Main.sex.getCharacterPerformingAction().getClothingInSlot(InventorySlot.PENIS)==null;
+		}
+		@Override
+		public String getDescription() {
+			return "";
+		}
+		@Override
+		public String applyEffectsString() {
+			StringBuilder sb = new StringBuilder();
+			sb.append("<p>");
+			sb.append(Main.sex.getCharacterPerformingAction().equipClothingFromNowhere(
+					Main.game.getItemGen().generateClothing(ClothingType.getClothingTypeFromId("innoxia_penis_condom_webbing"), false), true, Main.sex.getCharacterPerformingAction()));
+			sb.append("</p>");
+			return sb.toString();
+		}
+	};
+	
+	public static final SexAction SPINNERET_SPIN_CONDOM_PARTNER = new SexAction(
+			SexActionType.REQUIRES_NO_PENETRATION_AND_EXPOSED,
+			ArousalIncrease.ONE_MINIMUM,
+			ArousalIncrease.TWO_LOW,
+			CorruptionLevel.ONE_VANILLA,
+			Util.newHashMapOfValues(new Value<>(SexAreaOrifice.SPINNERET, SexAreaPenetration.PENIS)),
+			SexParticipantType.NORMAL) {
+		@Override
+		public SexActionCategory getCategory() {
+			return SexActionCategory.MISCELLANEOUS;
+		}
+		@Override
+		public String getActionTitle() {
+			return "Spin condom";
+		}
+		@Override
+		public String getActionDescription() {
+			return "Use your spinneret to wrap [npc2.namePos] [npc2.penis] in a condom-like binding of webbing.";
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {
+			return (Main.sex.getCharacterPerformingAction().isPlayer()
+						|| ((NPC) Main.sex.getCharacterPerformingAction()).isWantingToEquipCondomOnPartner(Main.sex.getTargetedPartner(Main.sex.getCharacterPerformingAction())))
+					&& Main.sex.isCanRemoveOthersClothing(Main.sex.getCharacterPerformingAction(), null)
+					&& Main.sex.getCharacterTargetedForSexAction(this).hasPenisIgnoreDildo()
+					&& Main.sex.isClothingEquipAvailable(Main.sex.getCharacterTargetedForSexAction(this), InventorySlot.PENIS, null)
+					&& Main.sex.getCharacterTargetedForSexAction(this).getClothingInSlot(InventorySlot.PENIS)==null;
+		}
+		@Override
+		public String getDescription() {
+			return "";
+		}
+		@Override
+		public String applyEffectsString() {
+			StringBuilder sb = new StringBuilder();
+			sb.append("<p>");
+			sb.append(Main.sex.getCharacterTargetedForSexAction(this).equipClothingFromNowhere(
+					Main.game.getItemGen().generateClothing(ClothingType.getClothingTypeFromId("innoxia_penis_condom_webbing"), false), true, Main.sex.getCharacterPerformingAction()));
+			sb.append("</p>");
+			return sb.toString();
+		}
+	};
+	
+	public static final SexAction SPINNERET_SPIN_SEAL_VAGINA = new SexAction(
+			SexActionType.REQUIRES_NO_PENETRATION_AND_EXPOSED,
+			ArousalIncrease.ONE_MINIMUM,
+			ArousalIncrease.TWO_LOW,
+			CorruptionLevel.ONE_VANILLA,
+			Util.newHashMapOfValues(new Value<>(SexAreaOrifice.SPINNERET, SexAreaOrifice.VAGINA)),
+			SexParticipantType.NORMAL) {
+		@Override
+		public SexActionCategory getCategory() {
+			return SexActionCategory.MISCELLANEOUS;
+		}
+		@Override
+		public String getActionTitle() {
+			return "Spin pussy-seal";
+		}
+		@Override
+		public String getActionDescription() {
+			return "Use your spinneret to apply a thick binding of webbing over [npc2.namePos] [npc2.pussy].";
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {//TODO add behaviour for NPCs too
+			return Main.sex.getCharacterPerformingAction().isPlayer()
+					&& Main.sex.isCanRemoveOthersClothing(Main.sex.getCharacterPerformingAction(), null)
+					&& Main.sex.isClothingEquipAvailable(Main.sex.getCharacterTargetedForSexAction(this), InventorySlot.VAGINA, null)
+					&& Main.sex.getCharacterTargetedForSexAction(this).getClothingInSlot(InventorySlot.VAGINA)==null;
+		}
+		@Override
+		public String getDescription() {
+			return "";
+		}
+		@Override
+		public String applyEffectsString() {
+			StringBuilder sb = new StringBuilder();
+			sb.append("<p>");
+			sb.append(Main.sex.getCharacterTargetedForSexAction(this).equipClothingFromNowhere(
+					Main.game.getItemGen().generateClothing(ClothingType.getClothingTypeFromId("innoxia_webbing_seal_vagina"), false), true, Main.sex.getCharacterPerformingAction()));
+			sb.append("</p>");
+			return sb.toString();
+		}
+		@Override
+		public List<AbstractFetish> getExtraFetishes(GameCharacter character) {
+			if(character.equals(Main.sex.getCharacterPerformingAction())) {
+				return Util.newArrayListOfValues(Fetish.FETISH_BONDAGE_APPLIER);
+			} else if(character.equals(Main.sex.getCharacterTargetedForSexAction(this))) {
+				return Util.newArrayListOfValues(Fetish.FETISH_BONDAGE_VICTIM);
+			}
+			return null;
+		}
+	};
+
+	public static final SexAction SPINNERET_SPIN_SEAL_ANUS = new SexAction(
+			SexActionType.REQUIRES_NO_PENETRATION_AND_EXPOSED,
+			ArousalIncrease.ONE_MINIMUM,
+			ArousalIncrease.TWO_LOW,
+			CorruptionLevel.ONE_VANILLA,
+			Util.newHashMapOfValues(new Value<>(SexAreaOrifice.SPINNERET, SexAreaOrifice.ANUS)),
+			SexParticipantType.NORMAL) {
+		@Override
+		public SexActionCategory getCategory() {
+			return SexActionCategory.MISCELLANEOUS;
+		}
+		@Override
+		public String getActionTitle() {
+			return "Spin ass-seal";
+		}
+		@Override
+		public String getActionDescription() {
+			return "Use your spinneret to apply a thick binding of webbing over [npc2.namePos] [npc2.asshole].";
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {//TODO add behaviour for NPCs too
+			return Main.sex.getCharacterPerformingAction().isPlayer()
+					&& Main.sex.isCanRemoveOthersClothing(Main.sex.getCharacterPerformingAction(), null)
+					&& Main.sex.isClothingEquipAvailable(Main.sex.getCharacterTargetedForSexAction(this), InventorySlot.ANUS, null)
+					&& Main.sex.getCharacterTargetedForSexAction(this).getClothingInSlot(InventorySlot.ANUS)==null;
+		}
+		@Override
+		public String getDescription() {
+			return "";
+		}
+		@Override
+		public String applyEffectsString() {
+			StringBuilder sb = new StringBuilder();
+			sb.append("<p>");
+			sb.append(Main.sex.getCharacterTargetedForSexAction(this).equipClothingFromNowhere(
+					Main.game.getItemGen().generateClothing(ClothingType.getClothingTypeFromId("innoxia_webbing_seal_anus"), false), true, Main.sex.getCharacterPerformingAction()));
+			sb.append("</p>");
+			return sb.toString();
+		}
+		@Override
+		public List<AbstractFetish> getExtraFetishes(GameCharacter character) {
+			if(character.equals(Main.sex.getCharacterPerformingAction())) {
+				return Util.newArrayListOfValues(Fetish.FETISH_BONDAGE_APPLIER);
+			} else if(character.equals(Main.sex.getCharacterTargetedForSexAction(this))) {
+				return Util.newArrayListOfValues(Fetish.FETISH_BONDAGE_VICTIM);
+			}
+			return null;
+		}
+	};
+
+	public static final SexAction SPINNERET_SPIN_SEAL_NIPPLES = new SexAction(
+			SexActionType.REQUIRES_NO_PENETRATION_AND_EXPOSED,
+			ArousalIncrease.ONE_MINIMUM,
+			ArousalIncrease.TWO_LOW,
+			CorruptionLevel.ONE_VANILLA,
+			Util.newHashMapOfValues(new Value<>(SexAreaOrifice.SPINNERET, SexAreaOrifice.NIPPLE)),
+			SexParticipantType.NORMAL) {
+		@Override
+		public SexActionCategory getCategory() {
+			return SexActionCategory.MISCELLANEOUS;
+		}
+		@Override
+		public String getActionTitle() {
+			return "Spin nipple-seal";
+		}
+		@Override
+		public String getActionDescription() {
+			return "Use your spinneret to apply a thick binding of webbing over [npc2.namePos] [npc2.nipples].";
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {//TODO add behaviour for NPCs too
+			return Main.sex.getCharacterPerformingAction().isPlayer()
+					&& Main.sex.isCanRemoveOthersClothing(Main.sex.getCharacterPerformingAction(), null)
+					&& Main.sex.isClothingEquipAvailable(Main.sex.getCharacterTargetedForSexAction(this), InventorySlot.NIPPLE, null)
+					&& Main.sex.getCharacterTargetedForSexAction(this).getClothingInSlot(InventorySlot.NIPPLE)==null;
+		}
+		@Override
+		public String getDescription() {
+			return "";
+		}
+		@Override
+		public String applyEffectsString() {
+			StringBuilder sb = new StringBuilder();
+			sb.append("<p>");
+			sb.append(Main.sex.getCharacterTargetedForSexAction(this).equipClothingFromNowhere(
+					Main.game.getItemGen().generateClothing(ClothingType.getClothingTypeFromId("innoxia_webbing_seal_nipples"), false), true, Main.sex.getCharacterPerformingAction()));
+			sb.append("</p>");
+			return sb.toString();
+		}
+		@Override
+		public List<AbstractFetish> getExtraFetishes(GameCharacter character) {
+			if(character.equals(Main.sex.getCharacterPerformingAction())) {
+				return Util.newArrayListOfValues(Fetish.FETISH_BONDAGE_APPLIER);
+			} else if(character.equals(Main.sex.getCharacterTargetedForSexAction(this))) {
+				return Util.newArrayListOfValues(Fetish.FETISH_BONDAGE_VICTIM);
+			}
+			return null;
+		}
+	};
+
+	public static final SexAction SPINNERET_SPIN_SEAL_MOUTH = new SexAction(
+			SexActionType.REQUIRES_NO_PENETRATION_AND_EXPOSED,
+			ArousalIncrease.ONE_MINIMUM,
+			ArousalIncrease.TWO_LOW,
+			CorruptionLevel.ONE_VANILLA,
+			Util.newHashMapOfValues(new Value<>(SexAreaOrifice.SPINNERET, SexAreaOrifice.MOUTH)),
+			SexParticipantType.NORMAL) {
+		@Override
+		public SexActionCategory getCategory() {
+			return SexActionCategory.MISCELLANEOUS;
+		}
+		@Override
+		public String getActionTitle() {
+			return "Spin mouth-seal";
+		}
+		@Override
+		public String getActionDescription() {
+			return "Use your spinneret to apply a thick binding of webbing over [npc2.namePos] [npc2.mouth].";
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {//TODO add behaviour for NPCs too
+			return Main.sex.getCharacterPerformingAction().isPlayer()
+					&& Main.sex.isCanRemoveOthersClothing(Main.sex.getCharacterPerformingAction(), null)
+					&& Main.sex.isClothingEquipAvailable(Main.sex.getCharacterTargetedForSexAction(this), InventorySlot.MOUTH, null)
+					&& Main.sex.getCharacterTargetedForSexAction(this).getClothingInSlot(InventorySlot.MOUTH)==null;
+		}
+		@Override
+		public String getDescription() {
+			return "";
+		}
+		@Override
+		public String applyEffectsString() {
+			StringBuilder sb = new StringBuilder();
+			sb.append("<p>");
+			sb.append(Main.sex.getCharacterTargetedForSexAction(this).equipClothingFromNowhere(
+					Main.game.getItemGen().generateClothing(ClothingType.getClothingTypeFromId("innoxia_webbing_seal_mouth"), false), true, Main.sex.getCharacterPerformingAction()));
+			sb.append("</p>");
+			return sb.toString();
+		}
+		@Override
+		public List<AbstractFetish> getExtraFetishes(GameCharacter character) {
+			if(character.equals(Main.sex.getCharacterPerformingAction())) {
+				return Util.newArrayListOfValues(Fetish.FETISH_BONDAGE_APPLIER);
+			} else if(character.equals(Main.sex.getCharacterTargetedForSexAction(this))) {
+				return Util.newArrayListOfValues(Fetish.FETISH_BONDAGE_VICTIM);
+			}
+			return null;
+		}
+	};
+	
+	// Cocooning:
+	
+	public static final SexAction SPINNERET_COCOON_PARTNER = new SexAction(
+			SexActionType.REQUIRES_NO_PENETRATION_AND_EXPOSED,
+			ArousalIncrease.ONE_MINIMUM,
+			ArousalIncrease.TWO_LOW,
+			CorruptionLevel.ONE_VANILLA,
+			Util.newHashMapOfValues(new Value<>(SexAreaOrifice.SPINNERET, null)),
+			SexParticipantType.NORMAL) {
+		@Override
+		public SexActionPriority getPriority() {
+			return SexActionPriority.HIGH;
+		}
+		@Override
+		public SexActionCategory getCategory() {
+			return SexActionCategory.MISCELLANEOUS;
+		}
+		@Override
+		public Colour getHighlightColour() {
+			return PresetColour.BASE_BLUE_STEEL;
+		}
+		@Override
+		public String getActionTitle() {
+			return "Cocoon [npc2.herHim]";
+		}
+		@Override
+		public String getActionDescription() {
+			return "Use your spinneret to wrap [npc2.name] up in a cocoon.";
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {
+			return (Main.sex.getCharacterPerformingAction().isPlayer() || Main.sex.getCharacterPerformingAction().hasFetish(Fetish.FETISH_BONDAGE_APPLIER))
+					&& Main.sex.getSexControl(Main.sex.getCharacterPerformingAction()).getValue()>=SexControl.FULL.getValue()
+					&& !Main.sex.isCharacterImmobilised(Main.sex.getCharacterTargetedForSexAction(this));
+		}
+		@Override
+		public String getDescription() {
+			return "Not wanting [npc2.name] to try and make any move of [npc2.her] own, [npc.name] [npc.verb(point)] [npc.her] spinneret at [npc2.herHim], before starting to shoot out a continuous strand of thick, sticky webbing."
+					+ " Before [npc2.she] [npc2.verb(know)] what's happening, [npc2.namePos] [npc2.arms] and [npc2.legs] are completely restrained by the strong binding,"
+						+ " and after just a few moments more, [npc.name] [npc.has] completely wrapped [npc2.herHim] up in a cocoon."
+					+ " Smirking at [npc.her] handiwork, [npc.name] [npc.verb(prepare)] to make good use of the fact that [style.boldBad([npc2.name] [npc2.is] no longer able to move)].";
+		}
+		@Override
+		public void applyEffects() {
+			Main.sex.addCharacterImmobilised(ImmobilisationType.COCOON, Main.sex.getCharacterPerformingAction(), Main.sex.getCharacterTargetedForSexAction(this));
+		}
+		@Override
+		public List<AbstractFetish> getExtraFetishes(GameCharacter character) {
+			if(character.equals(Main.sex.getCharacterPerformingAction())) {
+				return Util.newArrayListOfValues(Fetish.FETISH_BONDAGE_APPLIER);
+			} else if(character.equals(Main.sex.getCharacterTargetedForSexAction(this))) {
+				return Util.newArrayListOfValues(Fetish.FETISH_BONDAGE_VICTIM);
+			}
+			return null;
+		}
+	};
+
+	public static final SexAction SPINNERET_COCOON_PARTNER_REMOVE = new SexAction(
+			SexActionType.SPECIAL,
+			ArousalIncrease.ONE_MINIMUM,
+			ArousalIncrease.TWO_LOW,
+			CorruptionLevel.ONE_VANILLA,
+			null,
+			SexParticipantType.NORMAL) {
+		@Override
+		public SexActionCategory getCategory() {
+			return SexActionCategory.MISCELLANEOUS;
+		}
+		@Override
+		public Colour getHighlightColour() {
+			return PresetColour.BASE_GREEN_LIME;
+		}
+		@Override
+		public String getActionTitle() {
+			return "Remove webbing";
+		}
+		@Override
+		public String getActionDescription() {
+			return "Tear off the webbing that's binding [npc2.name] into [npc2.her] cocoon.";
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {
+			return Main.sex.getCharacterPerformingAction().isPlayer()
+					&& Main.sex.getImmobilisationTypes(Main.sex.getCharacterTargetedForSexAction(this)).containsKey(ImmobilisationType.COCOON)
+					&& Main.sex.getSexControl(Main.sex.getCharacterPerformingAction()).getValue()>=SexControl.FULL.getValue();
+		}
+		@Override
+		public String getDescription() {
+			return "Deciding that [npc2.name] [npc2.has] had enough of being restrained, [npc.name] [npc.verb(set)] about tearing off the webbing that's binding [npc2.herHim] into [npc2.her] cocoon. "
+					+ " After just a few moments, [npc.name] [npc.has] managed to destroy all of the webbing, and as a result, [style.boldGood([npc2.name] [npc2.is] now able to move again)].";
+		}
+		@Override
+		public void applyEffects() {
+			Main.sex.removeCharacterImmobilised(Main.sex.getCharacterTargetedForSexAction(this), ImmobilisationType.COCOON);
+		}
+	};
+
+	public static final SexAction COCOONED = new SexAction(
+			SexActionType.SPECIAL,
+			ArousalIncrease.ZERO_NONE,
+			ArousalIncrease.ZERO_NONE,
+			CorruptionLevel.ZERO_PURE,
+			null,
+			SexParticipantType.NORMAL) {
+		@Override
+		public boolean isOverrideAvailableDuringResisting() {
+			return true;
+		}
+		@Override
+		public boolean isAvailableDuringImmobilisation(Collection<ImmobilisationType> types) {
+			return types.contains(ImmobilisationType.COCOON);
+		}
+		@Override
+		public String getActionTitle() {
+			return "[style.boldBad(Cocooned!)]";
+		}
+		@Override
+		public String getActionDescription() {
+			return "The cocoon of thick spider-webbing is preventing you from making a move!";
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {
+			return Main.sex.getImmobilisationTypes(Main.sex.getCharacterPerformingAction()).containsKey(ImmobilisationType.COCOON)
+					&& !Main.sex.isCharacterInanimateFromImmobilisation(Main.sex.getCharacterPerformingAction());
+		}
+		@Override
+		public String getDescription() {
+			return UtilText.returnStringAtRandom(
+					"[npc.Name] [npc.verb(try)] to make a move, but the cocoon binding [npc.herHim] in place is too strong, and [npc.she] [npc.verb(collapse)] back down, stunned.");
+		}
+		@Override
+		public List<AbstractFetish> getExtraFetishes(GameCharacter character) {
+			if(character.equals(Main.sex.getCharacterPerformingAction())) {
+				return Util.newArrayListOfValues(Fetish.FETISH_BONDAGE_VICTIM);
+			}
+			return null;
+		}
+	};
+	
+	// Tentacles:
+	
+	public static final SexAction TENTACLES_RESTRICT_PARTNER = new SexAction(
+			SexActionType.REQUIRES_EXPOSED,
+			ArousalIncrease.ZERO_NONE,
+			ArousalIncrease.ZERO_NONE,
+			CorruptionLevel.ONE_VANILLA,
+			Util.newHashMapOfValues(new Value<>(SexAreaPenetration.TENTACLE, null)),
+			SexParticipantType.NORMAL) {
+		@Override
+		public SexActionPriority getPriority() {
+			return SexActionPriority.HIGH;
+		}
+		@Override
+		public SexActionCategory getCategory() {
+			return SexActionCategory.MISCELLANEOUS;
+		}
+		@Override
+		public Colour getHighlightColour() {
+			return PresetColour.BASE_BLUE_STEEL;
+		}
+		@Override
+		public String getActionTitle() {
+			return "Tentacle restraint";
+		}
+		@Override
+		public String getActionDescription() {
+			return "Use your tentacles to hold [npc2.name] still and prevent [npc2.herHim] from moving.";
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {
+			return (Main.sex.getCharacterPerformingAction().isPlayer() || Main.sex.getCharacterPerformingAction().hasFetish(Fetish.FETISH_BONDAGE_APPLIER))
+					&& Main.sex.getSexControl(Main.sex.getCharacterPerformingAction()).getValue()>=SexControl.FULL.getValue()
+					&& !Main.sex.isCharacterImmobilised(Main.sex.getCharacterTargetedForSexAction(this));
+		}
+		@Override
+		public String getDescription() {
+			return "Not wanting [npc2.name] to try and make any move of [npc2.her] own, [npc.name] [npc.verb(grab)] [npc2.herHim] with [npc.her] [npc.tentacles] and [npc.verb(hold)] [npc2.herHim] firmly in place."
+					+ "  Smirking as [npc2.name] [npc2.verb(make)] a few futile attempts to struggle against [npc.her] tight embrace,"
+						+ " [npc.name] [npc.verb(prepare)] to make good use of the fact that [style.boldBad([npc2.name] [npc2.is] no longer able to move)].";
+		}
+		@Override
+		public void applyEffects() {
+			Main.sex.addCharacterImmobilised(ImmobilisationType.TENTACLE_RESTRICTION, Main.sex.getCharacterPerformingAction(), Main.sex.getCharacterTargetedForSexAction(this));
+		}
+		@Override
+		public List<AbstractFetish> getExtraFetishes(GameCharacter character) {
+			if(character.equals(Main.sex.getCharacterPerformingAction())) {
+				return Util.newArrayListOfValues(Fetish.FETISH_BONDAGE_APPLIER);
+			} else if(character.equals(Main.sex.getCharacterTargetedForSexAction(this))) {
+				return Util.newArrayListOfValues(Fetish.FETISH_BONDAGE_VICTIM);
+			}
+			return null;
+		}
+	};
+
+	public static final SexAction TENTACLES_RELEASE_PARTNER = new SexAction(
+			SexActionType.SPECIAL,
+			ArousalIncrease.ONE_MINIMUM,
+			ArousalIncrease.TWO_LOW,
+			CorruptionLevel.ONE_VANILLA,
+			null,
+			SexParticipantType.NORMAL) {
+		@Override
+		public SexActionCategory getCategory() {
+			return SexActionCategory.MISCELLANEOUS;
+		}
+		@Override
+		public Colour getHighlightColour() {
+			return PresetColour.BASE_GREEN_LIME;
+		}
+		@Override
+		public String getActionTitle() {
+			return "Release tentacles";
+		}
+		@Override
+		public String getActionDescription() {
+			return "Release your grip on [npc2.name] and allow [npc2.herHim] to freely move again.";
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {
+			return Main.sex.getCharacterPerformingAction().isPlayer()
+					&& Main.sex.getImmobilisationTypes(Main.sex.getCharacterTargetedForSexAction(this)).containsKey(ImmobilisationType.TENTACLE_RESTRICTION)
+					&& Main.sex.getSexControl(Main.sex.getCharacterPerformingAction()).getValue()>=SexControl.FULL.getValue();
+		}
+		@Override
+		public String getDescription() {
+			return "Deciding that [npc2.name] [npc2.has] had enough of being restrained, [npc.name] [npc.verb(begin)] to relax the grip of [npc.her] [npc.tentacles]. "
+					+ " Smirking in amusement at the relieved look on [npc2.namePos] face, [npc.name] completely [npc.verb(release)] [npc2.herHim] from [npc.her] tentacles' embrace,"
+						+ " and as a result, [style.boldGood([npc2.name] [npc2.is] now able to move again)].";
+		}
+		@Override
+		public void applyEffects() {
+			Main.sex.removeCharacterImmobilised(Main.sex.getCharacterTargetedForSexAction(this), ImmobilisationType.TENTACLE_RESTRICTION);
+		}
+	};
+
+	public static final SexAction TENTACLE_SQUEEZE = new SexAction(
+			SexActionType.SPECIAL,
+			ArousalIncrease.ONE_MINIMUM,
+			ArousalIncrease.ONE_MINIMUM,
+			CorruptionLevel.TWO_HORNY,
+			null,
+			SexParticipantType.NORMAL,
+			SexPace.DOM_ROUGH) {
+		@Override
+		public boolean isSadisticAction() {
+			return true;
+		}
+		@Override
+		public String getActionTitle() {
+			return "Tentacle-squeeze";
+		}
+		@Override
+		public String getActionDescription() {
+			return "Take advantage of the fact that you have [npc2.name] fully restrained in your tentacles to firmly squeeze and constrict [npc2.her] body.";
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {
+			return Main.sex.getImmobilisationTypes(Main.sex.getCharacterTargetedForSexAction(this)).containsKey(ImmobilisationType.TENTACLE_RESTRICTION)
+					&& Main.sex.getSexControl(Main.sex.getCharacterPerformingAction()).getValue()>=SexControl.FULL.getValue();
+		}
+		@Override
+		public String getDescription() {
+			boolean targetPlayer = Main.sex.getCharacterTargetedForSexAction(this).isPlayer();
+			StringBuilder sb = new StringBuilder();
+			sb.append(UtilText.returnStringAtRandom(
+					"Taking full advantage of the fact that [npc.she] [npc.has] [npc2.name] completely restrained in [npc.her] tentacles, [npc.name] [npc.verb(squeeze)] down and firmly [npc.verb(constrict)] [npc2.her] body,"
+							+ " causing [npc2.herHim] to let out a pathetic, choking gasp.",
+					"Wanting to show [npc2.name] that [npc2.sheIs] completely at [npc.her] mercy, [npc.name] firmly [npc.verb(squeeze)] [npc.her] tentacles down around [npc2.her] body,"
+							+ " which results in [npc2.herHim] making a series of progressively weaker and more desperate gasping noises.",
+					"In a display of complete dominance, [npc.name] firmly [npc.verb(squeeze)] [npc.her] tentacles down around [npc2.namePos] body,"
+							+ " delighting in the desperate, frantic gasps and struggles that [npc.sheIs] able to elicit from "+(targetPlayer?"you.":"[npc.her] partner."),
+					"Greatly enjoying [npc.her] position of dominance, [npc.name] slowly increases the strength of [npc.her] tentacles' grip around [npc2.namePos] body, until "+(targetPlayer?"you're":"[npc.her] partner is")
+						+" able to do nothing but weakly struggle and desperately gasp for breath.",
+					"Firmly tightening [npc.her] tentacles' grip around [npc2.namePos] body, [npc.name] [npc.verb(delight)] in squeezing the breath out of "+(targetPlayer?"your":"[npc.her] partner's")
+						+" lungs, and can't help but let out a dominant [npc.moan] as [npc.she] [npc.verb(feel)] [npc2.name] weakly struggling to break free."));
+
+			sb.append(UtilText.returnStringAtRandom(
+					" Only once [npc2.nameIsFull] starting to go limp [npc.do] [npc.name] finally relent, and by relaxing [npc.her] tentacles somewhat,"
+							+ " [npc.she] [npc.verb(allow)] [npc2.herHim] to catch [npc2.her] breath and come back to [npc2.her] senses.",
+					" Not wanting to go so far as to make [npc2.name] lose consciousness, [npc.name] only [npc.verb(choose)] to relax [npc.her] tentacles at the last moment,"
+							+ " allowing [npc2.name] to take a deep breath and come back from the brink of fainting.",
+					" After some time constricting [npc2.name] in this manner, [npc.name] [npc.verb(feel)] as though [npc.sheHas] pushed [npc2.herHim] far enough, and so after one final, tight squeeze,"
+							+ " [npc.she] [npc.verb(relax)] [npc.her] tentacles and [npc.verb(allow)] [npc2.name] to breathe freely once again.",
+					" Waiting until [npc.she] [npc.verb(sense)] that [npc2.nameIsFull] about to faint, [npc.name] [npc.verb(let)] out an amused [npc.moan],"
+							+ " before relaxing [npc.her] tentacles and granting [npc2.name] the ability to fill [npc2.her] lungs with oxygen.",
+					" Waiting until [npc2.nameIsFull] about to pass out, [npc.name] [npc.verb(let)] out an amused [npc.moan], before relaxing [npc.her] tentacles and allowing [npc2.name] to take a deep breath and recover from [npc2.her] asphyxiation."));
+			
+			return sb.toString();
+		}
+		@Override
+		public List<AbstractFetish> getExtraFetishes(GameCharacter character) {
+			if(character.equals(Main.sex.getCharacterPerformingAction())) {
+				return Util.newArrayListOfValues(Fetish.FETISH_SADIST, Fetish.FETISH_BONDAGE_APPLIER);
+			} else if(character.equals(Main.sex.getCharacterTargetedForSexAction(this))) {
+				return Util.newArrayListOfValues(Fetish.FETISH_MASOCHIST, Fetish.FETISH_BONDAGE_VICTIM);
+			}
+			return null;
+		}
+	};
+
+	public static final SexAction TENTACLE_MASSAGE = new SexAction(
+			SexActionType.SPECIAL,
+			ArousalIncrease.ONE_MINIMUM,
+			ArousalIncrease.ONE_MINIMUM,
+			CorruptionLevel.TWO_HORNY,
+			null,
+			SexParticipantType.NORMAL) {
+		@Override
+		public String getActionTitle() {
+			return "Tentacle-massage";
+		}
+		@Override
+		public String getActionDescription() {
+			return "Take advantage of the fact that you have [npc2.name] fully restrained in your tentacles to squeeze and massage [npc2.her] body.";
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {
+			return Main.sex.getImmobilisationTypes(Main.sex.getCharacterTargetedForSexAction(this)).containsKey(ImmobilisationType.TENTACLE_RESTRICTION)
+					&& Main.sex.getSexControl(Main.sex.getCharacterPerformingAction()).getValue()>=SexControl.FULL.getValue();
+		}
+		@Override
+		public String getDescription() {
+			boolean targetPlayer = Main.sex.getCharacterTargetedForSexAction(this).isPlayer();
+			StringBuilder sb = new StringBuilder();
+			sb.append(UtilText.returnStringAtRandom(
+					"Taking full advantage of the fact that [npc.she] [npc.has] [npc2.name] completely restrained in [npc.her] tentacles, [npc.name] [npc.verb(squeeze)] down and [npc.verb(massage)] [npc2.her] body.",
+					"Wanting to show [npc2.name] that [npc2.sheIs] completely at [npc.her] mercy, [npc.name] [npc.verb(squeeze)] [npc.her] tentacles down around [npc2.her] body and [npc.verb(start)] massaging [npc2.herHim].",
+					"In a display of dominance, [npc.name] firmly [npc.verb(squeeze)] [npc.her] tentacles down around [npc2.namePos] body, using [npc.her] grip to massage "+(targetPlayer?"your":"[npc.her] partner's")+" body.",
+					"Greatly enjoying [npc.her] position of dominance, [npc.name] [npc.verb(make)] full use of [npc.her] tentacles' grip around [npc2.namePos] body by squeezing down and massaging [npc2.herHim].",
+					"Firmly tightening [npc.her] tentacles' grip around [npc2.namePos] body, [npc.name] [npc.verb(delight)] in squeezing and massaging [npc2.herHim]."));
+			
+			if(Main.sex.getSexPace(Main.sex.getCharacterTargetedForSexAction(this))==SexPace.SUB_RESISTING) {
+				sb.append(UtilText.returnStringAtRandom(
+						" Although it's a complete impossibility, [npc2.name] [npc2.verb(continue)] to try and struggle free from [npc.namePos] grip, letting out a distressed cry as [npc2.she] [npc2.verb(realise)] that it's futile.",
+						" [npc2.Name] [npc2.verb(let)] out a frantic cry in response, before trying, and failing, to struggle free from [npc.namePos] embrace.",
+						" Refusing to accept [npc2.her] fate, [npc2.name] [npc2.verb(try)] to pull free from [npc.namePos] tight embrace, but [npc2.her] efforts prove to be in vain."));
+			} else {
+				sb.append(UtilText.returnStringAtRandom(
+						" Letting out [npc2.a_moan+], [npc2.name] [npc2.verb(relax)] and [npc2.verb(enjoy)] the sensual feeling of [npc.namePos] [npc.tentacles+] sliding over and pressing down against [npc.her] body.",
+						" [npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] in response, making it very clear that [npc2.sheIs] enjoying the feeling of being wrapped up in [npc.namePos] [npc.tentacles+].",
+						" Relaxing and enjoying the feeling of being wrapped up in [npc.namePos] [npc.tentacles+], [npc2.name] [npc2.verb(let)] [npc2.a_moan+] and [npc2.verb(encourage)] [npc.herHim] to continue the massage."));
+			}
+			
+			return sb.toString();
+		}
+		@Override
+		public List<AbstractFetish> getExtraFetishes(GameCharacter character) {
+			if(character.equals(Main.sex.getCharacterPerformingAction())) {
+				return Util.newArrayListOfValues(Fetish.FETISH_DOMINANT, Fetish.FETISH_BONDAGE_APPLIER);
+			} else if(character.equals(Main.sex.getCharacterTargetedForSexAction(this))) {
+				return Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE, Fetish.FETISH_BONDAGE_VICTIM);
+			}
+			return null;
+		}
+	};
+	
+	public static final SexAction TENTACLE_BOUND = new SexAction(
+			SexActionType.SPECIAL,
+			ArousalIncrease.ZERO_NONE,
+			ArousalIncrease.ZERO_NONE,
+			CorruptionLevel.ZERO_PURE,
+			null,
+			SexParticipantType.NORMAL) {
+		@Override
+		public boolean isOverrideAvailableDuringResisting() {
+			return true;
+		}
+		@Override
+		public boolean isAvailableDuringImmobilisation(Collection<ImmobilisationType> types) {
+			return types.contains(ImmobilisationType.TENTACLE_RESTRICTION);
+		}
+		@Override
+		public String getActionTitle() {
+			return "[style.boldBad(Tentacle-bound!)]";
+		}
+		@Override
+		public String getActionDescription() {
+			GameCharacter applier = Main.sex.getImmobilisationTypes(Main.sex.getCharacterPerformingAction()).get(ImmobilisationType.TENTACLE_RESTRICTION);
+			return UtilText.parse(applier, "[npc.NameIsFull] using [npc.her] tentacles to hold you in place, and as a result, you are unable to make a move!");
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {
+			return Main.sex.getImmobilisationTypes(Main.sex.getCharacterPerformingAction()).containsKey(ImmobilisationType.TENTACLE_RESTRICTION)
+					&& !Main.sex.isCharacterInanimateFromImmobilisation(Main.sex.getCharacterPerformingAction());
+		}
+		@Override
+		public String getDescription() {
+			GameCharacter applier = Main.sex.getImmobilisationTypes(Main.sex.getCharacterPerformingAction()).get(ImmobilisationType.TENTACLE_RESTRICTION);
+			return UtilText.parse(Main.sex.getCharacterPerformingAction(), applier,
+					"[npc.Name] [npc.verb(try)] to make a move, but [npc2.namePos] tentacle embrace is far too strong, and all [npc.she] can manage is to make a few pathetic squirming motions.");
+		}
+		@Override
+		public List<AbstractFetish> getExtraFetishes(GameCharacter character) {
+			if(character.equals(Main.sex.getCharacterPerformingAction())) {
+				return Util.newArrayListOfValues(Fetish.FETISH_BONDAGE_VICTIM);
+			}
+			return null;
+		}
+	};
+	
+	// Witch's seal:
+
+	public static final SexAction WITCH_SEAL_CAST = new SexAction(
+			SexActionType.SPECIAL,
+			ArousalIncrease.ZERO_NONE,
+			ArousalIncrease.ZERO_NONE,
+			CorruptionLevel.ONE_VANILLA,
+			null,
+			SexParticipantType.NORMAL) {
+		@Override
+		public SexActionCategory getCategory() {
+			return SexActionCategory.MISCELLANEOUS;
+		}
+		@Override
+		public Colour getHighlightColour() {
+			return PresetColour.SPELL_SCHOOL_ARCANE;
+		}
+		@Override
+		public String getActionTitle() {
+			return "Cast '"+Spell.WITCH_SEAL.getName()+"'";
+		}
+		@Override
+		public String getActionDescription() {
+			return "Cast the spell '"+Spell.WITCH_SEAL.getName()+"' on [npc2.name] to immobilise [npc2.herHim] and completely prevent [npc2.herHim] from moving.";
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {
+			return Main.sex.getCharacterPerformingAction().isPlayer() // Only allow player to use this
+					&& Main.sex.getCharacterPerformingAction().hasSpell(Spell.WITCH_SEAL, true)
+					&& Main.sex.getSexControl(Main.sex.getCharacterPerformingAction()).getValue()>=SexControl.FULL.getValue()
+					&& !Main.sex.isCharacterImmobilised(Main.sex.getCharacterTargetedForSexAction(this));
+		}
+		@Override
+		public String getDescription() {
+			return "Not wanting [npc2.name] to try and make any move of [npc2.her] own, [npc.name] [npc.verb(prepare)] to cast the spell '"+Spell.WITCH_SEAL.getName()+"' on [npc2.herHim]."
+					+ " Concentrating on the arcane power within [npc.her] broomstick, [npc.name] [npc.verb(summon)] forth a powerful seal, which traps [npc2.name] in place!"
+						+ " Having successfully cast [npc.her] spell, [npc.name] [npc.verb(prepare)] to make good use of the fact that [style.boldBad([npc2.name] [npc2.is] no longer able to move)].";
+		}
+		@Override
+		public void applyEffects() {
+			Main.sex.addCharacterImmobilised(ImmobilisationType.WITCH_SEAL, Main.sex.getCharacterPerformingAction(), Main.sex.getCharacterTargetedForSexAction(this));
+		}
+		@Override
+		public List<AbstractFetish> getExtraFetishes(GameCharacter character) {
+			if(character.equals(Main.sex.getCharacterPerformingAction())) {
+				return Util.newArrayListOfValues(Fetish.FETISH_BONDAGE_APPLIER);
+			} else if(character.equals(Main.sex.getCharacterTargetedForSexAction(this))) {
+				return Util.newArrayListOfValues(Fetish.FETISH_BONDAGE_VICTIM);
+			}
+			return null;
+		}
+	};
+	
+	public static final SexAction WITCH_SEALED = new SexAction(
+			SexActionType.SPECIAL,
+			ArousalIncrease.ZERO_NONE,
+			ArousalIncrease.ZERO_NONE,
+			CorruptionLevel.ZERO_PURE,
+			null,
+			SexParticipantType.NORMAL) {
+		@Override
+		public boolean isOverrideAvailableDuringResisting() {
+			return true;
+		}
+		@Override
+		public boolean isAvailableDuringImmobilisation(Collection<ImmobilisationType> types) {
+			return types.contains(ImmobilisationType.WITCH_SEAL);
+		}
+		@Override
+		public String getActionTitle() {
+			return "[style.boldBad(Sealed!)]";
+		}
+		@Override
+		public String getActionDescription() {
+			GameCharacter applier = Main.sex.getImmobilisationTypes(Main.sex.getCharacterPerformingAction()).get(ImmobilisationType.WITCH_SEAL);
+			return UtilText.parse(applier, "The Witch's Seal that [npc.name] cast on you is preventing you from making a move!");
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {
+			return Main.sex.getImmobilisationTypes(Main.sex.getCharacterPerformingAction()).containsKey(ImmobilisationType.WITCH_SEAL)
+					&& !Main.sex.isCharacterInanimateFromImmobilisation(Main.sex.getCharacterPerformingAction());
+		}
+		@Override
+		public String getDescription() {
+			if(Main.sex.getInitialSexManager() instanceof SMAltarMissionarySealed) {
+				return UtilText.returnStringAtRandom(
+						"[npc.Name] [npc.verb(try)] to make a move, but the Witch's Seal is too strong, and [npc.she] [npc.verb(collapse)] back onto the altar, stunned.",
+						"The purple glow of a pentagram materialises beneath [npc.namePos] body as [npc.she] [npc.verb(try)] to make a move; proof that the Witch's Seal is still keeping [npc.herHim] bound in place.",
+						"[npc.Name] [npc.verb(try)] to sit up on the altar, but [npc.sheIs] only able to squirm about a little under the immobilising effects of the Witch's Seal.",
+						"The soft purple glow of the Witch's Seal can be seen all around [npc.name] as [npc.she] [npc.verb(struggle)] to make a move.",
+						"[npc.speech(~Mmm!~)] [npc.name] [npc.verb(moan)], struggling in vain against the Witch's Seal.",
+						"[npc.speech(~Aah!~)] [npc.name] [npc.verb(whimper)], squirming about on the altar as the Witch's Seal keeps [npc.herHim] locked in place.");
+				
+			} else {
+				return UtilText.returnStringAtRandom(
+						"[npc.Name] [npc.verb(try)] to make a move, but the Witch's Seal is too strong, and [npc.she] [npc.verb(collapse)] back into position, stunned.",
+						"The purple glow of a pentagram materialises beneath [npc.namePos] body as [npc.she] [npc.verb(try)] to make a move; proof that the Witch's Seal is still keeping [npc.herHim] bound in place.",
+						"[npc.Name] [npc.verb(try)] to move, but [npc.sheIs] only able to squirm about a little under the immobilising effects of the Witch's Seal.",
+						"The soft purple glow of the Witch's Seal can be seen all around [npc.name] as [npc.she] [npc.verb(struggle)] to make a move.",
+						"[npc.speech(~Mmm!~)] [npc.name] [npc.verb(moan)], struggling in vain against the Witch's Seal.",
+						"[npc.speech(~Aah!~)] [npc.name] [npc.verb(whimper)], squirming about as the Witch's Seal keeps [npc.herHim] locked in place.");
+			}
+		}
+		@Override
+		public List<AbstractFetish> getExtraFetishes(GameCharacter character) {
+			if(character.equals(Main.sex.getCharacterPerformingAction())) {
+				return Util.newArrayListOfValues(Fetish.FETISH_BONDAGE_VICTIM);
+			}
+			return null;
+		}
+	};
+
+	public static final SexAction WITCH_SEAL_BREAK = new SexAction(
+			SexActionType.SPECIAL,
+			ArousalIncrease.ONE_MINIMUM,
+			ArousalIncrease.TWO_LOW,
+			CorruptionLevel.ONE_VANILLA,
+			null,
+			SexParticipantType.NORMAL) {
+		@Override
+		public SexActionCategory getCategory() {
+			return SexActionCategory.MISCELLANEOUS;
+		}
+		@Override
+		public Colour getHighlightColour() {
+			return PresetColour.SPELL_SCHOOL_ARCANE;
+		}
+		@Override
+		public String getActionTitle() {
+			return "Dispel '"+Spell.WITCH_SEAL.getName()+"'";
+		}
+		@Override
+		public String getActionDescription() {
+			return "Cancel the spell '"+Spell.WITCH_SEAL.getName()+"' that you've cast on [npc2.name], allowing [npc2.herHim] to freely move again.";
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {
+			return Main.sex.getCharacterPerformingAction().isPlayer()
+					&& Main.sex.getImmobilisationTypes(Main.sex.getCharacterTargetedForSexAction(this)).containsKey(ImmobilisationType.WITCH_SEAL)
+					&& Main.sex.getSexControl(Main.sex.getCharacterPerformingAction()).getValue()>=SexControl.FULL.getValue();
+		}
+		@Override
+		public String getDescription() {
+			return "Deciding that [npc2.name] [npc2.has] had enough of being immobilised, [npc.name] [npc.verb(prepare)] to dispel the effect of the spell, '"+Spell.WITCH_SEAL.getName()+"'. "
+					+ " Taking a deep breath and concentrating on [npc.her] arcane power, [npc.name] [npc.verb(break)] the spell, and as a result, [style.boldGood([npc2.name] [npc2.is] now able to move again)].";
+		}
+		@Override
+		public void applyEffects() {
+			Main.sex.removeCharacterImmobilised(Main.sex.getCharacterTargetedForSexAction(this), ImmobilisationType.WITCH_SEAL);
+		}
+	};
+	
+	// Tentacles:
+	
+	public static final SexAction TAIL_CONSTRICTION_RESTRICT_PARTNER = new SexAction(
+			SexActionType.REQUIRES_EXPOSED,
+			ArousalIncrease.ZERO_NONE,
+			ArousalIncrease.ZERO_NONE,
+			CorruptionLevel.ONE_VANILLA,
+			null,
+			SexParticipantType.NORMAL) {
+		@Override
+		public SexActionPriority getPriority() {
+			return SexActionPriority.HIGH;
+		}
+		@Override
+		public SexActionCategory getCategory() {
+			return SexActionCategory.MISCELLANEOUS;
+		}
+		@Override
+		public Colour getHighlightColour() {
+			return PresetColour.BASE_BLUE_STEEL;
+		}
+		@Override
+		public String getActionTitle() {
+			return "Constrict";
+		}
+		@Override
+		public String getActionDescription() {
+			return "Wrap your long tail around [npc2.name] and constrict [npc2.herHim] in order to prevent [npc2.herHim] from moving.";
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {
+			if(Main.sex.getCharactersImmobilised().containsKey(ImmobilisationType.TAIL_CONSTRICTION)
+					&& Main.sex.getCharactersImmobilised().get(ImmobilisationType.TAIL_CONSTRICTION).containsKey(Main.sex.getCharacterPerformingAction())) {
+				return false; // If performing character is engaged in ongoing long-tail constriction, return false (as can only restrict one at a time).
+			}
+			return Main.sex.getCharacterPerformingAction().getLegConfiguration()==LegConfiguration.TAIL_LONG
+					&& (Main.sex.getCharacterPerformingAction().isPlayer() || Main.sex.getCharacterPerformingAction().hasFetish(Fetish.FETISH_BONDAGE_APPLIER))
+					&& Main.sex.getSexControl(Main.sex.getCharacterPerformingAction()).getValue()>=SexControl.FULL.getValue()
+					&& !Main.sex.isCharacterImmobilised(Main.sex.getCharacterTargetedForSexAction(this));
+		}
+		@Override
+		public String getDescription() {
+			return "Not wanting [npc2.name] to try and make any move of [npc2.her] own, [npc.name] [npc.verb(wrap)] [npc.her] long tail around [npc2.herHim] and [npc.verb(squeeze)] tight, locking [npc2.herHim] firmly in place."
+					+ "  Smirking as [npc2.name] [npc2.verb(make)] a few futile attempts to struggle against [npc.her] constricting coils,"
+						+ " [npc.name] [npc.verb(prepare)] to make good use of the fact that [style.boldBad([npc2.name] [npc2.is] no longer able to move)].";
+		}
+		@Override
+		public void applyEffects() {
+			Main.sex.addCharacterImmobilised(ImmobilisationType.TAIL_CONSTRICTION, Main.sex.getCharacterPerformingAction(), Main.sex.getCharacterTargetedForSexAction(this));
+		}
+		@Override
+		public List<AbstractFetish> getExtraFetishes(GameCharacter character) {
+			if(character.equals(Main.sex.getCharacterPerformingAction())) {
+				return Util.newArrayListOfValues(Fetish.FETISH_BONDAGE_APPLIER);
+			} else if(character.equals(Main.sex.getCharacterTargetedForSexAction(this))) {
+				return Util.newArrayListOfValues(Fetish.FETISH_BONDAGE_VICTIM);
+			}
+			return null;
+		}
+	};
+
+	public static final SexAction TAIL_CONSTRICTION_RELEASE_PARTNER = new SexAction(
+			SexActionType.SPECIAL,
+			ArousalIncrease.ONE_MINIMUM,
+			ArousalIncrease.TWO_LOW,
+			CorruptionLevel.ONE_VANILLA,
+			null,
+			SexParticipantType.NORMAL) {
+		@Override
+		public SexActionCategory getCategory() {
+			return SexActionCategory.MISCELLANEOUS;
+		}
+		@Override
+		public Colour getHighlightColour() {
+			return PresetColour.BASE_GREEN_LIME;
+		}
+		@Override
+		public String getActionTitle() {
+			return "Release constriction";
+		}
+		@Override
+		public String getActionDescription() {
+			return "Release your grip on [npc2.name] and allow [npc2.herHim] to freely move again.";
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {
+			return Main.sex.getCharacterPerformingAction().isPlayer()
+					&& Main.sex.getImmobilisationTypes(Main.sex.getCharacterTargetedForSexAction(this)).containsKey(ImmobilisationType.TAIL_CONSTRICTION)
+					&& Main.sex.getSexControl(Main.sex.getCharacterPerformingAction()).getValue()>=SexControl.FULL.getValue();
+		}
+		@Override
+		public String getDescription() {
+			return "Deciding that [npc2.name] [npc2.has] had enough of being restrained, [npc.name] [npc.verb(begin)] to relax the tight coils of [npc.her] long tail. "
+					+ " Smirking in amusement at the relieved look on [npc2.namePos] face, [npc.name] completely [npc.verb(release)] [npc2.herHim] from [npc.her] embrace,"
+						+ " and as a result, [style.boldGood([npc2.name] [npc2.is] now able to move again)].";
+		}
+		@Override
+		public void applyEffects() {
+			Main.sex.removeCharacterImmobilised(Main.sex.getCharacterTargetedForSexAction(this), ImmobilisationType.TAIL_CONSTRICTION);
+		}
+	};
+
+	public static final SexAction TAIL_SQUEEZE = new SexAction(
+			SexActionType.SPECIAL,
+			ArousalIncrease.ONE_MINIMUM,
+			ArousalIncrease.ONE_MINIMUM,
+			CorruptionLevel.TWO_HORNY,
+			null,
+			SexParticipantType.NORMAL,
+			SexPace.DOM_ROUGH) {
+		@Override
+		public boolean isSadisticAction() {
+			return true;
+		}
+		@Override
+		public String getActionTitle() {
+			return "Tail-squeeze";
+		}
+		@Override
+		public String getActionDescription() {
+			return "Take advantage of the fact that you have [npc2.name] fully restrained in your tail to firmly squeeze and constrict [npc2.her] body.";
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {
+			return Main.sex.getImmobilisationTypes(Main.sex.getCharacterTargetedForSexAction(this)).containsKey(ImmobilisationType.TAIL_CONSTRICTION)
+					&& Main.sex.getSexControl(Main.sex.getCharacterPerformingAction()).getValue()>=SexControl.FULL.getValue();
+		}
+		@Override
+		public String getDescription() {
+			boolean targetPlayer = Main.sex.getCharacterTargetedForSexAction(this).isPlayer();
+			StringBuilder sb = new StringBuilder();
+			sb.append(UtilText.returnStringAtRandom(
+					"Taking full advantage of the fact that [npc.she] [npc.has] [npc2.name] completely restrained in [npc.her] tail, [npc.name] [npc.verb(squeeze)] down and firmly [npc.verb(constrict)] [npc2.her] body,"
+							+ " causing [npc2.herHim] to let out a pathetic, choking gasp.",
+					"Wanting to show [npc2.name] that [npc2.sheIs] completely at [npc.her] mercy, [npc.name] firmly [npc.verb(squeeze)] [npc.her] tail down around [npc2.her] body,"
+							+ " which results in [npc2.herHim] making a series of progressively weaker and more desperate gasping noises.",
+					"In a display of complete dominance, [npc.name] firmly [npc.verb(squeeze)] [npc.her] tail down around [npc2.namePos] body,"
+							+ " delighting in the desperate, frantic gasps and struggles that [npc.sheIs] able to elicit from "+(targetPlayer?"you.":"[npc.her] partner."),
+					"Greatly enjoying [npc.her] position of dominance, [npc.name] slowly increases the strength of [npc.her] tail's grip around [npc2.namePos] body, until "+(targetPlayer?"you're":"[npc.her] partner is")
+						+" able to do nothing but weakly struggle and desperately gasp for breath.",
+					"Firmly tightening [npc.her] tail's grip around [npc2.namePos] body, [npc.name] [npc.verb(delight)] in squeezing the breath out of "+(targetPlayer?"your":"[npc.her] partner's")
+						+" lungs, and can't help but let out a dominant [npc.moan] as [npc.she] [npc.verb(feel)] [npc2.name] weakly struggling to break free."));
+			
+			sb.append(UtilText.returnStringAtRandom(
+					" Only once [npc2.nameIsFull] starting to go limp [npc.do] [npc.name] finally relent, and by relaxing [npc.her] tail somewhat,"
+							+ " [npc.she] [npc.verb(allow)] [npc2.herHim] to catch [npc2.her] breath and come back to [npc2.her] senses.",
+					" Not wanting to go so far as to make [npc2.name] lose consciousness, [npc.name] only [npc.verb(choose)] to relax [npc.her] tail at the last moment,"
+							+ " allowing [npc2.name] to take a deep breath and come back from the brink of fainting.",
+					" After some time constricting [npc2.name] in this manner, [npc.name] [npc.verb(feel)] as though [npc.sheHas] pushed [npc2.herHim] far enough, and so after one final, tight squeeze,"
+							+ " [npc.she] [npc.verb(relax)] [npc.her] tail and [npc.verb(allow)] [npc2.name] to breathe freely once again.",
+					" Waiting until [npc.she] [npc.verb(sense)] that [npc2.nameIsFull] about to faint, [npc.name] [npc.verb(let)] out an amused [npc.moan],"
+							+ " before relaxing [npc.her] tail and granting [npc2.name] the ability to fill [npc2.her] lungs with oxygen.",
+					" Waiting until [npc2.nameIsFull] about to pass out, [npc.name] [npc.verb(let)] out an amused [npc.moan], before relaxing [npc.her] tail and allowing [npc2.name] to take a deep breath and recover from [npc2.her] asphyxiation."));
+			
+			return sb.toString();
+		}
+		@Override
+		public List<AbstractFetish> getExtraFetishes(GameCharacter character) {
+			if(character.equals(Main.sex.getCharacterPerformingAction())) {
+				return Util.newArrayListOfValues(Fetish.FETISH_SADIST, Fetish.FETISH_BONDAGE_APPLIER);
+			} else if(character.equals(Main.sex.getCharacterTargetedForSexAction(this))) {
+				return Util.newArrayListOfValues(Fetish.FETISH_MASOCHIST, Fetish.FETISH_BONDAGE_VICTIM);
+			}
+			return null;
+		}
+	};
+
+	public static final SexAction TAIL_MASSAGE = new SexAction(
+			SexActionType.SPECIAL,
+			ArousalIncrease.ONE_MINIMUM,
+			ArousalIncrease.ONE_MINIMUM,
+			CorruptionLevel.TWO_HORNY,
+			null,
+			SexParticipantType.NORMAL) {
+		@Override
+		public String getActionTitle() {
+			return "Tail-massage";
+		}
+		@Override
+		public String getActionDescription() {
+			return "Take advantage of the fact that you have [npc2.name] fully restrained in your tail to squeeze and massage [npc2.her] body.";
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {
+			return Main.sex.getImmobilisationTypes(Main.sex.getCharacterTargetedForSexAction(this)).containsKey(ImmobilisationType.TAIL_CONSTRICTION)
+					&& Main.sex.getSexControl(Main.sex.getCharacterPerformingAction()).getValue()>=SexControl.FULL.getValue();
+		}
+		@Override
+		public String getDescription() {
+			boolean targetPlayer = Main.sex.getCharacterTargetedForSexAction(this).isPlayer();
+			StringBuilder sb = new StringBuilder();
+			sb.append(UtilText.returnStringAtRandom(
+					"Taking full advantage of the fact that [npc.she] [npc.has] [npc2.name] completely restrained in [npc.her] tail, [npc.name] [npc.verb(squeeze)] down and [npc.verb(massage)] [npc2.her] body.",
+					"Wanting to show [npc2.name] that [npc2.sheIs] completely at [npc.her] mercy, [npc.name] [npc.verb(squeeze)] [npc.her] tail down around [npc2.her] body and [npc.verb(start)] massaging [npc2.herHim].",
+					"In a display of dominance, [npc.name] firmly [npc.verb(squeeze)] [npc.her] tail down around [npc2.namePos] body, using [npc.her] grip to massage "+(targetPlayer?"your":"[npc.her] partner's")+" body.",
+					"Greatly enjoying [npc.her] position of dominance, [npc.name] [npc.verb(make)] full use of [npc.her] tail' grip around [npc2.namePos] body by squeezing down and massaging [npc2.herHim].",
+					"Firmly tightening [npc.her] tail' grip around [npc2.namePos] body, [npc.name] [npc.verb(delight)] in squeezing and massaging [npc2.herHim]."));
+			
+			if(Main.sex.getSexPace(Main.sex.getCharacterTargetedForSexAction(this))==SexPace.SUB_RESISTING) {
+				sb.append(UtilText.returnStringAtRandom(
+						" Although it's a complete impossibility, [npc2.name] [npc2.verb(continue)] to try and struggle free from [npc.namePos] grip, letting out a distressed cry as [npc2.she] [npc2.verb(realise)] that it's futile.",
+						" [npc2.Name] [npc2.verb(let)] out a frantic cry in response, before trying, and failing, to struggle free from [npc.namePos] embrace.",
+						" Refusing to accept [npc2.her] fate, [npc2.name] [npc2.verb(try)] to pull free from [npc.namePos] tight embrace, but [npc2.her] efforts prove to be in vain."));
+			} else {
+				sb.append(UtilText.returnStringAtRandom(
+						" Letting out [npc2.a_moan+], [npc2.name] [npc2.verb(relax)] and [npc2.verb(enjoy)] the sensual feeling of [npc.namePos] tail sliding over and pressing down against [npc.her] body.",
+						" [npc2.Name] [npc2.verb(let)] out [npc2.a_moan+] in response, making it very clear that [npc2.sheIs] enjoying the feeling of being wrapped up in [npc.namePos] tail.",
+						" Relaxing and enjoying the feeling of being wrapped up in [npc.namePos] tail, [npc2.name] [npc2.verb(let)] [npc2.a_moan+] and [npc2.verb(encourage)] [npc.herHim] to continue the massage."));
+			}
+			
+			return sb.toString();
+		}
+		@Override
+		public List<AbstractFetish> getExtraFetishes(GameCharacter character) {
+			if(character.equals(Main.sex.getCharacterPerformingAction())) {
+				return Util.newArrayListOfValues(Fetish.FETISH_DOMINANT, Fetish.FETISH_BONDAGE_APPLIER);
+			} else if(character.equals(Main.sex.getCharacterTargetedForSexAction(this))) {
+				return Util.newArrayListOfValues(Fetish.FETISH_SUBMISSIVE, Fetish.FETISH_BONDAGE_VICTIM);
+			}
+			return null;
+		}
+	};
+
+	public static final SexAction TAIL_CONSTRICTED = new SexAction(
+			SexActionType.SPECIAL,
+			ArousalIncrease.ZERO_NONE,
+			ArousalIncrease.ZERO_NONE,
+			CorruptionLevel.ZERO_PURE,
+			null,
+			SexParticipantType.NORMAL) {
+		@Override
+		public boolean isOverrideAvailableDuringResisting() {
+			return true;
+		}
+		@Override
+		public boolean isAvailableDuringImmobilisation(Collection<ImmobilisationType> types) {
+			return types.contains(ImmobilisationType.TAIL_CONSTRICTION);
+		}
+		@Override
+		public String getActionTitle() {
+			return "[style.boldBad(Constricted!)]";
+		}
+		@Override
+		public String getActionDescription() {
+			GameCharacter applier = Main.sex.getImmobilisationTypes(Main.sex.getCharacterPerformingAction()).get(ImmobilisationType.TAIL_CONSTRICTION);
+			return UtilText.parse(applier, "[npc.Name] is using [npc.her] long tail to hold you in place, and as a result, you are unable to make a move!");
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {
+			return Main.sex.getImmobilisationTypes(Main.sex.getCharacterPerformingAction()).containsKey(ImmobilisationType.TAIL_CONSTRICTION)
+					&& !Main.sex.isCharacterInanimateFromImmobilisation(Main.sex.getCharacterPerformingAction());
+		}
+		@Override
+		public String getDescription() {
+			GameCharacter applier = Main.sex.getImmobilisationTypes(Main.sex.getCharacterPerformingAction()).get(ImmobilisationType.TAIL_CONSTRICTION);
+			return UtilText.parse(Main.sex.getCharacterPerformingAction(), applier,
+					"[npc.Name] [npc.verb(try)] to make a move, but [npc2.namePos] constricting tail is far too strong, and all [npc.she] can manage is to make a few pathetic squirming motions.");
+		}
+		@Override
+		public List<AbstractFetish> getExtraFetishes(GameCharacter character) {
+			if(character.equals(Main.sex.getCharacterPerformingAction())) {
+				return Util.newArrayListOfValues(Fetish.FETISH_BONDAGE_VICTIM);
+			}
+			return null;
+		}
+	};
+	
+
+	// Command:
+
+	public static final SexAction COMMAND_IMMOBILE = new SexAction(
+			SexActionType.SPECIAL,
+			ArousalIncrease.ZERO_NONE,
+			ArousalIncrease.ZERO_NONE,
+			CorruptionLevel.ONE_VANILLA,
+			null,
+			SexParticipantType.NORMAL) {
+		@Override
+		public SexActionPriority getPriority() {
+			if(Main.sex.getCharacterPerformingAction().isPlayer()) {
+				return super.getPriority();
+			}
+			return SexActionPriority.UNIQUE_MAX;
+		}
+		@Override
+		public SexActionCategory getCategory() {
+			return SexActionCategory.MISCELLANEOUS;
+		}
+		@Override
+		public Colour getHighlightColour() {
+			return PresetColour.BASE_BLUE_STEEL;
+		}
+		@Override
+		public String getActionTitle() {
+			return "Sex toy";
+		}
+		@Override
+		public String getActionDescription() {
+			return "Command [npc2.name] to remain completely and utterly motionless, allowing you to fuck [npc2.herHim] as an immobile, silent sex toy.";
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {
+			return (Main.sex.getCharacterPerformingAction().isPlayer() || Main.sex.getCharacterPerformingAction().hasFetish(Fetish.FETISH_BONDAGE_APPLIER)) // Only allow player or bondage fetishists to use this
+					&& Main.sex.getCharacterTargetedForSexAction(this).isDoll()
+					&& Main.sex.getSexControl(Main.sex.getCharacterPerformingAction()).getValue()>=SexControl.FULL.getValue()
+					&& !Main.sex.isCharacterImmobilised(Main.sex.getCharacterTargetedForSexAction(this));
+		}
+		@Override
+		public String getDescription() {
+			return "Wanting [npc2.name] to act like an inanimate sex toy, [npc.name] [npc.verb(order)] [npc2.herHim] to stop moving."
+						+ " Obediently carrying out [npc.namePos] command, [npc2.name] [npc2.verb(freeze)] in place."
+						+ " Smiling to [npc.herself], [npc.name] [npc.verb(prepare)] to make good use of the fact that [style.boldBad([npc2.name] [npc2.is] now completely immobile)].";
+		}
+		@Override
+		public void applyEffects() {
+			Main.sex.addCharacterImmobilised(ImmobilisationType.COMMAND, Main.sex.getCharacterPerformingAction(), Main.sex.getCharacterTargetedForSexAction(this));
+		}
+		@Override
+		public List<AbstractFetish> getExtraFetishes(GameCharacter character) {
+			if(character.equals(Main.sex.getCharacterPerformingAction())) {
+				return Util.newArrayListOfValues(Fetish.FETISH_BONDAGE_APPLIER);
+			} else if(character.equals(Main.sex.getCharacterTargetedForSexAction(this))) {
+				return Util.newArrayListOfValues(Fetish.FETISH_BONDAGE_VICTIM);
+			}
+			return null;
+		}
+	};
+	
+	public static final SexAction COMMAND_IMMOBILE_ACTION = new SexAction(
+			SexActionType.SPECIAL,
+			ArousalIncrease.ZERO_NONE,
+			ArousalIncrease.ZERO_NONE,
+			CorruptionLevel.ZERO_PURE,
+			null,
+			SexParticipantType.NORMAL) {
+		@Override
+		public boolean isOverrideAvailableDuringResisting() {
+			return true;
+		}
+		@Override
+		public boolean isAvailableDuringImmobilisation(Collection<ImmobilisationType> types) {
+			return types.contains(ImmobilisationType.COMMAND);
+		}
+		@Override
+		public String getActionTitle() {
+			return "[style.boldBad(Sex toy!)]";
+		}
+		@Override
+		public String getActionDescription() {
+			GameCharacter applier = Main.sex.getImmobilisationTypes(Main.sex.getCharacterPerformingAction()).get(ImmobilisationType.COMMAND);
+			return UtilText.parse(applier, "Having been commanded by [npc.name] to remain motionless, you obediently remain immobile!");
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {
+			return Main.sex.getImmobilisationTypes(Main.sex.getCharacterPerformingAction()).containsKey(ImmobilisationType.COMMAND)
+					&& !Main.sex.getImmobilisationTypes(Main.sex.getCharacterPerformingAction()).containsKey(ImmobilisationType.SLEEP);
+		}
+		@Override
+		public String getDescription() {
+			return UtilText.returnStringAtRandom(
+					"[npc.Name] obediently [npc.verb(remain)] completely motionless, acting like an inanimate sex doll.",
+					"Having been commanded to do so, [npc.name] [npc.verb(remain)] totally immobile.",
+					"Staying completely and utterly motionless, [npc.name] [npc.verb(allow)] [npc.herself] to be used like a worthless sex toy.",
+					"[npc.Name] [npc.verb(remain)] totally immobile and [npc.do]n't react to anything that's done to [npc.herHim].",
+					"Being an obedient sex doll, [npc.name] [npc.do] as [npc.sheIs] told and [npc.verb(stay)] completely motionless.",
+					"[npc.Name] [npc.do] a perfect impression of an inanimate sex doll and [npc.verb(remain)] completely and utterly motionless.");
+		}
+		@Override
+		public List<AbstractFetish> getExtraFetishes(GameCharacter character) {
+			if(character.equals(Main.sex.getCharacterPerformingAction())) {
+				return Util.newArrayListOfValues(Fetish.FETISH_BONDAGE_VICTIM);
+			}
+			return null;
+		}
+	};
+
+	public static final SexAction COMMAND_IMMOBILE_RELEASE = new SexAction(
+			SexActionType.SPECIAL,
+			ArousalIncrease.ONE_MINIMUM,
+			ArousalIncrease.TWO_LOW,
+			CorruptionLevel.ONE_VANILLA,
+			null,
+			SexParticipantType.NORMAL) {
+		@Override
+		public SexActionCategory getCategory() {
+			return SexActionCategory.MISCELLANEOUS;
+		}
+		@Override
+		public Colour getHighlightColour() {
+			return PresetColour.BASE_GREEN_LIME;
+		}
+		@Override
+		public String getActionTitle() {
+			return "Animate";
+		}
+		@Override
+		public String getActionDescription() {
+			return "Tell [npc2.name] that [npc2.she] no longer needs to remain immobile, allowing [npc2.herHim] to freely move and talk again.";
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {
+			return Main.sex.getCharacterPerformingAction().isPlayer()
+					&& Main.sex.getImmobilisationTypes(Main.sex.getCharacterTargetedForSexAction(this)).containsKey(ImmobilisationType.COMMAND)
+					&& Main.sex.getSexControl(Main.sex.getCharacterPerformingAction()).getValue()>=SexControl.FULL.getValue();
+		}
+		@Override
+		public String getDescription() {
+			return "Having had enough of [npc2.namePos] immobile behaviour, [npc.name] [npc.verb(tell)] [npc2.herHim] that [npc.sheIs] free to move once again."
+					+ " With a horny moan and seductive glance, it's revealed that [style.boldGood([npc2.name] [npc2.is] now able to move again)].";
+		}
+		@Override
+		public void applyEffects() {
+			Main.sex.removeCharacterImmobilised(Main.sex.getCharacterTargetedForSexAction(this), ImmobilisationType.COMMAND);
+		}
+	};
+	
+	// Sleeping:
+	
+	public static final SexAction SLEEPING_ACTION = new SexAction(
+			SexActionType.SPECIAL,
+			ArousalIncrease.ZERO_NONE,
+			ArousalIncrease.ZERO_NONE,
+			CorruptionLevel.ZERO_PURE,
+			null,
+			SexParticipantType.NORMAL) {
+		@Override
+		public boolean isOverrideAvailableDuringResisting() {
+			return true;
+		}
+		@Override
+		public boolean isAvailableDuringImmobilisation(Collection<ImmobilisationType> types) {
+			return types.contains(ImmobilisationType.SLEEP);
+		}
+		@Override
+		public String getActionTitle() {
+			return "[style.boldBad(Sleeping...)]";
+		}
+		@Override
+		public String getActionDescription() {
+			return "You remain deeply asleep...";
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {
+			return Main.sex.getImmobilisationTypes(Main.sex.getCharacterPerformingAction()).containsKey(ImmobilisationType.SLEEP);
+		}
+		@Override
+		public String getDescription() {
+			return UtilText.returnStringAtRandom(
+					"[npc.Name] [npc.verb(remain)] deeply asleep and [npc.verb(show)] no sign of being close to waking up.",
+					"Despite letting out the occasional "+(Main.sex.getCharacterPerformingAction().isFeminine()?"moan":"groan")+", [npc.name] [npc.verb(remain)] deeply asleep.",
+					"Continuing to sleep, [npc.name] [npc.verb(remain)] totally unaware that [npc.sheIs] being fucked.",
+					"[npc.Name] [npc.verb(remain)] deeply asleep and barely [npc.verb(react)] to anything that's done to [npc.herHim].",
+					"Being an incredibly heavy sleeper, [npc.name] [npc.verb(remain)] in a deep slumber even while [npc.sheIs] being fucked.",
+					"[npc.Name] [npc.do]n't show any sign of waking up as [npc.sheIs] fucked in [npc.her] sleep.");
+		}
+		@Override
+		public List<AbstractFetish> getExtraFetishes(GameCharacter character) {
+			if(character.equals(Main.sex.getCharacterPerformingAction())) {
+				return Util.newArrayListOfValues(Fetish.FETISH_NON_CON_SUB);
+			}
+			return null;
+		}
+	};
+
+	public static final SexAction SLEEPING_WAKE = new SexAction(
+			SexActionType.SPECIAL,
+			ArousalIncrease.ONE_MINIMUM,
+			ArousalIncrease.TWO_LOW,
+			CorruptionLevel.ONE_VANILLA,
+			null,
+			SexParticipantType.NORMAL) {
+		@Override
+		public SexActionCategory getCategory() {
+			return SexActionCategory.MISCELLANEOUS;
+		}
+		@Override
+		public Colour getHighlightColour() {
+			return PresetColour.BASE_GREEN_LIME;
+		}
+		@Override
+		public String getActionTitle() {
+			return "Wake [npc2.herHim]";
+		}
+		@Override
+		public String getActionDescription() {
+			return "Shake [npc2.name] until [npc2.she] wakes up.";
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {
+			return Main.sex.getCharacterPerformingAction().isPlayer()
+					&& Main.sex.getImmobilisationTypes(Main.sex.getCharacterTargetedForSexAction(this)).containsKey(ImmobilisationType.SLEEP)
+					&& Main.sex.getSexControl(Main.sex.getCharacterPerformingAction()).getValue()>=SexControl.FULL.getValue();
+		}
+		@Override
+		public String getDescription() {
+			return "Having had enough of fucking [npc2.name] while [npc2.sheIs] asleep, [npc.name] roughly [npc.verb(shake)] [npc2.herHim] in an attempt to wake [npc2.herHim] up."
+					+ " Reluctantly opening [npc2.her] [npc2.eyes], [npc2.name] [npc.verb(let)] out a yawn and [style.boldGood([npc2.verb(wake)] up)].";
+		}
+		@Override
+		public void applyEffects() {
+			Main.sex.addCharacterWoken(Main.sex.getCharacterTargetedForSexAction(this));
+		}
+	};
+
+	public static final SexAction SLEEPING_WOKEN_UP = new SexAction(
+			SexActionType.SPECIAL,
+			ArousalIncrease.ONE_MINIMUM,
+			ArousalIncrease.TWO_LOW,
+			CorruptionLevel.ONE_VANILLA,
+			null,
+			SexParticipantType.NORMAL) {
+		@Override
+		public SexActionPriority getPriority() {
+			return SexActionPriority.UNIQUE_MAX;
+		}
+		@Override
+		public SexActionCategory getCategory() {
+			return SexActionCategory.MISCELLANEOUS;
+		}
+		@Override
+		public boolean isOverrideAvailableDuringResisting() {
+			return true;
+		}
+		@Override
+		public boolean isAvailableDuringImmobilisation(Collection<ImmobilisationType> types) {
+			return types.contains(ImmobilisationType.SLEEP);
+		}
+		@Override
+		public Colour getHighlightColour() {
+			return PresetColour.GENERIC_BAD;
+		}
+		@Override
+		public String getActionTitle() {
+			return "Woken up";
+		}
+		@Override
+		public String getActionDescription() {
+			return "You wake up to find that you're being fucked!";
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {
+			return Main.sex.getCharacterPerformingAction().isAsleep()
+					&& Main.sex.getCharactersWoken().contains(Main.sex.getCharacterPerformingAction());
+		}
+		@Override
+		public String getDescription() {
+			StringBuilder sb = new StringBuilder();
+			// Woken by oral:
+			if(Main.sex.getAllOngoingSexAreas(Main.sex.getCharacterPerformingAction(), SexAreaOrifice.MOUTH).stream().anyMatch(penetration->penetration.isPenetration() && ((SexAreaPenetration)penetration).isTakesVirginity())) {
+				// Pen name
+				SexAreaPenetration pen = Main.sex.getFirstOngoingSexAreaPenetration(Main.sex.getCharacterPerformingAction(), SexAreaOrifice.MOUTH);
+				GameCharacter characterPenetrating = Main.sex.getOngoingCharactersUsingAreas(Main.sex.getCharacterPerformingAction(), SexAreaOrifice.MOUTH, pen).iterator().next();
+				sb.append(UtilText.parse(Main.sex.getCharacterPerformingAction(), characterPenetrating,
+						"Although [npc.sheIs] a deep sleeper, the suffocating feeling of having [npc2.namePos] "+pen.getName(characterPenetrating)+" thrust down [npc.her] throat causes [npc.name] to jolt awake."));
+				
+			} else {
+				GameCharacter dom = Main.sex.getDominantParticipants(false).keySet().iterator().next();
+				sb.append(UtilText.parse(Main.sex.getCharacterPerformingAction(), dom,
+						"Although [npc.sheIs] a deep sleeper, [npc2.namePos] movements are forceful enough to rouse [npc.herHim] from [npc.her] slumber."));
+			}
+			
+			switch(Main.sex.getSexPace(Main.sex.getCharacterPerformingAction())) {
+				case SUB_EAGER:
+					if(Main.sex.getCharacterPerformingAction().isMute()) {
+						sb.append(" Upon opening [npc.her] [npc.eyes] and seeing what's happening, [npc.name] [npc.verb(let)] out an excited [npc.moan] and happily [npc.verb(submit)] to being fucked.");
+					} else {
+						sb.append(" Upon opening [npc.her] [npc.eyes] and seeing what's happening, [npc.name] [npc.verb(let)] out an excited [npc.moan] and happily [npc.verb(exclaim)], [npc.speech(Yes! Fuck me!)]");
+					}
+					break;
+				case SUB_RESISTING:
+					if(Main.sex.getCharacterPerformingAction().isMute()) {
+						sb.append(" Upon opening [npc.her] [npc.eyes] and seeing what's happening, [npc.name] [npc.verb(let)] out a mortified gasp and desperately [npc.verb(try)] to resist.");
+					} else {
+						sb.append(" Upon opening [npc.her] [npc.eyes] and seeing what's happening, [npc.name] [npc.verb(let)] out a mortified gasp and [npc.verb("+(Main.sex.getCharacterPerformingAction().isFeminine()?"scream":"shout")+")] in horror,");
+						sb.append(" [npc.speechNoExtraEffects(What the fuck?! No! Get away from me!)]");
+					}
+					break;
+				case SUB_NORMAL:
+				case DOM_GENTLE:
+				case DOM_NORMAL:
+				case DOM_ROUGH:
+				default:
+					if(Main.sex.getCharacterPerformingAction().isMute()) {
+						sb.append(" Upon opening [npc.her] [npc.eyes] and seeing what's happening, [npc.name] [npc.verb(let)] out a [npc.moan] and quickly [npc.verb(submit)] to being fucked.");
+					} else {
+						sb.append(" Upon opening [npc.her] [npc.eyes] and seeing what's happening, [npc.name] [npc.verb(let)] out a [npc.moan] and [npc.verb(exclaim)], [npc.speech(Yes! Fuck me!)]");
+					}
+					break;
+			}
+			
+			return sb.toString();
+		}
+		@Override
+		public String applyPreParsingEffects() {
+			Main.sex.removeCharacterImmobilised(Main.sex.getCharacterPerformingAction(), ImmobilisationType.SLEEP);
+			Main.sex.removeCharacterWoken(Main.sex.getCharacterPerformingAction());
+			Main.sex.getCharacterPerformingAction().wakeUp();
+			
+			// If not attracted to person fucking them, immediately set to resisting:
+			if(!Main.sex.getCharacterPerformingAction().isDoll()
+					&& Main.game.isNonConEnabled()
+					&& !Main.sex.getCharacterPerformingAction().isAttractedTo(Main.game.getPlayer())
+					&& !Main.sex.getCharacterPerformingAction().getFetishDesire(Fetish.FETISH_NON_CON_SUB).isPositive()) {
+				Main.game.getTextEndStringBuilder().append(Main.sex.getCharacterPerformingAction().incrementAffection(Main.game.getPlayer(), -100));
+				Main.sex.getCharacterPerformingAction().setLust(0);
+			}
+			
+			return "";
+		}
+	};
+	
+	// Ovipositor actions:
+
+//	public static final SexAction OVIPOSITOR_PENIS_EGG_LAYING_BLOCKED = new SexAction(
+//			SexActionType.ONGOING,
+//			ArousalIncrease.FIVE_EXTREME,
+//			ArousalIncrease.FIVE_EXTREME,
+//			CorruptionLevel.ZERO_PURE,
+//			null,
+//			SexParticipantType.NORMAL) {
+//		private GameCharacter getCharacterToBeEgged() {
+//			return GenericActions.getCharacterToBeEgged(Main.sex.getCharacterPerformingAction(), Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS);
+//		}
+//		private SexAreaInterface getAreaToBeEgged() {
+//			return Main.sex.getOngoingSexAreas(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS, getCharacterToBeEgged()).get(0);
+//		}
+//		@Override
+//		public boolean isBaseRequirementsMet() {
+//			if(!Main.sex.getCharacterPerformingAction().hasPenisIgnoreDildo()
+//					|| !Main.sex.getCharacterPerformingAction().hasPenisModifier(PenetrationModifier.OVIPOSITOR)
+//					|| !Main.sex.getCharacterPerformingAction().hasVagina()
+////					|| !Main.sex.getCharacterPerformingAction().isVaginaEggLayer()
+//					|| !Main.sex.getCharacterPerformingAction().isPregnant()) {
+//				return false;
+//			}
+//			if(Main.sex.getCharactersHavingOngoingActionWith(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS).isEmpty()) {
+//				return false;
+//			}
+//			if(!getCharacterToBeEgged().isAbleToBeEgged()) {
+//				return false;
+//			}
+//			return !Main.sex.getCharactersHavingOngoingActionWith(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS).isEmpty()
+//					&& !OVIPOSITOR_PENIS_EGG_LAYING.isBaseRequirementsMet();
+//		}
+//		@Override
+//		public String getActionTitle() {
+//			return "Lay eggs";
+//		}
+//		@Override
+//		public String getActionDescription() {
+//			if(!getCharacterToBeEgged().isAbleToBeImpregnated()) {
+//				return UtilText.parse(getCharacterToBeEgged(),
+//						"[npc.Name] cannot be impregnated, so you cannot lay eggs in [npc.herHim]!");
+//			}
+//
+//			if(Main.sex.getCharacterPerformingAction().getLocationPlace().getPlaceType().equals(PlaceType.GAMBLING_DEN_FUTA_PREGNANCY)
+//					|| Main.sex.getCharacterPerformingAction().getLocationPlace().getPlaceType().equals(PlaceType.GAMBLING_DEN_PREGNANCY)) {
+//				return UtilText.parse(getCharacterToBeEgged(),
+//						"Epona will consider egg-laying to be cheating, and so you're not able to do this!");
+//			}
+//			
+//			SexAreaInterface areaContacted = getAreaToBeEgged();
+//			
+//			if(!areaContacted.isOrifice()) {
+//				switch((SexAreaPenetration)areaContacted) {
+//					case FINGER:
+//						return UtilText.parse(getCharacterToBeEgged(),
+//								"You cannot lay eggs while receiving a handjob from [npc.name]!");
+//					case FOOT:
+//						return UtilText.parse(getCharacterToBeEgged(),
+//								"You cannot lay eggs while receiving a [npc.footjob] from [npc.name]!");
+//					case TAIL:
+//						return UtilText.parse(getCharacterToBeEgged(),
+//								"You cannot lay eggs while receiving a tailjob from [npc.name]!");
+//					case TENTACLE:
+//						return UtilText.parse(getCharacterToBeEgged(),
+//								"You cannot lay eggs while receiving a tentaclejob from [npc.name]!");
+//					case CLIT:
+//					case PENIS:
+//					case TONGUE:
+//						break;
+//				}
+//			} else {
+//				return UtilText.parse(getCharacterToBeEgged(),
+//						(((SexAreaOrifice) areaContacted).isInternalOrifice()
+//							?"You cannot lay eggs in [npc.namePos] "
+//							:"You cannot lay eggs while fucking [npc.namePos] ")
+//						+areaContacted.getName(getCharacterToBeEgged(), true)+"!");
+//			}
+//			return UtilText.parse(getCharacterToBeEgged(),
+//					"You cannot lay eggs while fucking [npc.namePos] "+areaContacted.getName(getCharacterToBeEgged(), true)+"!");
+//		}
+//		@Override
+//		public String getDescription() {
+//			return "";
+//		}
+//		@Override
+//		public Response toResponse() {
+//			if(!isBaseRequirementsMet()) {
+//				return null;
+//			}
+//			return convertToNullResponse();
+//		}
+//		@Override
+//		public SexActionCategory getCategory() {
+//			return SexActionCategory.SEX;
+//		}
+//	};
+	
+	public static final SexAction OVIPOSITOR_PENIS_EGG_LAYING = new SexAction(
+			SexActionType.ONGOING,
+			ArousalIncrease.FOUR_HIGH,
+			ArousalIncrease.THREE_NORMAL,
+			CorruptionLevel.TWO_HORNY,
+			null,
+			SexParticipantType.NORMAL) {
+		private GameCharacter getCharacterToBeEgged() {
+			return GenericActions.getCharacterToBeEgged(Main.sex.getCharacterPerformingAction(), Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.PENIS, getAreaToBeEgged());
+		}
+		private SexAreaInterface getAreaToBeEgged() {
+			return Main.sex.getAllOngoingSexAreas(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS).get(0);
+//			return Main.sex.getOngoingSexAreas(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS, getCharacterToBeEgged()).get(0);
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {
+			// To lay eggs, the orgasming character requires an ovipositor penis, an egg-laying vagina, and for the eggs to be fertilised
+			if(!Main.sex.getCharacterPerformingAction().hasPenisIgnoreDildo()
+					|| !Main.sex.getCharacterPerformingAction().hasPenisModifier(PenetrationModifier.OVIPOSITOR)
+//					|| !Main.sex.getCharacterPerformingAction().hasVagina()
+//					|| !Main.sex.getCharacterPerformingAction().isVaginaEggLayer()
+					|| !Main.sex.getCharacterPerformingAction().isVisiblyPregnant()) {
+				return false;
+			}
+			if(Main.sex.getCharactersHavingOngoingActionWith(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.PENIS).isEmpty()) {
+				return false;
+			}
+			if(!getCharacterToBeEgged().isAbleToBeEgged()) {
+				return false;
+			}
+			if(!getCharacterToBeEgged().isAbleToBeImpregnated()
+					|| Main.sex.getCharacterPerformingAction().getLocationPlace().getPlaceType().equals(PlaceType.GAMBLING_DEN_FUTA_PREGNANCY)
+					|| Main.sex.getCharacterPerformingAction().getLocationPlace().getPlaceType().equals(PlaceType.GAMBLING_DEN_PREGNANCY)) {
+				return false;
+			}
+			
+			SexAreaInterface areaContacted = getAreaToBeEgged();
+			if(!areaContacted.isOrifice()) {
+				return false;
+			}
+			
+			boolean isPenetratingSuitableOrifice  = false;
+			if(areaContacted.isOrifice()) {
+				switch((SexAreaOrifice)areaContacted) {
+					case ARMPITS:
+					case ASS:
+					case THIGHS:
+					case BREAST:
+					case BREAST_CROTCH:
+					case URETHRA_PENIS:
+					case URETHRA_VAGINA:
+						return false;
+					case NIPPLE:
+						isPenetratingSuitableOrifice = getCharacterToBeEgged().getIncubationLitter((SexAreaOrifice) areaContacted)==null && getCharacterToBeEgged().isBreastAbleToIncubateEggs();
+						break;
+					case NIPPLE_CROTCH:
+						isPenetratingSuitableOrifice = getCharacterToBeEgged().getIncubationLitter((SexAreaOrifice) areaContacted)==null && getCharacterToBeEgged().isBreastCrotchAbleToIncubateEggs();
+						break;
+					case ANUS:
+					case MOUTH:
+						isPenetratingSuitableOrifice = getCharacterToBeEgged().getIncubationLitter((SexAreaOrifice) areaContacted)==null;
+						break;
+					case SPINNERET:
+						// Spinneret transformation restrictions are too complex to handle, so just prevent ability to lay eggs in it.
+//						isPenetratingSuitableOrifice = getCharacterToBeEgged().getIncubationLitter((SexAreaOrifice) areaContacted)==null;
+						return false;
+					case VAGINA:
+						isPenetratingSuitableOrifice = getCharacterToBeEgged().getIncubationLitter((SexAreaOrifice) areaContacted)==null && !getCharacterToBeEgged().isPregnant();
+						break;
+				}
+			}
+			if(!isPenetratingSuitableOrifice) {
+				return false;
+			}
+			
+			return true;
+		}
+		@Override
+		public SexActionPriority getPriority() {
+			if(Main.sex.getCharacterPerformingAction().getFetishDesire(Fetish.FETISH_IMPREGNATION).isNegative() || Main.sex.isInForeplay(Main.sex.getCharacterPerformingAction())) {
+				return SexActionPriority.LOW;
+			}
+			if(Math.random()<0.66f || Main.sex.getCharacterPerformingAction().hasFetish(Fetish.FETISH_IMPREGNATION)) {
+				return SexActionPriority.HIGH;
+			}
+			return SexActionPriority.NORMAL;
+		}
+		@Override
+		public String getActionTitle() {
+			try {
+				switch((SexAreaOrifice)getAreaToBeEgged()) {
+					case ANUS:
+						return "Lay eggs (anal)";
+					case MOUTH:
+						return "Lay eggs (stomach)";
+					case NIPPLE: case NIPPLE_CROTCH:
+						return "Lay eggs (breasts)";
+					case VAGINA:
+						return "Lay eggs (womb)";
+					case SPINNERET:
+						return "Lay eggs (spinneret)";
+					case ARMPITS:
+					case BREAST:
+					case ASS:
+					case BREAST_CROTCH:
+					case THIGHS:
+					case URETHRA_PENIS:
+					case URETHRA_VAGINA:
+						return "";
+				}
+			} catch(Exception ex) {
+				System.err.println("OVIPOSITOR_PENIS_EGG_LAYING getActionTitle() error - Area not found!");
+			}
+			return "Lay eggs";
+		}
+		@Override
+		public String getActionDescription() {
+			String returnString = "Decide to lay your eggs in [npc2.name].";
+			GameCharacter characterPenetrated = getCharacterToBeEgged();
+			SexAreaInterface areaContacted = getAreaToBeEgged();
+			switch((SexAreaOrifice)areaContacted) {
+				case ANUS:
+					returnString = "Ram your cock as deep as possible into [npc2.namePos] [npc2.asshole], before using its ovipositor ability to lay your eggs in [npc2.her] stomach.";
+					break;
+				case MOUTH:
+					returnString = "Ram your cock as deep as possible down [npc2.namePos] throat, before using its ovipositor ability to lay your eggs in [npc2.her] stomach.";
+					break;
+				case NIPPLE:
+					returnString = "Ram your cock as deep as possible into [npc2.namePos] [npc2.nipple+], before using its ovipositor ability to lay your eggs in [npc2.her] [npc2.breasts].";
+					break;
+				case NIPPLE_CROTCH:
+					returnString = "Ram your cock as deep as possible into [npc2.namePos] [npc2.crotchNipple+], before using its ovipositor ability to lay your eggs in [npc2.her] [npc2.crotchBoobs].";
+					break;
+				case VAGINA:
+					returnString = "Ram your cock as deep as possible into [npc2.namePos] [npc2.pussy+], before using its ovipositor ability to lay your eggs in [npc2.her] womb.";
+					break;
+				case SPINNERET:
+					returnString = "Ram your cock as deep as possible into [npc2.namePos] [npc2.spinneret], before using its ovipositor ability to lay your eggs inside of [npc2.herHim].";
+					break;
+				case ARMPITS:
+				case ASS:
+				case BREAST:
+				case BREAST_CROTCH:
+				case THIGHS:
+				case URETHRA_PENIS:
+				case URETHRA_VAGINA:
+					break;
+			}
+			return UtilText.parse(Main.sex.getCharacterPerformingAction(), characterPenetrated, returnString);
+		}
+		@Override
+		public String getDescription() {
+			return eggLayingTargetDescription(SexAreaPenetration.PENIS, getAreaToBeEgged(), Main.sex.getCharacterPerformingAction(), getCharacterToBeEgged());
+		}
+		@Override
+		public String applyPreParsingEffects() {
+			Main.sex.setCharacterLayingEggs(Main.sex.getCharacterPerformingAction());
+			return "";
+		}
+		@Override
+		public String applyEffectsString() {
+			StringBuilder sb = new StringBuilder();
+			if(Main.sex.getCharacterPerformingAction().isWearingCondom()) {//TODO test appending
+				sb.append(UtilText.parse(Main.sex.getCharacterPerformingAction(),
+						"<p style='text-align:center;'>[style.boldTerrible([npc.NamePos] condom broke as [npc.she] [npc.was] laying [npc.her] eggs!)]</p>"));
+				Main.sex.getCharacterPerformingAction().getClothingInSlot(InventorySlot.PENIS).setSealed(false);
+				Main.sex.getCharacterPerformingAction().unequipClothingIntoVoid(Main.sex.getCharacterPerformingAction().getClothingInSlot(InventorySlot.PENIS), true, Main.sex.getCharacterPerformingAction());
+			}
+			
+			int eggCount = Main.sex.getCharacterPerformingAction().getPregnantLitter().getTotalLitterCount();
+			String areaEgged = getAreaToBeEgged().getName(getCharacterToBeEgged(), true);
+			if(getAreaToBeEgged()==SexAreaOrifice.ANUS || getAreaToBeEgged()==SexAreaOrifice.MOUTH) {
+				areaEgged = "stomach";
+			} else if(getAreaToBeEgged()==SexAreaOrifice.VAGINA) {
+				areaEgged = "womb";
+			}
+			sb.append(
+					"<p style='text-align:center;'>"
+							+ UtilText.parse(getCharacterToBeEgged(),
+									"[style.italicsYellowLight([npc.Name] [npc.has] had "+Util.intToString(eggCount)+" egg"+(eggCount>1?"s":"")+" implanted in [npc.her] "+areaEgged+"!)]")
+					+ "</p>");
+			
+			Main.sex.getCharacterPerformingAction().implantPregnantLitter(getCharacterToBeEgged(), (SexAreaOrifice) getAreaToBeEgged());
+			
+			return sb.toString();
+		}
+		@Override
+		public String applyEndEffects(){
+			Main.sex.setCharacterLayingEggs(null);
+			return "";
+		}
+		@Override
+		public List<AbstractFetish> getFetishes(GameCharacter character) {
+			if(character.equals(Main.sex.getCharacterPerformingAction())) {
+				return Util.newArrayListOfValues(Fetish.FETISH_IMPREGNATION);
+			} else {
+				return Util.newArrayListOfValues(Fetish.FETISH_PREGNANCY);
+			}
+		}
+		@Override
+		public SexActionCategory getCategory() {
+			return SexActionCategory.SEX;
+		}
+	};
+
+//	public static final SexAction OVIPOSITOR_CLIT_EGG_LAYING_BLOCKED = new SexAction(
+//			SexActionType.ONGOING,
+//			ArousalIncrease.FIVE_EXTREME,
+//			ArousalIncrease.FIVE_EXTREME,
+//			CorruptionLevel.ZERO_PURE,
+//			null,
+//			SexParticipantType.NORMAL) {
+//		private GameCharacter getCharacterToBeEgged() {
+//			return GenericActions.getCharacterToBeEgged(Main.sex.getCharacterPerformingAction(), Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.CLIT);
+//		}
+//		private SexAreaInterface getAreaToBeEgged() {
+//			return Main.sex.getOngoingSexAreas(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.CLIT, getCharacterToBeEgged()).get(0);
+//		}
+//		@Override
+//		public boolean isBaseRequirementsMet() {
+//			if(Main.sex.getCharacterPerformingAction().getVaginaClitorisSize()==ClitorisSize.ZERO_AVERAGE
+//					|| !Main.sex.getCharacterPerformingAction().hasClitorisModifier(PenetrationModifier.OVIPOSITOR)
+//					|| !Main.sex.getCharacterPerformingAction().hasVagina()
+////					|| !Main.sex.getCharacterPerformingAction().isVaginaEggLayer()
+//					|| !Main.sex.getCharacterPerformingAction().isPregnant()) {
+//				return false;
+//			}
+//			if(Main.sex.getCharactersHavingOngoingActionWith(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.CLIT).isEmpty()) {
+//				return false;
+//			}
+//			if(!getCharacterToBeEgged().isAbleToBeEgged()) {
+//				return false;
+//			}
+//			return !Main.sex.getCharactersHavingOngoingActionWith(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.CLIT).isEmpty() && !OVIPOSITOR_CLIT_EGG_LAYING.isBaseRequirementsMet();
+//		}
+//		@Override
+//		public String getActionTitle() {
+//			return "Lay eggs (clit)";
+//		}
+//		@Override
+//		public String getActionDescription() {
+//			if(!getCharacterToBeEgged().isAbleToBeImpregnated()) {
+//				return UtilText.parse(getCharacterToBeEgged(),
+//						"[npc.Name] cannot be impregnated, so you cannot lay eggs in [npc.herHim]!");
+//			}
+//
+//			if(Main.sex.getCharacterPerformingAction().getLocationPlace().getPlaceType().equals(PlaceType.GAMBLING_DEN_FUTA_PREGNANCY)
+//					|| Main.sex.getCharacterPerformingAction().getLocationPlace().getPlaceType().equals(PlaceType.GAMBLING_DEN_PREGNANCY)) {
+//				return UtilText.parse(getCharacterToBeEgged(),
+//						"Epona will consider egg-laying to be cheating, and so you're not able to do this!");
+//			}
+//			
+//			SexAreaInterface areaContacted = getAreaToBeEgged();
+//			
+//			if(!areaContacted.isOrifice()) {
+//				switch((SexAreaPenetration)areaContacted) {
+//					case FINGER:
+//						return UtilText.parse(getCharacterToBeEgged(),
+//								"You cannot lay eggs while being fingered by [npc.name]!");
+//					case FOOT:
+//						return UtilText.parse(getCharacterToBeEgged(),
+//								"You cannot lay eggs while receiving a [npc.footjob] from [npc.name]!");
+//					case TAIL:
+//						return UtilText.parse(getCharacterToBeEgged(),
+//								"You cannot lay eggs while being tail-fucked by [npc.name]!");
+//					case TENTACLE:
+//						return UtilText.parse(getCharacterToBeEgged(),
+//								"You cannot lay eggs while being tentacle-fucked by [npc.name]!");
+//					case CLIT:
+//					case PENIS:
+//					case TONGUE:
+//						break;
+//				}
+//			} else {
+//				return UtilText.parse(getCharacterToBeEgged(),
+//						(((SexAreaOrifice) areaContacted).isInternalOrifice()
+//							?"You cannot lay eggs in [npc.namePos] "
+//							:"You cannot lay eggs while fucking [npc.namePos] ")
+//						+areaContacted.getName(getCharacterToBeEgged(), true)+"!");
+//			}
+//			return UtilText.parse(getCharacterToBeEgged(),
+//					"You cannot lay eggs while fucking [npc.namePos] "+areaContacted.getName(getCharacterToBeEgged(), true)+"!");
+//		}
+//		@Override
+//		public String getDescription() {
+//			return "";
+//		}
+//		@Override
+//		public Response toResponse() {
+//			if(!isBaseRequirementsMet()) {
+//				return null;
+//			}
+//			return convertToNullResponse();
+//		}
+//		@Override
+//		public SexActionCategory getCategory() {
+//			return SexActionCategory.SEX;
+//		}
+//	};
+	
+	public static final SexAction OVIPOSITOR_CLIT_EGG_LAYING = new SexAction(
+			SexActionType.ONGOING,
+			ArousalIncrease.FOUR_HIGH,
+			ArousalIncrease.THREE_NORMAL,
+			CorruptionLevel.TWO_HORNY,
+			null,
+			SexParticipantType.NORMAL) {
+		private GameCharacter getCharacterToBeEgged() {
+			return GenericActions.getCharacterToBeEgged(Main.sex.getCharacterPerformingAction(), Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.CLIT, getAreaToBeEgged());
+		}
+		private SexAreaInterface getAreaToBeEgged() {
+			return Main.sex.getAllOngoingSexAreas(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.CLIT).get(0);
+//			return Main.sex.getOngoingSexAreas(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.CLIT, getCharacterToBeEgged()).get(0);
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {
+			// To lay eggs, the orgasming character requires an ovipositor clit, an egg-laying vagina, and for the eggs to be fertilised
+			if(Main.sex.getCharacterPerformingAction().getVaginaClitorisSize()==ClitorisSize.ZERO_AVERAGE
+					|| !Main.sex.getCharacterPerformingAction().hasClitorisModifier(PenetrationModifier.OVIPOSITOR)
+//					|| !Main.sex.getCharacterPerformingAction().hasVagina()
+//					|| !Main.sex.getCharacterPerformingAction().isVaginaEggLayer()
+					|| !Main.sex.getCharacterPerformingAction().isVisiblyPregnant()) {
+				return false;
+			}
+			
+			if(Main.sex.getCharactersHavingOngoingActionWith(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.CLIT).isEmpty()) {
+				return false;
+			}
+			
+			if(!getCharacterToBeEgged().isAbleToBeEgged()) {
+				return false;
+			}
+			if(!getCharacterToBeEgged().isAbleToBeImpregnated()
+					|| Main.sex.getCharacterPerformingAction().getLocationPlace().getPlaceType().equals(PlaceType.GAMBLING_DEN_FUTA_PREGNANCY)
+					|| Main.sex.getCharacterPerformingAction().getLocationPlace().getPlaceType().equals(PlaceType.GAMBLING_DEN_PREGNANCY)) {
+				return false;
+			}
+			
+			SexAreaInterface areaContacted = getAreaToBeEgged();
+			if(!areaContacted.isOrifice()) {
+				return false;
+			}
+			
+			boolean isPenetratingSuitableOrifice  = false;
+			if(areaContacted.isOrifice()) {
+				switch((SexAreaOrifice)areaContacted) {
+					case ARMPITS:
+					case ASS:
+					case THIGHS:
+					case BREAST:
+					case BREAST_CROTCH:
+					case URETHRA_PENIS:
+					case URETHRA_VAGINA:
+						return false;
+					case NIPPLE:
+						isPenetratingSuitableOrifice = getCharacterToBeEgged().getIncubationLitter((SexAreaOrifice) areaContacted)==null && getCharacterToBeEgged().isBreastAbleToIncubateEggs();
+						break;
+					case NIPPLE_CROTCH:
+						isPenetratingSuitableOrifice = getCharacterToBeEgged().getIncubationLitter((SexAreaOrifice) areaContacted)==null && getCharacterToBeEgged().isBreastCrotchAbleToIncubateEggs();
+						break;
+					case ANUS:
+					case MOUTH:
+						isPenetratingSuitableOrifice = getCharacterToBeEgged().getIncubationLitter((SexAreaOrifice) areaContacted)==null;
+						break;
+					case SPINNERET:
+						// Spinneret transformation restrictions are too complex to handle, so just prevent ability to lay eggs in it.
+//						isPenetratingSuitableOrifice = getCharacterToBeEgged().getIncubationLitter((SexAreaOrifice) areaContacted)==null;
+						return false;
+					case VAGINA:
+						isPenetratingSuitableOrifice = getCharacterToBeEgged().getIncubationLitter((SexAreaOrifice) areaContacted)==null && !getCharacterToBeEgged().isPregnant();
+						break;
+				}
+			}
+			if(!isPenetratingSuitableOrifice) {
+				return false;
+			}
+			
+			return true;
+		}
+		@Override
+		public SexActionPriority getPriority() {
+			if(Main.sex.getCharacterPerformingAction().getFetishDesire(Fetish.FETISH_IMPREGNATION).isNegative() || Main.sex.isInForeplay(Main.sex.getCharacterPerformingAction())) {
+				return SexActionPriority.LOW;
+			}
+			if(Math.random()<0.66f || Main.sex.getCharacterPerformingAction().hasFetish(Fetish.FETISH_IMPREGNATION)) {
+				return SexActionPriority.HIGH;
+			}
+			return SexActionPriority.NORMAL;
+		}
+		@Override
+		public String getActionTitle() {
+			try {
+				switch((SexAreaOrifice)getAreaToBeEgged()) {
+					case ANUS:
+						return "Lay eggs (clit-anal)";
+					case MOUTH:
+						return "Lay eggs (clit-stomach)";
+					case NIPPLE: case NIPPLE_CROTCH:
+						return "Lay eggs (clit-breasts)";
+					case VAGINA:
+						return "Lay eggs (clit-womb)";
+					case SPINNERET:
+						return "Lay eggs (clit-spinneret)";
+					case ARMPITS:
+					case BREAST:
+					case ASS:
+					case BREAST_CROTCH:
+					case THIGHS:
+					case URETHRA_PENIS:
+					case URETHRA_VAGINA:
+						return "";
+				}
+			} catch(Exception ex) {
+				System.err.println("OVIPOSITOR_CLIT_EGG_LAYING getActionTitle() error - Area not found!");
+			}
+			return "Lay eggs (clit)";
+		}
+		@Override
+		public String getActionDescription() {
+			String returnString = "Decide to lay your eggs in [npc2.name].";
+			GameCharacter characterPenetrated = getCharacterToBeEgged();
+			SexAreaInterface areaContacted = getAreaToBeEgged();
+			switch((SexAreaOrifice)areaContacted) {
+				case ANUS:
+					returnString = "Ram your clit as deep as possible into [npc2.namePos] [npc2.asshole], before using its ovipositor ability to lay your eggs in [npc2.her] stomach.";
+					break;
+				case MOUTH:
+					returnString = "Ram your clit as deep as possible down [npc2.namePos] throat, before using its ovipositor ability to lay your eggs in [npc2.her] stomach.";
+					break;
+				case NIPPLE:
+					returnString = "Ram your clit as deep as possible into [npc2.namePos] [npc2.nipple+], before using its ovipositor ability to lay your eggs in [npc2.her] [npc2.breasts].";
+					break;
+				case NIPPLE_CROTCH:
+					returnString = "Ram your clit as deep as possible into [npc2.namePos] [npc2.crotchNipple+], before using its ovipositor ability to lay your eggs in [npc2.her] [npc2.crotchBoobs].";
+					break;
+				case VAGINA:
+					returnString = "Ram your clit as deep as possible into [npc2.namePos] [npc2.pussy+], before using its ovipositor ability to lay your eggs in [npc2.her] womb.";
+					break;
+				case SPINNERET:
+					returnString = "Ram your clit as deep as possible into [npc2.namePos] [npc2.spinneret], before using its ovipositor ability to lay your eggs inside of [npc2.herHim].";
+					break;
+				case ARMPITS:
+				case ASS:
+				case BREAST:
+				case BREAST_CROTCH:
+				case THIGHS:
+				case URETHRA_PENIS:
+				case URETHRA_VAGINA:
+					break;
+			}
+			return UtilText.parse(Main.sex.getCharacterPerformingAction(), characterPenetrated, returnString);
+		}
+		@Override
+		public String getDescription() {
+			return eggLayingTargetDescription(SexAreaPenetration.CLIT, getAreaToBeEgged(), Main.sex.getCharacterPerformingAction(), getCharacterToBeEgged());
+		}
+		@Override
+		public String applyPreParsingEffects() {
+			Main.sex.setCharacterLayingEggs(Main.sex.getCharacterPerformingAction());
+			return "";
+		}
+		@Override
+		public String applyEffectsString() {
+			StringBuilder sb = new StringBuilder();
+			int eggCount = Main.sex.getCharacterPerformingAction().getPregnantLitter().getTotalLitterCount();
+			String areaEgged = getAreaToBeEgged().getName(getCharacterToBeEgged(), true);
+			if(getAreaToBeEgged()==SexAreaOrifice.ANUS || getAreaToBeEgged()==SexAreaOrifice.MOUTH) {
+				areaEgged = "stomach";
+			} else if(getAreaToBeEgged()==SexAreaOrifice.VAGINA) {
+				areaEgged = "womb";
+			}
+			sb.append(
+					"<p style='text-align:center;'>"
+							+ UtilText.parse(getCharacterToBeEgged(),
+									"[style.italicsYellowLight([npc.Name] [npc.has] had "+Util.intToString(eggCount)+" egg"+(eggCount>1?"s":"")+" implanted in [npc.her] "+areaEgged+"!)]")
+					+ "</p>");
+			
+			Main.sex.getCharacterPerformingAction().implantPregnantLitter(getCharacterToBeEgged(), (SexAreaOrifice) getAreaToBeEgged());
+			return sb.toString();
+		}
+		@Override
+		public String applyEndEffects() {
+			Main.sex.setCharacterLayingEggs(null);
+			return "";
+		}
+		@Override
+		public List<AbstractFetish> getFetishes(GameCharacter character) {
+			if(character.equals(Main.sex.getCharacterPerformingAction())) {
+				return Util.newArrayListOfValues(Fetish.FETISH_IMPREGNATION);
+			} else {
+				return Util.newArrayListOfValues(Fetish.FETISH_PREGNANCY);
+			}
+		}
+		@Override
+		public SexActionCategory getCategory() {
+			return SexActionCategory.SEX;
+		}
+	};
+	
+	// Need individual actions for tail egg laying, as it's possible for a character with multiple tails to be penetrating multiple orifices at once
+	
+	public static final SexAction OVIPOSITOR_TAIL_EGG_LAYING_VAGINA = new SexAction(
+			SexActionType.ONGOING,
+			ArousalIncrease.FOUR_HIGH,
+			ArousalIncrease.THREE_NORMAL,
+			CorruptionLevel.TWO_HORNY,
+			null,
+			SexParticipantType.NORMAL) {
+		private GameCharacter getCharacterToBeEgged() {
+			return GenericActions.getCharacterToBeEgged(Main.sex.getCharacterPerformingAction(), Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.TAIL, getAreaToBeEgged());
+		}
+		private SexAreaOrifice getAreaToBeEgged() {
+			return SexAreaOrifice.VAGINA;
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {
+			// To lay eggs, the orgasming character requires an ovipositor tail and for the eggs to be fertilised
+			if(!Main.sex.getCharacterPerformingAction().getTailType().isOvipositor()
+					|| !Main.sex.getCharacterPerformingAction().isVisiblyPregnant()) {
+				return false;
+			}
+			if(getCharacterToBeEgged()==null) {
+				return false;
+			}
+			if(!getCharacterToBeEgged().isAbleToBeEgged()) {
+				return false;
+			}
+			if(!getCharacterToBeEgged().isAbleToBeImpregnated()
+					|| Main.sex.getCharacterPerformingAction().getLocationPlace().getPlaceType().equals(PlaceType.GAMBLING_DEN_FUTA_PREGNANCY)
+					|| Main.sex.getCharacterPerformingAction().getLocationPlace().getPlaceType().equals(PlaceType.GAMBLING_DEN_PREGNANCY)) {
+				return false;
+			}
+			SexAreaOrifice areaContacted = getAreaToBeEgged();
+			boolean isPenetratingSuitableOrifice = getCharacterToBeEgged().getIncubationLitter(areaContacted)==null && !getCharacterToBeEgged().isPregnant();
+			if(!isPenetratingSuitableOrifice) {
+				return false;
+			}
+			return true;
+		}
+		@Override
+		public SexActionPriority getPriority() {
+			if(Main.sex.getCharacterPerformingAction().getFetishDesire(Fetish.FETISH_IMPREGNATION).isNegative() || Main.sex.isInForeplay(Main.sex.getCharacterPerformingAction())) {
+				return SexActionPriority.LOW;
+			}
+			if(Math.random()<0.66f || Main.sex.getCharacterPerformingAction().hasFetish(Fetish.FETISH_IMPREGNATION)) {
+				return SexActionPriority.HIGH;
+			}
+			return SexActionPriority.NORMAL;
+		}
+		@Override
+		public String getActionTitle() {
+			return "Lay eggs (tail-womb)";
+		}
+		@Override
+		public String getActionDescription() {
+			GameCharacter characterPenetrated = getCharacterToBeEgged();
+			return UtilText.parse(Main.sex.getCharacterPerformingAction(), characterPenetrated,
+					"Ram your tail as deep as possible into [npc2.namePos] [npc2.pussy+], before using its ovipositor ability to lay your eggs in [npc2.her] womb.");
+		}
+		@Override
+		public String getDescription() {
+			return eggLayingTargetDescription(SexAreaPenetration.TAIL, getAreaToBeEgged(), Main.sex.getCharacterPerformingAction(), getCharacterToBeEgged());
+		}
+		@Override
+		public String applyPreParsingEffects() {
+			Main.sex.setCharacterLayingEggs(Main.sex.getCharacterPerformingAction());
+			return "";
+		}
+		@Override
+		public String applyEffectsString() {
+			StringBuilder sb = new StringBuilder();
+			int eggCount = Main.sex.getCharacterPerformingAction().getPregnantLitter().getTotalLitterCount();
+			sb.append(
+					"<p style='text-align:center;'>"
+							+ UtilText.parse(getCharacterToBeEgged(),
+									"[style.italicsYellowLight([npc.Name] [npc.has] had "+Util.intToString(eggCount)+" egg"+(eggCount>1?"s":"")+" implanted in [npc.her] womb!)]")
+					+ "</p>");
+			Main.sex.getCharacterPerformingAction().implantPregnantLitter(getCharacterToBeEgged(), (SexAreaOrifice) getAreaToBeEgged());
+			return sb.toString();
+		}
+		@Override
+		public String applyEndEffects() {
+			Main.sex.setCharacterLayingEggs(null);
+			return "";
+		}
+		@Override
+		public List<AbstractFetish> getFetishes(GameCharacter character) {
+			if(character.equals(Main.sex.getCharacterPerformingAction())) {
+				return Util.newArrayListOfValues(Fetish.FETISH_IMPREGNATION);
+			} else {
+				return Util.newArrayListOfValues(Fetish.FETISH_PREGNANCY);
+			}
+		}
+		@Override
+		public SexActionCategory getCategory() {
+			return SexActionCategory.SEX;
+		}
+	};
+
+	public static final SexAction OVIPOSITOR_TAIL_EGG_LAYING_ANUS = new SexAction(
+			SexActionType.ONGOING,
+			ArousalIncrease.FOUR_HIGH,
+			ArousalIncrease.THREE_NORMAL,
+			CorruptionLevel.TWO_HORNY,
+			null,
+			SexParticipantType.NORMAL) {
+		private GameCharacter getCharacterToBeEgged() {
+			return GenericActions.getCharacterToBeEgged(Main.sex.getCharacterPerformingAction(), Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.TAIL, getAreaToBeEgged());
+		}
+		private SexAreaOrifice getAreaToBeEgged() {
+			return SexAreaOrifice.ANUS;
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {
+			// To lay eggs, the orgasming character requires an ovipositor tail and for the eggs to be fertilised
+			if(!Main.sex.getCharacterPerformingAction().getTailType().isOvipositor()
+					|| !Main.sex.getCharacterPerformingAction().isVisiblyPregnant()) {
+				return false;
+			}
+			if(getCharacterToBeEgged()==null) {
+				return false;
+			}
+			if(!getCharacterToBeEgged().isAbleToBeEgged()) {
+				return false;
+			}
+			if(!getCharacterToBeEgged().isAbleToBeImpregnated()
+					|| Main.sex.getCharacterPerformingAction().getLocationPlace().getPlaceType().equals(PlaceType.GAMBLING_DEN_FUTA_PREGNANCY)
+					|| Main.sex.getCharacterPerformingAction().getLocationPlace().getPlaceType().equals(PlaceType.GAMBLING_DEN_PREGNANCY)) {
+				return false;
+			}
+			SexAreaOrifice areaContacted = getAreaToBeEgged();
+			boolean isPenetratingSuitableOrifice = getCharacterToBeEgged().getIncubationLitter(areaContacted)==null;
+			if(!isPenetratingSuitableOrifice) {
+				return false;
+			}
+			return true;
+		}
+		@Override
+		public SexActionPriority getPriority() {
+			if(Main.sex.getCharacterPerformingAction().getFetishDesire(Fetish.FETISH_IMPREGNATION).isNegative() || Main.sex.isInForeplay(Main.sex.getCharacterPerformingAction())) {
+				return SexActionPriority.LOW;
+			}
+			if(Math.random()<0.66f || Main.sex.getCharacterPerformingAction().hasFetish(Fetish.FETISH_IMPREGNATION)) {
+				return SexActionPriority.HIGH;
+			}
+			return SexActionPriority.NORMAL;
+		}
+		@Override
+		public String getActionTitle() {
+			return "Lay eggs (tail-anal)";
+		}
+		@Override
+		public String getActionDescription() {
+			GameCharacter characterPenetrated = getCharacterToBeEgged();
+			return UtilText.parse(Main.sex.getCharacterPerformingAction(), characterPenetrated,
+					"Ram your tail as deep as possible into [npc2.namePos] [npc2.asshole], before using its ovipositor ability to lay your eggs in [npc2.her] stomach.");
+		}
+		@Override
+		public String getDescription() {
+			return eggLayingTargetDescription(SexAreaPenetration.TAIL, getAreaToBeEgged(), Main.sex.getCharacterPerformingAction(), getCharacterToBeEgged());
+		}
+		@Override
+		public String applyPreParsingEffects() {
+			Main.sex.setCharacterLayingEggs(Main.sex.getCharacterPerformingAction());
+			return "";
+		}
+		@Override
+		public String applyEffectsString() {
+			StringBuilder sb = new StringBuilder();
+			int eggCount = Main.sex.getCharacterPerformingAction().getPregnantLitter().getTotalLitterCount();
+			sb.append(
+					"<p style='text-align:center;'>"
+							+ UtilText.parse(getCharacterToBeEgged(),
+									"[style.italicsYellowLight([npc.Name] [npc.has] had "+Util.intToString(eggCount)+" egg"+(eggCount>1?"s":"")+" implanted in [npc.her] stomach!)]")
+					+ "</p>");
+			Main.sex.getCharacterPerformingAction().implantPregnantLitter(getCharacterToBeEgged(), (SexAreaOrifice) getAreaToBeEgged());
+			return sb.toString();
+		}
+		@Override
+		public String applyEndEffects() {
+			Main.sex.setCharacterLayingEggs(null);
+			return "";
+		}
+		@Override
+		public List<AbstractFetish> getFetishes(GameCharacter character) {
+			if(character.equals(Main.sex.getCharacterPerformingAction())) {
+				return Util.newArrayListOfValues(Fetish.FETISH_IMPREGNATION);
+			} else {
+				return Util.newArrayListOfValues(Fetish.FETISH_PREGNANCY);
+			}
+		}
+		@Override
+		public SexActionCategory getCategory() {
+			return SexActionCategory.SEX;
+		}
+	};
+
+	public static final SexAction OVIPOSITOR_TAIL_EGG_LAYING_MOUTH = new SexAction(
+			SexActionType.ONGOING,
+			ArousalIncrease.FOUR_HIGH,
+			ArousalIncrease.THREE_NORMAL,
+			CorruptionLevel.TWO_HORNY,
+			null,
+			SexParticipantType.NORMAL) {
+		private GameCharacter getCharacterToBeEgged() {
+			return GenericActions.getCharacterToBeEgged(Main.sex.getCharacterPerformingAction(), Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.TAIL, getAreaToBeEgged());
+		}
+		private SexAreaOrifice getAreaToBeEgged() {
+			return SexAreaOrifice.MOUTH;
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {
+			// To lay eggs, the orgasming character requires an ovipositor tail and for the eggs to be fertilised
+			if(!Main.sex.getCharacterPerformingAction().getTailType().isOvipositor()
+					|| !Main.sex.getCharacterPerformingAction().isVisiblyPregnant()) {
+				return false;
+			}
+			if(getCharacterToBeEgged()==null) {
+				return false;
+			}
+			if(!getCharacterToBeEgged().isAbleToBeEgged()) {
+				return false;
+			}
+			if(!getCharacterToBeEgged().isAbleToBeImpregnated()
+					|| Main.sex.getCharacterPerformingAction().getLocationPlace().getPlaceType().equals(PlaceType.GAMBLING_DEN_FUTA_PREGNANCY)
+					|| Main.sex.getCharacterPerformingAction().getLocationPlace().getPlaceType().equals(PlaceType.GAMBLING_DEN_PREGNANCY)) {
+				return false;
+			}
+			SexAreaOrifice areaContacted = getAreaToBeEgged();
+			boolean isPenetratingSuitableOrifice = getCharacterToBeEgged().getIncubationLitter(areaContacted)==null;
+			if(!isPenetratingSuitableOrifice) {
+				return false;
+			}
+			return true;
+		}
+		@Override
+		public SexActionPriority getPriority() {
+			if(Main.sex.getCharacterPerformingAction().getFetishDesire(Fetish.FETISH_IMPREGNATION).isNegative() || Main.sex.isInForeplay(Main.sex.getCharacterPerformingAction())) {
+				return SexActionPriority.LOW;
+			}
+			if(Math.random()<0.66f || Main.sex.getCharacterPerformingAction().hasFetish(Fetish.FETISH_IMPREGNATION)) {
+				return SexActionPriority.HIGH;
+			}
+			return SexActionPriority.NORMAL;
+		}
+		@Override
+		public String getActionTitle() {
+			return "Lay eggs (tail-oral)";
+		}
+		@Override
+		public String getActionDescription() {
+			GameCharacter characterPenetrated = getCharacterToBeEgged();
+			return UtilText.parse(Main.sex.getCharacterPerformingAction(), characterPenetrated,
+					"Ram your tail as deep as possible down [npc2.namePos] throat, before using its ovipositor ability to lay your eggs in [npc2.her] stomach.");
+		}
+		@Override
+		public String getDescription() {
+			return eggLayingTargetDescription(SexAreaPenetration.TAIL, getAreaToBeEgged(), Main.sex.getCharacterPerformingAction(), getCharacterToBeEgged());
+		}
+		@Override
+		public String applyPreParsingEffects() {
+			Main.sex.setCharacterLayingEggs(Main.sex.getCharacterPerformingAction());
+			return "";
+		}
+		@Override
+		public String applyEffectsString() {
+			StringBuilder sb = new StringBuilder();
+			int eggCount = Main.sex.getCharacterPerformingAction().getPregnantLitter().getTotalLitterCount();
+			sb.append(
+					"<p style='text-align:center;'>"
+							+ UtilText.parse(getCharacterToBeEgged(),
+									"[style.italicsYellowLight([npc.Name] [npc.has] had "+Util.intToString(eggCount)+" egg"+(eggCount>1?"s":"")+" implanted in [npc.her] stomach!)]")
+					+ "</p>");
+			Main.sex.getCharacterPerformingAction().implantPregnantLitter(getCharacterToBeEgged(), (SexAreaOrifice) getAreaToBeEgged());
+			return sb.toString();
+		}
+		@Override
+		public String applyEndEffects() {
+			Main.sex.setCharacterLayingEggs(null);
+			return "";
+		}
+		@Override
+		public List<AbstractFetish> getFetishes(GameCharacter character) {
+			if(character.equals(Main.sex.getCharacterPerformingAction())) {
+				return Util.newArrayListOfValues(Fetish.FETISH_IMPREGNATION);
+			} else {
+				return Util.newArrayListOfValues(Fetish.FETISH_PREGNANCY);
+			}
+		}
+		@Override
+		public SexActionCategory getCategory() {
+			return SexActionCategory.SEX;
+		}
+	};
+
+	public static final SexAction OVIPOSITOR_TAIL_EGG_LAYING_NIPPLE = new SexAction(
+			SexActionType.ONGOING,
+			ArousalIncrease.FOUR_HIGH,
+			ArousalIncrease.THREE_NORMAL,
+			CorruptionLevel.TWO_HORNY,
+			null,
+			SexParticipantType.NORMAL) {
+		private GameCharacter getCharacterToBeEgged() {
+			return GenericActions.getCharacterToBeEgged(Main.sex.getCharacterPerformingAction(), Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.TAIL, getAreaToBeEgged());
+		}
+		private SexAreaOrifice getAreaToBeEgged() {
+			return SexAreaOrifice.NIPPLE;
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {
+			// To lay eggs, the orgasming character requires an ovipositor tail and for the eggs to be fertilised
+			if(!Main.sex.getCharacterPerformingAction().getTailType().isOvipositor()
+					|| !Main.sex.getCharacterPerformingAction().isVisiblyPregnant()) {
+				return false;
+			}
+			if(getCharacterToBeEgged()==null) {
+				return false;
+			}
+			if(!getCharacterToBeEgged().isAbleToBeEgged()) {
+				return false;
+			}
+			if(!getCharacterToBeEgged().isAbleToBeImpregnated()
+					|| Main.sex.getCharacterPerformingAction().getLocationPlace().getPlaceType().equals(PlaceType.GAMBLING_DEN_FUTA_PREGNANCY)
+					|| Main.sex.getCharacterPerformingAction().getLocationPlace().getPlaceType().equals(PlaceType.GAMBLING_DEN_PREGNANCY)) {
+				return false;
+			}
+			SexAreaOrifice areaContacted = getAreaToBeEgged();
+			boolean isPenetratingSuitableOrifice = getCharacterToBeEgged().getIncubationLitter(areaContacted)==null && getCharacterToBeEgged().isBreastAbleToIncubateEggs();
+			if(!isPenetratingSuitableOrifice) {
+				return false;
+			}
+			return true;
+		}
+		@Override
+		public SexActionPriority getPriority() {
+			if(Main.sex.getCharacterPerformingAction().getFetishDesire(Fetish.FETISH_IMPREGNATION).isNegative() || Main.sex.isInForeplay(Main.sex.getCharacterPerformingAction())) {
+				return SexActionPriority.LOW;
+			}
+			if(Math.random()<0.66f || Main.sex.getCharacterPerformingAction().hasFetish(Fetish.FETISH_IMPREGNATION)) {
+				return SexActionPriority.HIGH;
+			}
+			return SexActionPriority.NORMAL;
+		}
+		@Override
+		public String getActionTitle() {
+			return "Lay eggs (tail-nipple)";
+		}
+		@Override
+		public String getActionDescription() {
+			GameCharacter characterPenetrated = getCharacterToBeEgged();
+			return UtilText.parse(Main.sex.getCharacterPerformingAction(), characterPenetrated,
+					"Ram your tail as deep as possible into [npc2.namePos] [npc2.nipple+], before using its ovipositor ability to lay your eggs in [npc2.her] [npc2.breasts].");
+		}
+		@Override
+		public String getDescription() {
+			return eggLayingTargetDescription(SexAreaPenetration.TAIL, getAreaToBeEgged(), Main.sex.getCharacterPerformingAction(), getCharacterToBeEgged());
+		}
+		@Override
+		public String applyPreParsingEffects() {
+			Main.sex.setCharacterLayingEggs(Main.sex.getCharacterPerformingAction());
+			return "";
+		}
+		@Override
+		public String applyEffectsString() {
+			StringBuilder sb = new StringBuilder();
+			int eggCount = Main.sex.getCharacterPerformingAction().getPregnantLitter().getTotalLitterCount();
+			sb.append(
+					"<p style='text-align:center;'>"
+							+ UtilText.parse(getCharacterToBeEgged(),
+									"[style.italicsYellowLight([npc.Name] [npc.has] had "+Util.intToString(eggCount)+" egg"+(eggCount>1?"s":"")+" implanted in [npc.her] [npc.breasts+]!)]")
+					+ "</p>");
+			Main.sex.getCharacterPerformingAction().implantPregnantLitter(getCharacterToBeEgged(), (SexAreaOrifice) getAreaToBeEgged());
+			return sb.toString();
+		}
+		@Override
+		public String applyEndEffects() {
+			Main.sex.setCharacterLayingEggs(null);
+			return "";
+		}
+		@Override
+		public List<AbstractFetish> getFetishes(GameCharacter character) {
+			if(character.equals(Main.sex.getCharacterPerformingAction())) {
+				return Util.newArrayListOfValues(Fetish.FETISH_IMPREGNATION);
+			} else {
+				return Util.newArrayListOfValues(Fetish.FETISH_PREGNANCY);
+			}
+		}
+		@Override
+		public SexActionCategory getCategory() {
+			return SexActionCategory.SEX;
+		}
+	};
+
+	public static final SexAction OVIPOSITOR_TAIL_EGG_LAYING_NIPPLE_CROTCH = new SexAction(
+			SexActionType.ONGOING,
+			ArousalIncrease.FOUR_HIGH,
+			ArousalIncrease.THREE_NORMAL,
+			CorruptionLevel.TWO_HORNY,
+			null,
+			SexParticipantType.NORMAL) {
+		private GameCharacter getCharacterToBeEgged() {
+			return GenericActions.getCharacterToBeEgged(Main.sex.getCharacterPerformingAction(), Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.TAIL, getAreaToBeEgged());
+		}
+		private SexAreaOrifice getAreaToBeEgged() {
+			return SexAreaOrifice.NIPPLE_CROTCH;
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {
+			// To lay eggs, the orgasming character requires an ovipositor tail and for the eggs to be fertilised
+			if(!Main.sex.getCharacterPerformingAction().getTailType().isOvipositor()
+					|| !Main.sex.getCharacterPerformingAction().isVisiblyPregnant()) {
+				return false;
+			}
+			if(getCharacterToBeEgged()==null) {
+				return false;
+			}
+			if(!getCharacterToBeEgged().isAbleToBeEgged()) {
+				return false;
+			}
+			if(!getCharacterToBeEgged().isAbleToBeImpregnated()
+					|| Main.sex.getCharacterPerformingAction().getLocationPlace().getPlaceType().equals(PlaceType.GAMBLING_DEN_FUTA_PREGNANCY)
+					|| Main.sex.getCharacterPerformingAction().getLocationPlace().getPlaceType().equals(PlaceType.GAMBLING_DEN_PREGNANCY)) {
+				return false;
+			}
+			SexAreaOrifice areaContacted = getAreaToBeEgged();
+			boolean isPenetratingSuitableOrifice = getCharacterToBeEgged().getIncubationLitter(areaContacted)==null && getCharacterToBeEgged().isBreastCrotchAbleToIncubateEggs();
+			if(!isPenetratingSuitableOrifice) {
+				return false;
+			}
+			return true;
+		}
+		@Override
+		public SexActionPriority getPriority() {
+			if(Main.sex.getCharacterPerformingAction().getFetishDesire(Fetish.FETISH_IMPREGNATION).isNegative() || Main.sex.isInForeplay(Main.sex.getCharacterPerformingAction())) {
+				return SexActionPriority.LOW;
+			}
+			if(Math.random()<0.66f || Main.sex.getCharacterPerformingAction().hasFetish(Fetish.FETISH_IMPREGNATION)) {
+				return SexActionPriority.HIGH;
+			}
+			return SexActionPriority.NORMAL;
+		}
+		@Override
+		public String getActionTitle() {
+			return "Lay eggs (tail-crotch-nipple)";
+		}
+		@Override
+		public String getActionDescription() {
+			GameCharacter characterPenetrated = getCharacterToBeEgged();
+			return UtilText.parse(Main.sex.getCharacterPerformingAction(), characterPenetrated,
+					"Ram your tail as deep as possible into [npc2.namePos] [npc2.crotchNipple+], before using its ovipositor ability to lay your eggs in [npc2.her] [npc2.crotchBoobs].");
+		}
+		@Override
+		public String getDescription() {
+			return eggLayingTargetDescription(SexAreaPenetration.TAIL, getAreaToBeEgged(), Main.sex.getCharacterPerformingAction(), getCharacterToBeEgged());
+		}
+		@Override
+		public String applyPreParsingEffects() {
+			Main.sex.setCharacterLayingEggs(Main.sex.getCharacterPerformingAction());
+			return "";
+		}
+		@Override
+		public String applyEffectsString() {
+			StringBuilder sb = new StringBuilder();
+			int eggCount = Main.sex.getCharacterPerformingAction().getPregnantLitter().getTotalLitterCount();
+			sb.append(
+					"<p style='text-align:center;'>"
+							+ UtilText.parse(getCharacterToBeEgged(),
+									"[style.italicsYellowLight([npc.Name] [npc.has] had "+Util.intToString(eggCount)+" egg"+(eggCount>1?"s":"")+" implanted in [npc.her] [npc.crotchBoobs+]!)]")
+					+ "</p>");
+			Main.sex.getCharacterPerformingAction().implantPregnantLitter(getCharacterToBeEgged(), (SexAreaOrifice) getAreaToBeEgged());
+			return sb.toString();
+		}
+		@Override
+		public String applyEndEffects() {
+			Main.sex.setCharacterLayingEggs(null);
+			return "";
+		}
+		@Override
+		public List<AbstractFetish> getFetishes(GameCharacter character) {
+			if(character.equals(Main.sex.getCharacterPerformingAction())) {
+				return Util.newArrayListOfValues(Fetish.FETISH_IMPREGNATION);
+			} else {
+				return Util.newArrayListOfValues(Fetish.FETISH_PREGNANCY);
+			}
+		}
+		@Override
+		public SexActionCategory getCategory() {
+			return SexActionCategory.SEX;
+		}
+	};
+	
+//	public static final SexAction OVIPOSITOR_TAIL_EGG_LAYING = new SexAction(
+//			SexActionType.ONGOING,
+//			ArousalIncrease.FOUR_HIGH,
+//			ArousalIncrease.THREE_NORMAL,
+//			CorruptionLevel.TWO_HORNY,
+//			null,
+//			SexParticipantType.NORMAL) {
+//		private GameCharacter getCharacterToBeEgged() {
+//			return GenericActions.getCharacterToBeEgged(Main.sex.getCharacterPerformingAction(), Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.TAIL, getAreaToBeEgged());
+//		}
+//		private SexAreaInterface getAreaToBeEgged() {
+//			return Main.sex.getOngoingSexAreas(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.TAIL, getCharacterToBeEgged()).get(0);
+//		}
+//		@Override
+//		public boolean isBaseRequirementsMet() {
+//			// To lay eggs, the orgasming character requires an ovipositor tail, an egg-laying vagina, and for the eggs to be fertilised
+//			if(!Main.sex.getCharacterPerformingAction().getTailType().isOvipositor()
+////					|| !Main.sex.getCharacterPerformingAction().hasVagina()
+////					|| !Main.sex.getCharacterPerformingAction().isVaginaEggLayer()
+//					|| !Main.sex.getCharacterPerformingAction().isVisiblyPregnant()) {
+//				return false;
+//			}
+//			
+//			if(Main.sex.getCharactersHavingOngoingActionWith(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.TAIL).isEmpty()) {
+//				return false;
+//			}
+//			
+//			if(!getCharacterToBeEgged().isAbleToBeEgged()) {
+//				return false;
+//			}
+//			if(!getCharacterToBeEgged().isAbleToBeImpregnated()
+//					|| Main.sex.getCharacterPerformingAction().getLocationPlace().getPlaceType().equals(PlaceType.GAMBLING_DEN_FUTA_PREGNANCY)
+//					|| Main.sex.getCharacterPerformingAction().getLocationPlace().getPlaceType().equals(PlaceType.GAMBLING_DEN_PREGNANCY)) {
+//				return false;
+//			}
+//			
+//			SexAreaInterface areaContacted = getAreaToBeEgged();
+//			if(!areaContacted.isOrifice()) {
+//				return false;
+//			}
+//			
+//			boolean isPenetratingSuitableOrifice  = false;
+//			if(areaContacted.isOrifice()) {
+//				switch((SexAreaOrifice)areaContacted) {
+//					case ARMPITS:
+//					case ASS:
+//					case THIGHS:
+//					case BREAST:
+//					case BREAST_CROTCH:
+//					case URETHRA_PENIS:
+//					case URETHRA_VAGINA:
+//						return false;
+//					case NIPPLE:
+//						isPenetratingSuitableOrifice = getCharacterToBeEgged().getIncubationLitter((SexAreaOrifice) areaContacted)==null && getCharacterToBeEgged().isBreastAbleToIncubateEggs();
+//						break;
+//					case NIPPLE_CROTCH:
+//						isPenetratingSuitableOrifice = getCharacterToBeEgged().getIncubationLitter((SexAreaOrifice) areaContacted)==null && getCharacterToBeEgged().isBreastCrotchAbleToIncubateEggs();
+//						break;
+//					case ANUS:
+//					case MOUTH:
+//						isPenetratingSuitableOrifice = getCharacterToBeEgged().getIncubationLitter((SexAreaOrifice) areaContacted)==null;
+//						break;
+//					case SPINNERET:
+//						// Spinneret transformation restrictions are too complex to handle, so just prevent ability to lay eggs in it.
+////						isPenetratingSuitableOrifice = getCharacterToBeEgged().getIncubationLitter((SexAreaOrifice) areaContacted)==null;
+//						return false;
+//					case VAGINA:
+//						isPenetratingSuitableOrifice = getCharacterToBeEgged().getIncubationLitter((SexAreaOrifice) areaContacted)==null && !getCharacterToBeEgged().isPregnant();
+//						break;
+//				}
+//			}
+//			if(!isPenetratingSuitableOrifice) {
+//				return false;
+//			}
+//			
+//			return true;
+//		}
+//		@Override
+//		public SexActionPriority getPriority() {
+//			if(Main.sex.getCharacterPerformingAction().getFetishDesire(Fetish.FETISH_IMPREGNATION).isNegative() || Main.sex.isInForeplay(Main.sex.getCharacterPerformingAction())) {
+//				return SexActionPriority.LOW;
+//			}
+//			if(Math.random()<0.66f || Main.sex.getCharacterPerformingAction().hasFetish(Fetish.FETISH_IMPREGNATION)) {
+//				return SexActionPriority.HIGH;
+//			}
+//			return SexActionPriority.NORMAL;
+//		}
+//		@Override
+//		public String getActionTitle() {
+//			try {
+//				switch((SexAreaOrifice)getAreaToBeEgged()) {
+//					case ANUS:
+//						return "Lay eggs (tail-anal)";
+//					case MOUTH:
+//						return "Lay eggs (tail-stomach)";
+//					case NIPPLE: case NIPPLE_CROTCH:
+//						return "Lay eggs (tail-breasts)";
+//					case VAGINA:
+//						return "Lay eggs (tail-womb)";
+//					case SPINNERET:
+//						return "Lay eggs (tail-spinneret)";
+//					case ARMPITS:
+//					case BREAST:
+//					case ASS:
+//					case BREAST_CROTCH:
+//					case THIGHS:
+//					case URETHRA_PENIS:
+//					case URETHRA_VAGINA:
+//						return "";
+//				}
+//			} catch(Exception ex) {
+//				System.err.println("OVIPOSITOR_TAIL_EGG_LAYING getActionTitle() error - Area not found!");
+//			}
+//			return "Lay eggs (tail)";
+//		}
+//		@Override
+//		public String getActionDescription() {
+//			String returnString = "Decide to lay your eggs in [npc2.name].";
+//			GameCharacter characterPenetrated = getCharacterToBeEgged();
+//			SexAreaInterface areaContacted = getAreaToBeEgged();
+//			switch((SexAreaOrifice)areaContacted) {
+//				case ANUS:
+//					returnString = "Ram your tail as deep as possible into [npc2.namePos] [npc2.asshole], before using its ovipositor ability to lay your eggs in [npc2.her] stomach.";
+//					break;
+//				case MOUTH:
+//					returnString = "Ram your tail as deep as possible down [npc2.namePos] throat, before using its ovipositor ability to lay your eggs in [npc2.her] stomach.";
+//					break;
+//				case NIPPLE:
+//					returnString = "Ram your tail as deep as possible into [npc2.namePos] [npc2.nipple+], before using its ovipositor ability to lay your eggs in [npc2.her] [npc2.breasts].";
+//					break;
+//				case NIPPLE_CROTCH:
+//					returnString = "Ram your tail as deep as possible into [npc2.namePos] [npc2.crotchNipple+], before using its ovipositor ability to lay your eggs in [npc2.her] [npc2.crotchBoobs].";
+//					break;
+//				case VAGINA:
+//					returnString = "Ram your tail as deep as possible into [npc2.namePos] [npc2.pussy+], before using its ovipositor ability to lay your eggs in [npc2.her] womb.";
+//					break;
+//				case SPINNERET:
+//					returnString = "Ram your tail as deep as possible into [npc2.namePos] [npc2.spinneret], before using its ovipositor ability to lay your eggs inside of [npc2.herHim].";
+//					break;
+//				case ARMPITS:
+//				case ASS:
+//				case BREAST:
+//				case BREAST_CROTCH:
+//				case THIGHS:
+//				case URETHRA_PENIS:
+//				case URETHRA_VAGINA:
+//					break;
+//			}
+//			return UtilText.parse(Main.sex.getCharacterPerformingAction(), characterPenetrated, returnString);
+//		}
+//		@Override
+//		public String getDescription() {
+//			return eggLayingTargetDescription(SexAreaPenetration.TAIL, Main.sex.getCharacterPerformingAction(), getCharacterToBeEgged());
+//		}
+//		@Override
+//		public String applyPreParsingEffects() {
+//			Main.sex.setCharacterLayingEggs(Main.sex.getCharacterPerformingAction());
+//			return "";
+//		}
+//		@Override
+//		public void applyEffects() {
+//			int eggCount = Main.sex.getCharacterPerformingAction().getPregnantLitter().getTotalLitterCount();
+//			String areaEgged = getAreaToBeEgged().getName(getCharacterToBeEgged(), true);
+//			if(getAreaToBeEgged()==SexAreaOrifice.ANUS || getAreaToBeEgged()==SexAreaOrifice.MOUTH) {
+//				areaEgged = "stomach";
+//			} else if(getAreaToBeEgged()==SexAreaOrifice.VAGINA) {
+//				areaEgged = "womb";
+//			}
+//			Main.game.getTextEndStringBuilder().append(
+//					"<p style='text-align:center;'>"
+//							+ UtilText.parse(getCharacterToBeEgged(),
+//									"[style.italicsYellowLight([npc.Name] [npc.has] had "+Util.intToString(eggCount)+" egg"+(eggCount>1?"s":"")+" implanted in [npc.her] "+areaEgged+"!)]")
+//					+ "</p>");
+//			
+//			Main.sex.getCharacterPerformingAction().implantPregnantLitter(getCharacterToBeEgged(), (SexAreaOrifice) getAreaToBeEgged());
+//		}
+//		@Override
+//		public String applyEndEffects() {
+//			Main.sex.setCharacterLayingEggs(null);
+//			return "";
+//		}
+//		@Override
+//		public List<AbstractFetish> getFetishes(GameCharacter character) {
+//			if(character.equals(Main.sex.getCharacterPerformingAction())) {
+//				return Util.newArrayListOfValues(Fetish.FETISH_IMPREGNATION);
+//			} else {
+//				return Util.newArrayListOfValues(Fetish.FETISH_PREGNANCY);
+//			}
+//		}
+//		@Override
+//		public SexActionCategory getCategory() {
+//			return SexActionCategory.SEX;
+//		}
+//	};
+	
+	public static final SexAction OVIPOSITOR_TAIL_EGG_LAYING_SELF_VAGINA = new SexAction(
+			SexActionType.ONGOING,
+			ArousalIncrease.FOUR_HIGH,
+			ArousalIncrease.THREE_NORMAL,
+			CorruptionLevel.TWO_HORNY,
+			null,
+			SexParticipantType.SELF) {
+		private GameCharacter getCharacterToBeEgged() {
+			return GenericActions.getCharacterToBeEgged(Main.sex.getCharacterPerformingAction(), Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.TAIL, getAreaToBeEgged());
+		}
+		private SexAreaOrifice getAreaToBeEgged() {
+			return SexAreaOrifice.VAGINA;
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {
+			// To lay eggs, the orgasming character requires an ovipositor tail and for the eggs to be fertilised
+			if(!Main.sex.getCharacterPerformingAction().getTailType().isOvipositor()
+					|| !Main.sex.getCharacterPerformingAction().isVisiblyPregnant()) {
+				return false;
+			}
+			if(getCharacterToBeEgged()==null) {
+				return false;
+			}
+			if(!getCharacterToBeEgged().isAbleToBeEgged()) {
+				return false;
+			}
+			if(!getCharacterToBeEgged().isAbleToBeImpregnated()
+					|| Main.sex.getCharacterPerformingAction().getLocationPlace().getPlaceType().equals(PlaceType.GAMBLING_DEN_FUTA_PREGNANCY)
+					|| Main.sex.getCharacterPerformingAction().getLocationPlace().getPlaceType().equals(PlaceType.GAMBLING_DEN_PREGNANCY)) {
+				return false;
+			}
+			SexAreaInterface areaContacted = getAreaToBeEgged();
+			boolean isPenetratingSuitableOrifice = getCharacterToBeEgged().getIncubationLitter((SexAreaOrifice) areaContacted)==null;
+			if(!isPenetratingSuitableOrifice) {
+				return false;
+			}
+			return true;
+		}
+		@Override
+		public SexActionPriority getPriority() {
+			if(Main.sex.getCharacterPerformingAction().getFetishDesire(Fetish.FETISH_IMPREGNATION).isNegative() || Main.sex.isInForeplay(Main.sex.getCharacterPerformingAction())) {
+				return SexActionPriority.LOW;
+			}
+			if(Math.random()<0.66f || Main.sex.getCharacterPerformingAction().hasFetish(Fetish.FETISH_IMPREGNATION)) {
+				return SexActionPriority.HIGH;
+			}
+			return SexActionPriority.NORMAL;
+		}
+		@Override
+		public String getActionTitle() {
+			return "Lay eggs (self tail-womb)";
+		}
+		@Override
+		public String getActionDescription() {
+			String returnString = "Ram your tail as deep as possible into your own [npc.pussy+], before using its ovipositor ability to lay your eggs in your womb.";
+			return UtilText.parse(Main.sex.getCharacterPerformingAction(), returnString);
+		}
+		@Override
+		public String getDescription() {
+			return eggLayingTargetDescription(SexAreaPenetration.TAIL, getAreaToBeEgged(), Main.sex.getCharacterPerformingAction(), getCharacterToBeEgged());
+		}
+		@Override
+		public String applyPreParsingEffects() {
+			Main.sex.setCharacterLayingEggs(Main.sex.getCharacterPerformingAction());
+			return "";
+		}
+		@Override
+		public String applyEffectsString() {
+			StringBuilder sb = new StringBuilder();
+			int eggCount = Main.sex.getCharacterPerformingAction().getPregnantLitter().getTotalLitterCount();
+			sb.append(
+					"<p style='text-align:center;'>"
+							+ UtilText.parse(getCharacterToBeEgged(),
+									"[style.italicsYellowLight([npc.Name] [npc.has] had "+Util.intToString(eggCount)+" egg"+(eggCount>1?"s":"")+" implanted in [npc.her] womb!)]")
+					+ "</p>");
+			
+			Main.sex.getCharacterPerformingAction().implantPregnantLitter(getCharacterToBeEgged(), (SexAreaOrifice) getAreaToBeEgged());
+			return sb.toString();
+		}
+		@Override
+		public String applyEndEffects() {
+			Main.sex.setCharacterLayingEggs(null);
+			return "";
+		}
+		@Override
+		public List<AbstractFetish> getFetishes(GameCharacter character) {
+			if(character.equals(Main.sex.getCharacterPerformingAction())) {
+				return Util.newArrayListOfValues(Fetish.FETISH_IMPREGNATION);
+			} else {
+				return Util.newArrayListOfValues(Fetish.FETISH_PREGNANCY);
+			}
+		}
+		@Override
+		public SexActionCategory getCategory() {
+			return SexActionCategory.SELF;
+		}
+	};
+
+	public static final SexAction OVIPOSITOR_TAIL_EGG_LAYING_SELF_ANUS = new SexAction(
+			SexActionType.ONGOING,
+			ArousalIncrease.FOUR_HIGH,
+			ArousalIncrease.THREE_NORMAL,
+			CorruptionLevel.TWO_HORNY,
+			null,
+			SexParticipantType.SELF) {
+		private GameCharacter getCharacterToBeEgged() {
+			return GenericActions.getCharacterToBeEgged(Main.sex.getCharacterPerformingAction(), Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.TAIL, getAreaToBeEgged());
+		}
+		private SexAreaOrifice getAreaToBeEgged() {
+			return SexAreaOrifice.ANUS;
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {
+			// To lay eggs, the orgasming character requires an ovipositor tail and for the eggs to be fertilised
+			if(!Main.sex.getCharacterPerformingAction().getTailType().isOvipositor()
+					|| !Main.sex.getCharacterPerformingAction().isVisiblyPregnant()) {
+				return false;
+			}
+			if(getCharacterToBeEgged()==null) {
+				return false;
+			}
+			if(!getCharacterToBeEgged().isAbleToBeEgged()) {
+				return false;
+			}
+			if(!getCharacterToBeEgged().isAbleToBeImpregnated()
+					|| Main.sex.getCharacterPerformingAction().getLocationPlace().getPlaceType().equals(PlaceType.GAMBLING_DEN_FUTA_PREGNANCY)
+					|| Main.sex.getCharacterPerformingAction().getLocationPlace().getPlaceType().equals(PlaceType.GAMBLING_DEN_PREGNANCY)) {
+				return false;
+			}
+			SexAreaInterface areaContacted = getAreaToBeEgged();
+			boolean isPenetratingSuitableOrifice = getCharacterToBeEgged().getIncubationLitter((SexAreaOrifice) areaContacted)==null;
+			if(!isPenetratingSuitableOrifice) {
+				return false;
+			}
+			return true;
+		}
+		@Override
+		public SexActionPriority getPriority() {
+			if(Main.sex.getCharacterPerformingAction().getFetishDesire(Fetish.FETISH_IMPREGNATION).isNegative() || Main.sex.isInForeplay(Main.sex.getCharacterPerformingAction())) {
+				return SexActionPriority.LOW;
+			}
+			if(Math.random()<0.66f || Main.sex.getCharacterPerformingAction().hasFetish(Fetish.FETISH_IMPREGNATION)) {
+				return SexActionPriority.HIGH;
+			}
+			return SexActionPriority.NORMAL;
+		}
+		@Override
+		public String getActionTitle() {
+			return "Lay eggs (self tail-anus)";
+		}
+		@Override
+		public String getActionDescription() {
+			String returnString = "Ram your tail as deep as possible into your own [npc.asshole], before using its ovipositor ability to lay your eggs in your stomach.";
+			return UtilText.parse(Main.sex.getCharacterPerformingAction(), returnString);
+		}
+		@Override
+		public String getDescription() {
+			return eggLayingTargetDescription(SexAreaPenetration.TAIL, getAreaToBeEgged(), Main.sex.getCharacterPerformingAction(), getCharacterToBeEgged());
+		}
+		@Override
+		public String applyPreParsingEffects() {
+			Main.sex.setCharacterLayingEggs(Main.sex.getCharacterPerformingAction());
+			return "";
+		}
+		@Override
+		public String applyEffectsString() {
+			StringBuilder sb = new StringBuilder();
+			int eggCount = Main.sex.getCharacterPerformingAction().getPregnantLitter().getTotalLitterCount();
+			sb.append(
+					"<p style='text-align:center;'>"
+							+ UtilText.parse(getCharacterToBeEgged(),
+									"[style.italicsYellowLight([npc.Name] [npc.has] had "+Util.intToString(eggCount)+" egg"+(eggCount>1?"s":"")+" implanted in [npc.her] stomach!)]")
+					+ "</p>");
+			
+			Main.sex.getCharacterPerformingAction().implantPregnantLitter(getCharacterToBeEgged(), (SexAreaOrifice) getAreaToBeEgged());
+			return sb.toString();
+		}
+		@Override
+		public String applyEndEffects() {
+			Main.sex.setCharacterLayingEggs(null);
+			return "";
+		}
+		@Override
+		public List<AbstractFetish> getFetishes(GameCharacter character) {
+			if(character.equals(Main.sex.getCharacterPerformingAction())) {
+				return Util.newArrayListOfValues(Fetish.FETISH_IMPREGNATION);
+			} else {
+				return Util.newArrayListOfValues(Fetish.FETISH_PREGNANCY);
+			}
+		}
+		@Override
+		public SexActionCategory getCategory() {
+			return SexActionCategory.SELF;
+		}
+	};
+
+	public static final SexAction OVIPOSITOR_TAIL_EGG_LAYING_SELF_MOUTH = new SexAction(
+			SexActionType.ONGOING,
+			ArousalIncrease.FOUR_HIGH,
+			ArousalIncrease.THREE_NORMAL,
+			CorruptionLevel.TWO_HORNY,
+			null,
+			SexParticipantType.SELF) {
+		private GameCharacter getCharacterToBeEgged() {
+			return GenericActions.getCharacterToBeEgged(Main.sex.getCharacterPerformingAction(), Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.TAIL, getAreaToBeEgged());
+		}
+		private SexAreaOrifice getAreaToBeEgged() {
+			return SexAreaOrifice.MOUTH;
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {
+			// To lay eggs, the orgasming character requires an ovipositor tail and for the eggs to be fertilised
+			if(!Main.sex.getCharacterPerformingAction().getTailType().isOvipositor()
+					|| !Main.sex.getCharacterPerformingAction().isVisiblyPregnant()) {
+				return false;
+			}
+			if(getCharacterToBeEgged()==null) {
+				return false;
+			}
+			if(!getCharacterToBeEgged().isAbleToBeEgged()) {
+				return false;
+			}
+			if(!getCharacterToBeEgged().isAbleToBeImpregnated()
+					|| Main.sex.getCharacterPerformingAction().getLocationPlace().getPlaceType().equals(PlaceType.GAMBLING_DEN_FUTA_PREGNANCY)
+					|| Main.sex.getCharacterPerformingAction().getLocationPlace().getPlaceType().equals(PlaceType.GAMBLING_DEN_PREGNANCY)) {
+				return false;
+			}
+			SexAreaInterface areaContacted = getAreaToBeEgged();
+			boolean isPenetratingSuitableOrifice = getCharacterToBeEgged().getIncubationLitter((SexAreaOrifice) areaContacted)==null;
+			if(!isPenetratingSuitableOrifice) {
+				return false;
+			}
+			return true;
+		}
+		@Override
+		public SexActionPriority getPriority() {
+			if(Main.sex.getCharacterPerformingAction().getFetishDesire(Fetish.FETISH_IMPREGNATION).isNegative() || Main.sex.isInForeplay(Main.sex.getCharacterPerformingAction())) {
+				return SexActionPriority.LOW;
+			}
+			if(Math.random()<0.66f || Main.sex.getCharacterPerformingAction().hasFetish(Fetish.FETISH_IMPREGNATION)) {
+				return SexActionPriority.HIGH;
+			}
+			return SexActionPriority.NORMAL;
+		}
+		@Override
+		public String getActionTitle() {
+			return "Lay eggs (self tail-oral)";
+		}
+		@Override
+		public String getActionDescription() {
+			String returnString = "Ram your tail as deep as possible down your own throat, before using its ovipositor ability to lay your eggs in your stomach.";
+			return UtilText.parse(Main.sex.getCharacterPerformingAction(), returnString);
+		}
+		@Override
+		public String getDescription() {
+			return eggLayingTargetDescription(SexAreaPenetration.TAIL, getAreaToBeEgged(), Main.sex.getCharacterPerformingAction(), getCharacterToBeEgged());
+		}
+		@Override
+		public String applyPreParsingEffects() {
+			Main.sex.setCharacterLayingEggs(Main.sex.getCharacterPerformingAction());
+			return "";
+		}
+		@Override
+		public String applyEffectsString() {
+			StringBuilder sb = new StringBuilder();
+			int eggCount = Main.sex.getCharacterPerformingAction().getPregnantLitter().getTotalLitterCount();
+			sb.append(
+					"<p style='text-align:center;'>"
+							+ UtilText.parse(getCharacterToBeEgged(),
+									"[style.italicsYellowLight([npc.Name] [npc.has] had "+Util.intToString(eggCount)+" egg"+(eggCount>1?"s":"")+" implanted in [npc.her] stomach!)]")
+					+ "</p>");
+			
+			Main.sex.getCharacterPerformingAction().implantPregnantLitter(getCharacterToBeEgged(), (SexAreaOrifice) getAreaToBeEgged());
+			return sb.toString();
+		}
+		@Override
+		public String applyEndEffects() {
+			Main.sex.setCharacterLayingEggs(null);
+			return "";
+		}
+		@Override
+		public List<AbstractFetish> getFetishes(GameCharacter character) {
+			if(character.equals(Main.sex.getCharacterPerformingAction())) {
+				return Util.newArrayListOfValues(Fetish.FETISH_IMPREGNATION);
+			} else {
+				return Util.newArrayListOfValues(Fetish.FETISH_PREGNANCY);
+			}
+		}
+		@Override
+		public SexActionCategory getCategory() {
+			return SexActionCategory.SELF;
+		}
+	};
+
+	public static final SexAction OVIPOSITOR_TAIL_EGG_LAYING_SELF_NIPPLE = new SexAction(
+			SexActionType.ONGOING,
+			ArousalIncrease.FOUR_HIGH,
+			ArousalIncrease.THREE_NORMAL,
+			CorruptionLevel.TWO_HORNY,
+			null,
+			SexParticipantType.SELF) {
+		private GameCharacter getCharacterToBeEgged() {
+			return GenericActions.getCharacterToBeEgged(Main.sex.getCharacterPerformingAction(), Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.TAIL, getAreaToBeEgged());
+		}
+		private SexAreaOrifice getAreaToBeEgged() {
+			return SexAreaOrifice.NIPPLE;
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {
+			// To lay eggs, the orgasming character requires an ovipositor tail and for the eggs to be fertilised
+			if(!Main.sex.getCharacterPerformingAction().getTailType().isOvipositor()
+					|| !Main.sex.getCharacterPerformingAction().isVisiblyPregnant()) {
+				return false;
+			}
+			if(getCharacterToBeEgged()==null) {
+				return false;
+			}
+			if(!getCharacterToBeEgged().isAbleToBeEgged()) {
+				return false;
+			}
+			if(!getCharacterToBeEgged().isAbleToBeImpregnated()
+					|| Main.sex.getCharacterPerformingAction().getLocationPlace().getPlaceType().equals(PlaceType.GAMBLING_DEN_FUTA_PREGNANCY)
+					|| Main.sex.getCharacterPerformingAction().getLocationPlace().getPlaceType().equals(PlaceType.GAMBLING_DEN_PREGNANCY)) {
+				return false;
+			}
+			SexAreaInterface areaContacted = getAreaToBeEgged();
+			boolean isPenetratingSuitableOrifice = getCharacterToBeEgged().getIncubationLitter((SexAreaOrifice) areaContacted)==null && getCharacterToBeEgged().isBreastAbleToIncubateEggs();
+			if(!isPenetratingSuitableOrifice) {
+				return false;
+			}
+			return true;
+		}
+		@Override
+		public SexActionPriority getPriority() {
+			if(Main.sex.getCharacterPerformingAction().getFetishDesire(Fetish.FETISH_IMPREGNATION).isNegative() || Main.sex.isInForeplay(Main.sex.getCharacterPerformingAction())) {
+				return SexActionPriority.LOW;
+			}
+			if(Math.random()<0.66f || Main.sex.getCharacterPerformingAction().hasFetish(Fetish.FETISH_IMPREGNATION)) {
+				return SexActionPriority.HIGH;
+			}
+			return SexActionPriority.NORMAL;
+		}
+		@Override
+		public String getActionTitle() {
+			return "Lay eggs (self tail-nipple)";
+		}
+		@Override
+		public String getActionDescription() {
+			String returnString = "Ram your tail as deep as possible into your own [npc.nipple+], before using its ovipositor ability to lay your eggs in your [npc.breasts].";
+			return UtilText.parse(Main.sex.getCharacterPerformingAction(), returnString);
+		}
+		@Override
+		public String getDescription() {
+			return eggLayingTargetDescription(SexAreaPenetration.TAIL, getAreaToBeEgged(), Main.sex.getCharacterPerformingAction(), getCharacterToBeEgged());
+		}
+		@Override
+		public String applyPreParsingEffects() {
+			Main.sex.setCharacterLayingEggs(Main.sex.getCharacterPerformingAction());
+			return "";
+		}
+		@Override
+		public String applyEffectsString() {
+			StringBuilder sb = new StringBuilder();
+			int eggCount = Main.sex.getCharacterPerformingAction().getPregnantLitter().getTotalLitterCount();
+			sb.append(
+					"<p style='text-align:center;'>"
+							+ UtilText.parse(getCharacterToBeEgged(),
+									"[style.italicsYellowLight([npc.Name] [npc.has] had "+Util.intToString(eggCount)+" egg"+(eggCount>1?"s":"")+" implanted in [npc.her] [npc.breasts+]!)]")
+					+ "</p>");
+			
+			Main.sex.getCharacterPerformingAction().implantPregnantLitter(getCharacterToBeEgged(), (SexAreaOrifice) getAreaToBeEgged());
+			return sb.toString();
+		}
+		@Override
+		public String applyEndEffects() {
+			Main.sex.setCharacterLayingEggs(null);
+			return "";
+		}
+		@Override
+		public List<AbstractFetish> getFetishes(GameCharacter character) {
+			if(character.equals(Main.sex.getCharacterPerformingAction())) {
+				return Util.newArrayListOfValues(Fetish.FETISH_IMPREGNATION);
+			} else {
+				return Util.newArrayListOfValues(Fetish.FETISH_PREGNANCY);
+			}
+		}
+		@Override
+		public SexActionCategory getCategory() {
+			return SexActionCategory.SELF;
+		}
+	};
+
+	public static final SexAction OVIPOSITOR_TAIL_EGG_LAYING_SELF_NIPPLE_CROTCH = new SexAction(
+			SexActionType.ONGOING,
+			ArousalIncrease.FOUR_HIGH,
+			ArousalIncrease.THREE_NORMAL,
+			CorruptionLevel.TWO_HORNY,
+			null,
+			SexParticipantType.SELF) {
+		private GameCharacter getCharacterToBeEgged() {
+			return GenericActions.getCharacterToBeEgged(Main.sex.getCharacterPerformingAction(), Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.TAIL, getAreaToBeEgged());
+		}
+		private SexAreaOrifice getAreaToBeEgged() {
+			return SexAreaOrifice.NIPPLE_CROTCH;
+		}
+		@Override
+		public boolean isBaseRequirementsMet() {
+			// To lay eggs, the orgasming character requires an ovipositor tail and for the eggs to be fertilised
+			if(!Main.sex.getCharacterPerformingAction().getTailType().isOvipositor()
+					|| !Main.sex.getCharacterPerformingAction().isVisiblyPregnant()) {
+				return false;
+			}
+			if(getCharacterToBeEgged()==null) {
+				return false;
+			}
+			if(!getCharacterToBeEgged().isAbleToBeEgged()) {
+				return false;
+			}
+			if(!getCharacterToBeEgged().isAbleToBeImpregnated()
+					|| Main.sex.getCharacterPerformingAction().getLocationPlace().getPlaceType().equals(PlaceType.GAMBLING_DEN_FUTA_PREGNANCY)
+					|| Main.sex.getCharacterPerformingAction().getLocationPlace().getPlaceType().equals(PlaceType.GAMBLING_DEN_PREGNANCY)) {
+				return false;
+			}
+			SexAreaInterface areaContacted = getAreaToBeEgged();
+			boolean isPenetratingSuitableOrifice = getCharacterToBeEgged().getIncubationLitter((SexAreaOrifice) areaContacted)==null && getCharacterToBeEgged().isBreastCrotchAbleToIncubateEggs();
+			if(!isPenetratingSuitableOrifice) {
+				return false;
+			}
+			return true;
+		}
+		@Override
+		public SexActionPriority getPriority() {
+			if(Main.sex.getCharacterPerformingAction().getFetishDesire(Fetish.FETISH_IMPREGNATION).isNegative() || Main.sex.isInForeplay(Main.sex.getCharacterPerformingAction())) {
+				return SexActionPriority.LOW;
+			}
+			if(Math.random()<0.66f || Main.sex.getCharacterPerformingAction().hasFetish(Fetish.FETISH_IMPREGNATION)) {
+				return SexActionPriority.HIGH;
+			}
+			return SexActionPriority.NORMAL;
+		}
+		@Override
+		public String getActionTitle() {
+			return "Lay eggs (self tail-crotch-nipple)";
+		}
+		@Override
+		public String getActionDescription() {
+			String returnString = "Ram your tail as deep as possible into your own [npc.crotchNipple+], before using its ovipositor ability to lay your eggs in your [npc.crotchBoobs].";
+			return UtilText.parse(Main.sex.getCharacterPerformingAction(), returnString);
+		}
+		@Override
+		public String getDescription() {
+			return eggLayingTargetDescription(SexAreaPenetration.TAIL, getAreaToBeEgged(), Main.sex.getCharacterPerformingAction(), getCharacterToBeEgged());
+		}
+		@Override
+		public String applyPreParsingEffects() {
+			Main.sex.setCharacterLayingEggs(Main.sex.getCharacterPerformingAction());
+			return "";
+		}
+		@Override
+		public String applyEffectsString() {
+			StringBuilder sb = new StringBuilder();
+			int eggCount = Main.sex.getCharacterPerformingAction().getPregnantLitter().getTotalLitterCount();
+			sb.append(
+					"<p style='text-align:center;'>"
+							+ UtilText.parse(getCharacterToBeEgged(),
+									"[style.italicsYellowLight([npc.Name] [npc.has] had "+Util.intToString(eggCount)+" egg"+(eggCount>1?"s":"")+" implanted in [npc.her] [npc.crotchBoobs+]!)]")
+					+ "</p>");
+			
+			Main.sex.getCharacterPerformingAction().implantPregnantLitter(getCharacterToBeEgged(), (SexAreaOrifice) getAreaToBeEgged());
+			return sb.toString();
+		}
+		@Override
+		public String applyEndEffects() {
+			Main.sex.setCharacterLayingEggs(null);
+			return "";
+		}
+		@Override
+		public List<AbstractFetish> getFetishes(GameCharacter character) {
+			if(character.equals(Main.sex.getCharacterPerformingAction())) {
+				return Util.newArrayListOfValues(Fetish.FETISH_IMPREGNATION);
+			} else {
+				return Util.newArrayListOfValues(Fetish.FETISH_PREGNANCY);
+			}
+		}
+		@Override
+		public SexActionCategory getCategory() {
+			return SexActionCategory.SELF;
+		}
+	};
+	
+//	public static final SexAction OVIPOSITOR_TAIL_EGG_LAYING_SELF = new SexAction(
+//			SexActionType.ONGOING,
+//			ArousalIncrease.FOUR_HIGH,
+//			ArousalIncrease.THREE_NORMAL,
+//			CorruptionLevel.TWO_HORNY,
+//			null,
+//			SexParticipantType.SELF) {
+//		private GameCharacter getCharacterToBeEgged() {
+//			return GenericActions.getCharacterToBeEgged(Main.sex.getCharacterPerformingAction(), Main.sex.getCharacterTargetedForSexAction(this), SexAreaPenetration.TAIL, getAreaToBeEgged());
+//		}
+//		private SexAreaInterface getAreaToBeEgged() {
+//			return Main.sex.getOngoingSexAreas(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.TAIL, getCharacterToBeEgged()).get(0);
+//		}
+//		@Override
+//		public boolean isBaseRequirementsMet() {
+//			// To lay eggs, the orgasming character requires an ovipositor tail, an egg-laying vagina, and for the eggs to be fertilised
+//			if(!Main.sex.getCharacterPerformingAction().getTailType().isOvipositor()
+////					|| !Main.sex.getCharacterPerformingAction().hasVagina()
+////					|| !Main.sex.getCharacterPerformingAction().isVaginaEggLayer()
+//					|| !Main.sex.getCharacterPerformingAction().isVisiblyPregnant()) {
+//				return false;
+//			}
+//			
+//			if(Main.sex.getCharactersHavingOngoingActionWith(Main.sex.getCharacterPerformingAction(), SexAreaPenetration.TAIL).isEmpty()) {
+//				return false;
+//			}
+//			
+//			if(!getCharacterToBeEgged().isAbleToBeEgged()) {
+//				return false;
+//			}
+//			if(!getCharacterToBeEgged().isAbleToBeImpregnated()
+//					|| Main.sex.getCharacterPerformingAction().getLocationPlace().getPlaceType().equals(PlaceType.GAMBLING_DEN_FUTA_PREGNANCY)
+//					|| Main.sex.getCharacterPerformingAction().getLocationPlace().getPlaceType().equals(PlaceType.GAMBLING_DEN_PREGNANCY)) {
+//				return false;
+//			}
+//			
+//			SexAreaInterface areaContacted = getAreaToBeEgged();
+//			if(!areaContacted.isOrifice()) {
+//				return false;
+//			}
+//			
+//			boolean isPenetratingSuitableOrifice  = false;
+//			if(areaContacted.isOrifice()) {
+//				switch((SexAreaOrifice)areaContacted) {
+//					case ARMPITS:
+//					case ASS:
+//					case THIGHS:
+//					case BREAST:
+//					case BREAST_CROTCH:
+//					case URETHRA_PENIS:
+//					case URETHRA_VAGINA:
+//						return false;
+//					case NIPPLE:
+//						isPenetratingSuitableOrifice = getCharacterToBeEgged().getIncubationLitter((SexAreaOrifice) areaContacted)==null && getCharacterToBeEgged().isBreastAbleToIncubateEggs();
+//						break;
+//					case NIPPLE_CROTCH:
+//						isPenetratingSuitableOrifice = getCharacterToBeEgged().getIncubationLitter((SexAreaOrifice) areaContacted)==null && getCharacterToBeEgged().isBreastCrotchAbleToIncubateEggs();
+//						break;
+//					case ANUS:
+//					case MOUTH:
+//						isPenetratingSuitableOrifice = getCharacterToBeEgged().getIncubationLitter((SexAreaOrifice) areaContacted)==null;
+//						break;
+//					case SPINNERET:
+//						// Spinneret transformation restrictions are too complex to handle, so just prevent ability to lay eggs in it.
+////						isPenetratingSuitableOrifice = getCharacterToBeEgged().getIncubationLitter((SexAreaOrifice) areaContacted)==null;
+//						return false;
+//					case VAGINA:
+//						isPenetratingSuitableOrifice = getCharacterToBeEgged().getIncubationLitter((SexAreaOrifice) areaContacted)==null && !getCharacterToBeEgged().isPregnant();
+//						break;
+//				}
+//			}
+//			if(!isPenetratingSuitableOrifice) {
+//				return false;
+//			}
+//			
+//			return true;
+//		}
+//		@Override
+//		public SexActionPriority getPriority() {
+//			if(Main.sex.getCharacterPerformingAction().getFetishDesire(Fetish.FETISH_IMPREGNATION).isNegative() || Main.sex.isInForeplay(Main.sex.getCharacterPerformingAction())) {
+//				return SexActionPriority.LOW;
+//			}
+//			if(Math.random()<0.66f || Main.sex.getCharacterPerformingAction().hasFetish(Fetish.FETISH_IMPREGNATION)) {
+//				return SexActionPriority.HIGH;
+//			}
+//			return SexActionPriority.NORMAL;
+//		}
+//		@Override
+//		public String getActionTitle() {
+//			try {
+//				switch((SexAreaOrifice)getAreaToBeEgged()) {
+//					case ANUS:
+//						return "Lay eggs (self tail-anal)";
+//					case MOUTH:
+//						return "Lay eggs (self tail-stomach)";
+//					case NIPPLE: case NIPPLE_CROTCH:
+//						return "Lay eggs (tail-breasts)";
+//					case VAGINA:
+//						return "Lay eggs (self tail-womb)";
+//					case SPINNERET:
+//						return "Lay eggs (self tail-spinneret)";
+//					case ARMPITS:
+//					case BREAST:
+//					case ASS:
+//					case BREAST_CROTCH:
+//					case THIGHS:
+//					case URETHRA_PENIS:
+//					case URETHRA_VAGINA:
+//						return "";
+//				}
+//			} catch(Exception ex) {
+//				System.err.println("OVIPOSITOR_TAIL_EGG_LAYING_SELF getActionTitle() error - Area not found!");
+//			}
+//			return "Lay eggs (self tail)";
+//		}
+//		@Override
+//		public String getActionDescription() {
+//			String returnString = "Decide to lay your eggs in yourself.";
+//			GameCharacter characterPenetrated = getCharacterToBeEgged();
+//			SexAreaInterface areaContacted = getAreaToBeEgged();
+//			switch((SexAreaOrifice)areaContacted) {
+//				case ANUS:
+//					returnString = "Ram your tail as deep as possible into your own [npc2.asshole], before using its ovipositor ability to lay your eggs in your stomach.";
+//					break;
+//				case MOUTH:
+//					returnString = "Ram your tail as deep as possible down your own throat, before using its ovipositor ability to lay your eggs in your stomach.";
+//					break;
+//				case NIPPLE:
+//					returnString = "Ram your tail as deep as possible into your own [npc2.nipple+], before using its ovipositor ability to lay your eggs in your [npc2.breasts].";
+//					break;
+//				case NIPPLE_CROTCH:
+//					returnString = "Ram your tail as deep as possible into your own [npc2.crotchNipple+], before using its ovipositor ability to lay your eggs in your [npc2.crotchBoobs].";
+//					break;
+//				case VAGINA:
+//					returnString = "Ram your tail as deep as possible into your own [npc2.pussy+], before using its ovipositor ability to lay your eggs in your womb.";
+//					break;
+//				case SPINNERET:
+//					returnString = "Ram your tail as deep as possible into your own [npc2.spinneret], before using its ovipositor ability to lay your eggs inside of yourself.";
+//					break;
+//				case ARMPITS:
+//				case ASS:
+//				case BREAST:
+//				case BREAST_CROTCH:
+//				case THIGHS:
+//				case URETHRA_PENIS:
+//				case URETHRA_VAGINA:
+//					break;
+//			}
+//			return UtilText.parse(Main.sex.getCharacterPerformingAction(), characterPenetrated, returnString);
+//		}
+//		@Override
+//		public String getDescription() {
+//			return eggLayingTargetDescription(SexAreaPenetration.TAIL, Main.sex.getCharacterPerformingAction(), getCharacterToBeEgged());
+//		}
+//		@Override
+//		public String applyPreParsingEffects() {
+//			Main.sex.setCharacterLayingEggs(Main.sex.getCharacterPerformingAction());
+//			return "";
+//		}
+//		@Override
+//		public void applyEffects() {
+//			int eggCount = Main.sex.getCharacterPerformingAction().getPregnantLitter().getTotalLitterCount();
+//			String areaEgged = getAreaToBeEgged().getName(getCharacterToBeEgged(), true);
+//			if(getAreaToBeEgged()==SexAreaOrifice.ANUS || getAreaToBeEgged()==SexAreaOrifice.MOUTH) {
+//				areaEgged = "stomach";
+//			} else if(getAreaToBeEgged()==SexAreaOrifice.VAGINA) {
+//				areaEgged = "womb";
+//			}
+//			Main.game.getTextEndStringBuilder().append(
+//					"<p style='text-align:center;'>"
+//							+ UtilText.parse(getCharacterToBeEgged(),
+//									"[style.italicsYellowLight([npc.Name] [npc.has] had "+Util.intToString(eggCount)+" egg"+(eggCount>1?"s":"")+" implanted in [npc.her] "+areaEgged+"!)]")
+//					+ "</p>");
+//			
+//			Main.sex.getCharacterPerformingAction().implantPregnantLitter(getCharacterToBeEgged(), (SexAreaOrifice) getAreaToBeEgged());
+//		}
+//		@Override
+//		public String applyEndEffects() {
+//			Main.sex.setCharacterLayingEggs(null);
+//			return "";
+//		}
+//		@Override
+//		public List<AbstractFetish> getFetishes(GameCharacter character) {
+//			if(character.equals(Main.sex.getCharacterPerformingAction())) {
+//				return Util.newArrayListOfValues(Fetish.FETISH_IMPREGNATION);
+//			} else {
+//				return Util.newArrayListOfValues(Fetish.FETISH_PREGNANCY);
+//			}
+//		}
+//		@Override
+//		public SexActionCategory getCategory() {
+//			return SexActionCategory.SELF;
+//		}
+//	};
+}

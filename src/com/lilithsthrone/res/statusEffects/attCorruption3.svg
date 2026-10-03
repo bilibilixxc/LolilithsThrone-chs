@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64">
+    <defs>
+        <linearGradient id="angelWings2">
+            <stop offset="0" stop-color="#e8d5ff"/>
+            <stop offset="1" stop-color="#b9aaff"/>
+        </linearGradient>
+        <linearGradient id="linearGradient4196" x1="-95.879" x2="-89.313" y1="1034.128" y2="1030.256" gradientTransform="translate(147.293 -429.574) scale(1.4071)" gradientUnits="userSpaceOnUse" xlink:href="#angelWings2"/>
+        <linearGradient id="linearGradient4233" x1="-95.879" x2="-89.313" y1="1034.128" y2="1030.256" gradientTransform="matrix(-1.4071 0 0 1.4071 -83.322 -429.662)" gradientUnits="userSpaceOnUse" xlink:href="#angelWings2"/>
+    </defs>
+    <g stroke="#000">
+        <path fill="url(#linearGradient4196)" fill-rule="evenodd" stroke-width=".5" d="M31.628 1029.41c-9.124-3.998-11.045-8.82-7.493-15.174-6.286-6.14-17.672-5.325-22.543-1.337 5.671-.864 8.71 5.565 6.25 8.458 2.96-.107 8.089 2.439 7.929 5.876 3.682-.356 6.304 2.09 6.622 4.788 2.084-2.285 5.012-1.336 6.157-.155-.587-1.907.709-3.169 3.078-2.456z" transform="translate(0 -988.362)"/>
+        <path fill="none" stroke-width=".281" d="M24.166 25.874C18.918 25.78 10.52 29.053 8.09 32.84M23.948 26.247c-3.9 3.287-6.217 7.985-7.96 12.406M22.456 43.348c-.292-2.748-2.419-10.908 1.626-17.403M28.301 43.193c-2.345-6.083-8.643-8.712-4.446-16.697"/>
+        <path fill="url(#linearGradient4233)" fill-rule="evenodd" stroke-width=".5" d="M32.343 1029.322c9.125-3.997 11.045-8.82 7.494-15.174 6.285-6.14 17.671-5.325 22.542-1.337-5.671-.864-8.71 5.565-6.25 8.458-2.96-.107-8.089 2.439-7.928 5.876-3.682-.356-6.305 2.09-6.623 4.788-2.084-2.285-5.012-1.336-6.157-.155.587-1.907-.709-3.169-3.078-2.456z" transform="translate(0 -988.362)"/>
+        <path fill="none" stroke-width=".281" d="M39.806 25.786c5.247-.094 13.644 3.179 16.074 6.965M40.023 26.16c3.9 3.286 6.217 7.984 7.96 12.405M41.516 43.26c.29-2.748 2.418-10.908-1.627-17.403M35.67 43.105c2.345-6.083 8.643-8.712 4.446-16.697"/>
+    </g>
+</svg>

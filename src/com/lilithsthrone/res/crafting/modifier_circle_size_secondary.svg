@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+    <g transform="translate(0 -988.362)">
+        <ellipse cx="31.861" cy="1021.172" fill="#ff8080" stroke="#000" stroke-linecap="round" stroke-linejoin="round" rx="23.947" ry="23.608"/>
+        <g stroke="#000" transform="translate(.53 .53)">
+            <path fill="none" stroke-dasharray=".54697781,4.37582249" stroke-width=".547" d="M23.7 1033.637l20.2-8.553"/>
+            <path fill="none" stroke-dasharray=".54697782,4.37582254" stroke-dashoffset="2.625" stroke-width=".547" d="M30.512 1008.118l-12.58 18.74"/>
+            <ellipse cx="-45.307" cy="1029.448" fill="#faa" stroke-linecap="round" stroke-width=".547" rx="4.494" ry="4.289" transform="rotate(-3.678)"/>
+            <ellipse cx="-28.069" cy="1016.917" fill="#f55" stroke-linecap="round" stroke-width=".547" rx="11.066" ry="10.793" transform="rotate(-3.678)"/>
+            <path fill="#ffd5d5" fill-rule="evenodd" stroke-width=".5" d="M23.838 1029.435c.103.567.115 1.151.039 1.746l-6.05.097a5.844 5.844 0 0 1-.014-1.766z"/>
+            <path fill="#ff2a2a" fill-rule="evenodd" stroke-width=".5" d="M35.103 1007.737a11.879 11.879 0 0 1 4.27-.001l.027 6.598 6.477-.052c.283 1.385.305 2.81.072 4.257l-6.465.016.064 6.574c-1.413.2-2.845.304-4.354.023l.02-6.537-6.73.039c-.28-1.454-.236-2.886 0-4.306l6.72-.047z"/>
+        </g>
+        <path fill="#f9f9f9" fill-rule="evenodd" d="M33.183 1000.688c8.462 1.116 16.427 3.742 20.246 18.98-11.69-16.704-13.196-13.754-20.246-18.98z"/>
+        <path fill-opacity=".449" fill-rule="evenodd" d="M42.087 1042.076c-21.988 9.273-40.585-11.535-31.666-30.378.168 16.137 12.616 31.992 31.666 30.378z"/>
+    </g>
+</svg>

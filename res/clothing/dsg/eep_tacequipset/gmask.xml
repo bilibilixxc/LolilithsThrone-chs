@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<clothing>
+
+	<coreAtributes>
+	
+		<authorTag><![CDATA[Slightly raised lettering on the underside of the mask reads "Official Enforcer Issue, MFD by DSG Threadworks."]]></authorTag>
+
+		<value>1000</value> 
+
+		<determiner><![CDATA[an]]></determiner>
+
+		<name><![CDATA[Enforcer's gas Mask]]></name>
+
+		<namePlural pluralByDefault="false"><![CDATA[Enforcer's gas mask]]></namePlural> 
+
+		<description><![CDATA[A gas mask made of tough hycar rubber. The dome-shaped polycarbonate visor offers a wide field of view without obstructing the brim of a helmet.]]></description> 
+
+		<physicalResistance>2</physicalResistance> 
+
+		<femininity>ANDROGYNOUS</femininity> 
+
+		<slot>MOUTH</slot> 
+
+		<rarity>EPIC</rarity> 
+
+		<clothingSet/>
+
+		<imageName>gmask_nofilter.svg</imageName> 
+
+		<imageEquippedName>gmask.svg</imageEquippedName>
+
+		<effects>
+			<effect limit="0" mod1="CLOTHING_ATTRIBUTE" mod2="RESISTANCE_POISON" potency="MAJOR_BOOST" timer="397" type="CLOTHING"/>
+			<effect limit="0" mod1="CLOTHING_ATTRIBUTE" mod2="RESISTANCE_POISON" potency="MAJOR_BOOST" timer="397" type="CLOTHING"/>
+			<effect limit="0" mod1="CLOTHING_ATTRIBUTE" mod2="RESISTANCE_POISON" potency="MAJOR_BOOST" timer="397" type="CLOTHING"/>
+			<effect limit="0" mod1="CLOTHING_ATTRIBUTE" mod2="RESISTANCE_POISON" potency="MAJOR_BOOST" timer="397" type="CLOTHING"/>
+			<effect limit="0" mod1="CLOTHING_ATTRIBUTE" mod2="RESISTANCE_POISON" potency="MAJOR_BOOST" timer="397" type="CLOTHING"/>
+		</effects> 
+
+		<blockedPartsList> 
+
+			<blockedParts>
+
+				<displacementType>REMOVE_OR_EQUIP</displacementType> 
+
+				<clothingAccessRequired> 
+					<clothingAccess>MOUTH</clothingAccess>
+					<clothingAccess>HEAD</clothingAccess>
+				</clothingAccessRequired>
+
+				<blockedBodyParts>
+					<bodyPart>MOUTH</bodyPart>
+				</blockedBodyParts> 
+
+				<clothingAccessBlocked> 
+				</clothingAccessBlocked>
+
+				<concealedSlots/> 
+			</blockedParts>
+		</blockedPartsList>
+
+		<incompatibleSlots>
+			<slot>EYES</slot>
+		</incompatibleSlots> 
+
+		<primaryColours values="JUST_BLACK"/> 
+		<primaryColoursDye values="ALL"/>
+		<secondaryColours>
+			<colour>CLOTHING_GREEN_DARK</colour>
+		</secondaryColours>
+		<secondaryColoursDye values="ALL"/>
+		<tertiaryColours values="JUST_SILVER"/>
+		
+		<tertiaryColoursDye values="ALL_WITH_METALS"/>
+
+		<itemTags> 	
+			<tag>RIGID_MATERIAL</tag>
+			<tag>CONTRABAND_MEDIUM</tag>
+		</itemTags>
+	</coreAtributes>
+
+	<replacementText type="REMOVE_OR_EQUIP">
+		<self>
+			<![CDATA[[npc.Name] [npc.verb(put)] on the gas mask and [npc.verb(screw)] in a new filter cartridge.]]>
+		</self>
+		<other>
+			<![CDATA[[npc.Name] [npc.verb(push)] the gas mask onto [npc2.namePos] [npc2.face] and [npc.verb(screw)] in a new filter cartridge.]]>
+		</other>
+		<otherRough>
+			<![CDATA[[npc.Name] [npc.verb(force)] the gas mask onto [npc2.namePos] [npc2.face] and hastily [npc.verb(screw)] in a new filter cartridge.]]>
+		</otherRough>
+	</replacementText>
+
+	<displacementText type="REMOVE_OR_EQUIP">
+		<self>
+			<![CDATA[[npc.Name] [npc.verb(take)] off [npc.her] gas mask.]]>
+		</self>
+		<other>
+			<![CDATA[[npc.Name] [npc.verb(take)] [npc2.namePos] gas mask off [npc2.her] [npc2.face].]]>
+		</other>
+		<otherRough>
+			<![CDATA[[npc.Name] [npc.verb(yank)] [npc2.namePos] gas mask from [npc2.her] [npc2.face].]]>
+		</otherRough>
+	</displacementText>
+	
+</clothing>

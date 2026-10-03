@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<clothing>
+
+	<coreAtributes>
+	
+		<authorTag><![CDATA[Faintly raised lettering on each pad reads "Official Enforcer Issue, MFD by DSG Threadworks."]]></authorTag>
+
+		<value>350</value>
+
+		<determiner><![CDATA[a pair of]]></determiner>
+
+		<name><![CDATA[Enforcer's tactical elbow pads]]></name>
+
+		<namePlural pluralByDefault="true"><![CDATA[Enforcer's tactical elbow pads]]></namePlural> 
+
+		<description><![CDATA[A pair of hard plastic plates riveted to elbow pads made from shock absorbing foam. They attach to the wearer's elbows via adjustable straps]]></description> 
+
+		<physicalResistance>2</physicalResistance> 
+
+		<femininity>ANDROGYNOUS</femininity> 
+
+		<slot>WRIST</slot> 
+
+		<rarity>EPIC</rarity> 
+
+		<clothingSet/> 
+
+		<imageName>telbowpads.svg</imageName> 
+
+		<imageEquippedName/> 
+
+		<effects/>
+
+		<blockedPartsList> 
+
+			<blockedParts>
+
+				<displacementType>REMOVE_OR_EQUIP</displacementType> 
+
+				<clothingAccessRequired> 
+					<clothingAccess>WRISTS</clothingAccess>
+				</clothingAccessRequired>
+
+				<blockedBodyParts/> 
+
+				<clothingAccessBlocked/> 
+
+				<concealedSlots/> 
+			</blockedParts>
+		</blockedPartsList>
+
+		<incompatibleSlots/> 
+
+		<primaryColours values="JUST_BLACK"/> 
+		<primaryColoursDye values="ALL"/>
+		<secondaryColours values="JUST_BLACK"/> 
+		<secondaryColoursDye values="ALL"/>
+		<tertiaryColours values="JUST_STEEL"/> 
+		<tertiaryColoursDye values="ALL_METAL"/>
+
+		<itemTags> 
+			<tag>RIGID_MATERIAL</tag>
+			<tag>CONTRABAND_MEDIUM</tag>
+		</itemTags>
+	</coreAtributes>
+
+	<replacementText type="REMOVE_OR_EQUIP">
+		<self>
+			<![CDATA[[npc.Name] [npc.verb(slip)] the tactical elbow pads over [npc.her] elbows and [npc.verb(tighten)] the straps.]]>
+		</self>
+		<other>
+			<![CDATA[[npc.Name] [npc.verb(slip)] the tactical elbow pads over [npc2.namePos] elbows and [npc.verb(tighten)] the straps.]]>
+		</other>
+		<otherRough>
+			<![CDATA[[npc.Name] [npc.verb(stuff)] [npc2.namePos] legs through the tactical elbow pads and hastily [npc.verb(tighten)] the straps.]]>
+		</otherRough>
+	</replacementText>
+
+	<displacementText type="REMOVE_OR_EQUIP">
+		<self>
+			<![CDATA[[npc.Name] [npc.verb(loosen)] the straps on [npc.her] tactical elbow pads and [npc.verb(slip)] them off.]]>
+		</self>
+		<other>
+			<![CDATA[[npc.Name] [npc.verb(loosen)] the straps on [npc2.namePos] tactical elbow pads and [npc.verb(slip)] them off.]]>
+		</other>
+		<otherRough>
+			<![CDATA[[npc.Name] [npc.verb(tear)] at the straps on [npc2.namePos] tactical elbow pads until they're loose enough and [npc.verb(toss)] them aside.]]>
+		</otherRough>
+	</displacementText>
+	
+</clothing>

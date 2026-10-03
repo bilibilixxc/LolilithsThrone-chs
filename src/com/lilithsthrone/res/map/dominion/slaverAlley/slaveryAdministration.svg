@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64">
+    <defs>
+        <linearGradient id="slaveryAdministrationGradient">
+            <stop offset="0" stop-color="#f55"/>
+            <stop offset="1" stop-color="#ff8080"/>
+        </linearGradient>
+        <linearGradient id="linearGradient15" x1="29.5" x2="44.125" y1="1025.487" y2="1003.362" gradientTransform="matrix(1.28844 0 0 1.29051 -9.225 -296.313)" gradientUnits="userSpaceOnUse" xlink:href="#slaveryAdministrationGradient"/>
+    </defs>
+    <g transform="translate(0 -988.362)">
+        <ellipse cx="32" cy="1020.368" fill="url(#linearGradient15)" fill-rule="evenodd" rx="30.383" ry="30.381"/>
+        <ellipse cx="22.741" cy="1035.89" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.229" rx="9.033" ry="4.717" transform="rotate(.008)"/>
+        <ellipse cx="60.641" cy="1032.638" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.056" rx="8.701" ry="4.387" transform="rotate(.876)"/>
+        <ellipse cx="159.16" cy="1033.98" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width=".652" rx="3.339" ry="1.107" transform="matrix(.99961 .0279 -.12867 .99169 0 0)"/>
+        <ellipse cx="162.807" cy="1033.12" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width=".652" rx="3.339" ry="1.107" transform="matrix(.99961 .0279 -.12867 .99169 0 0)"/>
+        <ellipse cx="166.686" cy="1032.342" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width=".652" rx="3.339" ry="1.107" transform="matrix(.99961 .0279 -.12867 .99169 0 0)"/>
+        <ellipse cx="170.976" cy="1032.355" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width=".652" rx="3.339" ry="1.107" transform="matrix(.99961 .0279 -.12867 .99169 0 0)"/>
+        <g transform="matrix(1.06942 0 0 1.10814 -1.966 -109.878)">
+            <path fill="#fff" fill-rule="evenodd" d="M25.812 1003.768c-1.23-2-3.066-4.442-3.718-5.718-.411-.806 3.067-1.592 3.781-.47l2.625 4.126z"/>
+            <ellipse cx="32.219" cy="1009.643" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="4.114" rx="6.767" ry="7.08"/>
+            <path fill="#fff" fill-rule="evenodd" d="M38.968 1003.86c1.23-2 3.067-4.442 3.718-5.719.411-.805-3.066-1.591-3.781-.468l-2.625 4.125zM25.766 1015.707c-1.23 2-3.067 4.442-3.719 5.719-.41.805 3.067 1.591 3.782.468l2.625-4.125zM38.859 1015.646c1.23 2 3.067 4.442 3.719 5.719.41.805-3.067 1.591-3.782.469l-2.625-4.125z"/>
+        </g>
+    </g>
+</svg>

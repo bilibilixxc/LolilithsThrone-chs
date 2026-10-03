@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" cursor="default" viewBox="0 0 256 256">
+    <defs>
+        <linearGradient id="linearGradient2">
+            <stop offset="0" stop-color="#f55"/>
+            <stop offset="1" stop-color="#ff2a2a"/>
+        </linearGradient>
+        <linearGradient id="linearGradient0">
+            <stop offset="0" stop-color="#faa"/>
+            <stop offset="1" stop-color="#ff8080"/>
+        </linearGradient>
+        <linearGradient id="linearGradient1" x1="134.35" x2="134.603" y1="32.504" y2="189.835" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient0"/>
+        <linearGradient id="linearGradient3" x1="161.786" x2="148.214" y1="234.036" y2="228.5" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient2"/>
+    </defs>
+    <g stroke="#000">
+        <path fill="url(#linearGradient3)" fill-rule="evenodd" d="M167.054 248.992c-16.254-.45-18.613.13-25.633.568l20.077-78.413z"/>
+        <path fill="none" stroke-width=".5" d="M108.66 26.446s-7.166-18.095-5.96-19.04c.667-.52 11.318 22.433 11.318 22.433M113.571 24.214s-1.54-22.9-1.004-22.99c1.05-.18 15.737 45.58 15.737 45.58M143.571 43.768S156.953 1.092 157.395 1.2c2.078.51-.52 26.138-.52 26.138M160.357 30.643s9.544-22.887 7.92-23.503c-1.054-.4-11.58 21.628-11.58 21.628"/>
+        <path fill="url(#linearGradient1)" fill-rule="evenodd" d="M146.429 253.679c-15.004-1.487-25.928 3.274-45.715-5.536-1.91-38.53-4.867-75.966-3.303-114.643.398-9.846 9.374-32.453 9.375-48.929 0-22.422-4.524-29.762-6.786-44.642 2.978-8.91 8.788-13.07 13.036-16.965 9.382 8.933 13.335 18.794 22.857 29.822 8.93-10.505 12.001-19.78 20.536-29.643 7.41 3.11 11.06 9.605 13.75 16.964-1.48 14.134-7.29 26.374-6.697 39.643 1.392 31.093 9.41 37.762 9.732 54.732 1.13 59.633-.36 63.664-3.393 113.304l-4.285 2.5-3.929-66.072c-9.849 29.25-10.119 46.31-15.178 69.465z"/>
+        <path fill="none" stroke-width=".5" d="M106.786 87.16c9.468-14.897 19.515-23.132 29.285-34.553 9.794 11.598 19.163 23.124 27.947 34.554M152.054 71.714c3.325-8.158 3.433-17.485 5.089-26.25M118.84 71.491c-1.663-6.002-5.248-22.846-6.34-25.848M161.429 184.527c5.576-20.615 9.295-40.538 12.098-44.91"/>
+    </g>
+</svg>

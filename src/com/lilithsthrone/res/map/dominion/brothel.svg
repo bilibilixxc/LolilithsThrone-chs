@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64">
+    <defs>
+        <linearGradient id="brothelGradient">
+            <stop offset="0" stop-color="#f55"/>
+            <stop offset="1" stop-color="#ff8080"/>
+        </linearGradient>
+        <linearGradient id="linearGradient15" x1="29.5" x2="44.125" y1="1025.487" y2="1003.362" gradientTransform="matrix(1.28844 0 0 1.29051 -9.225 -296.313)" gradientUnits="userSpaceOnUse" xlink:href="#brothelGradient"/>
+    </defs>
+    <g transform="translate(0 -988.362)">
+        <ellipse cx="32" cy="1020.368" fill="url(#linearGradient15)" fill-rule="evenodd" rx="30.383" ry="30.381"/>
+        <path fill="none" stroke="#fff" stroke-linecap="round" stroke-width="4.84" d="M11.682 1013.595l20.6-14.315 21.317 14.556"/>
+        <path fill="#fff" fill-rule="evenodd" d="M32.282 1004.046l-16.562 11.343.13 21.864 33.047.037-.204-22.204zm5.31 10.424c3.105.052 5.775 2.567 3.878 7.005-2.063 4.828-6.681 7.426-8.923 11.497-2.089-4.248-6.97-6.372-9-11.495-1.689-4.265 1.12-6.842 4.406-6.873 2.36-.022 4.795.848 4.82 3.773.003-2.929 2.384-3.948 4.82-3.907z"/>
+    </g>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64">
+    <defs>
+        <linearGradient id="riverGradient">
+            <stop offset="0" stop-color="#f55"/>
+            <stop offset="1" stop-color="#ff8080"/>
+        </linearGradient>
+        <linearGradient id="linearGradient15" x1="29.5" x2="44.125" y1="1025.487" y2="1003.362" gradientTransform="matrix(1.28844 0 0 1.29051 -9.225 -296.313)" gradientUnits="userSpaceOnUse" xlink:href="#riverGradient"/>
+    </defs>
+    <g transform="translate(0 -988.362)">
+        <ellipse cx="32" cy="1020.368" fill="url(#linearGradient15)" fill-rule="evenodd" rx="30.383" ry="30.381"/>
+        <path fill="#fff" fill-rule="evenodd" stroke="#fff" stroke-linejoin="round" stroke-width=".856" d="M13.207 1003.912l4.073.032.126 33.162-4.36-.032z"/>
+        <path fill="#fff" fill-rule="evenodd" stroke="#fff" stroke-linejoin="round" stroke-width=".864" d="M46.926 1004.41l4.23.03.132 32.537-4.529-.032z"/>
+        <path fill="none" stroke="#fff" stroke-linecap="round" stroke-width="3" d="M41.668 1010.704c-2.664.099-5.17-2.187-5.17-2.187s-2.75 2.075-4.417 2.091c-2.688.024-4.427-2.107-4.427-2.107s-2.695 2.486-5.482 2.457M41.75 1021.602c-2.663.1-5.17-2.187-5.17-2.187s-2.749 2.076-4.416 2.091c-2.689.024-4.428-2.107-4.428-2.107s-2.695 2.486-5.481 2.458M41.214 1033.138c-2.664.1-5.17-2.187-5.17-2.187s-2.75 2.075-4.417 2.091c-2.688.024-4.427-2.107-4.427-2.107s-2.695 2.486-5.482 2.458"/>
+    </g>
+</svg>

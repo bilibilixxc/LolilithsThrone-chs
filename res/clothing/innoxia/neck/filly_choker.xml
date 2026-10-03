@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!-- This item of clothing had its default name changed from 'filly' to 'mule', along with references throughout the game, in v0.4.10.10 -->
+
+<clothing>
+	<coreAttributes>
+		<value>1000</value>
+		<determiner><![CDATA[a]]></determiner>
+		<name><![CDATA[choker]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[chokers]]></namePlural>
+		<description><![CDATA[A sturdy, leather choker, which is fastened around the wearer's neck by means of a metal buckle. A series of large metal letters are fastened to the front of the collar and boldly spell out the word ]]></description>
+		<physicalResistance>0</physicalResistance>
+		<femininity>ANDROGYNOUS</femininity>
+		<equipSlots>
+		  <slot>NECK</slot>
+		</equipSlots>
+		<rarity>QUEST</rarity>
+		<clothingSet/>
+		<imageName>filly_choker.svg</imageName>
+		<imageEquippedName/>
+		
+		<stickers>
+			<category id="txt" priority="1">
+				<categoryName><![CDATA[Text]]></categoryName>
+				<sticker id="mule" priority="1" defaultSticker="true" zLayer="1" colourDisabled="" colourSelected="">
+					<stickerName><![CDATA[Mule]]></stickerName>
+					<namePrefix priority="1"><![CDATA[<i>'Mule'</i> ]]></namePrefix>
+					<namePostfix/>
+					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>'MULE'</i>.]]></descriptionModification>
+					<imageName zLayer="1" slot="NECK">filly_choker_stickers/mule.svg</imageName>
+					<itemTagsAdded/>
+					<itemTagsRemoved/>
+					<unavailabilityText/>
+					<availabilityText/>
+				</sticker>
+				<sticker id="filly" priority="2" defaultSticker="false" zLayer="1" colourDisabled="" colourSelected="">
+					<stickerName><![CDATA[Filly]]></stickerName>
+					<namePrefix priority="1"><![CDATA[<i>'Filly'</i> ]]></namePrefix>
+					<namePostfix/>
+					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i>'FILLY'</i>.]]></descriptionModification>
+					<imageName zLayer="1" slot="NECK">filly_choker_stickers/filly.svg</imageName>
+					<itemTagsAdded>
+						<tag>FILLY_NAMING</tag>
+					</itemTagsAdded>
+					<itemTagsRemoved/>
+					<unavailabilityText/>
+					<availabilityText/>
+				</sticker>
+			</category>
+		</stickers>
+
+		<effects>
+			<effect itemEffectType="CLOTHING" limit="0" potency="MINOR_BOOST" primaryModifier="CLOTHING_SPECIAL" secondaryModifier="CLOTHING_SEALING" timer="0"/>
+			<effect itemEffectType="CLOTHING" limit="0" potency="MINOR_BOOST" primaryModifier="CLOTHING_SPECIAL" secondaryModifier="CLOTHING_SERVITUDE" timer="0"/>
+			<effect itemEffectType="CLOTHING" limit="0" potency="MAJOR_BOOST" primaryModifier="TF_MOD_FETISH_BEHAVIOUR" secondaryModifier="TF_MOD_FETISH_SUBMISSIVE" timer="0"/>
+			<effect itemEffectType="CLOTHING" limit="0" potency="MAJOR_BOOST" primaryModifier="TF_MOD_FETISH_BEHAVIOUR" secondaryModifier="TF_MOD_FETISH_ANAL_RECEIVING" timer="0"/>
+			<effect itemEffectType="CLOTHING" limit="0" potency="MAJOR_BOOST" primaryModifier="TF_MOD_FETISH_BEHAVIOUR" secondaryModifier="TF_MOD_FETISH_ANAL_GIVING" timer="0"/>
+			<effect itemEffectType="CLOTHING" limit="0" potency="MAJOR_BOOST" primaryModifier="TF_MOD_FETISH_BEHAVIOUR" secondaryModifier="TF_MOD_FETISH_PENIS_RECEIVING" timer="0"/>
+		</effects>
+		
+		<blockedPartsList slot="NECK">
+			<blockedParts>
+				<displacementType>REMOVE_OR_EQUIP</displacementType>
+				<clothingAccessRequired/>
+				<blockedBodyParts/>
+				<clothingAccessBlocked/>
+				<concealedSlots/>
+			</blockedParts>
+		</blockedPartsList>
+			
+		<incompatibleSlots/>
+			
+		<primaryColours recolouringAllowed="false">
+			<colour>CLOTHING_BRONZE</colour>
+		</primaryColours>
+		<primaryColoursDye>
+			<colour>CLOTHING_SILVER</colour>
+			<colour>CLOTHING_GOLD</colour>
+		</primaryColoursDye>
+		<secondaryColours>
+			<colour>CLOTHING_BLACK</colour>
+		</secondaryColours>
+		<secondaryColoursDye values="ALL"/>
+		<tertiaryColours>
+			<colour>CLOTHING_STEEL</colour>
+		</tertiaryColours>
+		<tertiaryColoursDye values="ALL_WITH_METALS"/>
+
+		<itemTags/>
+	</coreAttributes>
+
+  <replacementText slot="NECK" type="REMOVE_OR_EQUIP">
+    <self>
+      <![CDATA[[npc.Name] securely [npc.verb(fasten)] the leather choker around [npc.her] neck.]]>
+    </self>
+    <other>
+      <![CDATA[[npc.Name] securely [npc.verb(fasten)] the leather choker around [npc2.namePos] neck.]]>
+    </other>
+    <otherRough>
+      <![CDATA[[npc.Name] firmly [npc.verb(grab)] [npc2.name], before securely fastening the leather choker around [npc2.her] neck.]]>
+    </otherRough>
+  </replacementText>
+  <displacementText slot="NECK" type="REMOVE_OR_EQUIP">
+    <self>
+      <![CDATA[[npc.Name] [npc.verb(unfasten)] [npc.her] leather choker, before taking it off from around [npc.her] neck.]]>
+    </self>
+    <other>
+      <![CDATA[[npc.Name] [npc.verb(unfasten)] [npc2.namePos] leather choker, before taking it off from around [npc2.her] neck.]]>
+    </other>
+    <otherRough>
+      <![CDATA[[npc.Name] roughly [npc.verb(unfasten)] [npc2.namePos] leather choker, before yanking it off from around [npc2.her] neck.]]>
+    </otherRough>
+  </displacementText>
+	
+</clothing>

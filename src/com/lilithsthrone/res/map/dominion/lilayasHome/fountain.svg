@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64">
+    <defs>
+        <linearGradient id="fountainGradient">
+            <stop offset="0" stop-color="#f55"/>
+            <stop offset="1" stop-color="#ff8080"/>
+        </linearGradient>
+        <linearGradient id="linearGradient15" x1="29.5" x2="44.125" y1="1025.487" y2="1003.362" gradientTransform="matrix(1.28844 0 0 1.29051 -9.225 -296.313)" gradientUnits="userSpaceOnUse" xlink:href="#fountainGradient"/>
+    </defs>
+    <g transform="translate(0 -988.362)">
+        <ellipse cx="32" cy="1020.368" fill="url(#linearGradient15)" fill-rule="evenodd" rx="30.383" ry="30.381"/>
+        <g stroke="#fff">
+            <path fill="#fff" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" d="M13.2 1033.11l38.138-.17c.016 2.9-1.806 6.728-6.952 6.733l-23.796.024c-3.58 0-7.422-2.686-7.39-6.586z"/>
+            <path fill="#fff" fill-rule="evenodd" stroke-width="1.1" d="M28.15 1028.37v2.358l8.167.049v-2.358c-2.417.561-5.947.624-8.167-.049z"/>
+            <path fill="#fff" fill-rule="evenodd" stroke-linecap="round" stroke-width="2.2" d="M19.107 1018.307l26.276.025"/>
+            <path fill="#fff" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.1" d="M19.788 1018.235c-.054 3.306 5.158 8.603 12.59 8.628 8.86.031 12.78-6.356 12.324-8.628z"/>
+            <path fill="#fff" fill-rule="evenodd" stroke-linecap="round" stroke-width="2.2" d="M12.355 1033.126l39.902.065"/>
+            <g fill="none" stroke-linecap="round">
+                <path stroke-width="1.6500000000000001" d="M32.257 1015.78l.049-7.584c.074-11.613-16.5-11.174-16.383-.754"/>
+                <path stroke-width="1.375" d="M20.857 1010.943c.29-7.379 10.891-7.834 11.57.145M25.719 1014.073c-.221-3.392 6.175-5.233 6.49.534"/>
+            </g>
+            <g fill="none" stroke-linecap="round">
+                <path stroke-width="1.6500000000000001" d="M32.233 1015.767l-.049-7.584c-.074-11.613 16.5-11.173 16.383-.753"/>
+                <path stroke-width="1.375" d="M43.633 1010.93c-.29-7.378-10.891-7.834-11.57.146M38.772 1014.06c.22-3.392-6.176-5.233-6.49.535"/>
+            </g>
+        </g>
+    </g>
+</svg>

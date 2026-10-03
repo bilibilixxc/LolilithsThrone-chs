@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 256 256">
+    <defs>
+        <linearGradient id="linearGradient4335" x1="141.964" x2="143.036" y1="225.464" y2="220.107" gradientTransform="matrix(1.78865 0 0 2.52939 -113.592 -385.609)" gradientUnits="userSpaceOnUse" xlink:href="#poisonVapours3"/>
+        <linearGradient id="poisonVapours3">
+            <stop offset="0" stop-color="#165016"/>
+            <stop offset="1" stop-color="#217821"/>
+        </linearGradient>
+        <linearGradient id="linearGradient4327" x1="138.393" x2="139.643" y1="214.929" y2="209.393" gradientTransform="matrix(1.78865 0 0 2.52939 -113.592 -385.609)" gradientUnits="userSpaceOnUse" xlink:href="#poisonVapours2"/>
+        <linearGradient id="poisonVapours2">
+            <stop offset="0" stop-color="#37c837"/>
+            <stop offset="1" stop-color="#5fd35f"/>
+        </linearGradient>
+        <linearGradient id="linearGradient4319" x1="139.286" x2="140.536" y1="203.321" y2="196.179" gradientTransform="matrix(1.78865 0 0 2.52939 -113.592 -385.609)" gradientUnits="userSpaceOnUse" xlink:href="#poisonVapours1"/>
+        <linearGradient id="poisonVapours1">
+            <stop offset="0" stop-color="#80ff80"/>
+            <stop offset="1" stop-color="#afa"/>
+        </linearGradient>
+    </defs>
+    <g fill-rule="evenodd">
+        <path fill="url(#linearGradient4319)" d="M23.017 123.45c10.379-16.991 29.377-32.726 55.957-32.897 36.12-.232 63.427 25.349 94.727 26.829 22.525 1.064 39.445-1.576 59.155-19.802-1.098 18.967-26.725 40.808-60.354 40.562-34.444-.253-67.288-27.872-96.726-29.064-19.773-.801-36.389.864-52.76 14.372z"/>
+        <path fill="url(#linearGradient4327)" d="M22.403 138.58c10.401-12.445 19.449-19.178 46.087-19.303 36.198-.17 57.97 30.063 104.126 31.467 22.579.686 39.531-11.694 59.284-25.043-1.1 13.892-26.783 40.36-60.485 40.247-55.704-.184-72.631-35.105-102.133-35.978-19.816-.587-30.473-.964-46.879 8.61z"/>
+        <path fill="url(#linearGradient4335)" d="M21.976 151.036c11.2-7.653 22.246-10.714 41.69-10.36 36.189.659 64.364 35.493 110.521 36.896 22.578.686 39.531-11.694 59.283-25.043-1.1 13.892-26.782 40.36-60.485 40.248-55.703-.185-79.164-40.778-108.327-44.442-11.023-1.385-29.074-1.763-42.682 2.701z"/>
+    </g>
+</svg>

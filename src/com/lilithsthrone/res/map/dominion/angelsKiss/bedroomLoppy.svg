@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64">
+    <defs>
+        <linearGradient id="roomLoppyGradient">
+            <stop offset="0" stop-color="#f55"/>
+            <stop offset="1" stop-color="#ff8080"/>
+        </linearGradient>
+        <linearGradient id="linearGradient15" x1="29.5" x2="44.125" y1="1025.487" y2="1003.362" gradientTransform="matrix(1.28844 0 0 1.29051 -9.225 -296.313)" gradientUnits="userSpaceOnUse" xlink:href="#roomLoppyGradient"/>
+    </defs>
+    <g transform="translate(0 -988.362)">
+        <ellipse cx="32" cy="1020.368" fill="url(#linearGradient15)" fill-rule="evenodd" rx="30.383" ry="30.381"/>
+        <g fill="none" stroke="#fff">
+            <path stroke-width="4.7916" d="M16.536 998.494v22.685"/>
+            <path stroke-linecap="round" stroke-width="5.1401889" d="M22.191 1005.432h2.954"/>
+            <path stroke-width="7.1874" d="M17.53 1012.024l33.339.047"/>
+            <path stroke-width="4.7916" d="M48.548 1021.056l-.075-8.591"/>
+        </g>
+        <path fill="#fff" fill-rule="evenodd" d="M29.713 1024.207c-4.198 1.037-9.365 4.862-9.588 8.225-.093 1.404 2.174 5.222 6.076 5.457 6.987.42 5.568 3.825 5.814 5.536 7.282.568 10.779-4.381 12.494-6.934-4.021-3.003-2.61-8.514-7.079-11.285-2.637-1.636-5.052-1.657-7.717-.999zm-1.296 3.555a1.678 1.678 0 1 1 .001 3.355 1.678 1.678 0 0 1 0-3.355z"/>
+        <path fill="#fff" fill-rule="evenodd" stroke="#f55" stroke-width=".656" d="M33.137 1023.792c-.019.115.31-.175.285-.052-1.364 6.607-12.298 23.573-.701 24.223 14.304.803 6.254-15.946 5.804-21.652-.017-.205.167.337.172.162.924-1.439-5.671-4.49-5.56-2.681z"/>
+    </g>
+</svg>

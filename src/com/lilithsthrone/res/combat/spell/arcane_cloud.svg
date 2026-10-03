@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 256 256">
+    <defs>
+        <linearGradient id="arcaneCloud2">
+            <stop offset="0" stop-color="#93a7ac"/>
+            <stop offset="1" stop-color="#d058e7" stop-opacity=".98"/>
+        </linearGradient>
+        <linearGradient id="arcaneCloud1">
+            <stop offset="0" stop-color="#f38cec"/>
+            <stop offset="1" stop-color="#b7c4c8"/>
+        </linearGradient>
+        <linearGradient id="linearGradient4159" x1="121.071" x2="121.786" y1="164.929" y2="104.571" gradientTransform="translate(2.143 2.143)" gradientUnits="userSpaceOnUse" xlink:href="#arcaneCloud1"/>
+        <linearGradient id="linearGradient4171" x1="178.214" x2="182.143" y1="74.214" y2="122.071" gradientTransform="translate(2.143 2.143)" gradientUnits="userSpaceOnUse" xlink:href="#arcaneCloud2"/>
+    </defs>
+    <g fill-rule="evenodd">
+        <path fill="url(#linearGradient4171)" d="M181.204 136.673c44.74 28.587 78.297-43.596 19.053-48.976-10.008-27.576-48.014-41.114-86.077-13.06-79.594-4.68-50.845 96.85 15.65 63.817 16.66 8.326 33.808 7.304 51.374-1.781z"/>
+        <path fill="url(#linearGradient4159)" d="M81.313 167.848c-53.57 33.102-93.747-50.482-22.812-56.712 11.983-31.932 57.488-47.608 103.062-15.123 95.301-5.419 60.88 112.15-18.738 73.897-19.948 9.642-40.479 8.458-61.512-2.062z"/>
+    </g>
+</svg>

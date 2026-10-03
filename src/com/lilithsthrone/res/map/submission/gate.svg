@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64">
+    <defs>
+        <linearGradient id="gateGradient">
+            <stop offset="0" stop-color="#f55"/>
+            <stop offset="1" stop-color="#ff8080"/>
+        </linearGradient>
+        <linearGradient id="linearGradient15" x1="29.5" x2="44.125" y1="1025.487" y2="1003.362" gradientTransform="matrix(1.28844 0 0 1.29051 -9.225 -296.313)" gradientUnits="userSpaceOnUse" xlink:href="#gateGradient"/>
+    </defs>
+    <g transform="translate(0 -988.362)">
+        <ellipse cx="32" cy="1020.368" fill="url(#linearGradient15)" fill-rule="evenodd" rx="30.383" ry="30.381"/>
+        <path fill="none" stroke="#fff" stroke-linecap="round" stroke-width="4" d="M16.694 1037.906v-32.218M49.142 1038.196v-32.218"/>
+        <path fill="none" stroke="#fff" stroke-width="3" d="M17.187 1013.8l8.688-.036c4-2.516 8.167-2.536 12.5-.052l9.062-.037M17.063 1031.691l30.25-.125"/>
+        <path fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2.042" d="M32.25 1038.553v-33.57"/>
+        <path fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1.965" d="M38.125 1038.569v-31.1"/>
+        <path fill="none" stroke="#fff" stroke-linecap="round" stroke-width="1.922" d="M43.562 1038.549V1008.8"/>
+        <path fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2.002" d="M21.531 1038.252v-28.967"/>
+        <path fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2" d="M26.469 1038.252v-31.217"/>
+        <ellipse cx="16.643" cy="1002.252" fill="#fff" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.497" rx="2.136" ry="2.029"/>
+        <path fill="none" stroke="#fff" stroke-width="4" d="M27.375 1021.956l10.375.062"/>
+        <ellipse cx="49.056" cy="1002.511" fill="#fff" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.497" rx="2.136" ry="2.029"/>
+    </g>
+</svg>

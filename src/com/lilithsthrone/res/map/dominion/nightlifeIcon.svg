@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64">
+    <defs>
+        <linearGradient id="nightlifeGradient">
+            <stop offset="0" stop-color="#f55"/>
+            <stop offset="1" stop-color="#ff8080"/>
+        </linearGradient>
+        <linearGradient id="linearGradient15" x1="29.5" x2="44.125" y1="1025.487" y2="1003.362" gradientTransform="matrix(1.28844 0 0 1.29051 -9.225 -296.313)" gradientUnits="userSpaceOnUse" xlink:href="#nightlifeGradient"/>
+    </defs>
+    <g transform="translate(0 -988.362)">
+        <ellipse cx="32" cy="1020.368" fill="url(#linearGradient15)" fill-rule="evenodd" rx="30.383" ry="30.381"/>
+        <g fill="none" stroke="#fff" stroke-linejoin="round">
+            <path stroke-width="3.51" d="M79.853 1034.021l-.032-12.083-10.45-9.716 21.595.052-11.108 9.686" transform="matrix(1.38952 0 0 1.67744 -78.66 -692.83)"/>
+            <path stroke-linecap="round" stroke-width="3.227" d="M74.594 1032.54h11.099" transform="matrix(1.38952 0 0 1.67744 -78.66 -692.83)"/>
+        </g>
+    </g>
+</svg>

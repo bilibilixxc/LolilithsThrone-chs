@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64">
+    <defs>
+        <linearGradient id="nyanShopGradient">
+            <stop offset="0" stop-color="#f55"/>
+            <stop offset="1" stop-color="#ff8080"/>
+        </linearGradient>
+        <linearGradient id="linearGradient15" x1="29.5" x2="44.125" y1="1025.487" y2="1003.362" gradientTransform="matrix(1.28844 0 0 1.29051 -9.225 -296.313)" gradientUnits="userSpaceOnUse" xlink:href="#nyanShopGradient"/>
+    </defs>
+    <g fill-rule="evenodd" transform="translate(0 -988.362)">
+        <ellipse cx="32" cy="1020.368" fill="url(#linearGradient15)" rx="30.383" ry="30.381"/>
+        <path fill="#fff" d="M43.557 1041.749c-2.92-.03-4.36.04-7.019-.062-1.95-.076-4.519-.298-6.898-.365-3.024-.084-5.968.011-9.432.195.417-8.215.355-16.42.278-24.4-1.635.863-2.401 1.744-4.216 2.533-2.3-2.535-4.264-4.175-6.393-6.254 4.826-5.254 5.594-6.86 9.034-9.59 1.534-1.217 5.925-3.963 7.337-4.226 1.465.947 7.55 1.721 10.776-.076 3.197 1.22 5.875 2.21 7.738 3.839 3.658 3.199 5.905 6.524 8.848 9.775-1.837 2.332-4.046 4.293-6.069 6.44-1.748-.556-2.538-1.83-3.771-3.072-.31 7.852-.126 17.466-.213 25.263z"/>
+    </g>
+</svg>

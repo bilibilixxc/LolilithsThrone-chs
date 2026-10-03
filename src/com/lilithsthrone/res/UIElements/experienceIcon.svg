@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64">
+    <defs>
+        <linearGradient id="linearGradientAgility4151">
+            <stop offset="0" stop-color="#faa"/>
+            <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+        </linearGradient>
+        <radialGradient id="radialGradientExperience4157" cx="33.499" cy="1020.984" r="28.107" fx="33.499" fy="1020.984" gradientTransform="matrix(.01197 1.0312 -1.09222 .01271 1082.829 972.845)" gradientUnits="userSpaceOnUse" xlink:href="#linearGradientAgility4151"/>
+    </defs>
+    <g fill-rule="evenodd" transform="translate(0 -988.362)">
+        <ellipse cx="-31.908" cy="1020.366" fill="url(#radialGradientExperience4157)" color="#000" overflow="visible" rx="31.912" ry="31.901" transform="scale(-1 1)" style="isolation:auto;mix-blend-mode:normal;solid-color:#000;solid-opacity:1"/>
+        <path fill="#faa" stroke="#000" d="M12.295 1036.327l19.908-15.687 19.943 15.58.013 9.283-19.792-16.328-20.046 16.336z"/>
+        <path fill="#faa" stroke="#000" d="M12.104 1023.831l19.907-15.686 19.943 15.579.014 9.284-19.792-16.328-20.047 16.335z"/>
+        <path fill="#faa" stroke="#000" d="M11.977 1011.106l19.908-15.686 19.943 15.579.013 9.284-19.792-16.329-20.046 16.336z"/>
+    </g>
+</svg>

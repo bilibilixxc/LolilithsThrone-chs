@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 256 256">
+    <defs>
+        <linearGradient id="cloakOfFlames5">
+            <stop offset="0" stop-color="#f4161c"/>
+            <stop offset="1" stop-color="#f40c5a"/>
+        </linearGradient>
+        <linearGradient id="cloakOfFlames3">
+            <stop offset="0" stop-color="#ff7132"/>
+            <stop offset="1" stop-color="#ffb243"/>
+        </linearGradient>
+        <linearGradient id="cloakOfFlames4">
+            <stop offset="0" stop-color="#f44816"/>
+            <stop offset="1" stop-color="#f4670c"/>
+        </linearGradient>
+        <linearGradient id="linearGradient4205" x1="127.658" x2="142.268" y1="220.043" y2="141.829" gradientTransform="matrix(.83668 0 0 .86327 21.747 6.681)" gradientUnits="userSpaceOnUse" xlink:href="#cloakOfFlames3"/>
+        <linearGradient id="linearGradient4213" x1="132.143" x2="154.643" y1="194.929" y2="59.571" gradientTransform="matrix(.83668 0 0 .86327 21.747 6.681)" gradientUnits="userSpaceOnUse" xlink:href="#cloakOfFlames4"/>
+        <linearGradient id="linearGradient4405" x1="132.143" x2="154.643" y1="194.929" y2="59.571" gradientTransform="matrix(1.01238 0 0 1.04456 -1.158 -17.53)" gradientUnits="userSpaceOnUse" xlink:href="#cloakOfFlames5"/>
+    </defs>
+    <g fill-rule="evenodd">
+        <path fill="url(#linearGradient4405)" d="M130.621 41.637c-50.23 14.115-65.832 70.96-82.202 147.513 54.282.597 50.03 29.771 74.977 30.49 31.464.907 27.127-18.144 44.17-17.2 21.373 1.185 30.593 10.326 45.654 15.637-14.234-39.317-34.174-99.06-38.246-140.979-2.724-28.044 9.647-29.613 2.741-31.762-1.715-.533-19.43-1.86-17.857-1.476 16.446 4.024-10.107 16.003-22.773 14.767-6.743-.658-10.536-14.1 4.86-16.576.996-.16-9.992-.789-11.324-.414z"/>
+        <path fill="url(#linearGradient4213)" d="M133.146 41.334C91.634 53 76.25 114.225 62.72 177.492c44.861.494 41.347 24.604 61.964 25.199 26.004.75 22.42-14.996 36.504-14.215 17.664.979 25.284 8.533 37.731 12.922-11.764-32.493-28.243-81.868-31.608-116.51-2.251-23.178 10.463-38.72 4.756-40.496-1.417-.441-16.058-1.538-14.758-1.22 13.592 3.325-8.352 13.225-18.82 12.204-5.573-.544-8.708-11.654 4.016-13.7.824-.132-8.257-.651-9.359-.342z"/>
+        <path fill="url(#linearGradient4205)" d="M97.92 121.323c-18.302 7.097-3.017 25.568-35.2 56.169 44.861.494 41.347 24.604 61.964 25.199 26.004.75 22.42-14.996 36.504-14.215 17.664.979 25.284 8.533 37.731 12.922-11.764-32.493-18.25-14.716-27.637-49.128-11.826 36.41-5.964-3.348-23.407-21.71 4.107 16.07.59 29.69-2.253 29.39-12.249-1.296-17.851-30.42-11.778-45.85-19.011 19.342-14.775 49.08-26.556 47.93-7.014-.684-15.843-18.637-9.367-40.707z"/>
+    </g>
+</svg>

@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64">
+    <defs>
+        <linearGradient id="bridgeGradient">
+            <stop offset="0" stop-color="#f55"/>
+            <stop offset="1" stop-color="#ff8080"/>
+        </linearGradient>
+        <linearGradient id="linearGradient15" x1="29.5" x2="44.125" y1="1025.487" y2="1003.362" gradientTransform="matrix(1.28844 0 0 1.29051 -9.225 -296.313)" gradientUnits="userSpaceOnUse" xlink:href="#bridgeGradient"/>
+    </defs>
+    <g transform="translate(0 -988.362)">
+        <ellipse cx="32" cy="1020.368" fill="url(#linearGradient15)" fill-rule="evenodd" rx="30.383" ry="30.381"/>
+        <g stroke="#fff">
+            <path fill="#fff" fill-rule="evenodd" stroke-linejoin="round" stroke-width="1.089" d="M57.125 1029.967l-7.278.021c-13.254-7.147-21.16-7.23-35.21.031l-7.965.072c20.287-11.19 30.823-11.927 50.453-.124z"/>
+            <path fill="none" stroke-linecap="round" stroke-width="2.42" d="M9.104 1028.966c0-.214.16-11.337.16-11.337M32.285 1021.479c0-.214.16-11.337.16-11.337M54.798 1028.805c0-.214.16-11.337.16-11.337M43.996 1023.885c0-.214.16-11.336.16-11.336M19.665 1024.1c0-.215.16-11.337.16-11.337"/>
+            <path fill="none" stroke-width="1.21" d="M9.478 1019.18c15.027-9.153 33.225-8.243 45.294.641M9.27 1023.911c15.026-9.152 33.224-8.242 45.292.642"/>
+        </g>
+    </g>
+</svg>

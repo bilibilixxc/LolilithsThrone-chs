@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64">
+    <defs>
+        <linearGradient id="roomGradient">
+            <stop offset="0" stop-color="#f55"/>
+            <stop offset="1" stop-color="#ff8080"/>
+        </linearGradient>
+        <linearGradient id="linearGradient15" x1="29.5" x2="44.125" y1="1025.487" y2="1003.362" gradientTransform="matrix(1.28844 0 0 1.29051 -9.225 -296.313)" gradientUnits="userSpaceOnUse" xlink:href="#roomGradient"/>
+    </defs>
+    <g transform="translate(0 -988.362)">
+        <ellipse cx="32" cy="1020.368" fill="url(#linearGradient15)" fill-rule="evenodd" rx="30.383" ry="30.381"/>
+        <g fill="none" stroke="#fff">
+            <path stroke-width="4.7916" d="M16.536 998.494v22.685"/>
+            <path stroke-linecap="round" stroke-width="5.1401889" d="M22.191 1005.432h2.954"/>
+            <path stroke-width="7.1874" d="M17.53 1012.024l33.339.047"/>
+            <path stroke-width="4.7916" d="M48.548 1021.056l-.075-8.591"/>
+        </g>
+        <path fill="#fff" fill-rule="evenodd" d="M35.322 1019.204c3.084-.361 6.064 1.777 4.775 6.427-1.403 5.06-5.635 8.248-7.316 12.582-2.635-3.933-7.756-5.39-10.448-10.197-2.241-4.002.2-6.93 3.453-7.398 2.335-.335 4.865.203 5.28 3.099-.388-2.903 1.836-4.23 4.256-4.513zM46.13 1036.592c1.802.908 2.653 3.133.29 5.193-2.571 2.24-6.006 2.454-8.468 4.202-.021-3.075-2.276-5.697-2.015-9.266.217-2.972 2.588-3.686 4.519-2.775 1.386.654 2.564 1.851 1.753 3.569.829-1.712 2.51-1.635 3.922-.923zM25.005 1035.354c1.527-.627 3.358.04 3.366 2.604.008 2.79-1.7 5.029-1.939 7.488-1.912-1.635-4.742-1.645-6.809-3.719-1.72-1.726-.892-3.575.706-4.281 1.146-.507 2.518-.594 3.146.828-.615-1.43.333-2.428 1.53-2.92z"/>
+    </g>
+</svg>

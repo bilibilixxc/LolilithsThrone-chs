@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64">
+    <defs>
+        <linearGradient id="linearGradient4518">
+            <stop offset="0" stop-color="#aa00d4"/>
+            <stop offset="1" stop-color="#6f7c91"/>
+        </linearGradient>
+        <linearGradient id="linearGradient4508">
+            <stop offset="0" stop-color="#c0f"/>
+            <stop offset="1" stop-color="#b7bec8"/>
+        </linearGradient>
+        <linearGradient id="linearGradient4514" x1="479" x2="478.75" y1="45.5" y2="27.25" gradientTransform="matrix(.9 0 0 .9 13.993 3.062)" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient4508"/>
+        <linearGradient id="linearGradient4516" x1="492.75" x2="492.5" y1="28.5" y2="12.5" gradientTransform="matrix(.9 0 0 .9 13.993 3.062)" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient4518"/>
+    </defs>
+    <g stroke="#000" transform="translate(-415.13 6.273)">
+        <ellipse cx="438.037" cy="22.922" fill="#ffc100" stroke-linecap="round" stroke-linejoin="round" stroke-width=".965" rx="15.886" ry="15.715"/>
+        <path fill="url(#linearGradient4516)" fill-rule="evenodd" stroke-width=".653" d="M470.38 30.806c6.231-.035 6.072-11.06-2.288-10.826 1.627-5.457-5.189-7.395-7.766-4.447-.297-5.69-9.808-9.162-13.179-1.498-14.594-2.294-13.675 16.982-3.882 16.926z"/>
+        <path fill="url(#linearGradient4514)" fill-rule="evenodd" stroke-width=".847" d="M424.845 43.777c-8.146-.046-7.939-14.257 2.992-13.955-2.127-7.034 6.785-9.532 10.154-5.732.388-7.335 12.824-11.81 17.231-1.93 19.082-2.958 17.88 21.888 5.077 21.816z"/>
+    </g>
+</svg>

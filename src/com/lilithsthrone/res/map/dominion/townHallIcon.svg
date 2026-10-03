@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64">
+    <defs>
+        <linearGradient id="townHallGradient">
+            <stop offset="0" stop-color="#f55"/>
+            <stop offset="1" stop-color="#ff8080"/>
+        </linearGradient>
+        <linearGradient id="linearGradient15" x1="29.5" x2="44.125" y1="1025.487" y2="1003.362" gradientTransform="matrix(1.28844 0 0 1.29051 -9.225 -296.313)" gradientUnits="userSpaceOnUse" xlink:href="#townHallGradient"/>
+    </defs>
+    <g transform="translate(0 -988.362)">
+        <ellipse cx="32" cy="1020.368" fill="url(#linearGradient15)" fill-rule="evenodd" rx="30.383" ry="30.381"/>
+        <path fill="none" stroke="#fff" stroke-linejoin="round" stroke-width="3" d="M73.17 1023.07l26.658.01-13.22-7.925z" transform="translate(-95.156 -497.166) scale(1.47376)"/>
+        <path fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2.769" d="M75.798 1026.262v9.584" transform="translate(-95.156 -497.166) scale(1.47376)"/>
+        <path fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2.914" d="M99.947 1039.054h-27.36" transform="translate(-95.156 -497.166) scale(1.47376)"/>
+        <path fill="#f0f" fill-rule="evenodd" d="M32.259 1013.68l-6.718 17.389 16.218-10.919-19.384-.09 16.458 11.413z"/>
+        <path fill="none" stroke="#fff" stroke-linecap="round" stroke-width="2.769" d="M96.95 1026.29v9.585" transform="translate(-95.156 -497.166) scale(1.47376)"/>
+    </g>
+</svg>

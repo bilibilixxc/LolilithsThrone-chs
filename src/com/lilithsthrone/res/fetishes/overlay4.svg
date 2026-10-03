@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+    <g fill="#ff8080" stroke="#000" stroke-linejoin="round" stroke-width="1.286" font-family="sans-serif" font-weight="400" letter-spacing="0" word-spacing="0">
+        <path d="M63.09 19.45l-9.783 28.017h-4.652L39.337 19.45h5.591l6.142 21.074 6.527-21.074z" style="line-height:125%"/>
+        <path stroke-linecap="round" d="M37.542 47.591H27.105v-3.546h2.921V23.012h-2.921v-3.47h10.437v3.47h-2.767v21.033h2.767z" style="line-height:125%"/>
+    </g>
+</svg>

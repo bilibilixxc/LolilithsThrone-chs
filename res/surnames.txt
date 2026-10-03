@@ -1,0 +1,8 @@
+# Follow this example
+# surnames/youkoSurnames are all that's valid
+# youkoSurnames are for beast races
+# Any lines starting with # are ignored feel free to comment ones out you can't finish
+# share your name lists if you feel like it so we can propagate a good sized name list
+# Example because I can't think of anything.
+surnames=Pinkerton
+surnames=Pinkerson

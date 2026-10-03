@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<dialogue>
+
+	<htmlContent tag="OUTSIDE"><![CDATA[
+	<p>
+		This particular street is dominated by the huge structure of Dominion's city hall. The architecture of this seat of local government is distinctly classical, with the frontage consisting of a series of huge marble pillars and polished stone steps. A sign near the entrance of this impressive building informs you that it's open to the public from
+		#IF(game.getHourOfDay()>=9 && game.getHourOfDay()<=16)
+			 [style.colourMinorGood([units.time(9)]-[units.time(16)])].
+		#ELSE
+			 [style.colourMinorBad([units.time(9)]-[units.time(16)])].
+		#ENDIF
+	</p>
+	<p>
+		#IF(game.getCurrentWeather()==WEATHER_MAGIC_STORM)
+			As there's an arcane storm raging overhead, your surroundings are almost completely deserted, with only the occasional demon to be seen walking down the street.
+			#IF(game.getHourOfDay()>=9 && game.getHourOfDay()<=16)
+				 As city hall is [style.colourGood(currently open to the public)], you wonder how many people are inside due to legitimate business, and how many are just making use of the building to take shelter from the storm.
+			#ELSE
+				 Unfortunately, due to the time of day, city hall is [style.colourBad(currently closed to the public)], so if you had any business within, you'll have to return during regular opening times.
+			#ENDIF
+		#ELSE
+			#IF(game.getHourOfDay()>=9 && game.getHourOfDay()<=16)
+				As city hall is [style.colourGood(currently open to the public)], you could always head inside and seek to conduct whatever business you have to attend to.
+			#ELSE
+				Unfortunately, due to the time of day, city hall is [style.colourBad(currently closed to the public)], so if you had any business within, you'll have to return during regular opening times.
+			#ENDIF
+		#ENDIF
+	</p>
+	]]>
+	</htmlContent>
+
+	
+	<!-- CITY_HALL_ENTRANCE -->
+
+	<htmlContent tag="ENTRY"><![CDATA[
+	<p>
+		Walking up the short series of polished marble steps which lead to city hall's main entrance, you find yourself confronted by a pair of revolving glass doors. Heading through the one marked 'Entrance', you step into the main foyer and take a look at your new surroundings.
+	</p>
+	]]>
+	</htmlContent>
+
+	<htmlContent tag="CITY_HALL_FOYER"><![CDATA[
+	<p>
+		The grand entrance to Dominion's city hall gives visitors the impression of great wealth and prestige. Huge marble pillars line the edges of this colossal foyer, and between them, sitting upon the polished marble floor, are numerous finely-carved busts of notable demons. Hanging from the walls are gigantic portraits of yet more demons and half-demons, with nameplates identifying them as particularly important members of the local government. Looking up at the high vaulted ceiling, you see the source of this area's illumination taking the form of several huge, crystal chandeliers.
+	</p>
+	<p>
+		On one end of this grand foyer, there's the pair of revolving glass doors which serve as the public entrance and exit, while on the other, a huge, circular desk is staffed by ten or so receptionists, who each wait patiently to answer any queries directed their way by visiting members of the public. Beyond that, the entrance hall branches off left and right into two corridors, which lead into the depths of this centre of bureaucracy.
+	</p>
+	<p>
+		Although not busy by any stretch of the imagination, several members of the public are milling around in this area, and are no doubt waiting for their friends or companions to finish conducting whatever business they had within.
+	</p>
+	]]>
+	</htmlContent>
+
+	
+	<!-- CITY_HALL_INFORMATION_DESK -->
+	
+	<htmlContent tag="CITY_HALL_INFORMATION_DESK"><![CDATA[
+	<p>
+		Near the far end of the grand foyer, there's a huge, circular desk, which is staffed by ten or so receptionists. It's beside this desk that you currently find yourself standing, and you wonder whether you should approach one of the helpful-looking girls currently on duty, or simply head past them without asking for assistance.
+	</p>
+	]]>
+	</htmlContent>
+
+	<htmlContent tag="CITY_HALL_INFORMATION_DESK_NAME_CHANGE"><![CDATA[
+	<p>
+		Wanting to know where to go in order to get your name officially changed, you step up to the desk and ask one of the receptionists for directions.
+	</p>
+	<p>
+		[genericFemale.speech(Ah, you'll want the Bureau of Demographics for that,)] the girl happily answers, before turning in her chair and pointing down the corridor which leads to the left. [genericFemale.speech(You need to head that way, and at the end of the corridor, take another left, and then the office you're looking for will be at the end of that corridor on your right. Applying for a change of name is considered minor business, so once you're there, you'll only need to fill out forms 2-B, 7-D, and the usual series of A-series documents from 1 to 13. There's also no need to wait for an appointment; the Bureau of Demographics is always open to all members of the public. Have a nice day!)]
+	</p>
+	<p>
+		Without asking if there was anything else you needed, the receptionist calls out to someone standing behind you, and proceeds to ask them if there's anything she can help them with. As you've already got the information you wanted, you step away from the desk and wonder if you should head down to this 'Bureau of Demographics' right away...
+	</p>
+	]]>
+	</htmlContent>
+
+	<htmlContent tag="CITY_HALL_INFORMATION_DESK_PROPERTY"><![CDATA[
+	<p>
+		Curious about the purchase of property in Dominion, you approach the information desk and ask one of the free receptionists where you'd need to go to talk about such a matter.
+	</p>
+	<p>
+		[genericFemale.speech(Oh, I'm sorry, [pc.sir],)] the receptionist says, the forced smile on her face making it clear that she isn't actually sorry at all. [genericFemale.speech(The transfer of property rights have recently been suspended, and there's no telling when they might be available again. For future reference, the Bureau of Property and Commerce is down the corridor on the right. Have a good day!)]
+	</p>
+	<p>
+		Looking right past you, the girl then calls out to someone who was waiting behind you, and proceeds to ask them if they need any assistance. As your question has now been answered, you step away from the desk and wonder what to do next...
+	</p>
+	]]>
+	</htmlContent>
+
+	
+	<!-- CITY_HALL_CORRIDOR -->
+	
+	<htmlContent tag="CITY_HALL_CORRIDOR"><![CDATA[
+	<p>
+		Just like the main foyer, the corridors of Dominion's city hall are a grand affair. Polished marble flooring, high-vaulted ceilings, and impressive portraits lining the walls all give the impression of great wealth and importance.
+	</p>
+	<p>
+		Although there are several office workers and self-important bureaucrats hurrying to and fro, the corridor is easily wide enough to accommodate all of you, and, thanks to this abundance of space, you find that there's no need for anyone to adjust their tangent as you all continue on your separate ways.
+	</p>
+	]]>
+	</htmlContent>
+
+	
+	<!-- CITY_HALL_WAITING_AREA -->
+	
+	<htmlContent tag="CITY_HALL_WAITING_AREA"><![CDATA[
+	<p>
+		For those residents of Dominion who have specific business with the city's administrators, a large, well-furnished waiting room has been provided. Sitting upon the many low-backed sofas which litter this open area, there are numerous members of the public, and you notice that many of them are holding little ticket stubs. A large, arcane-powered notification board is fixed to the far wall, and you see that it reads: <i>Now serving: [#((game.getHourOfDay()*115)+(game.getDayMinutes()%60)).toFixed(0)]</i>
+	</p>
+	]]>
+	</htmlContent>
+	
+	<htmlContent tag="CITY_HALL_WAITING_AREA_LODGER_QUEST"><![CDATA[
+	#IF(game.getDialogueFlags().hasFlag(FLAG_cityHallLodgerBoardSeen))
+		<p>
+			Shuddering at the thought of being at the mercy of Dominion's bureaucracy, you turn your attention towards the small, free-standing notice board that's positioned on one side of the waiting room. Curious to see if there's anything to be discovered from reading the many notes pinned to it, you quickly head over to this notice board and start reading.
+		</p>
+		<p>
+			It soon becomes apparent that the only item which holds any interest to you is the piece of paper titled 'Lodgers Seeking Rooms To Rent'. While you're sure that this will be a way in which to meet new and exciting people, there's not much point in looking over the list of Lodgers until you've gained Lilaya's permission to invite guests to stay in one of the empty rooms in her mansion. Resolving to ask your [lilaya.relation(pc)] about that as soon as possible, you [pc.step] back and prepare to continue on your way...
+		</p>
+	#ELSE
+		<p>
+			Shuddering at the thought of being at the mercy of Dominion's bureaucracy, you turn away and prepare to leave, but as you do so, you spot a small, free-standing notice board positioned on one side of the waiting room. Curious to see if there's anything to be discovered from reading the many notes pinned to it, you quickly head over to the notice board and start reading.
+		</p>
+		<p>
+			Unfortunately, the vast majority of the posters and proclamations pinned to the board are either advertising some frivolous product or making a common-sense public service announcement. There is, however, one piece of paper which attracts your attention, as it's titled 'Lodgers Seeking Rooms To Rent'. Wondering if this could be a way in which to meet new and exciting people, you decide to ask Lilaya about inviting guests to stay in one of the empty rooms in her mansion. Until such time as you've gained her permission, there's not much point in looking over the list of Lodgers, and so you [pc.step] back and prepare to continue on your way...
+		</p>
+	#ENDIF
+	]]>
+	</htmlContent>
+	
+	<htmlContent tag="CITY_HALL_WAITING_AREA_LODGER_NO_ROOM"><![CDATA[
+	#IF(game.getDialogueFlags().hasFlag(FLAG_cityHallLodgerBoardSeen))
+		<p>
+			Shuddering at the thought of being at the mercy of Dominion's bureaucracy, you turn your attention towards the small, free-standing notice board that's positioned on one side of the waiting room. Curious to see if there's anything to be discovered from reading the many notes pinned to it, you quickly head over to this notice board and start reading.
+		</p>
+		<p>
+			It soon becomes apparent that the only item which holds any interest to you is the piece of paper titled 'Lodgers Seeking Rooms To Rent'. Unfortunately, you don't currently have any free guest rooms in Lilaya's mansion where you could house a lodger, and so with little point in reading over the list of names, you [pc.step] back and prepare to continue on your way...
+		</p>
+	#ELSE
+		<p>
+			Shuddering at the thought of being at the mercy of Dominion's bureaucracy, you turn away and prepare to leave, but as you do so, you spot a small, free-standing notice board positioned on one side of the waiting room. Curious to see if there's anything to be discovered from reading the many notes pinned to it, you quickly head over to the notice board and start reading.
+		</p>
+		<p>
+			Unfortunately, the vast majority of the posters and proclamations pinned to the board are either advertising some frivolous product or making a common-sense public service announcement. There is, however, one piece of paper which attracts your attention, as it's titled 'Lodgers Seeking Rooms To Rent'. Unfortunately, you don't currently have any free guest rooms in Lilaya's mansion where you could house a lodger, and so with little point in reading over the list of names, you [pc.step] back and prepare to continue on your way...
+		</p>
+	#ENDIF
+	]]>
+	</htmlContent>
+	
+	<htmlContent tag="CITY_HALL_WAITING_AREA_LODGER_AVAILABLE"><![CDATA[
+	#IF(game.getDialogueFlags().hasFlag(FLAG_cityHallLodgerBoardSeen))
+		<p>
+			Shuddering at the thought of being at the mercy of Dominion's bureaucracy, you turn your attention towards the small, free-standing notice board that's positioned on one side of the waiting room. Curious to see if there's anything to be discovered from reading the many notes pinned to it, you quickly head over to this notice board and start reading.
+		</p>
+		<p>
+			It soon becomes apparent that the only item which holds any interest to you is the piece of paper titled 'Lodgers Seeking Rooms To Rent'. You wonder whether you should take some time to read over the list of names of people looking for lodgings, or simply [pc.step] back and continue on your way...
+		</p>
+	#ELSE
+		<p>
+			Shuddering at the thought of being at the mercy of Dominion's bureaucracy, you turn away and prepare to leave, but as you do so, you spot a small, free-standing notice board positioned on one side of the waiting room. Curious to see if there's anything to be discovered from reading the many notes pinned to it, you quickly head over to the notice board and start reading.
+		</p>
+		<p>
+			Unfortunately, the vast majority of the posters and proclamations pinned to the board are either advertising some frivolous product or making a common-sense public service announcement. There is, however, one piece of paper which attracts your attention, as it's titled 'Lodgers Seeking Rooms To Rent'. You wonder whether you should take some time to read over the list of names of people looking for lodgings, or simply [pc.step] back and continue on your way...
+		</p>
+	#ENDIF
+	]]>
+	</htmlContent>
+
+	
+	<!-- CITY_HALL_WAITING_AREA_LODGER_LIST -->
+	
+	<htmlContent tag="CITY_HALL_WAITING_AREA_LODGER_LIST"><![CDATA[
+	<p>
+		Thinking that it would be fun to have someone staying in one of the guest rooms which you've had prepared, you take a closer look at the piece of paper titled 'Lodgers Seeking Rooms To Rent' and spend some time reading through the list of names...
+	</p>
+	]]>
+	</htmlContent>
+	
+	
+	<!-- LODGER_IMPORT_START -->
+	
+	<htmlContent tag="LODGER_IMPORT_START"><![CDATA[
+	<p>
+		You can import any of your previously exported characters in order to add them to the lodger list. Once imported, this character will show up in this area, and by interacting with them you can add them as a friendly occupant.
+	</p>
+	<p>
+		<i>You can export any character in the game by viewing their character sheet and pressing the little export button in the bottom-right of the screen.</i>
+	</p>
+	]]>
+	</htmlContent>
+	
+	
+	<!-- CITY_HALL_APPROACH_LODGER -->
+	
+	<htmlContent tag="CITY_HALL_APPROACH_LODGER"><![CDATA[
+	<p>
+		Liking the sound of '[npc.name]', you look around the waiting room to see if you can find anyone matching [npc.her] description. Sure enough, after a brief [pc.walk] around the many low-backed sofas which litter the waiting room, you see [npc.a_race] sitting beside a small suitcase which undoubtedly contains [npc.her] possessions.
+	</p>
+	<p>
+		[pc.Walking] up to this [npc.race], you ask [npc.her] if [npc.sheIs] the same [npc.name] who's put [npc.her] name down on the list of lodgers looking for rooms to rent.
+		#IF(npc.isShy())
+			 Shyly averting [npc.her] [npc.eyes+] and looking down at the floor,
+		#ELSEIF(npc.isConfident())
+			 Confidently standing up and fixing [npc.her] [npc.eyes+] upon your face,
+		#ELSE
+			 Looking up at you with [npc.her] [npc.eyes+],
+		#ENDIF
+		#IF(npc.isMute())
+			 the [npc.name] reveals the fact that [npc.sheIs] mute by simply nodding [npc.her] head up and down as a means of conveying a positive response.
+		#ELSE
+			  the [npc.name] replies,
+			#IF(npc.isSelfish())
+				 [npc.speech(Yes, that's me. You've got a room for me, right? I deserve it more than anyone else.)]
+			#ELSEIF(npc.isKind())
+				 [npc.speech(Yes, that's me. You've got a room for me? If someone needs it more than me then you can give it to them, but if not, then I'd really appreciate having a place to stay.)]
+			#ELSE
+				 [npc.speech(Yes, that's me. You've got a room for me?)]
+			#ENDIF
+		#ENDIF
+	</p>
+	<p>
+		Taking hold of [npc.her] suitcase, [npc.name] seems ready to leave, and so you need to quickly decide whether or not you really do want to offer [npc.herHim] a room in which to stay...
+	</p>
+	]]>
+	</htmlContent>
+	
+	
+	<!-- LODGER_DENIED -->
+	
+	<htmlContent tag="LODGER_DENIED"><![CDATA[
+	<p>
+		Not liking your first impression of [npc.name], you tell [npc.herHim] that you've changed your mind and don't have a room to offer [npc.herHim] after all. Letting out a weary sigh, the [npc.race] picks up [npc.her] suitcase and
+		#IF(npc.isMute())
+			 silently heads for the exit.
+		#ELSE
+			 heads for the exit, muttering, [npc.speech(I'll have better luck elsewhere in the Realm...)]
+		#ENDIF
+	</p>
+	<p>
+		With [npc.name] having swiftly departed, you're left standing in the waiting room wondering what to do next...
+	</p>
+	]]>
+	</htmlContent>
+	
+	
+	<!-- LODGER_GIVEN_ROOM -->
+	
+	<htmlContent tag="LODGER_GIVEN_ROOM"><![CDATA[
+	<p>
+		Responding to [npc.namePos] question by confirming that you are indeed here to offer [npc.herHim] a room, you ask the [npc.race] if [npc.sheIs] ready to leave this place straight away.
+	</p>
+	#IF(npc.isMute())
+		<p>
+			As [npc.sheIs] unable to talk, [npc.name] responds once again by nodding [npc.her] head, before taking hold of [npc.her] suitcase and accompanying you out of city hall and down the street. As the two of you travel beside one another, [npc.name] seems to be getting more excited about [npc.her] future, and by the time that you've arrived at Lilaya's mansion, the previous worn-out look on [npc.her] face has been replaced by an expression of wide-eyed wonder.
+		</p>
+		<p>
+			Although [npc.she] can't talk, [npc.name] makes [npc.her] emotions known by giving you a look of utter disbelief as you head to the front door. After telling [npc.herHim] that this is where you live, the [npc.race] shakes [npc.her] head in wonder, before following you up the steps to the mansion's entrance.
+		</p>
+		<p>
+			After Rose has opened the door, you accompany [npc.name] through the mansion and show [npc.herHim] to [npc.her] room. Putting [npc.her] suitcase down beside the bed, [npc.she] turns towards you and offers you [npc.her] sincere thanks by bowing [npc.her] head and smiling at you. Telling [npc.name] that [npc.sheIs] very welcome, you tell [npc.herHim] to take [npc.her] time getting settled in, before [pc.stepping] out of [npc.her] room and giving [npc.herHim] some privacy in which to unpack. Feeling as though you've done a good thing, you wonder what to do next...
+		</p>
+	#ELSE
+		<p>
+			[npc.speech(Yes,)] [npc.she] immediately replies, before sighing, [npc.speech(I've been waiting here for an opportunity like this for days...)]
+		</p>
+		<p>
+			Taking hold of [npc.her] suitcase, [npc.name] accompanies you out of city hall and down the street. As the two of you travel and talk with one another, [npc.name] starts to get more excited about [npc.her] future, and by the time that you've arrived at Lilaya's mansion, the previous worn-out look on [npc.her] face has been replaced by an expression of wide-eyed wonder.
+		</p>
+		<p>
+			[npc.speech(You mean, you're offering me a place to stay in <i>there</i>?)] [npc.name] asks in disbelief as you head to the front door. After responding in the positive, the [npc.race] sighs, [npc.speech(Wow...)]
+		</p>
+		<p>
+			After Rose has opened the door, you accompany [npc.name] through the mansion and show [npc.herHim] to [npc.her] room. Putting [npc.her] suitcase down beside the bed, [npc.she] turns towards you and offers you [npc.her] sincere thanks, 
+			#IF(npc.hasJob())
+				 [npc.speech(Thank you so much for offering me this place to stay. I've got a pretty steady job, so paying rent won't be an issue. Seriously, thank you.)]
+			#ELSE
+				 [npc.speech(Thank you so much for offering me this place to stay. I don't have a job right now, but I'll be sure to find one soon, and then paying rent won't be an issue. Seriously, thank you.)]
+			#ENDIF
+		</p>
+		<p>
+			Telling [npc.name] that [npc.sheIs] very welcome, you tell [npc.herHim] to take [npc.her] time getting settled in, before [pc.stepping] out of [npc.her] room and giving [npc.herHim] some privacy in which to unpack. Feeling as though you've done a good thing, you wonder what to do next...
+		</p>
+	#ENDIF
+	]]>
+	</htmlContent>
+	
+	
+	<!-- CITY_HALL_OFFICE -->
+	
+	<htmlContent tag="CITY_HALL_OFFICE"><![CDATA[
+	<p>
+		The door to the office before you is made from rich mahogany and frosted glass, with a brass plate fixed to the centre which reads: <i>'Private'</i>. Knowing that a private office such as this one would have nothing to offer you except for tedious, pointless government bureaucracy, you decide against taking a look inside, and instead turn around and prepare to continue on your way elsewhere...
+	</p>
+	]]>
+	</htmlContent>
+
+	
+	<!-- CITY_HALL_STAIRS -->
+	
+	<htmlContent tag="CITY_HALL_STAIRS"><![CDATA[
+	<p>
+		While the polished marble stairs before you offer access to the upper floors of city hall, you are unable to scale them, as a barrier of red rope bars your passage. A little sign hangs from this obstacle, which reads:
+	</p>
+	<p style='text-align:center;'>
+		<i>'Public access prohibited!<br/>Admission only to visitors accompanied by a member of staff.'</i>
+	</p>
+	<p>
+		While there is obviously nothing really stopping you from simply stepping over this barrier and proceeding upstairs, you know that only the dull inner-workings of government bureaucracy would await you, and so, with that in mind, you decide not to waste your time and choose to head elsewhere...
+	</p>
+	]]>
+	</htmlContent>
+	
+	
+	
+</dialogue>

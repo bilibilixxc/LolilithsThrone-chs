@@ -1,0 +1,10 @@
+#Check chatswaps rules.txt for information
+NPC:age(<14).Come fuck me!=Get over here and fuck me!
+NPC:age(3-9).my ass=my buns
+NPC:age(>18)&&playerAge(<=15).Come fuck me!=Lets fuck little one!
+NPC:age(>18)&&playerAge(>15).Come fuck me!=Lets fuck!
+NPC:age(>18)&&playerAge(<15).What do we have here=What's a child doing around here
+NPC:age(<15)&&playerAge(<15).What do we have here=I guess we're both skipping school
+NPC:age(<15)&&playerAge(>18).What do we have here?=I am not going back to school!
+NPC:age(<15)&&playerAge(>18).It'll be a lot easier if you just give up!=You can't make me go back there!
+NPC:age(>18)&&playerAge(<15).It'll be a lot easier if you just give up!=I guess it's my job to teach you to stay home!

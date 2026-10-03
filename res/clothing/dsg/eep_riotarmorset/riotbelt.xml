@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<clothing>
+
+	<coreAtributes>
+	
+		<authorTag><![CDATA[On the inside of the left thigh panel, faint rubberised ink reads "Official Enforcer Issue, MFD by DSG Threadworks."]]></authorTag>
+
+		<value>1000</value> 
+
+		<determiner><![CDATA[an]]></determiner>
+
+		<name><![CDATA[Enforcer's riot belt]]></name>
+
+		<namePlural pluralByDefault="false"><![CDATA[Enforcer's riot belt]]></namePlural> 
+
+		<description><![CDATA[A heavy duty belt with a codpiece and a set of ballistic fibre thigh panels attached to it. The odd shape of the thigh panels come from the metallic inserts in them.]]></description> 
+
+		<physicalResistance>10</physicalResistance> 
+
+		<femininity>ANDROGYNOUS</femininity> 
+
+		<slot>HIPS</slot> 
+
+		<rarity>EPIC</rarity> 
+
+		<clothingSet>dsg_enforcer_riot</clothingSet>
+
+		<imageName>riotbelt.svg</imageName> 
+
+		<imageEquippedName/> 
+
+		<effects/> 
+
+		<blockedPartsList> 
+
+			<blockedParts>
+
+				<displacementType>REMOVE_OR_EQUIP</displacementType> 
+
+				<clothingAccessRequired/>
+
+				<blockedBodyParts> 
+					<bodyPart>THIGHS</bodyPart>
+				</blockedBodyParts>
+
+				<clothingAccessBlocked> 
+					<clothingAccess>LEGS_UP_TO_GROIN</clothingAccess>
+					<clothingAccess>LEGS_UP_TO_GROIN_LOW_LEVEL</clothingAccess>
+				</clothingAccessBlocked>
+
+				<concealedSlots/> 
+			</blockedParts>
+
+			<blockedParts>
+				<displacementType>PULLS_UP</displacementType>
+				<clothingAccessRequired/>
+				<blockedBodyParts>
+					<bodyPart>VAGINA</bodyPart>
+					<bodyPart>TESTICLES</bodyPart>
+					<bodyPart>PENIS</bodyPart>
+					<bodyPart>MOUND</bodyPart>
+				</blockedBodyParts>
+				<clothingAccessBlocked>
+					<clothingAccess>GROIN</clothingAccess>
+				</clothingAccessBlocked>
+
+				<concealedSlots>
+					<slot>GROIN</slot>
+					<slot>VAGINA</slot>
+					<slot>PENIS</slot>
+					<slot>PIERCING_PENIS</slot>
+					<slot>PIERCING_VAGINA</slot>
+				</concealedSlots>
+			</blockedParts>
+		</blockedPartsList>
+
+		<incompatibleSlots/> 
+
+		<primaryColours values="JUST_GREY"/> 
+		<primaryColoursDye values="ALL"/>
+		<secondaryColours values="JUST_GREY"/> 
+		<secondaryColoursDye values="ALL"/>
+		<tertiaryColours values="JUST_BLACK"/> 
+		<tertiaryColoursDye values="ALL"/>
+
+		<itemTags> 
+			<tag>RIGID_MATERIAL</tag>
+			<tag>CONTRABAND_MEDIUM</tag>
+		</itemTags>
+	</coreAtributes>
+
+	<replacementText type="REMOVE_OR_EQUIP">
+		<self>
+			<![CDATA[[npc.Name] [npc.verb(buckle)] the riot belt up around [npc.her] waist and [npc.verb(adjust)] the thigh panels and codpiece until they're comfortable.]]>
+		</self>
+		<other>
+			<![CDATA[[npc.Name] [npc.verb(buckle)] the riot belt up around [npc2.namePos] waist and [npc.verb(help)] [npc2.her] [npc2.verb(adjust)] the thigh panels and codpiece until they're comfortable.]]>
+		</other>
+		<otherRough>
+			<![CDATA[[npc.Name] [npc.verb(force)] the riot belt around [npc2.namePos] waist and hastily [npc.verb(tighten)] the straps.]]>
+		</otherRough>
+	</replacementText>
+
+	<displacementText type="REMOVE_OR_EQUIP">
+		<self>
+			<![CDATA[[npc.Name] [npc.verb(loosen)] the straps on [npc.her] riot belt before unbuckling it.]]>
+		</self>
+		<other>
+			<![CDATA[[npc.Name] [npc.verb(loosen)] the straps on [npc2.namePos] riot belt before unbuckling it.]]>
+		</other>
+		<otherRough>
+			<![CDATA[[npc.Name] [npc.verb(tear)] at the straps on [npc2.namePos] riot belt before unbuckling it and tossing them aside.]]>
+		</otherRough>
+	</displacementText>
+
+	<replacementText type="PULLS_DOWN">
+		<self>
+			<![CDATA[[npc.Name] [npc.verb(lower)] the codpiece on [npc.her] riot belt back down and [npc.verb(tighten)] the adjustment straps.]]>
+		</self>
+		<other>
+			<![CDATA[[npc.Name] [npc.verb(lower)] the codpiece on [npc.her] riot belt back down and [npc.verb(tighten)] the adjustment straps.]]>
+		</other>
+		<otherRough>
+			<![CDATA[[npc.Name] [npc.verb(flip)] the codpiece on [npc.her] riot belt back down and roughly [npc.verb(tighten)] the adjustment straps.]]>
+		</otherRough>
+	</replacementText>
+
+	<displacementText type="PULLS_UP">
+		<self>
+			<![CDATA[[npc.Name] [npc.verb(loosen)] the codpiece on [npc.her] riot belt before lifting it up.]]>
+		</self>
+		<other>
+			<![CDATA[[npc.Name] [npc.verb(loosen)] the codpiece on [npc2.namePos] riot belt before lifting it up.]]>
+		</other>
+		<otherRough>
+			<![CDATA[[npc.Name] [npc.verb(tug)] at the codpiece on [npc2.namePos] riot belt until it's loose enough before flipping it up.]]>
+		</otherRough>
+	</displacementText>
+	
+</clothing>

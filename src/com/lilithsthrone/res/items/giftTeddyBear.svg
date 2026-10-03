@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 256 256">
+    <defs>
+        <linearGradient id="linearGradient4233">
+            <stop offset="0" stop-color="#a53b3b"/>
+            <stop offset="1" stop-color="#c83737"/>
+        </linearGradient>
+        <linearGradient id="linearGradient4225">
+            <stop offset="0" stop-color="#a66c45"/>
+            <stop offset="1" stop-color="#d38d5f"/>
+        </linearGradient>
+        <linearGradient id="linearGradient4217">
+            <stop offset="0" stop-color="#a66c45"/>
+            <stop offset="1" stop-color="#d38d5f"/>
+        </linearGradient>
+        <linearGradient id="linearGradient4209">
+            <stop offset="0" stop-color="#a66c45"/>
+            <stop offset="1" stop-color="#d38d5f"/>
+        </linearGradient>
+        <linearGradient id="linearGradient4201">
+            <stop offset="0" stop-color="#a66c45"/>
+            <stop offset="1" stop-color="#d38d5f"/>
+        </linearGradient>
+        <linearGradient id="linearGradient4193">
+            <stop offset="0" stop-color="#a66c45"/>
+            <stop offset="1" stop-color="#d38d5f"/>
+        </linearGradient>
+        <linearGradient id="linearGradient4199" x1="103.288" x2="154.553" y1="110.285" y2="38.565" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient4193"/>
+        <linearGradient id="linearGradient4207" x1="65.66" x2="80.56" y1="173.42" y2="137.56" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient4201"/>
+        <linearGradient id="linearGradient4215" x1="174.504" x2="201.273" y1="158.773" y2="129.983" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient4209"/>
+        <linearGradient id="linearGradient4223" x1="63.64" x2="74.246" y1="228.978" y2="195.643" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient4217"/>
+        <linearGradient id="linearGradient4231" x1="168.695" x2="183.343" y1="228.726" y2="190.845" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient4225"/>
+        <linearGradient id="linearGradient4239" x1="112.885" x2="144.199" y1="203.22" y2="152.712" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient4233"/>
+    </defs>
+    <path fill="#a66a41" fill-rule="evenodd" stroke="#000" d="M62.74 207.268c-3.778-14.552 21.92-54.288 30.81-84.222l73.11-8.207c3.62 29.8 17.412 58.97 14.773 87.378-40.643 34.25-79.7 20.607-118.693 5.05z"/>
+    <path fill="url(#linearGradient4215)" fill-rule="evenodd" stroke="#000" d="M164.046 111.603c-10.665 13.453-.179 24.862-.667 37.888 10.593 7.667 16.616 26.96 27.78 22.333 21.814-9.04 21.153-18.032 20.26-23.714-3.145-20.038-24.408-41.671-47.373-36.507z"/>
+    <path fill="url(#linearGradient4207)" fill-rule="evenodd" stroke="#000" d="M81.807 116.606c-15.99-3.837-30.085 19.383-28.032 38.134 2.842 25.96 18.923 24.014 37.502 21.97 3.73-8.957 6.923-14.546 10.354-25-.023-25.187-13.53-33.593-19.824-35.104z"/>
+    <path fill="url(#linearGradient4223)" fill-rule="evenodd" stroke="#000" d="M67.796 189.935c-30.77 2.618-34.551 49.482-10.101 55.053 23.754 5.414 56.832-.892 57.83-19.824.842-15.94-8.647-38.555-47.729-35.229z"/>
+    <path fill="url(#linearGradient4231)" fill-rule="evenodd" stroke="#000" d="M178.518 180.732c-25.676 6.015-49.718 15.5-37.754 41.795 13.012 28.598 46.667 18.988 55.432 13.763 42.095-25.093 10.883-62.25-17.678-55.558z"/>
+    <path fill="#6c5d53" fill-rule="evenodd" stroke="#000" stroke-width="1.036" d="M72.685 210.001c-27.352.958-22.15 30.583-6.814 34.98 12.313 3.53 33.217-4.605 35.33-9.49 6.772-15.659-8.305-26.197-28.516-25.49z"/>
+    <path fill="#6c5d53" fill-rule="evenodd" stroke="#000" d="M186.473 204.723c-24.404 6.087-36.943 18.15-11.616 32.198 7.302 4.051 24.131-.08 29.168-7.07 13.796-19.15 3.29-30.327-17.552-25.128z"/>
+    <path fill="url(#linearGradient4239)" fill-rule="evenodd" stroke="#000" d="M127.39 215.854c-22.386-12.183-39.383-24.096-46.276-48.852-7.892-28.343 42.926-50.105 52.62-18.211 6.485-24.507 57.152-25.715 51.332 11.557-3.584 22.947-32.348 41.715-57.676 55.506z"/>
+    <path fill="url(#linearGradient4199)" fill-rule="evenodd" stroke="#000" stroke-width=".966" d="M123.982 19.236C74.366 22.908 60.647 58.419 69.85 94.768c6.72 26.542 61.085 65.52 114.263 2.652 14.559-17.212 12.105-36.355 4.278-50.35-10.651-19.045-34.089-30.078-64.41-27.834z"/>
+    <path fill="#e6e6e6" fill-rule="evenodd" stroke="#000" d="M126.259 99.717c34.898.621 32.006 15.904 16.036 25.254-10.606 6.21-24.1 7.772-32.956-.505-4.253-3.975-22.773-25.456 16.92-24.749z"/>
+    <path fill="#d38d5f" fill-rule="evenodd" stroke="#000" d="M67.264 69.456c5.007-20.427 14.361-34.187 33.104-44.773-5.035-5.212-32.939-9.211-41.037 6.06-8.133 15.337-7.103 31.71 7.933 38.713zM163.503 25.566c9.691-10.576 33.352-11.958 44.763 1.826 17.562 21.214.824 42.57-14.585 48.935.46-19.301-10.795-35.801-30.178-50.76z"/>
+    <path fill="#6c5d53" fill-rule="evenodd" stroke="#000" d="M174.615 35.163c2.343-4.04 13.895-8.264 23.486 1.894 9.292 9.842.991 22.32-7.324 21.529-3.452-7.258-6.283-13.842-16.162-23.423zM69.306 62.184c-.758 1.01-1.541-13.53 2.277-18.518 3.478-4.544 15.022-9.008 15.022-9.008-9.416 7.778-13.382 17.812-17.299 27.526zM83.196 63.068l7.323 12.122c5.63-6.276 12.387-11.99 20.708-16.92L103.4 45.643c-10.033 3.552-16.567 9.497-20.203 17.425z"/>
+    <path fill="#1a1a1a" fill-rule="evenodd" stroke="#000" d="M123.548 108.007c-14.555-.996-17.151 8.266-10.71 13.65 5.432 4.542 13.129 5.53 20.366 2.051 9.48-4.557 4.34-14.743-9.656-15.7z"/>
+    <path fill="none" stroke="#000" d="M123.741 125.717l.162 4.437M109.863 123.154c10.337 11.58 28.515 5.377 33.576-3.223"/>
+    <ellipse cx="111.985" cy="88.953" fill="#784421" stroke="#000" stroke-linecap="round" stroke-linejoin="round" rx="7.45" ry="7.071"/>
+    <ellipse cx="139.512" cy="90.974" fill="#784421" stroke="#000" stroke-linecap="round" stroke-linejoin="round" rx="7.45" ry="7.071"/>
+    <ellipse cx="139.449" cy="91.858" fill="#1a1a1a" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".679" rx="5.022" ry="4.833"/>
+    <ellipse cx="111.859" cy="89.964" fill="#1a1a1a" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".679" rx="5.022" ry="4.833"/>
+    <g fill="none" stroke="#000" stroke-linecap="round" stroke-width="7.5">
+        <path d="M128.078 153.706c-10.482 22.907 15.576 17.102 12.81-.343M105.622 152.347c-2.694 5.76-2.516 12.078-2.65 17.838M103.717 159.923l13.199.472M118.993 151.648c-2.064 5.656-2.324 12.4-2.11 17.712"/>
+        <path stroke-linejoin="round" d="M165.143 152.08c-20.26-1.73-23.074 25.919-1.558 8.832-1.473 2.6-2.464 5.202-1.99 7.803M106.242 193.241a40.116 40.116 0 0 1 3.245-13.377c.172.086 4.259 7.422 5.972 9.99 3.201-3.57 10.04-11.768 10.17-11.962-.95 5.565-1.834 11.14-.866 17.021M147.684 179.328c-3.903.983-7.582 2.227-13.372 1.029-.178 4.873-.444 9.747-1.904 14.62 4.86-.788 9.577-1.409 14.28-2.015M144.049 186.188c-3.508.841-6.816.69-10.17.771"/>
+        <path d="M156.262 177.658c-.043.172-1.861 10.119-1.861 10.119M153.828 193.908l-.1.504"/>
+    </g>
+    <g fill="none" stroke="#ececec" stroke-linecap="round" stroke-width="4.824">
+        <path d="M127.9 153.349c-10.483 22.907 15.576 17.102 12.809-.343M105.444 151.99c-2.695 5.76-2.517 12.078-2.65 17.838M103.539 159.566l13.198.471M118.814 151.291c-2.064 5.656-2.324 12.4-2.11 17.712"/>
+        <path stroke-linejoin="round" d="M164.965 151.722c-20.26-1.728-23.075 25.92-1.558 8.832-1.473 2.601-2.465 5.202-1.991 7.803M106.063 192.884a40.116 40.116 0 0 1 3.246-13.377c.171.085 4.258 7.422 5.972 9.99 3.2-3.57 10.039-11.769 10.169-11.962-.949 5.565-1.834 11.14-.865 17.021M147.505 178.97c-3.903.984-7.581 2.227-13.372 1.03-.177 4.873-.444 9.746-1.904 14.62 4.861-.788 9.577-1.409 14.28-2.015M143.87 185.83c-3.508.842-6.815.691-10.17.772"/>
+        <path d="M156.083 177.301c-.043.172-1.86 10.118-1.86 10.118M153.65 193.551l-.1.504"/>
+    </g>
+    <path fill="none" stroke="#000" d="M83.843 56.305l3.314 3.22M90.03 50.37c.554.976 1.172 2.11 2.494 3.852M96.975 46.14l1.736 3.663M92.429 70.574l2.241 3.314M98.616 64.765l2.589 3.41M104.425 60.03l2.935 3.347M104.298 50.308l3.315-2.052M106.95 55.232l4.04-1.673M86.179 64.765l-3.346 2.368M89.051 69.027l-2.967 3.062"/>
+</svg>

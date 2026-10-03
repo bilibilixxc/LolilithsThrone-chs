@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<clothing>
+	
+	
+	<coreAtributes>
+	
+		<authorTag><![CDATA[A small tag sewn into the vest's cummerbund reads "Official Enforcer Issue, MFD by DSG Threadworks."]]></authorTag>
+	
+		
+		<value>1500</value> 
+		
+		
+		<determiner><![CDATA[an]]></determiner>
+		
+		
+		<name><![CDATA[stabproof vest]]></name>
+		
+		
+		<namePlural pluralByDefault="false"><![CDATA[stabproof vests]]></namePlural>
+		
+		
+		<description><![CDATA[A low-profile pocketed vest made from ballistic fibres, it tips the scale towards mobility and discreetness against protection.]]></description>
+		
+		
+		<physicalResistance>10</physicalResistance> 
+		
+		
+		<femininity>ANDROGYNOUS</femininity> 
+		
+		
+		<slot>TORSO_OVER</slot> 
+		
+		
+		<rarity>EPIC</rarity> 
+		
+		
+		<clothingSet>dsg_enforcer_patrol</clothingSet>
+		
+		
+		<imageName>stpvest.svg</imageName> 
+		
+		
+		<imageEquippedName/> 
+		
+		
+		<stickers>
+			
+			<category id="name_plate" priority="1"> 
+				<categoryName><![CDATA[Name Plate]]></categoryName>
+				<sticker id="none" priority="0" defaultSticker="true" zLayer="1" colourSelected="TEXT_GREY"> 
+					<stickerName><![CDATA[None]]></stickerName>
+					<namePrefix priority="1"><![CDATA[Contractor ]]></namePrefix>
+					<namePostfix/>
+					<descriptionModification/>
+					<imageName/>
+					<itemTagsAdded/>
+					<itemTagsRemoved/>
+					<unavailabilityText/>
+					<availabilityText/>
+				</sticker>
+				<sticker id="enforcer" priority="1" defaultSticker="false" zLayer="1" colourDisabled="TEXT_GREY" colourSelected="CLOTHING_BLUE"> 			
+					<stickerName><![CDATA[Enforcer]]></stickerName>
+					<namePrefix priority="1"><![CDATA[Enforcer ]]></namePrefix> 
+					<namePostfix/> 
+					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i> This one is clearly labeled for Enforcer use.</i>]]></descriptionModification> 
+					<imageName>stpvest_st_enf.svg</imageName> 
+					<itemTagsAdded>
+						<tag>CONTRABAND_HEAVY</tag>
+					</itemTagsAdded> 
+					<itemTagsRemoved>
+						<tag>CONTRABAND_MEDIUM</tag>
+					</itemTagsRemoved> 
+					<unavailabilityText showDisabledButton="true"><![CDATA[
+						#IF(!pc.hasOccupationTag(OCCUPATION_TAG_ENFORCER_PATROL) ||
+							!pc.hasOccupationTag(OCCUPATION_TAG_ENFORCER_SWORD) ||
+							!pc.hasOccupationTag(OCCUPATION_TAG_ENFORCER_ORICL))
+							Only Enforcers can use an Enforcer nameplate!
+						#ENDIF
+					]]></unavailabilityText> 
+					<availabilityText><![CDATA[
+						As an Enforcer, you can freely use Enforcer name plates.
+					]]></availabilityText> 
+				</sticker>
+				<sticker id="claire" priority="2" defaultSticker="false" zLayer="1" colourDisabled="TEXT_GREY" colourSelected="FEMININE_PLUS"> 
+					<stickerName><![CDATA[Claire]]></stickerName>
+					<namePrefix priority="1"><![CDATA[Claire's ]]></namePrefix>
+					<namePostfix/>
+					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i> This one belongs to Claire.</i>]]></descriptionModification>
+					<imageName>stpvest_st_claire.svg</imageName>
+					<itemTagsAdded>
+						<tag>CONTRABAND_HEAVY</tag>
+					</itemTagsAdded>
+					<itemTagsRemoved>
+						<tag>CONTRABAND_MEDIUM</tag>
+					</itemTagsRemoved>
+					<unavailabilityText showDisabledButton="false"><![CDATA[
+						#IF(pc.getId() != claire.getId())
+							You can't use Claire's name plate!
+						#ENDIF
+					]]></unavailabilityText>
+					<availabilityText><![CDATA[
+						I don't know what kind of hax you used to unlock this, but apparently you are Claire.
+					]]></availabilityText>
+				</sticker>
+				<sticker id="sean" priority="2" defaultSticker="false" zLayer="1" colourDisabled="TEXT_GREY" colourSelected="FEMININE_PLUS"> 
+					<stickerName><![CDATA[Sean]]></stickerName>
+					<namePrefix priority="1"><![CDATA[Sean's ]]></namePrefix>
+					<namePostfix/>
+					<descriptionModification fullReplacement="false" priority="1"><![CDATA[<i> This one belongs to Sean.</i>]]></descriptionModification>
+					<imageName>stpvest_st_sean.svg</imageName>
+					<itemTagsAdded>
+						<tag>CONTRABAND_HEAVY</tag>
+					</itemTagsAdded>
+					<itemTagsRemoved>
+						<tag>CONTRABAND_MEDIUM</tag>
+					</itemTagsRemoved>
+					<unavailabilityText showDisabledButton="false"><![CDATA[
+						#IF(pc.getId() != sean.getId())
+							You can't use Sean's name plate!
+						#ENDIF
+					]]></unavailabilityText>
+					<availabilityText><![CDATA[
+						Beware of flying CRT monitors.
+					]]></availabilityText>
+				</sticker>
+			</category>
+		</stickers>
+		
+		
+		<effects>
+			<effect limit="0" mod1="CLOTHING_ATTRIBUTE" mod2="RESISTANCE_FIRE" potency="MAJOR_BOOST" timer="397" type="CLOTHING"/>
+			<effect limit="0" mod1="CLOTHING_ATTRIBUTE" mod2="RESISTANCE_FIRE" potency="BOOST" timer="397" type="CLOTHING"/>
+			<effect limit="0" mod1="CLOTHING_ATTRIBUTE" mod2="RESISTANCE_ICE" potency="MAJOR_BOOST" timer="397" type="CLOTHING"/>
+			<effect limit="0" mod1="CLOTHING_ATTRIBUTE" mod2="RESISTANCE_POISON" potency="MAJOR_BOOST" timer="397" type="CLOTHING"/>	
+		</effects>
+		
+		
+		<blockedPartsList> 
+		
+			
+			<blockedParts>
+			
+				
+				<displacementType>REMOVE_OR_EQUIP</displacementType> 
+				
+				
+				<clothingAccessRequired>
+					<clothingAccess>HEAD</clothingAccess>
+				</clothingAccessRequired>
+				
+				
+				<blockedBodyParts> 
+					<bodyPart>BREASTS</bodyPart>
+					<bodyPart>NIPPLES</bodyPart>
+					<bodyPart>STOMACH</bodyPart>
+					<bodyPart>BACK</bodyPart>
+				</blockedBodyParts>
+				
+				
+				<clothingAccessBlocked> 
+					<clothingAccess>ARMS_UP_TO_SHOULDER</clothingAccess>
+				</clothingAccessBlocked>
+				
+				
+				
+				<concealedSlots values="CONCEALED_PARTIAL_TORSO"/> 
+
+			</blockedParts>
+
+		</blockedPartsList>
+		
+		
+		<incompatibleSlots/> 
+		
+		
+		<primaryColours values="JUST_BLACK"/> 
+		<primaryColoursDye values="ALL"/>
+		<secondaryColours values="JUST_GREY"/> 
+		<secondaryColoursDye values="ALL"/>
+		<tertiaryColours values="JUST_BLACK"/> 
+		<tertiaryColoursDye values="ALL"/>
+		
+		
+		
+		<itemTags> 
+			<tag>FITS_ARM_WINGS</tag>
+			<tag>CONTRABAND_MEDIUM</tag>
+		</itemTags>
+	</coreAtributes>
+
+	
+	
+	
+	<replacementText type="REMOVE_OR_EQUIP">
+		<self>
+		  <![CDATA[[npc.Name] [npc.verb(slide)] the vest over [npc.her] head and [npc.verb(tighten)] the cummerbund on either side of [npc.her] torso.]]>
+		</self>
+		<other>
+		  <![CDATA[[npc.Name] [npc.verb(slide)] the vest over [npc2.namePos] head and [npc.verb(tighten)] the cummerbund on either side of [npc2.her] torso.]]>
+		</other>
+		<otherRough>
+		  <![CDATA[[npc.Name] [npc.verb(shove)] the vest over [npc2.namePos] head and [npc.verb(tighten)] the cummerbund on either side of [npc2.her] torso as much as possible.]]>
+		</otherRough>
+	</replacementText>
+	
+	
+	<displacementText type="REMOVE_OR_EQUIP">
+		<self>
+		  <![CDATA[[npc.Name] un[npc.do] the cummerbund on either side of [npc.her] vest and slide [npc.her] head through the neck hole.]]>
+		</self>
+		<other>
+		  <![CDATA[[npc.Name] un[npc.do] the cummerbund on either side of [npc2.namePos] vest and slide [npc2.her] head through the neck hole.]]>
+		</other>
+		<otherRough>
+		  <![CDATA[[npc.Name] [npc.verb(rip)] open the cummerbund on either side of [npc2.namePos] vest and [npc.verb(yank)] the rest over [npc2.her] head.]]>
+		</otherRough>
+	</displacementText>
+	
+</clothing>

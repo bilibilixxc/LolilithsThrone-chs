@@ -1,0 +1,16 @@
+<svg version="1.1" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+ <defs>
+  <linearGradient id="daddyHomeIcon" x1="29.5" x2="44.125" y1="1025.5" y2="1003.4" gradientTransform="matrix(1.2884 0 0 1.2905 -9.225 -1284.7)" gradientUnits="userSpaceOnUse">
+   <stop stop-color="#f55" offset="0"/>
+   <stop stop-color="#ff8080" offset="1"/>
+  </linearGradient>
+ </defs>
+ <ellipse cx="32" cy="32.006" rx="30.383" ry="30.381" fill="url(#daddyHomeIcon)" fill-rule="evenodd"/>
+ <g transform="matrix(.675 0 0 .675 10.023 20.985)">
+  <g transform="translate(0 -988.36)" fill="none" stroke="#fff">
+   <path transform="matrix(1.4036 0 0 1.4036 -13.18 -411.23)" d="m42.473 1031.5-19.752-0.091v-12.482h-4.13l13.783-11.89 14.173 11.69-4.273 0.086z" stroke-width="2.594"/>
+   <path transform="matrix(1.4036 0 0 1.4036 -13.18 -411.23)" d="m32.31 1030.4-0.04755-8.17" stroke-width="6"/>
+  </g>
+ </g>
+ <path d="m26.25 25.414 0.11586-18.074c15.002-3.0824 23.034 17.628-0.11586 18.074z" fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="3.5"/>
+</svg>

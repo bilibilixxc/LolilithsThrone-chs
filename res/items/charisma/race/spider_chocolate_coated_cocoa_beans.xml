@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<item>
+	<coreAttributes>
+		<value>250</value> 
+		<determiner><![CDATA[a tin of]]></determiner>
+		<name><![CDATA[Chocolate Coated Coffee Bean]]></name>
+		<namePlural pluralByDefault="true"><![CDATA[Chocolate Coated Coffee Beans]]></namePlural>
+		<description><![CDATA[A metal tin containing several dozen coffee beans covered in dark chocolate. On one side of the tin there's a picture of a flushed spider-girl winking at the viewer, along with the cautionary words: <i>'Warning! Extremely alcoholic to spiders!'</i>]]></description> 
+		
+		<useDescriptor>eat</useDescriptor>
+		
+		<sexUse>true</sexUse>
+		<combatUseAllies>true</combatUseAllies>
+		<combatUseEnemies>false</combatUseEnemies>
+		<consumedOnUse>true</consumedOnUse>
+		
+		<rarity>RARE</rarity> 
+		
+		<imageName zLayer="0" imageRotation="0" imageSize="100">background_bottom.svg</imageName>
+		<imageName zLayer="1" imageRotation="0" imageSize="70" target1='stroke="#000"' replacement1='stroke="#ff5555"' target2='#ff8080' replacement2='#ff5555'>res/race/charisma/spider/subspecies/icon.svg</imageName>
+		<imageName zLayer="2" imageRotation="0" imageSize="70">spider_chocolate_coated_cocoa_beans.svg</imageName>
+		<imageName zLayer="3" imageRotation="0" imageSize="100">background_top.svg</imageName>
+		
+		<colourPrimary>charisma_spider_silk_white</colourPrimary>
+		<colourSecondary/>
+		<colourTertiary/>
+		
+		<potionDescriptor><![CDATA[spider]]></potionDescriptor>
+		<associatedRace>charisma_spider</associatedRace>
+		<enchantmentItemTypeId>ELIXIR</enchantmentItemTypeId>
+		<enchantmentEffectId>RACE</enchantmentEffectId>
+		
+		<effectTooltipLines>
+			<line><![CDATA[[style.boldGood(Restores)] 10% [style.boldHealth([#ATTRIBUTE_HEALTH_MAXIMUM.getName()])]]]></line>
+			<line><![CDATA[[#ATTRIBUTE_MAJOR_PHYSIQUE.getFormattedValue(2)] to 'potion effects']]></line>
+		</effectTooltipLines>
+		
+		<applyEffects><![CDATA[
+			[##npc.incrementHealth(npc.getAttributeValue(ATTRIBUTE_HEALTH_MAXIMUM)/10)]
+			
+			<p style='margin-bottom:0; padding-bottom:0;'>
+				[npc.Name] [npc.verb(start)] to feel stronger...
+			</p>
+			[#npc.addPotionEffect(ATTRIBUTE_MAJOR_PHYSIQUE, 2)]
+		]]></applyEffects>
+		
+		<itemTags>
+			<tag>FOOD</tag>
+			<tag>RACIAL_TF_ITEM</tag>
+			<tag>SOLD_BY_RALPH</tag>
+			<tag>CAFFEINATED_040</tag>
+		</itemTags>
+	</coreAttributes>
+
+	<useDescriptions>
+		<selfUse><![CDATA[
+		[npc.Name] [npc.verb(take)] a handful of chocolate coated coffee beans and [npc.verb(crush)] it in [npc.her] [npc.mouth]. Unable to control [npc.herself], [npc.she] quickly [npc.verb(finish)] the entire tin.
+		]]></selfUse>
+		<otherUse><![CDATA[
+		[npc.Name] [npc.verb(take)] a handful of chocolate coated coffee beans and [npc.verb(hold)] it out to [npc2.name], who [npc.verb(crush)] it in [npc2.her] [npc2.mouth]. Unable to control [npc2.herself], [npc2.she] quickly [npc2.verb(finish)] the entire tin.
+		]]></otherUse>
+	</useDescriptions>
+
+	
+</item>

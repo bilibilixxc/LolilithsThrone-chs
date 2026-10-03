@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<clothing>
+
+	<coreAtributes>
+	
+		<authorTag><![CDATA[A small tag sewn into the waist reads "Official Enforcer Issue, MFD by DSG Threadworks."]]></authorTag>
+
+		<value>300</value> 
+
+		<determiner><![CDATA[an]]></determiner>
+
+		<name><![CDATA[Enforcer's uniform skirt]]></name>
+
+		<namePlural pluralByDefault="false"><![CDATA[Enforcer's uniform skirts]]></namePlural> 
+
+		<description><![CDATA[A below-the-knee length skirt with two pleats and belt loops. While somewhat suitable for patrol duty, it is almost never used for this purpose due to the increased risk of getting caught on something.]]></description> 
+
+		<physicalResistance>0</physicalResistance> 
+
+		<femininity>FEMININE</femininity> 
+
+		<slot>LEG</slot> 
+
+		<rarity>EPIC</rarity> 
+
+		<clothingSet>dsg_enforcer_service</clothingSet>
+
+		<imageName>enfskirt.svg</imageName> 
+
+		<imageEquippedName/> 
+
+		<effects/>
+
+		<blockedPartsList> 
+
+			<blockedParts>
+
+				<displacementType>PULLS_UP</displacementType>
+
+				<clothingAccessRequired/> 
+
+				<blockedBodyParts> 
+					<bodyPart>ANUS</bodyPart>
+					<bodyPart>PENIS</bodyPart>
+					<bodyPart>VAGINA</bodyPart>
+				</blockedBodyParts>
+				
+				<clothingAccessBlocked> 
+					<clothingAccess>GROIN</clothingAccess>
+				</clothingAccessBlocked>
+
+				<concealedSlots values="CONCEALED_GROIN"/> 
+			</blockedParts>
+		</blockedPartsList>
+
+		<incompatibleSlots/> 
+
+		<primaryColours values="JUST_BLACK"/>
+		<primaryColoursDye values="ALL"/>
+		<secondaryColours values="JUST_GOLD"/>
+		<secondaryColoursDye values="ALL_METAL"/>
+
+		<itemTags> 
+			<tag>CONTRABAND_MEDIUM</tag>
+		</itemTags>
+	</coreAtributes>
+
+	<replacementText type="REMOVE_OR_EQUIP">
+		<self>
+		  <![CDATA[[npc.Name] [npc.verb(step)] into the uniform skirt and [npc.verb(pull)] them up to [npc.her] waist before buttoning up the front.]]>
+		</self>
+		<other>
+		  <![CDATA[[npc.Name] [npc.verb(pull)] the uniform skirt up around [npc2.namePos] legs up to [npc2.her] waist before buttoning up the front.]]>
+		</other>
+		<otherRough>
+		  <![CDATA[[npc.Name] [npc.verb(yank)] the uniform skirt up around [npc2.namePos] legs up to [npc2.her] waist before roughly buttoning up the front.]]>
+		</otherRough>
+	</replacementText>
+
+	<displacementText type="REMOVE_OR_EQUIP">
+		<self>
+		  <![CDATA[[npc.Name] [npc.verb(unbutton)] [npc.her] uniform skirt and [npc.verb(pull)] them down before kicking them from [npc.her] [npc.feet].]]>
+		</self>
+		<other>
+		  <![CDATA[[npc.Name] [npc.verb(unbutton)] [npc2.name] uniform skirt and [npc.verb(pull)] them down before sliding them from [npc2.her] [npc2.feet].]]>
+		</other>
+		<otherRough>
+		  <![CDATA[[npc.Name] forcibly [npc.verb(unbutton)] [npc2.name] uniform skirt and [npc.verb(yank)] them off.]]>
+		</otherRough>
+	</displacementText>	
+	
+</clothing>

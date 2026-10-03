@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- For a version without all of the comments, see "rental_daddy.xml". -->
+<clothing>
+	<coreAttributes>
+		<value>5</value>
+		<determiner><![CDATA[a]]></determiner>
+		<name><![CDATA[ragged chest wrap]]></name>
+		<namePlural pluralByDefault="false"><![CDATA[ragged chest wraps]]></namePlural>
+		<description><![CDATA[A thick strip of ragged, tattered cloth, that's been shaped in such a way so as to be wrapped around the chest in order to support a pair of breasts.]]></description>
+		<physicalResistance>0</physicalResistance>
+		<femininity>FEMININE</femininity>
+		<slot>CHEST</slot>
+		<rarity>COMMON</rarity>
+		<clothingSet/>
+		<imageName>ragged_chest_wrap.svg</imageName>
+		<imageEquippedName/> 
+		
+		<stickers>
+			<category id="strp" priority="1">
+				<categoryName><![CDATA[Strap]]></categoryName>
+				<sticker id="shldr" priority="1" defaultSticker="true" zLayer="-1">
+					<stickerName><![CDATA[Shoulder]]></stickerName>
+					<namePrefix/>
+					<namePostfix/>
+					<descriptionModification fullReplacement="false" priority="3"><![CDATA[ A single loop has been incorporated into the crude design, which is meant to be slung over one shoulder.]]></descriptionModification>
+					<imageName>ragged_chest_wrap_strap.svg</imageName>
+					<itemTagsAdded/>
+					<itemTagsRemoved/>
+					<unavailabilityText/>
+					<availabilityText/>
+				</sticker>
+				<sticker id="none" priority="0" defaultSticker="true" zLayer="1">
+					<stickerName><![CDATA[None]]></stickerName>
+					<namePrefix/>
+					<namePostfix/>
+					<descriptionModification/>
+					<imageName/>
+					<itemTagsAdded/>
+					<itemTagsRemoved/>
+					<unavailabilityText/>
+					<availabilityText/>
+				</sticker>
+			</category>
+		</stickers>
+		
+		<effects/>
+		<blockedPartsList> 
+			<blockedParts>
+				<displacementType>PULLS_UP</displacementType> 
+				
+				<clothingAccessRequired>CHEST</clothingAccessRequired>
+				
+				<blockedBodyParts>
+					<bodyPart>BREASTS</bodyPart>
+					<bodyPart>NIPPLES</bodyPart>
+				</blockedBodyParts>
+				
+				<clothingAccessBlocked/>
+				
+				<concealedSlots values="CONCEALED_BREASTS"/>
+			</blockedParts>
+		</blockedPartsList>
+		
+		<incompatibleSlots/> 
+		
+		<primaryColours>
+			<colour>CLOTHING_BLACK</colour>
+			<colour>CLOTHING_GREY_DARK</colour>
+			<colour>CLOTHING_DESATURATED_BROWN</colour>
+			<colour>CLOTHING_DESATURATED_BROWN_DARK</colour>
+			<colour>CLOTHING_DESATURATED_BROWN_DESAT</colour>
+			<colour>CLOTHING_KHAKI</colour>
+			<colour>CLOTHING_KHAKI_DESAT</colour>
+		</primaryColours>
+		<primaryColoursDye values="ALL"/>
+		<secondaryColours/>
+		<secondaryColoursDye/>
+		<tertiaryColours/>
+		<tertiaryColoursDye/>
+		
+		<itemTags/>
+	</coreAttributes>
+	
+  <replacementText type="REMOVE_OR_EQUIP">
+    <self>
+      <![CDATA[[npc.Name] [npc.verb(pull)] the ragged chest wrap down over [npc.her] head and [npc.verb(fit)] it into place over [npc.her] [npc.breasts].]]>
+    </self>
+    <other>
+      <![CDATA[[npc.Name] [npc.verb(pull)] the ragged chest wrap down over [npc2.namePos] head and [npc.verb(fit)] it into place over [npc2.her] [npc2.breasts].]]>
+    </other>
+    <otherRough>
+      <![CDATA[[npc.Name] roughly [npc.verb(pull)] the ragged chest wrap down over [npc2.namePos] head and [npc.verb(fit)] it into place over [npc2.her] [npc2.breasts].]]>
+    </otherRough>
+  </replacementText>
+
+  <displacementText type="REMOVE_OR_EQUIP">
+    <self>
+      <![CDATA[[npc.Name] [npc.verb(pull)] off [npc.her] ragged chest wrap.]]>
+    </self>
+    <other>
+      <![CDATA[[npc.Name] [npc.verb(pull)] off [npc2.namePos] ragged chest wrap.]]>
+    </other>
+    <otherRough>
+      <![CDATA[[npc.Name] roughly [npc.verb(pull)] off [npc2.namePos] ragged chest wrap.]]>
+    </otherRough>
+  </displacementText>
+	
+</clothing>

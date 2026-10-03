@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 64 64">
+    <defs>
+        <linearGradient id="lilinPalaceGradient">
+            <stop offset="0" stop-color="#f55"/>
+            <stop offset="1" stop-color="#ff8080"/>
+        </linearGradient>
+        <linearGradient id="linearGradient15" x1="29.5" x2="44.125" y1="1025.487" y2="1003.362" gradientTransform="matrix(1.28844 0 0 1.29051 -9.225 -296.313)" gradientUnits="userSpaceOnUse" xlink:href="#lilinPalaceGradient"/>
+    </defs>
+    <g fill-rule="evenodd" transform="translate(0 -988.362)">
+        <ellipse cx="32" cy="1020.368" fill="url(#linearGradient15)" rx="30.383" ry="30.381"/>
+        <path fill="#fff" d="M50.335 1015.96l-36.424-.01-.092 22.243 36.613-.117zm-15.307 20.858l-6.8-.056c.148-9.46 6.389-10.565 6.8.057z"/>
+        <path fill="#fff" d="M39.521 1003.706l-14.375.062.07 12.5 14.305.125v-12.687zm-7.019 4.238c1.11.068 2.186 1.786 2.248 4.93l-4.7.035c.199-3.45 1.342-5.033 2.452-4.965z"/>
+        <path fill="#fff" stroke="#fff" stroke-linejoin="round" d="M23.084 1004.362l9.5-7.062 9.25 7.062z"/>
+        <path fill="#fff" d="M21.023 1009.24l-7.117.042.035 8.899 7.082.09v-9.032zm-3.244 2.456c.623.046 1.227 1.198 1.262 3.309l-2.639.023c.112-2.317.754-3.377 1.377-3.332z"/>
+        <path fill="#fff" stroke="#fff" stroke-linejoin="round" stroke-width=".613" d="M12.732 1009.817l5.022-5.028 4.889 5.028z"/>
+        <path fill="#fff" d="M50.336 1009.35l-7.117.043.035 8.899 7.082.09v-9.032zm-3.432 2.127c.623.046 1.227 1.198 1.262 3.309l-2.639.023c.112-2.316.754-3.377 1.377-3.332z"/>
+        <path fill="#fff" stroke="#fff" stroke-linejoin="round" stroke-width=".613" d="M41.732 1009.927l5.022-5.027 4.889 5.027z"/>
+    </g>
+</svg>

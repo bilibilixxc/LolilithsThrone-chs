@@ -1,0 +1,17 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.0//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" xmlns:inkscape ="http://www.inkscape.org/namespaces/inkscape" >
+<desc>CopyRight:SVG Design Editor;
+configurationStart;Unit=smInches;Dpi=96;Division=4;Grid=True;Zoom=5;CanvasW=64;CanvasH=64;configurationEnd;</desc>
+<g isVisble = "True" inkscape:label = "ojisan Default Layer" inkscape:groupmode = "layer" ><g id="group_0">
+<circle style="fill:#1A1A1A;stroke:#000000; stroke-width:1" cx = "25.494" cy = "1045.512" r = "0.01425in" transform = "matrix(1,0,0,1,0,-988.3629)" vector-effect="non-scaling-stroke" pen = "1,1" stroke-linecap = "round" stroke-linejoin = "round" />
+<circle style="fill:#1A1A1A;stroke:#000000; stroke-width:1" cx = "10.092" cy = "1045.49" r = "0.01425in" transform = "matrix(1,0,0,1,0,-988.3629)" vector-effect="non-scaling-stroke" pen = "1,1" stroke-linecap = "round" stroke-linejoin = "round" />
+<ellipse style="fill:#808080;stroke:#000000; stroke-width:1" cx = "19.169" cy = "1000.494" rx = "0.05301042in" ry = "0.04878125in" transform = "matrix(1,0,0,1,0,-988.3629)" vector-effect="non-scaling-stroke" pen = "1,1" stroke-linecap = "round" stroke-linejoin = "round" />
+<path style="fill:#4D4D4D;stroke:#000000; stroke-width:1" d="m16.62,1035.7l-0.02,4.09c-2.78,-0.04 -4.86,1.27 -6.83,2.58c-2.84,1.89 -1.77,3.49 -0.13,2.52c2.16,-1.29 4.68,-2.58 7.2,-2.56l2.65,0.02c2.52,0.02 4.73,1.58 6.67,2.76c1.74,1.06 2.66,-1.21 -0.09,-2.78c-1.99,-1.15 -4.16,-2.04 -6.36,-2.43l0,-4.11l-3.09,-0.09z" fill-rule = "evenodd" transform = "matrix(1,0,0,1,0,-988.3629)" vector-effect="non-scaling-stroke" pen = "1,1" />
+<path style="fill:#808080;stroke:#000000; stroke-width:1" d="m13.5,1011.86l0.12,14.13c0.03,2.95 2.21,5.39 5.19,5.44l11.19,0.19l0,11.31c0,4.13 5.96,4.03 5.94,0.12l-0.06,-14.31c-0.01,-1.45 -0.5,-3.33 -2.62,-3.31l-9.56,0.06l-0.19,-9.25l2.56,1.38l9.56,0.12c3.6,0.05 3.75,-5.66 -0.12,-5.69l-7.81,-0.06c-1.62,-0.33 -6.9,-4.74 -9.06,-4.75c-2.08,-0.01 -5.15,2.21 -5.12,4.62l0,0z" fill-rule = "evenodd" transform = "matrix(1,0,0,1,0,-988.3629)" vector-effect="non-scaling-stroke" pen = "1,1" />
+<path style="fill:#4D4D4D;stroke:#000000; stroke-width:1" d="m7.38,1011l0.09,22.81c0.01,1.5 0.42,3.17 2.48,3.18l16.26,0.09c2.3,0.01 2.68,-4.01 0.13,-4.02l-13.57,-0.04c-1.03,0 -1.28,-0.93 -1.28,-1.72l0.05,-20.28c0.01,-2.92 -4.17,-3.79 -4.16,0l0,0l0,0zm23.82,8.97c-1.56,0.02 -1.67,2.87 0,2.87l12.06,0.04l0.13,22.71c0.01,1.2 0.11,1.95 1.46,1.94l11.8,-0.04c1.19,0 1.6,-0.45 1.59,-1.46l-0.09,-24.57c0,-0.89 -0.56,-1.82 -1.42,-1.81l-25.54,0.31z" fill-rule = "evenodd" transform = "matrix(1,0,0,1,0,-988.3629)" vector-effect="non-scaling-stroke" pen = "1,1" />
+<path style="fill:#666666;stroke:#000000; stroke-width:1" d="m46.47,1017.3c-1.24,0 -1.04,1.84 0.03,1.84l5.16,0l-0.03,-13.88l-3.19,-3.41l1.12,-4.88c0.33,-1.42 -2.61,-2.24 -2.91,-0.84l-3.66,17.28c-0.34,1.6 2.54,2.25 2.88,0.78l0.91,-4l2.81,-0.75l-0.06,7.84l-3.06,0z" fill-rule = "evenodd" transform = "matrix(1,0,0,1,0,-988.3629)" vector-effect="non-scaling-stroke" pen = "1,1" />
+</g>
+<rect style="fill:#4F81BD;stroke:Black; stroke-width:1" x = "50" y = "50" width = "1.041667in" height = "1.041667in" transform = "matrix(0.1102771,0,0,0.01689765,8.172168,8.710175)" vector-effect="non-scaling-stroke" pen = "0.5513889,0.08448864" />
+</g>
+</svg>

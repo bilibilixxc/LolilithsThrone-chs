@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 256 256">
+    <defs>
+        <linearGradient id="linearGradient5013">
+            <stop offset="0" stop-color="#f7dc73"/>
+            <stop offset="1" stop-color="#ffea96"/>
+        </linearGradient>
+        <linearGradient id="linearGradient5005">
+            <stop offset="0" stop-color="#77533c"/>
+            <stop offset="1" stop-color="#885f45"/>
+        </linearGradient>
+        <linearGradient id="linearGradient4997">
+            <stop offset="0" stop-color="#312219"/>
+            <stop offset="1" stop-color="#453023"/>
+        </linearGradient>
+        <linearGradient id="linearGradient4989">
+            <stop offset="0" stop-color="#3c2a1e"/>
+            <stop offset="1" stop-color="#4f3728"/>
+        </linearGradient>
+        <linearGradient id="linearGradient4995" x1="80.812" x2="80.56" y1="124.428" y2="107.76" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient4989"/>
+        <linearGradient id="linearGradient5003" x1="123.036" x2="122.679" y1="144.214" y2="127.607" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient4997"/>
+        <linearGradient id="linearGradient5011" x1="92.5" x2="93.036" y1="169.571" y2="155.107" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient5005"/>
+        <linearGradient id="linearGradient5019" x1="51.071" x2="51.964" y1="151.536" y2="136.714" gradientUnits="userSpaceOnUse" xlink:href="#linearGradient5013"/>
+    </defs>
+    <g stroke="#000">
+        <path fill="#faa" fill-rule="evenodd" stroke-linejoin="bevel" d="M8.445 131.863l90.802 46.355 58.545-62.229-84.808-39.291z"/>
+        <path fill="none" d="M73.125 76.938l-.09 15.67"/>
+        <path fill="#917c6f" fill-rule="evenodd" d="M17.321 138.857l56.072-50.893 80.893 34.822-55 64.107z"/>
+        <path fill="#483e37" fill-rule="evenodd" d="M55.987 116.983c-5.62-2.537-3.666-5.456-1.596-7.466l14.683-14.262c2.623-2.548 5.573-3.686 9.961-1.832l24.886 10.515c3.704 1.565 3.098 5.068 1.231 7.117l-14.12 15.5c-3.618 3.972-6.398 3.354-9.782 1.827z"/>
+        <path fill="url(#linearGradient4995)" fill-rule="evenodd" d="M61.844 119.408c-.518-9.748 2.011-21.468 15.8-21.953 18.742-.658 20.18 14.097 20.713 20.845l-8.143 8.943c-2.8 3.075-5.584 2.604-8.398 1.315z"/>
+        <path fill="#483e37" fill-rule="evenodd" d="M96.544 135.337c-5.621-2.537-3.666-5.456-1.597-7.466l14.683-14.262c2.624-2.548 5.574-3.686 9.962-1.832l24.885 10.515c3.705 1.566 3.099 5.068 1.232 7.117l-14.12 15.5c-3.619 3.973-6.399 3.354-9.783 1.827z"/>
+        <path fill="url(#linearGradient5003)" fill-rule="evenodd" d="M102.4 137.762c-.518-9.748 2.012-21.468 15.8-21.953 18.743-.658 20.339 14.318 20.87 21.066l-8.3 8.722c-2.867 3.013-5.584 2.604-8.398 1.315z"/>
+        <path fill="#483e37" fill-rule="evenodd" d="M67.037 164.808c-5.563-2.663-3.543-5.537-1.429-7.5l15-13.929c2.68-2.488 5.655-3.56 10-1.607l24.643 11.071c3.669 1.648 2.984 5.136 1.072 7.143l-14.465 15.179c-3.707 3.89-6.472 3.21-9.82 1.607z"/>
+        <path fill="url(#linearGradient5011)" fill-rule="evenodd" d="M72.837 167.364c-.298-9.757 2.494-21.418 16.29-21.592 18.752-.237 20.011 14.77 20.392 21.529l-8.495 8.533c-2.934 2.948-5.641 2.478-8.425 1.126z"/>
+        <path fill="#483e37" fill-rule="evenodd" d="M25.116 146.12c-5.563-2.662-3.543-5.537-1.429-7.5l15-13.929c2.68-2.488 5.655-3.56 10-1.607l24.643 11.072c3.668 1.648 2.984 5.136 1.071 7.142l-14.464 15.179c-3.707 3.89-6.472 3.21-9.821 1.607z"/>
+        <path fill="url(#linearGradient5019)" fill-rule="evenodd" d="M30.916 148.676c-.299-9.757 2.493-21.418 16.289-21.592 18.753-.237 20.012 14.518 20.392 21.276l-8.494 8.786c-2.89 2.99-5.641 2.479-8.426 1.126z"/>
+        <path fill="#ff8080" fill-rule="evenodd" stroke-linejoin="bevel" d="M8.586 131.499l1.01 31.314 88.79 44.573 1.62-31.44z"/>
+        <path fill="#f55" fill-rule="evenodd" stroke-linejoin="bevel" d="M100.005 176.198l-1.768 31.188 59.347-66.543v-25.254z"/>
+        <path fill="#faa" fill-rule="evenodd" stroke-linejoin="bevel" d="M147.857 67.786l93.572 40.535 4.821 81.041-105-41.576z"/>
+        <path fill="#ff8080" fill-rule="evenodd" stroke-linejoin="bevel" d="M124.643 172.102l101.071 40.622 20.715-23.331-103.75-41.964z"/>
+        <path fill="#ff8080" fill-rule="evenodd" stroke-linejoin="bevel" d="M128.929 91.714l-4.108 80.893 17.679-25 5.599-79.926z"/>
+        <path fill="#ffb380" fill-rule="evenodd" d="M148.329 181.546l16.492-25.01L170 77.25l17.321 7.679-3.75 78.928-18.226 24.56z"/>
+        <path fill="#ffb380" fill-rule="evenodd" d="M127.717 116.07l18.42-18.567 97.025 40.437-.88-14.278-94.96-41.59-18.937 20.446z"/>
+        <path fill="none" stroke-width=".5" d="M164.781 156.121l19.193 8.081M147.106 81.982L146.07 97.92"/>
+        <path fill="#ff7f2a" fill-rule="evenodd" stroke-width=".75" d="M150.945 86.716c13.78 6.01 7.568 7.38 16.187 8.605l-2.897 13.284c-16.084-8.279-18.983-15.446-13.29-21.89zM155.202 83.854c4.787-4.206 13.931 5.844 10.22 9.679-4.325-3.012-7.94-6.19-10.22-9.68z"/>
+        <path fill="#f95" fill-rule="evenodd" stroke-width=".75" d="M175.205 97.06c-.834-4.703-1.067-11.498-5.905-14.069-9.56-5.08-26.622-7.555-29.552-5.312-2.138 1.638-1.58 8.827 7.276 20.371l12.052 6.314c-6.974-6.303-9.638-11.935-6.903-16.308 2.925-4.677 10.696-2.68 11.082 2.203.415 5.26-2.312 12.741 11.352 12.808z"/>
+        <path fill="#ff7f2a" fill-rule="evenodd" stroke-width=".75" d="M216.999 110.59c3.906 3.061-1.836 6.085-2.971 9.126l-17.406-9.113z"/>
+        <path fill="#f95" fill-rule="evenodd" stroke-width=".75" d="M184.902 101.04c4.454.813.738-12.382 8.553-12.817 12.74 4.11 17.331 15.131 24.632 23.605-3.22-2.98-13.461 1.65-33.401-4.264z"/>
+        <path fill="#f95" fill-rule="evenodd" stroke-width=".75" d="M182.959 109.045c1.009-1.564-1.726-3.856.735-3.75 12.876.561 46.619 22.947 54.29 35.625-5.642 6.95-11.572 13.708-15.036 22.102-12.969-21.664-12.78-32.278-39.99-53.977zM174.761 101.074c-11.775-7.766-17.558-3.204-36.135 4.18 1.969 10.801 6.134 13.504 13.062 34.986 7.454-11.766 14.393-34.914 22.571-33.727-1.102-2.134 1.181-.537.502-5.439z"/>
+        <path fill="#f95" fill-rule="evenodd" stroke-width=".75" d="M172.55 92.95l-2.379 14.89c4.753 2.72 9.535 5.378 15.452 5.662l1.75-13.801c-4.49-5.512-9.608-6.484-14.823-6.752z"/>
+    </g>
+</svg>

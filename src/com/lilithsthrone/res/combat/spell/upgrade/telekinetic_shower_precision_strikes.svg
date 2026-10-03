@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+    <ellipse cx="166.797" cy="84.012" fill="none" stroke="#a04" stroke-linecap="round" stroke-linejoin="round" stroke-width="7.309" rx="45.154" ry="42.469"/>
+    <ellipse cx="166.797" cy="84.012" fill="none" stroke="#a04" stroke-linecap="round" stroke-linejoin="round" stroke-width="6.907" rx="27.996" ry="26.332"/>
+    <ellipse cx="166.797" cy="84.012" fill="#a04" stroke="#a04" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.548" rx="10.33" ry="9.716"/>
+    <path fill="#b89c8a" fill-rule="evenodd" d="M169.483 117.336l-8.988 2.867-4.73-16.512 17.059-2.207z"/>
+    <path fill="#aa8974" fill-rule="evenodd" d="M138.075 121.7l-5.342-8.224 7.145-7.39 10.584-3.35-3.786 13.507z"/>
+    <path fill="#846450" fill-rule="evenodd" d="M134.05 79.946l9.692 1.972.365 10.21-4.967 9.815-7.144-12.11z"/>
+    <path fill="none" stroke="#f06" stroke-dasharray="5.48146127,10.96292253" stroke-linecap="round" stroke-linejoin="round" stroke-width="5.481" d="M126.68 96.293l-91.299 53.514"/>
+    <path fill="none" stroke="#f59" stroke-dasharray="5.48146127,10.96292253" stroke-linecap="round" stroke-linejoin="round" stroke-width="5.481" d="M130.09 125.04l-67.784 80.68"/>
+    <path fill="none" stroke="#fac" stroke-dasharray="5.48146127,10.96292253" stroke-linecap="round" stroke-linejoin="round" stroke-width="5.481" d="M155.18 128.658l-31.477 100.108"/>
+</svg>

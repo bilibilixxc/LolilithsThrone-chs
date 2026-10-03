@@ -1,0 +1,94 @@
+Valid Args
+    gender(x_x_x_x_x) gender(x) gender(x_x) playerGender(x) npcGender(x)
+    breast() penis() penisGirth() testicle() age() fem() vDepth() all use number comparison
+    numberComparison(>#) numberComparison(<#) numberComparison(<=#) numberComparison(>=#) numberComparison(=#) numberComparison(#-#)
+    vCapacity() all use float comparison
+    floatComparison(>#.###) floatComparison(<#.#) floatComparison(>=#.#######)
+    all comparisons have a compare() playerCompare() npcCompare()
+
+
+Age Check
+    Checks Actual Age
+    age(>10) = age is greater than 10
+    age(5-10) = age is between 5 and 10 including 5 and 10
+    playerAge(<=10) = player's age is less than or equal to 10
+
+Age Check 2
+    Checks Appears As Age
+    age2(>10) = apparant age is greater than 10
+    age2(5-10) = apparant age is between 5 and 10 including 5 and 10
+    playerAge2(<=10) = player's apparant age is less than or equal to 10
+
+Feminimity Check
+    fem(<40) = feminimity masculine
+    fem(40-60) = feminimity is androgynous
+    playerFem(<=10) = player's feminimity is very masculine
+    npcFem(>=80) = NPC's feminimity is very feminine
+
+Penis Check
+    penis(<3) = Penis less than 3 cm
+
+Penis Girth Check
+    penisGirth(>5) = Girth is greater than 5 cm
+
+Testicle Check
+    testicle(>3) = Testicle size is greater than "large"
+
+Breast Check
+    breast(>10) = Cup size is greater than 10 (10 is E-Cup)
+
+Vaginal|Ass Capacity Check
+    vCapacity(>0.4) = Capacity is greater than 0.4
+     0-1 = ZERO_IMPENETRABLE
+     1-2 = ONE_EXTREMELY_TIGHT
+     2-4 = TWO_TIGHT
+     4-6 = THREE_SLIGHTLY_LOOSE
+     6-9 = FOUR_LOOSE
+     9-12 = FIVE_ROOMY
+    12-16 = SIX_STRETCHED_OPEN
+    16-25 = SEVEN_GAPING
+
+Vaginal|Ass Depth Check
+    vDepth(>2) = Depth is greater than TWO_AVERAGE
+    ZERO_EXTREMELY_SHALLOW = 0.5 or 50% of normal
+    ONE_SHALLOW = 0.75 or 75% of normal
+    TWO_AVERAGE = 1 or 100% of normal
+    THREE_SPACIOUS = 1.5 or 150% of normal
+    FOUR_DEEP = 2 or 200% of normal
+    FIVE_VERY_DEEP = 2.5 or 250% of normal
+    SIX_CAVERNOUS = 3 or 300% of normal
+    SEVEN_FATHOMLESS = 4 or 400% of normal
+
+Gender Check
+    gender(x)
+    x is any of the following
+    F = Feminine
+    M = Masculine
+    N = Neutral
+    P = Penis
+    V = Vagina
+    B = Breasts
+    gender(N) means neuter/doll Because this is gender MATCH
+    gender(+x) means has this IE gender(+P) means has penis
+    can be used like this gender(+P_-B_+V) = Has Penis, and Vagina, No Breasts
+    without +/- means exactly this gender
+
+Checks
+    gender() and age() generically only check the person speaking
+    NPC:age() will check age and only if NPC is speaking
+    NPC: means NPC speaking context
+    PLAYER: means Player speaking context
+    playerAge() checks Player age regardless of context
+    npcAge() checks NPC age regardless of context
+    $= for additional lines of the same context
+    You can have multiple comparisons, IE
+        NPC:age(>30)&&playerAge(<14)&&npcGender(M_+P).Your ass is mine! =Your tight little ass is mine!
+
+Do not put = anywhere other than age() and swap=with
+Line to Swap=Swap with this line
+##  Caution ##
+It can swap button names too, doing so breaks the window and buttons, make sure it is multiple words as to not cause that
+
+The tests I performed are below for an example reference.
+    View the game's credits screen$=This is a test of infinite chat swaps 0
+    View the game's credits screen$=This is a test of infinite chat swaps 1

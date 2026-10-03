@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 256 256">
+    <defs>
+        <linearGradient id="earthquake6">
+            <stop offset="0" stop-color="#6a4f3b"/>
+            <stop offset="1" stop-color="#846249" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="earthquake1">
+            <stop offset="0" stop-color="#6a4e3b"/>
+            <stop offset="1" stop-color="#846249"/>
+        </linearGradient>
+        <linearGradient id="earthquake5">
+            <stop offset="0" stop-color="#6a4f3b"/>
+            <stop offset="1" stop-color="#846249"/>
+        </linearGradient>
+        <linearGradient id="earthquake2">
+            <stop offset="0" stop-color="#755740"/>
+            <stop offset="1" stop-color="#846249"/>
+        </linearGradient>
+        <linearGradient id="eathquake4">
+            <stop offset="0" stop-color="#6d513c"/>
+            <stop offset="1" stop-color="#846249"/>
+        </linearGradient>
+        <linearGradient id="earthquake3">
+            <stop offset="0" stop-color="#543f2f"/>
+            <stop offset="1" stop-color="#846249" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="linearGradient4218" x1="202.662" x2="204.303" y1="136.297" y2="126.322" gradientUnits="userSpaceOnUse" xlink:href="#earthquake3"/>
+        <linearGradient id="linearGradient4226" x1="147.987" x2="146.977" y1="169.632" y2="147.914" gradientUnits="userSpaceOnUse" xlink:href="#earthquake1"/>
+        <linearGradient id="linearGradient4234" x1="320.471" x2="323.501" y1="176.45" y2="175.945" gradientUnits="userSpaceOnUse" xlink:href="#eathquake4"/>
+        <linearGradient id="linearGradient4242" x1="179.555" x2="179.933" y1="187.562" y2="181.375" gradientUnits="userSpaceOnUse" xlink:href="#earthquake2"/>
+        <linearGradient id="linearGradient4250" x1="70.711" x2="71.026" y1="124.806" y2="117.483" gradientUnits="userSpaceOnUse" xlink:href="#earthquake5"/>
+        <linearGradient id="linearGradient4258" x1="53.159" x2="53.854" y1="91.913" y2="85.284" gradientUnits="userSpaceOnUse" xlink:href="#earthquake1"/>
+        <linearGradient id="linearGradient4266" x1="52.086" x2="51.392" y1="92.482" y2="88.062" gradientUnits="userSpaceOnUse" xlink:href="#earthquake6"/>
+    </defs>
+    <path fill="url(#linearGradient4226)" fill-rule="evenodd" d="M14.335 71.741L54.65 85.408l-14.023 2.485 39.438 19.63-26.876 13.42 59.887 19.381-43.82 7.703 139.64 51.686-43.885-31.194 30.528-26.883 48.099-5.71-85.247-25.06 39.74 16.957-43.516 4.675-18.392 15.558-32.203-22.89 11.101-17.642L58.447 88.39l7.304-5.467z"/>
+    <path fill="url(#linearGradient4258)" fill-rule="evenodd" d="M14.335 71.741L54.65 85.408l-14.023 2.485 17.936 8.928-.116-8.43 7.304-5.468z"/>
+    <path fill="none" stroke="#28170b" stroke-width="1.5" d="M155.034 132.477l.208 47.254M136.245 148.093c0 .714.052 24.59.052 24.59M104.05 125.26l.057 12.02"/>
+    <path fill="none" stroke="#28170b" d="M58.46 88.478l.044 8.303"/>
+    <path fill="url(#linearGradient4266)" fill-rule="evenodd" d="M54.65 85.408l-14.023 2.485 13.54 6.74z"/>
+    <path fill="none" stroke="#28170b" d="M54.554 85.464l-.09 9.286"/>
+    <path fill="url(#linearGradient4242)" fill-rule="evenodd" d="M164.826 183.4l44.07 16.313-43.885-31.194z"/>
+    <path fill="url(#linearGradient4218)" fill-rule="evenodd" d="M197.78 141.333l45.858-5.408-85.247-25.059 39.74 16.957z"/>
+    <path fill="url(#linearGradient4234)" fill-rule="evenodd" d="M113.076 140.324l-43.82 7.703 44.333 16.318z"/>
+    <path fill="url(#linearGradient4250)" fill-rule="evenodd" d="M80.065 107.524L53.19 120.942l26.933 8.717z"/>
+    <path fill="none" stroke="#28170b" stroke-width="1.5" d="M198.028 127.881l.019 13.435M112.896 140.376l.032 23.766M164.91 168.433l.045 14.976M80.046 107.598l.11 21.991"/>
+</svg>
